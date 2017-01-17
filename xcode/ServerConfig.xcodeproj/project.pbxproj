@@ -10,6 +10,9 @@
 		439BD1A21E2E1C4E007A1112 /* ServerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439BD1981E2E1C4E007A1112 /* ServerConfig.framework */; };
 		439BD1A71E2E1C4E007A1112 /* ServerConfigTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1A61E2E1C4E007A1112 /* ServerConfigTests.m */; };
 		439BD1A91E2E1C4E007A1112 /* ServerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 439BD19B1E2E1C4E007A1112 /* ServerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		439BD1B61E2E1CED007A1112 /* server_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1B41E2E1CED007A1112 /* server_config.c */; };
+		439BD1B71E2E1CED007A1112 /* server_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1B41E2E1CED007A1112 /* server_config.c */; };
+		439BD1BA1E2E1D0B007A1112 /* server_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 439BD1B91E2E1D0B007A1112 /* server_config.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 		439BD1A11E2E1C4E007A1112 /* ServerConfigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerConfigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		439BD1A61E2E1C4E007A1112 /* ServerConfigTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerConfigTests.m; sourceTree = "<group>"; };
 		439BD1A81E2E1C4E007A1112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439BD1B41E2E1CED007A1112 /* server_config.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = server_config.c; sourceTree = "<group>"; };
+		439BD1B91E2E1D0B007A1112 /* server_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server_config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,8 @@
 		439BD19A1E2E1C4E007A1112 /* ServerConfig */ = {
 			isa = PBXGroup;
 			children = (
+				439BD1B31E2E1CBE007A1112 /* include */,
+				439BD1B21E2E1CA9007A1112 /* src */,
 				439BD19B1E2E1C4E007A1112 /* ServerConfig.h */,
 				439BD19C1E2E1C4E007A1112 /* Info.plist */,
 			);
@@ -86,6 +93,24 @@
 			path = ServerConfigTests;
 			sourceTree = "<group>";
 		};
+		439BD1B21E2E1CA9007A1112 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				439BD1B41E2E1CED007A1112 /* server_config.c */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		439BD1B31E2E1CBE007A1112 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				439BD1B91E2E1D0B007A1112 /* server_config.h */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -94,6 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439BD1A91E2E1C4E007A1112 /* ServerConfig.h in Headers */,
+				439BD1BA1E2E1D0B007A1112 /* server_config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439BD1B61E2E1CED007A1112 /* server_config.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439BD1B71E2E1CED007A1112 /* server_config.c in Sources */,
 				439BD1A71E2E1C4E007A1112 /* ServerConfigTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +420,7 @@
 				439BD1AE1E2E1C4E007A1112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		439BD1AF1E2E1C4E007A1112 /* Build configuration list for PBXNativeTarget "ServerConfigTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +429,7 @@
 				439BD1B11E2E1C4E007A1112 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
