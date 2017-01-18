@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		430EF5551E2F6F290056B88A /* ServerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 430EF5531E2F6F290056B88A /* ServerConfig.h */; };
+		430EF5551E2F6F290056B88A /* ServerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 430EF5531E2F6F290056B88A /* ServerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		430EF5561E2F6F290056B88A /* ServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 430EF5541E2F6F290056B88A /* ServerConfig.m */; };
 		430EF5571E2F6F290056B88A /* ServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 430EF5541E2F6F290056B88A /* ServerConfig.m */; };
 		439BD1A21E2E1C4E007A1112 /* ServerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439BD1981E2E1C4E007A1112 /* ServerConfig.framework */; };
 		439BD1A71E2E1C4E007A1112 /* ServerConfigTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1A61E2E1C4E007A1112 /* ServerConfigTests.m */; };
 		439BD1B61E2E1CED007A1112 /* server_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1B41E2E1CED007A1112 /* server_config.c */; };
 		439BD1B71E2E1CED007A1112 /* server_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1B41E2E1CED007A1112 /* server_config.c */; };
-		439BD1BA1E2E1D0B007A1112 /* server_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 439BD1B91E2E1D0B007A1112 /* server_config.h */; };
+		439BD1BA1E2E1D0B007A1112 /* server_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 439BD1B91E2E1D0B007A1112 /* server_config.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

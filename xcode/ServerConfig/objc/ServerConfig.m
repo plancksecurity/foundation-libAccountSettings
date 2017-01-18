@@ -129,23 +129,19 @@
     return a;
 }
 
-@end
-
-@implementation ServerConfig
-
-+ (NSInteger)probeAccount:(SCAccount  * _Nonnull)theAccount
+- (NSInteger)probe
 {
-    account a = theAccount.cObj;
+    account a = self.cObj;
     int res = probe_for_config(&a);
-    [theAccount set:a];
+    [self set:a];
     return res;
 }
 
-+ (NSInteger)probeAccountWithProvider:(SCAccount  * _Nonnull)theAccount
+- (NSInteger)probeWithProvider
 {
-    account a = theAccount.cObj;
+    account a = self.cObj;
     int res = probe_for_config_with_provider(&a);
-    [theAccount set:a];
+    [self set:a];
     return res;
 }
 

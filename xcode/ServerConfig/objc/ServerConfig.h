@@ -73,11 +73,7 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 - (void)set:(account)obj;
 - (account)cObj;
 
-@end
-
-@interface ServerConfig : NSObject
-
-+ (NSInteger)probeAccount:(SCAccount  * _Nonnull)account;
-+ (NSInteger)probeAccountWithProvider:(SCAccount  * _Nonnull)account;
+- (NSInteger)probe;
+- (NSInteger)probeWithProvider;
 
 @end
