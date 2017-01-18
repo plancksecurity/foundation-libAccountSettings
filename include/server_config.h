@@ -20,7 +20,7 @@ typedef enum _tlsconfig {
 } tlsconfig;
 
 typedef struct _connconfig {
-    char *name;
+    const char *name;
     unsigned int service; // see /etc/services
     unsigned int port; // real port to use
     tlsconfig tls;
@@ -68,16 +68,37 @@ typedef struct _mailconfig {
     manualconfig mc;
 } mailconfig;
 
+typedef struct _provider {
+    const char *domain;
+} provider;
+
 typedef struct _account {
-    char *name;
+    /**
+     This will be used primarily for detecting servers, needed
+     for `probe_for_config`.
+     */
+    const char *email;
+
+    /**
+     This is only needed when using `probe_for_config_with_provider`.
+     */
+    provider prov;
+
     mailconfig conf;
     credentials login;
 } account;
 
-// fill missing pieces of account struct
-// will return 0 on success or an error value
+/**
+ Contact servers and probe for config.
+ - Returns: 0 on success, other values signify errors.
+ */
+int probe_for_config(account *a);
 
-int measure_config(account *a);
-int populate_pre_config(account *a);
+/**
+ Contact servers and probe for config, take into account the given
+ provider information.
+ - Returns: 0 on success, other values signify errors.
+ */
+int probe_for_config_with_provider(account *a);
 
 #endif /* server_config_h */

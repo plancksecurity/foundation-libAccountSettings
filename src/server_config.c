@@ -8,3 +8,10 @@
 
 #include "server_config.h"
 
+int probe_for_config(account *a) {
+    return -1; // not implemented
+}
+
+int probe_for_config_with_provider(account *a) {
+    return -1; // not implemented
+}

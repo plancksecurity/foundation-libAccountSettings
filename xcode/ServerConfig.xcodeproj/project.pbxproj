@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430EF5551E2F6F290056B88A /* ServerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 430EF5531E2F6F290056B88A /* ServerConfig.h */; };
+		430EF5561E2F6F290056B88A /* ServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 430EF5541E2F6F290056B88A /* ServerConfig.m */; };
+		430EF5571E2F6F290056B88A /* ServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 430EF5541E2F6F290056B88A /* ServerConfig.m */; };
 		439BD1A21E2E1C4E007A1112 /* ServerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439BD1981E2E1C4E007A1112 /* ServerConfig.framework */; };
 		439BD1A71E2E1C4E007A1112 /* ServerConfigTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1A61E2E1C4E007A1112 /* ServerConfigTests.m */; };
 		439BD1A91E2E1C4E007A1112 /* ServerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 439BD19B1E2E1C4E007A1112 /* ServerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		430EF5531E2F6F290056B88A /* ServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConfig.h; sourceTree = "<group>"; };
+		430EF5541E2F6F290056B88A /* ServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConfig.m; sourceTree = "<group>"; };
 		439BD1981E2E1C4E007A1112 /* ServerConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServerConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		439BD19B1E2E1C4E007A1112 /* ServerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerConfig.h; sourceTree = "<group>"; };
 		439BD19C1E2E1C4E007A1112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430EF5521E2F6EBD0056B88A /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				430EF5531E2F6F290056B88A /* ServerConfig.h */,
+				430EF5541E2F6F290056B88A /* ServerConfig.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
 		439BD18E1E2E1C4D007A1112 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +90,7 @@
 		439BD19A1E2E1C4E007A1112 /* ServerConfig */ = {
 			isa = PBXGroup;
 			children = (
+				430EF5521E2F6EBD0056B88A /* objc */,
 				439BD1B31E2E1CBE007A1112 /* include */,
 				439BD1B21E2E1CA9007A1112 /* src */,
 				439BD19B1E2E1C4E007A1112 /* ServerConfig.h */,
@@ -119,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439BD1A91E2E1C4E007A1112 /* ServerConfig.h in Headers */,
+				430EF5551E2F6F290056B88A /* ServerConfig.h in Headers */,
 				439BD1BA1E2E1D0B007A1112 /* server_config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,11 +190,13 @@
 					439BD1971E2E1C4E007A1112 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SBPJ2E4G5X;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					439BD1A01E2E1C4E007A1112 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SBPJ2E4G5X;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -223,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430EF5561E2F6F290056B88A /* ServerConfig.m in Sources */,
 				439BD1B61E2E1CED007A1112 /* server_config.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +252,7 @@
 			files = (
 				439BD1B71E2E1CED007A1112 /* server_config.c in Sources */,
 				439BD1A71E2E1C4E007A1112 /* ServerConfigTests.m in Sources */,
+				430EF5571E2F6F290056B88A /* ServerConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +366,7 @@
 		439BD1AD1E2E1C4E007A1112 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
@@ -358,12 +379,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.pep-security.libs.ServerConfig";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		439BD1AE1E2E1C4E007A1112 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
@@ -376,28 +400,36 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.pep-security.libs.ServerConfig";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		439BD1B01E2E1C4E007A1112 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
 				INFOPLIST_FILE = ServerConfigTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.pep-security.libs.ServerConfigTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ServerConfig/swift/ServerConfigTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		439BD1B11E2E1C4E007A1112 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
 				INFOPLIST_FILE = ServerConfigTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.pep-security.libs.ServerConfigTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ServerConfig/swift/ServerConfigTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
