@@ -20,7 +20,11 @@
 
 - (void)set:(connconfig)obj
 {
-    self.name = [[NSString alloc] initWithUTF8String:obj.name];
+    if (obj.name) {
+        self.name = [[NSString alloc] initWithUTF8String:obj.name];
+    } else {
+        self.name = nil;
+    }
     self.service = obj.service;
     self.port = obj.port;
 }
@@ -95,7 +99,11 @@
 
 - (void)set:(provider)obj
 {
-    self.domain = [[NSString alloc] initWithUTF8String:obj.domain];
+    if (obj.domain) {
+        self.domain = [[NSString alloc] initWithUTF8String:obj.domain];
+    } else {
+        self.domain = nil;
+    }
 }
 
 - (provider)cObj

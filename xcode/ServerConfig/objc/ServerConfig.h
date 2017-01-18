@@ -55,7 +55,7 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 
 @interface SCProvider : NSObject
 
-@property (nonatomic, nonnull) NSString *domain;
+@property (nonatomic, nullable) NSString *domain;
 
 - (instancetype _Nonnull)initFromC:(provider)provider;
 - (void)set:(provider)obj;
