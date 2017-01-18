@@ -12,7 +12,6 @@
 		430EF5571E2F6F290056B88A /* ServerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 430EF5541E2F6F290056B88A /* ServerConfig.m */; };
 		439BD1A21E2E1C4E007A1112 /* ServerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439BD1981E2E1C4E007A1112 /* ServerConfig.framework */; };
 		439BD1A71E2E1C4E007A1112 /* ServerConfigTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1A61E2E1C4E007A1112 /* ServerConfigTests.m */; };
-		439BD1A91E2E1C4E007A1112 /* ServerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 439BD19B1E2E1C4E007A1112 /* ServerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		439BD1B61E2E1CED007A1112 /* server_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1B41E2E1CED007A1112 /* server_config.c */; };
 		439BD1B71E2E1CED007A1112 /* server_config.c in Sources */ = {isa = PBXBuildFile; fileRef = 439BD1B41E2E1CED007A1112 /* server_config.c */; };
 		439BD1BA1E2E1D0B007A1112 /* server_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 439BD1B91E2E1D0B007A1112 /* server_config.h */; };
@@ -32,7 +31,6 @@
 		430EF5531E2F6F290056B88A /* ServerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerConfig.h; sourceTree = "<group>"; };
 		430EF5541E2F6F290056B88A /* ServerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerConfig.m; sourceTree = "<group>"; };
 		439BD1981E2E1C4E007A1112 /* ServerConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ServerConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		439BD19B1E2E1C4E007A1112 /* ServerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerConfig.h; sourceTree = "<group>"; };
 		439BD19C1E2E1C4E007A1112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439BD1A11E2E1C4E007A1112 /* ServerConfigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerConfigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		439BD1A61E2E1C4E007A1112 /* ServerConfigTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerConfigTests.m; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				430EF5521E2F6EBD0056B88A /* objc */,
 				439BD1B31E2E1CBE007A1112 /* include */,
 				439BD1B21E2E1CA9007A1112 /* src */,
-				439BD19B1E2E1C4E007A1112 /* ServerConfig.h */,
 				439BD19C1E2E1C4E007A1112 /* Info.plist */,
 			);
 			path = ServerConfig;
@@ -133,7 +130,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439BD1A91E2E1C4E007A1112 /* ServerConfig.h in Headers */,
 				430EF5551E2F6F290056B88A /* ServerConfig.h in Headers */,
 				439BD1BA1E2E1D0B007A1112 /* server_config.h in Headers */,
 			);
