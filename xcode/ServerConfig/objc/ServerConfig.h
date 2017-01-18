@@ -18,7 +18,7 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 
 #import "server_config.h"
 
-@interface ConnConfig : NSObject
+@interface SCConnConfig : NSObject
 
 @property (nonatomic, nullable) NSString *name;
 /** See /etc/service */
@@ -31,10 +31,10 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 
 @end
 
-@interface ManualConfig : NSObject
+@interface SCManualConfig : NSObject
 
-@property (nonatomic, nullable) ConnConfig *incoming;
-@property (nonatomic, nullable) ConnConfig *outgoing;
+@property (nonatomic, nullable) SCConnConfig *incoming;
+@property (nonatomic, nullable) SCConnConfig *outgoing;
 
 - (instancetype _Nonnull)initFromC:(manualconfig)manualconfig;
 - (void)set:(manualconfig)obj;
@@ -42,10 +42,10 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 
 @end
 
-@interface MailConfig : NSObject
+@interface SCMailConfig : NSObject
 
 @property preconfig pc;
-@property (nonatomic, nullable) ManualConfig *mc;
+@property (nonatomic, nullable) SCManualConfig *mc;
 
 - (instancetype _Nonnull)initFromC:(mailconfig)mailconfig;
 - (void)set:(mailconfig)obj;
@@ -53,7 +53,7 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 
 @end
 
-@interface Provider : NSObject
+@interface SCProvider : NSObject
 
 @property (nonatomic, nonnull) NSString *domain;
 
@@ -63,11 +63,11 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 
 @end
 
-@interface Account : NSObject
+@interface SCAccount : NSObject
 
 @property (nonatomic, nonnull) NSString *email;
-@property (nonatomic, nullable) Provider *provider;
-@property (nonatomic, nullable) MailConfig *mailConfig;
+@property (nonatomic, nullable) SCProvider *provider;
+@property (nonatomic, nullable) SCMailConfig *mailConfig;
 
 - (instancetype _Nonnull)initFromC:(account)account;
 - (void)set:(account)obj;
@@ -77,7 +77,7 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 
 @interface ServerConfig : NSObject
 
-+ (NSInteger)probeAccount:(Account  * _Nonnull)account;
-+ (NSInteger)probeAccountWithProvider:(Account  * _Nonnull)account;
++ (NSInteger)probeAccount:(SCAccount  * _Nonnull)account;
++ (NSInteger)probeAccountWithProvider:(SCAccount  * _Nonnull)account;
 
 @end

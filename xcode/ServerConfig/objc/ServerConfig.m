@@ -8,7 +8,7 @@
 
 #import "ServerConfig.h"
 
-@implementation ConnConfig
+@implementation SCConnConfig
 
 - (instancetype _Nonnull)initFromC:(connconfig)config
 {
@@ -35,7 +35,7 @@
 
 @end
 
-@implementation ManualConfig
+@implementation SCManualConfig
 
 - (instancetype _Nonnull)initFromC:(manualconfig)manualconfig
 {
@@ -47,8 +47,8 @@
 
 - (void)set:(manualconfig)obj
 {
-    self.incoming = [[ConnConfig alloc] initFromC:obj.incoming];
-    self.outgoing = [[ConnConfig alloc] initFromC:obj.outgoing];
+    self.incoming = [[SCConnConfig alloc] initFromC:obj.incoming];
+    self.outgoing = [[SCConnConfig alloc] initFromC:obj.outgoing];
 }
 
 - (manualconfig)cObj
@@ -59,7 +59,7 @@
 
 @end
 
-@implementation MailConfig
+@implementation SCMailConfig
 
 - (instancetype _Nonnull)initFromC:(mailconfig)mailconfig
 {
@@ -72,7 +72,7 @@
 - (void)set:(mailconfig)obj
 {
     self.pc = obj.pc;
-    self.mc = [[ManualConfig alloc] initFromC:obj.mc];
+    self.mc = [[SCManualConfig alloc] initFromC:obj.mc];
 }
 
 - (mailconfig)cObj
@@ -83,7 +83,7 @@
 
 @end
 
-@implementation Provider
+@implementation SCProvider
 
 - (instancetype _Nonnull)initFromC:(provider)provider
 {
@@ -106,7 +106,7 @@
 
 @end
 
-@implementation Account
+@implementation SCAccount
 
 - (instancetype _Nonnull)initFromC:(account)account
 {
@@ -119,8 +119,8 @@
 - (void)set:(account)obj
 {
     self.email = [[NSString alloc] initWithUTF8String:obj.email];
-    self.provider = [[Provider alloc] initFromC:obj.prov];
-    self.mailConfig = [[MailConfig alloc] initFromC:obj.conf];
+    self.provider = [[SCProvider alloc] initFromC:obj.prov];
+    self.mailConfig = [[SCMailConfig alloc] initFromC:obj.conf];
 }
 
 - (account)cObj
@@ -133,7 +133,7 @@
 
 @implementation ServerConfig
 
-+ (NSInteger)probeAccount:(Account  * _Nonnull)theAccount
++ (NSInteger)probeAccount:(SCAccount  * _Nonnull)theAccount
 {
     account a = theAccount.cObj;
     int res = probe_for_config(&a);
@@ -141,7 +141,7 @@
     return res;
 }
 
-+ (NSInteger)probeAccountWithProvider:(Account  * _Nonnull)theAccount
++ (NSInteger)probeAccountWithProvider:(SCAccount  * _Nonnull)theAccount
 {
     account a = theAccount.cObj;
     int res = probe_for_config_with_provider(&a);
