@@ -6,6 +6,9 @@
 //  Copyright © 2017 pEp Security S.A. All rights reserved.
 //
 
+#ifndef server_config_objc_h
+#define server_config_objc_h
+
 #import <Foundation/Foundation.h>
 
 //! Project version number for ServerConfig.
@@ -77,3 +80,5 @@ FOUNDATION_EXPORT const unsigned char ServerConfigVersionString[];
 - (NSInteger)probeWithProvider;
 
 @end
+
+#endif
