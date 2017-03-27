@@ -49,20 +49,31 @@ typedef enum _AS_FLAGS
 typedef enum _AS_PROTOCOL
 {
 	// Incoming
-	AS_PROTO_POP3          = 0x1100;
-	AS_PROTO_POP3S         = 0x1110;
-	AS_PROTO_POP3_STARTTLS = 0x1120;
+	AS_PROTO_POP3          = 0x1100,
+	AS_PROTO_POP3S         = 0x1110,
+	AS_PROTO_POP3_STARTTLS = 0x1120,
 	
-	AS_PROTO_IMAP          = 0x1200;
-	AS_PROTO_IMAPS         = 0x1210;
-	AS_PROTO_IMAP_STARTTLS = 0x1220;
+	AS_PROTO_IMAP          = 0x1200,
+	AS_PROTO_IMAPS         = 0x1210,
+	AS_PROTO_IMAP_STARTTLS = 0x1220,
 	
 	// Outgoing
-	AS_PROTO_SMTP          = 0x2100;
-	AS_PROTO_SMTPS         = 0x2110;
-	AS_PROTO_SMTP_STARTTLS = 0x2120;
+	AS_PROTO_SMTP          = 0x2100,
+	AS_PROTO_SMTPS         = 0x2110,
+	AS_PROTO_SMTP_STARTTLS = 0x2120,
 	
 } AS_PROTOCOL;
+
+
+//! How the username is built:
+typedef enum _AS_USERNAME
+{
+	AS_USERNAME_EMAIL_ADDRESS = 0x4001,
+	AS_USERNAME_EMAIL_LOCALPART = 0x4002,
+	AS_USERNAME_EMAIL_LOCALPART_DOMAIN = 0x4003,
+} AS_USERNAME;
+
+
 
 /** get account settings - the main API function.
  *
