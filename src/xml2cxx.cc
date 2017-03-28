@@ -36,6 +36,23 @@ std::vector<std::string> assignAllMembers(const tx::XMLElement* elem, const char
 	return v;
 }
 
+std::vector<Server> assignServers(const tx::XMLElement* elem, const char* memberName)
+{
+	std::vector<Server> v;
+	for(const tx::XMLElement* e = elem->FirstChildElement(memberName); e!=nullptr; e=e->NextSiblingElement(memberName) )
+	{
+		// TODO!
+	}
+	return v;
+}
+
+
+bool serverPreference(const Server& a, const Server& b)
+{
+	// TODO: define a proper preference
+	return a.protocol < b.protocol;
+}
+
 
 int main(int argc, char** argv)
 {
@@ -79,6 +96,22 @@ int main(int argc, char** argv)
 				std::cerr << " " << d;
 			}
 		}
+		
+		std::vector<Server> incomingServers = assignServers(emailProvider, "incomingServer");
+		std::sort(incomingServers.begin(), incomingServers.end(), &serverPreference);
+		if(incomingServers.size()>0)
+		{
+			as.incoming = incomingServers.front();
+		}
+		
+		std::vector<Server> outgoingServers = assignServers(emailProvider, "outgoingServer");
+		std::sort(outgoingServers.begin(), outgoingServers.end(), &serverPreference);
+		if(outgoingServers.size()>0)
+		{
+			as.outgoing = outgoingServers.front();
+		}
+		
+		
 		std::cerr << ".  Done.\n";
 	}
 }
