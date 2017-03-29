@@ -13,32 +13,34 @@ namespace tx = tinyxml2;
 const std::map<std::string, unsigned> mproto =
 	{
 		// protocols
-		{"pop3", 0x11000},
-		{"imap", 0x12000},
-		{"smtp", 0x21000},
-	};
-
-const std::map<std::string, unsigned> mauth =
-	{
-		// authentication
-		{"none"              , 0x00001},
-		{"client-IP-address" , 0x00005},
-		{"plain"             , 0x00010}, // is it the same as "password-cleartext"?
-		{"password-cleartext", 0x00011},
-		{"password-encrypted", 0x00020},
-		{"OAuth2"            , 0x00028},
+		{"pop3", AS_PROTO_POP3},
+		{"imap", AS_PROTO_IMAP},
+		{"smtp", AS_PROTO_SMTP},
 	};
 
 const std::map<std::string, unsigned> msocket =
 	{
 		// socketType
-		{"plain"   , 0x00100},
-		{"STARTTLS", 0x00200},
-		{"SSL"     , 0x00300},
+		{"plain"   , AS_SOCK_PLAIN},
+		{"STARTTLS", AS_SOCK_STARTTLS},
+		{"SSL"     , AS_SOCK_SSL},
 	};
+
+const std::map<std::string, unsigned> mauth =
+	{
+		// authentication
+		{"none"              , AS_AUTH_NONE},
+		{"client-IP-address" , AS_AUTH_CLIENT_IP},
+		{"plain"             , AS_AUTH_PLAIN}, // is it the same as "password-cleartext"?
+		{"password-cleartext", AS_AUTH_PW_CLEARTEXT},
+		{"password-encrypted", AS_AUTH_PW_ENCRYPTED},
+		{"OAuth2"            , AS_AUTH_OAUTH2},
+	};
+
 
 const std::map<std::string, AS_USERNAME> musername =
 	{
+		{""              ,  AS_USERNAME_NONE},
 		{"%EMAILADDRESS%",  AS_USERNAME_EMAIL_ADDRESS},
 		{"%EMAILLOCALPART%", AS_USERNAME_EMAIL_LOCALPART},
 		{"%EMAILLOCALPART%.%EMAILDOMAIN%", AS_USERNAME_EMAIL_LOCALPART_DOMAIN },
@@ -79,17 +81,17 @@ std::vector<Server> assignServers(const tx::XMLElement* elem, const char* member
 	for(const tx::XMLElement* e = elem->FirstChildElement(memberName); e!=nullptr; e=e->NextSiblingElement(memberName) )
 	{
 		Server server;
-		unsigned protocol = 0;
+		unsigned access = 0;
 		const std::string type = e->Attribute("type");
-		protocol |= mproto.at(type);
+		access |= mproto.at(type);
 		
 		server.name = assignMember(e, "hostname");
 		server.port = std::stoi(assignMember(e, "port"));
 		const std::string auth = assignMember(e, "authentication");
 		const std::string socketType = assignMember(e, "socketType");
-		protocol |= mauth.at(auth);
-		protocol |= msocket.at(socketType);
-		server.protocol = AS_PROTOCOL(protocol);
+		access |= mauth.at(auth);
+		access |= msocket.at(socketType);
+		server.access = AS_ACCESS(access);
 		
 		const std::string username = assignMember(e, "username");
 		server.username = musername.at(username);
@@ -102,12 +104,12 @@ std::vector<Server> assignServers(const tx::XMLElement* elem, const char* member
 bool serverPreference(const Server& a, const Server& b)
 {
 	// TODO: define a proper preference
-	return a.protocol > b.protocol;
+	return a.access > b.access;
 }
 
 
 int main(int argc, char** argv)
-{
+try{
 	std::cerr << "Reading " << (argc-1) << "file" << ((argc-1)==1 ? "" : "s") << ":\n";
 	for(int a=1; a<argc; ++a)
 	{
@@ -117,13 +119,13 @@ int main(int argc, char** argv)
 		const tx::XMLElement* clientConfig = doc.FirstChildElement("clientConfig");
 		if(clientConfig==nullptr)
 		{
-			std::cerr << "ERROR: not a valid clientConfig!";
+			std::cerr << " ERROR: not a valid clientConfig!\n";
 			continue;
 		}
 		const tx::XMLElement* emailProvider = clientConfig->FirstChildElement("emailProvider");
 		if(emailProvider==nullptr)
 		{
-			std::cerr << "ERROR: not a valid clientConfig! <emailProvider> not found!";
+			std::cerr << " ERROR: not a valid clientConfig! <emailProvider> not found!\n";
 			continue;
 		}
 		
@@ -132,7 +134,7 @@ int main(int argc, char** argv)
 		const char* id = emailProvider->Attribute("id");
 		if(id==nullptr)
 		{
-			std::cerr << "PROBLEM: <emailProvider> has no attribute id. :-o";
+			std::cerr << " PROBLEM: <emailProvider> has no attribute id!";
 		}else{
 			as.id = id;
 			std::cerr << "id=" << as.id;
@@ -153,8 +155,13 @@ int main(int argc, char** argv)
 			as.outgoing = outgoingServers.front();
 		}
 		
-		std::cerr << '\n' << as;
-		std::cerr << ".  Done.\n";
+		std::cout << "\n" << as << std::flush;
+		std::cerr << "\n";
 		vas.push_back(std::move(as));
 	}
+}
+catch(std::runtime_error& e)
+{
+	std::cerr << "ERROR: " << e.what() << "\n";
+	return 7;
 }

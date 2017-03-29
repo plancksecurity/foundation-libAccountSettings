@@ -14,7 +14,7 @@ struct Server
 {
 	std::string name;
 	int         port = -1;
-	AS_PROTOCOL protocol = AS_PROTOCOL(-1);
+	AS_ACCESS   access = AS_ACCESS(-1);
 	AS_USERNAME username = AS_USERNAME(-1);
 };
 

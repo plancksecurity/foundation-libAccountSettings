@@ -24,7 +24,6 @@ AccountSettings* create_account_settings(void);
 void free_account_settings(AccountSettings* account_settings);
 
 
-
 typedef enum _AS_STATUS
 {
 	AS_OK = 0,
@@ -45,29 +44,37 @@ typedef enum _AS_FLAGS
 } AS_FLAGS;
 
 
-//! Known protocols
-typedef enum _AS_PROTOCOL
+//! Combination of protocol, socket type & authentication type
+typedef enum _AS_ACCESS
 {
-	// Incoming
-	AS_PROTO_POP3          = 0x1100,
-	AS_PROTO_POP3S         = 0x1110,
-	AS_PROTO_POP3_STARTTLS = 0x1120,
+	// protocols
+	AS_PROTO_POP3         = 0x11000,  // incoming
+	AS_PROTO_IMAP         = 0x12000,  // incoming
+	AS_PROTO_SMTP         = 0x21000,  // outgoing
+	AS_PROTO_BITMASK      = 0xFF000,  // bitmask for AS_PROTO...
 	
-	AS_PROTO_IMAP          = 0x1200,
-	AS_PROTO_IMAPS         = 0x1210,
-	AS_PROTO_IMAP_STARTTLS = 0x1220,
+	// socket types
+	AS_SOCK_PLAIN         = 0x00100,
+	AS_SOCK_STARTTLS      = 0x00400,
+	AS_SOCK_SSL           = 0x00800,
+	AS_SOCK_BITMASK       = 0x00F00,  // bitmask for AS_SOCK...
+
+	// authentication types
+	AS_AUTH_NONE          = 0x00001,
+	AS_AUTH_CLIENT_IP     = 0x00005,
+	AS_AUTH_PLAIN         = 0x00010,  // TODO: is "plain" and "password-cleartext" the same?
+	AS_AUTH_PW_CLEARTEXT  = 0x00011,
+	AS_AUTH_PW_ENCRYPTED  = 0x00020,
+	AS_AUTH_OAUTH2        = 0x00050,
+	AS_AUTH_BITMASK       = 0x000FF,  // bitmask for AS_AUTH...
 	
-	// Outgoing
-	AS_PROTO_SMTP          = 0x2100,
-	AS_PROTO_SMTPS         = 0x2110,
-	AS_PROTO_SMTP_STARTTLS = 0x2120,
-	
-} AS_PROTOCOL;
+} AS_ACCESS;
 
 
 //! How the username is built:
 typedef enum _AS_USERNAME
 {
+	AS_USERNAME_NONE = 0x4000, // no username, no authentication?
 	AS_USERNAME_EMAIL_ADDRESS = 0x4001,
 	AS_USERNAME_EMAIL_LOCALPART = 0x4002,
 	AS_USERNAME_EMAIL_LOCALPART_DOMAIN = 0x4003,
