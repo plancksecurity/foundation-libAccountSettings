@@ -7,6 +7,8 @@
 #include "account_settings.h"
 #include <string>
 #include <vector>
+#include <ostream>
+
 
 struct Server
 {
@@ -24,5 +26,8 @@ struct AccountSettings
 	Server incoming;
 	Server outgoing;
 };
+
+std::ostream& operator<<(std::ostream& o, const Server& srv);
+std::ostream& operator<<(std::ostream& o, const AccountSettings& as);
 
 #endif // ACCOUNT_SETTINGS_INTERNAL_HH
