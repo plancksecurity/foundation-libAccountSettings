@@ -17,18 +17,26 @@
 	extern "C" {
 #endif
 
+//! from user-level code: just an opaque handle to access the account settings
 struct AccountSettings;
 
-AccountSettings* create_account_settings(void);
+//! from user-level code: just an opaque handle to access certain server parameters (hostname, port number, access methods etc.)
+struct AS_Server;
 
+
+/** Release any memory that might be occupied by dynamically created AccountSetting objects.
+ * Don't access the pointee after this call!
+ * @param  account_settings  a pointer to an object created by get_account_settings() or a NULL pointer (which is a safe no-op).
+ */
 void free_account_settings(AccountSettings* account_settings);
 
 
 typedef enum _AS_STATUS
 {
-	AS_OK = 0,
-	AS_ILLEGAL_VALUE = -100,
-	AS_OUT_OF_MEMORY = -110,
+	AS_OK            = 0,     ///< account settings were found (or guessed). Please go on and query them. :-)
+	AS_TIMEOUT       = -900,  ///< the query to a remote service to get the account settings timed out. You might try it again later.
+	AS_NOT_FOUND     = -950,  ///< for the given parameters & flags no account settings could be found
+	AS_ILLEGAL_VALUE = -999,  ///< one or more parameters of get_account_settings() was/were invalid
 } AS_STATUS;
 
 
@@ -47,26 +55,26 @@ typedef enum _AS_FLAGS
 //! Combination of protocol, socket type & authentication type
 typedef enum _AS_ACCESS
 {
-	// protocols
-	AS_PROTO_POP3         = 0x11000,  // incoming
-	AS_PROTO_IMAP         = 0x12000,  // incoming
-	AS_PROTO_SMTP         = 0x21000,  // outgoing
-	AS_PROTO_BITMASK      = 0xFF000,  // bitmask for AS_PROTO...
+	/// protocols
+	AS_PROTO_POP3         = 0x00011,  ///< incoming
+	AS_PROTO_IMAP         = 0x00012,  ///< incoming
+	AS_PROTO_SMTP         = 0x00021,  ///< outgoing
+	AS_PROTO_BITMASK      = 0x000FF,  ///< bitmask for AS_PROTO...
 	
-	// socket types
-	AS_SOCK_PLAIN         = 0x00100,
-	AS_SOCK_STARTTLS      = 0x00400,
-	AS_SOCK_SSL           = 0x00800,
-	AS_SOCK_BITMASK       = 0x00F00,  // bitmask for AS_SOCK...
+	/// socket types
+	AS_SOCK_PLAIN         = 0x10000,
+	AS_SOCK_STARTTLS      = 0x40000,
+	AS_SOCK_SSL           = 0x80000,
+	AS_SOCK_BITMASK       = 0xF0000,  ///< bitmask for AS_SOCK...
 
-	// authentication types
-	AS_AUTH_NONE          = 0x00001,
-	AS_AUTH_CLIENT_IP     = 0x00005,
-	AS_AUTH_PLAIN         = 0x00010,  // TODO: is "plain" and "password-cleartext" the same?
-	AS_AUTH_PW_CLEARTEXT  = 0x00011,
-	AS_AUTH_PW_ENCRYPTED  = 0x00020,
-	AS_AUTH_OAUTH2        = 0x00050,
-	AS_AUTH_BITMASK       = 0x000FF,  // bitmask for AS_AUTH...
+	/// authentication types
+	AS_AUTH_NONE          = 0x00100,
+	AS_AUTH_CLIENT_IP     = 0x00500,
+	AS_AUTH_PLAIN         = 0x01000,  // TODO: is "plain" and "password-cleartext" the same?
+	AS_AUTH_PW_CLEARTEXT  = 0x01100,
+	AS_AUTH_PW_ENCRYPTED  = 0x02000,
+	AS_AUTH_OAUTH2        = 0x05000,
+	AS_AUTH_BITMASK       = 0x0FF00,  ///< bitmask for AS_AUTH...
 	
 } AS_ACCESS;
 
@@ -74,12 +82,12 @@ typedef enum _AS_ACCESS
 //! How the username is built:
 typedef enum _AS_USERNAME
 {
-	AS_USERNAME_NONE = 0x4000, // no username, no authentication?
+	AS_USERNAME_NONE = 0x4000,            ///< no username, no authentication?
 	AS_USERNAME_EMAIL_ADDRESS = 0x4001,
 	AS_USERNAME_EMAIL_LOCALPART = 0x4002,
 	AS_USERNAME_EMAIL_LOCALPART_DOMAIN = 0x4003,
+	AS_USERNAME_OTHER = 0x4fff,  ///< the username is none of the above (i.e. might be a numerical user ID etc.) and must be given by the user itself
 } AS_USERNAME;
-
 
 
 /** get account settings - the main API function.
@@ -88,11 +96,18 @@ typedef enum _AS_USERNAME
  * @param provider     the name of a provider. May be NULL if unknown. @see get_known_providers()
  * @param flags        @see AS_FLAGS
  * @param credentials  additional credentials that might be necessary to retrieve the account settings. Depends on AS_FLAGS, may be NULL.
- * @param out          output parameter holding the account settings, if return value is AS_OK, unchanged if an error occurs.
- *                     all text strings in the AccountSettings are allocated with malloc() and have to be free()'s by the user
- *                     or call account_settings_free().
+ * @return             the requested settings or NULL (only in case of out-of-memory)
+ *                     Don't forget to call free_account_settings() when the result is no longer needed. free_account_settings(NULL) is a safe no-op.
  */
-AS_STATUS get_account_settings(const char* accountName, const char* provider, AS_FLAGS flags, const void* credentials, AccountSettings* out);
+AccountSettings* get_account_settings(const char* accountName, const char* provider, AS_FLAGS flags, const void* credentials);
+
+
+/** get the status of the account_settings
+ *
+ * @param account_settings  the account settings your want to get the status for
+ * @return the status. Only if it is AS_OK the other query functions will return useful results!
+ */
+AS_STATUS AS_get_status(AccountSettings* account_settings);
 
 
 typedef struct _as_provider
@@ -101,19 +116,66 @@ typedef struct _as_provider
 	const char* description; ///< a more verbose and human readable description of the provider
 } as_provider;
 
+
 /** get list of known ISPs
- *  @return a pointer to a static array of known providers. The array is terminated by a {NULL,NULL} entry.
+ *  @return  a pointer to a static array of known providers. The array is terminated by a {NULL,NULL} entry.
+             The pointer points to internal r/o data of the library, do not delete it!
  */
-const as_provider* get_known_providers();
+const as_provider* AS_get_known_providers();
 
 
 /** get provider
  *
  * @param  accountSettings  guess what
- * @return the provider associated with the accountSettings. The pointer points to internal r/o data in accountSettings, do not delete it!
+ * @return the provider associated with the accountSettings.
+           The pointer points to internal r/o data in accountSettings, do not delete it!
  */
-const as_provider* get_provider(const AccountSettings* accountSettings);
+const as_provider* AS_get_provider(const AccountSettings* accountSettings);
 
+
+/**  get the server settings for "incoming" messages (e.g. IMAP or POP3)
+ * @param  accountSettings  guess what
+ * @return the server for incoming messages associated with the accountSettings.
+           The pointer points to internal r/o data in accountSettings, do not delete it!
+ */
+const AS_Server* AS_get_incoming(const AccountSettings* as);
+
+
+/**  get the server settings for "outgoing" messages (e.g. SMTP)
+ * @param  accountSettings  guess what
+ * @return the server for outgoing messages associated with the accountSettings.
+           The pointer points to internal r/o data in accountSettings, do not delete it!
+ */
+const AS_Server* AS_get_outgoing(const AccountSettings* as);
+
+
+/**  get the hostname of the server
+ * @param  server  guess what
+ * @return the hostname (DNS name or IP literal) of the server.
+           The pointer points to internal r/o data in accountSettings, do not delete it!
+ */
+const char* AS_get_hostname(const AS_Server* server);
+
+
+/**  get the port number where the server provides its service
+ * @param  server  guess what
+ * @return the numerical port number
+ */
+int AS_get_port(const AS_Server* server);
+
+
+/**  get the access method that is provided by the server
+ * @param  server  guess what
+ * @return the combined access method (protocol, socket type, authentication type)
+ */
+AS_ACCESS AS_get_access_method(const AS_Server* server);
+
+
+/**  get the type of username is expected for authentication at the server
+ * @param  server  guess what
+ * @return the expected type of username
+ */
+AS_USERNAME AS_get_username(const AS_Server* server);
 
 
 #ifdef __cplusplus
