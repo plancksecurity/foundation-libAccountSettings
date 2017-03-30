@@ -3,10 +3,38 @@
 
 #include "account_settings_internal.hh"
 #include "tinyxml2.hh"
+#include "stringpool.hh"
 #include <iostream>
 #include <map>
 
 std::vector<AccountSettings> vas;
+
+StringPool SP;
+
+
+void pool_add(const std::string& s)
+{
+	SP.add(s);
+}
+
+void pool_add(const std::vector<std::string>& v)
+{
+	for(const auto& s:v) { SP.add(s); }
+}
+
+void pool_add(const Server& srv)
+{
+	SP.add(srv.name);
+}
+
+void pool_add(const AccountSettings& a)
+{
+	pool_add(a.id);
+	pool_add(a.displayName);
+	pool_add(a.domains);
+	pool_add(a.incoming);
+	pool_add(a.outgoing);
+}
 
 namespace tx = tinyxml2;
 
@@ -155,10 +183,15 @@ try{
 			as.outgoing = outgoingServers.front();
 		}
 		
+		pool_add(as);
 		std::cout << "\n" << as << std::flush;
-		std::cerr << "\n";
+		std::cerr << " pool_size=" << SP.size() << ".\n";
 		vas.push_back(std::move(as));
 	}
+	
+	SP.makePool();
+	std::cout << "\n ==== Pool ===\n\n";
+	SP.printPool(std::cout, "stringpool");
 }
 catch(std::runtime_error& e)
 {
