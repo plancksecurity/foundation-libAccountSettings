@@ -6,7 +6,7 @@
 
 #include "account_settings.h"
 #include <string>
-#include <vector>
+#include <set>
 #include <ostream>
 
 
@@ -22,7 +22,7 @@ struct AccountSettings
 {
 	std::string id;
 	std::string displayName;
-	std::vector<std::string> domains;
+	std::set<std::string> domains;
 	Server incoming;
 	Server outgoing;
 };

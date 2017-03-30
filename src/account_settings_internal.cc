@@ -16,10 +16,11 @@ std::ostream& operator<<(std::ostream& o, const AccountSettings& as)
 		"\t" << as.domains.size() << " domain" << (as.domains.size()==1 ? "" : "s");
 	if( as.domains.size()>0 && as.domains.size()<10)
 	{
-		o << ": " << as.domains[0];
-		for(unsigned u=1; u<as.domains.size(); ++u)
+		auto d = as.domains.cbegin();
+		o << ": " << *d;
+		for(; d != as.domains.cend(); ++d)
 		{
-			o << ", " << as.domains[u];
+			o << ", " << *d;
 		}
 	}
 	

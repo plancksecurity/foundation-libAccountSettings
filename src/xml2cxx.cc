@@ -6,6 +6,8 @@
 #include "stringpool.hh"
 #include <iostream>
 #include <map>
+#include <vector>
+
 
 std::vector<AccountSettings> vas;
 
@@ -17,7 +19,7 @@ void pool_add(const std::string& s)
 	SP.add(s);
 }
 
-void pool_add(const std::vector<std::string>& v)
+void pool_add(const std::set<std::string>& v)
 {
 	for(const auto& s:v) { SP.add(s); }
 }
@@ -93,12 +95,12 @@ std::string assignMember(const tx::XMLElement* elem, const char* memberName, con
 }
 
 
-std::vector<std::string> assignAllMembers(const tx::XMLElement* elem, const char* memberName)
+std::set<std::string> assignAllMembers(const tx::XMLElement* elem, const char* memberName)
 {
-	std::vector<std::string> v;
+	std::set<std::string> v;
 	for(const tx::XMLElement* e = elem->FirstChildElement(memberName); e!=nullptr; e=e->NextSiblingElement(memberName) )
 	{
-		v.emplace_back( e->GetText() );
+		v.emplace( e->GetText() );
 	}
 	return v;
 }
