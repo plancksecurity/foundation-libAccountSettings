@@ -9,7 +9,7 @@
 #include <set>
 #include <ostream>
 
-struct Server
+struct AS_Server
 {
 	const char* name;
 	int         port;
@@ -25,11 +25,11 @@ struct AccountSettings
 	AS_Type type;
 	const char* id;
 	const char* displayName;
-	Server incoming;
-	Server outgoing;
+	AS_Server incoming;
+	AS_Server outgoing;
 };
 
-std::ostream& operator<<(std::ostream& o, const Server& srv);
+std::ostream& operator<<(std::ostream& o, const AS_Server& srv);
 std::ostream& operator<<(std::ostream& o, const AccountSettings& as);
 
 #endif // ACCOUNT_SETTINGS_INTERNAL_HH

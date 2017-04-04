@@ -28,7 +28,7 @@ struct AS_Server;
  * Don't access the pointee after this call!
  * @param  account_settings  a pointer to an object created by get_account_settings() or a NULL pointer (which is a safe no-op).
  */
-void free_account_settings(AccountSettings* account_settings);
+void free_account_settings(const AccountSettings* account_settings);
 
 
 typedef enum _AS_STATUS
@@ -99,7 +99,7 @@ typedef enum _AS_USERNAME
  * @return             the requested settings or NULL (only in case of out-of-memory)
  *                     Don't forget to call free_account_settings() when the result is no longer needed. free_account_settings(NULL) is a safe no-op.
  */
-AccountSettings* get_account_settings(const char* accountName, const char* provider, AS_FLAGS flags, const void* credentials);
+const AccountSettings* get_account_settings(const char* accountName, const char* provider, AS_FLAGS flags, const void* credentials);
 
 
 /** get the status of the account_settings
