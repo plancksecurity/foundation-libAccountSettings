@@ -14,8 +14,8 @@ namespace account_settings
 
 	struct Domain2AS
 	{
-		const char* const domain;
-		const AccountSettings* as;
+		const unsigned domain_nr;
+		const unsigned as_nr;
 	};
 
 	extern const Domain2AS IspDB[];

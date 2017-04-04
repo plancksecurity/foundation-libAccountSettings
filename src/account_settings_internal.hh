@@ -17,9 +17,12 @@ struct Server
 	AS_USERNAME username;
 };
 
+
+enum class AS_Type { STATIC = 232323, DYNAMIC = 424242 };
+
 struct AccountSettings
 {
-	enum class Type { STATIC = 232323, DYNAMIC = 424242 } type;
+	AS_Type type;
 	const char* id;
 	const char* displayName;
 	Server incoming;

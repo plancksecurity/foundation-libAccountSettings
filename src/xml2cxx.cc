@@ -8,6 +8,7 @@
 #include <map>
 #include <vector>
 #include <tuple> // for std::tie().  :-)
+#include "isp_db.hh"
 
 
 // using std::string instead of const char*
@@ -320,27 +321,34 @@ try{
 	std::cout << "const AccountSettings AccountList[] = {\n";
 	for(const auto& as : ass)
 	{
-		std::cout << "\t{ AccountSettings::Type::STATIC, SP+" << SP.getOffset(as.id) << ", SP+" << SP.getOffset(as.displayName) << ",\n"
-			"\t\t{ SP+" << SP.getOffset(as.incoming.name) << ", " << as.incoming.port << ", AS_ACCESS(" << Hex(as.incoming.access) << "), AS_USERNAME(" << Hex(as.incoming.username) << ") },\n"
-			"\t\t{ SP+" << SP.getOffset(as.outgoing.name) << ", " << as.outgoing.port << ", AS_ACCESS(" << Hex(as.outgoing.access) << "), AS_USERNAME(" << Hex(as.outgoing.username) << ") }\n"
+		std::cout << "\t{ AS_Type::STATIC, SP+" << SP.getOffset(as.id) << ", SP+" << SP.getOffset(as.displayName) << ",\t// " << as.id << "\t" << as.displayName << "\n"
+			"\t\t{ SP+" << SP.getOffset(as.incoming.name) << ", " << as.incoming.port << ", AS_ACCESS(" << Hex(as.incoming.access) << "), AS_USERNAME(" << Hex(as.incoming.username) << ") },\t// " << as.incoming.name << "\n"
+			"\t\t{ SP+" << SP.getOffset(as.outgoing.name) << ", " << as.outgoing.port << ", AS_ACCESS(" << Hex(as.outgoing.access) << "), AS_USERNAME(" << Hex(as.outgoing.username) << ") }\t// " << as.outgoing.name << "\n"
 			"\t},\n";
 	}
 	
 	std::cout << "};\n\n"
 		"const unsigned AccountListSize = " << ass.size() << ";\n";
 
-	struct Domain2AS
+	std::cout << "const Domain2AS IspDB[] = {\n";
+	for(const auto& isp : isp_db)
 	{
-		const char* const domain;
-		const AccountSettings* as;
-	};
+		const auto account_offset = std::distance(ass.begin(), isp.second);
+		std::cout << "\t{ " << SP.getOffset(isp.first) << ", " << account_offset << "},\t// " << isp.first << "\n";
+	}
 
-	extern const Domain2AS* const IspDB;
-	extern const Domain2AS* const IspDBEnd;
+	std::cout << "};\n\n"
+		"const unsigned IspDBSize = " << isp_db.size() << ";\n\n";
 
-
-	std::cout << "\n} // end of namespace account_settings.\n\n";
+	const unsigned string_pool_size = SP.size();
+	const unsigned ass_size = ass.size()*sizeof(AccountSettings);
+	const unsigned isp_size = isp_db.size()*sizeof(account_settings::Domain2AS);
 	
+	std::cout << "\n} // end of namespace account_settings.\n\n"
+		"// sizeof(Domain2AS) = " << sizeof(account_settings::Domain2AS) << "\n"
+		"// sizeof(AccountSettings) = " << sizeof(AccountSettings) << "\n"
+		"// Data size: " << string_pool_size << " + " << ass_size << " + " << isp_size << " = " << (string_pool_size+ass_size+isp_size) << " Bytes.\n"
+		"// ===<End of generated file>===\n\n";
 }
 catch(std::runtime_error& e)
 {
