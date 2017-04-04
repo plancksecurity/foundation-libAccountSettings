@@ -28,6 +28,8 @@ AccountSettings* create_dynamic_account_settings()
 //
 /////////////////////////
 
+using namespace account_settings;
+
 
 void free_account_settings(const AccountSettings* account_settings)
 {
