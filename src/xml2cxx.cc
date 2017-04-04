@@ -7,9 +7,61 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <tuple> // for std::tie().  :-)
 
 
-std::vector<AccountSettings> vas;
+std::vector<AccountSettings> vas, vas2;
+
+bool operator<(const Server& a, const Server& b)
+{
+	return std::tie(a.name, a.port, a.access, a.username, a.port) < std::tie(b.name, b.port, b.access, b.username, b.port);
+}
+
+bool operator==(const Server& a, const Server& b)
+{
+	return std::tie(a.name, a.port, a.access, a.username, a.port) == std::tie(b.name, b.port, b.access, b.username, b.port);
+}
+
+
+bool operator<(const AccountSettings& a, const AccountSettings& b)
+{
+	return std::tie(a.incoming, a.outgoing, a.domains) < std::tie(b.incoming, b.outgoing, b.domains);
+}
+
+
+bool SameServers(const AccountSettings& a, const AccountSettings& b)
+{
+	return (a.incoming == b.incoming) && (a.outgoing == b.outgoing);
+}
+
+void AS_Merge(AccountSettings& merge, const AccountSettings& as)
+{
+	if(!SameServers(merge,as))
+	{
+		throw std::runtime_error("Different servers in AccountSettings!");
+	}
+	
+	merge.domains.insert(as.domains.begin(), as.domains.end());
+}
+
+// adjacent merge
+template<class InputIter, class OutputIter, class Compare, class Merge>
+void adjacent_merge(InputIter begin, InputIter end, OutputIter out, Compare comp, Merge merge)
+{
+	while(begin!=end)
+	{
+		auto m = *begin;
+		++begin;
+		while( begin!=end && comp(m,*begin) )
+		{
+			merge(m, *begin);
+			++begin;
+		}
+		
+		*out = std::move(m);
+		++out;
+	}
+}
 
 StringPool SP;
 
@@ -190,6 +242,19 @@ try{
 		std::cerr << " pool_size=" << SP.size() << ".\n";
 		vas.push_back(std::move(as));
 	}
+	
+	std::sort(vas.begin(), vas.end());
+	adjacent_merge( vas.begin(), vas.end(), std::back_inserter(vas2), &SameServers, &AS_Merge);
+	
+	std::cout << "There are " << vas.size() << " entries originally, after merge there are " << vas2.size() << " entries.\n";
+	unsigned nr_of_domains=0;
+	std::set<std::string> domains;
+	for(const auto& v: vas2)
+	{
+		nr_of_domains += v.domains.size();
+		domains.insert(v.domains.begin(), v.domains.end());
+	}
+	std::cout << "There are data for " << domains.size() << " (" << nr_of_domains << ") domains.\n";
 	
 	SP.makePool();
 	std::cout << "\n ==== Pool ===\n\n";
