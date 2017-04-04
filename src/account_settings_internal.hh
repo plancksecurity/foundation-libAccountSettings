@@ -18,11 +18,11 @@ struct AS_Server
 };
 
 
-enum class AS_Type { STATIC = 232323, DYNAMIC = 424242 };
+enum AS_Type { STATIC = 0x23000, DYNAMIC = 0x42000, MASK = 0xFF000 };
 
 struct AccountSettings
 {
-	AS_Type type;
+	AS_Type type; // type & status
 	const char* id;
 	const char* displayName;
 	AS_Server incoming;

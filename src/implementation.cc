@@ -33,14 +33,16 @@ using namespace account_settings;
 
 void free_account_settings(const AccountSettings* account_settings)
 {
-	switch(account_settings->type)
+	const unsigned type = (account_settings->type & AS_Type::MASK);
+	if(type == AS_Type::STATIC)
 	{
-		case AS_Type::STATIC : // do nothing
-			return;
-		case AS_Type::DYNAMIC :
-			delete[] account_settings->id; // all strings are in that array :-)
-			delete   account_settings;
-			return;
+		// nothing to do
+		return;
+	}else if(type == AS_Type::DYNAMIC)
+	{
+		delete[] account_settings->id; // all strings are in that array :-)
+		delete   account_settings;
+		return;
 	}
 	throw std::runtime_error("free_account_settings: illegal account settings type!");
 }
@@ -52,7 +54,7 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	const auto at_sign = ac.rfind('@');
 	const std::string domain = at_sign!=std::string::npos ? ac.substr(at_sign+1) : "";
 	
-	// linear search for domain names. might be replaced by binary search some day, but for <1000 domains: is it worth, yet?
+	// FIXME: it does a linear search for domain names, yet. Might be replaced by binary search some day, but for <1000 domains: is it worth?
 	for(auto isp = IspDB; isp!= IspDB+IspDBSize; ++isp)
 	{
 		if( domain == StringPool + isp->domain_nr )
@@ -62,6 +64,52 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	}
 	
 	AccountSettings* dyn_as = create_dynamic_account_settings();
+
+	// TODO
+	//  - implement heuristics
+	//  - implement automx
+	//  - fetch from Mozilla's DB (still necessary when we have their data already in our local DB?)
 	
 	return dyn_as;
+}
+
+
+AS_STATUS AS_get_status(AccountSettings* account_settings)
+{
+	return account_settings ? AS_STATUS(account_settings->type & ~AS_Type::MASK) : AS_ILLEGAL_VALUE;
+}
+
+
+const AS_Server* AS_get_incoming(const AccountSettings* as)
+{
+	return &as->incoming;
+}
+
+const AS_Server* AS_get_outgoing(const AccountSettings* as)
+{
+	return &as->outgoing;
+}
+
+
+const char* AS_get_hostname(const AS_Server* server)
+{
+	return server->name;
+}
+
+
+int AS_get_port(const AS_Server* server)
+{
+	return server->port;
+}
+
+
+AS_ACCESS AS_get_access_method(const AS_Server* server)
+{
+	return server->access;
+}
+
+
+AS_USERNAME AS_get_username(const AS_Server* server)
+{
+	return server->username;
 }

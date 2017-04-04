@@ -33,10 +33,10 @@ void free_account_settings(const AccountSettings* account_settings);
 
 typedef enum _AS_STATUS
 {
-	AS_OK            = 0,     ///< account settings were found (or guessed). Please go on and query them. :-)
-	AS_TIMEOUT       = -900,  ///< the query to a remote service to get the account settings timed out. You might try it again later.
-	AS_NOT_FOUND     = -950,  ///< for the given parameters & flags no account settings could be found
-	AS_ILLEGAL_VALUE = -999,  ///< one or more parameters of get_account_settings() was/were invalid
+	AS_OK            = 0,    ///< account settings were found (or guessed). Please go on and query them. :-)
+	AS_TIMEOUT       = 900,  ///< the query to a remote service to get the account settings timed out. You might try it again later.
+	AS_NOT_FOUND     = 950,  ///< for the given parameters & flags no account settings could be found
+	AS_ILLEGAL_VALUE = 999,  ///< one or more parameters of get_account_settings() was/were invalid
 } AS_STATUS;
 
 
