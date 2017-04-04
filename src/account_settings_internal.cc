@@ -1,4 +1,5 @@
 #include "account_settings_internal.hh"
+#include "isp_db.hh"
 #include <cstdio>
 
 
@@ -12,20 +13,11 @@ std::ostream& operator<<(std::ostream& o, const Server& srv)
 
 std::ostream& operator<<(std::ostream& o, const AccountSettings& as)
 {
-	o << "{ id=\"" << as.id << "\", name=\"" << as.displayName << "\",\n"
-		"\t" << as.domains.size() << " domain" << (as.domains.size()==1 ? "" : "s");
-	if( as.domains.size()>0 && as.domains.size()<10)
-	{
-		auto d = as.domains.cbegin();
-		o << ": " << *d;
-		for(; d != as.domains.cend(); ++d)
-		{
-			o << ", " << *d;
-		}
-	}
+	o << "{ type=" << unsigned(as.type) << ", id=\"" << as.id << "\", name=\"" << as.displayName << "\",\n";
 	
 	return o << ".\n"
 		"\tIncoming: " << as.incoming << "\n"
 		"\tOutgoing: " << as.outgoing << "\n"
 		"}\n";
 }
+

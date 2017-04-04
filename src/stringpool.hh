@@ -22,6 +22,8 @@ public:
 	void add(const std::string& s);
 	void makePool();
 	
+	unsigned getOffset(const std::string& s) const { return offset_map.at(s).offset; }
+	
 	size_t size() const { return length; }
 	
 	void printPool(std::ostream& o, const std::string& name) const;

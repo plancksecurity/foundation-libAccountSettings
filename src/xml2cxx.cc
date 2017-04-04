@@ -10,39 +10,76 @@
 #include <tuple> // for std::tie().  :-)
 
 
-std::vector<AccountSettings> vas, vas2;
+// using std::string instead of const char*
+struct ServerS
+{
+	std::string name;
+	int         port = -1;
+	AS_ACCESS   access = AS_ACCESS(-1);
+	AS_USERNAME username = AS_USERNAME(-1);
+};
 
-bool operator<(const Server& a, const Server& b)
+struct AccountSettingsS
+{
+	std::string id;
+	std::string displayName;
+	ServerS incoming;
+	ServerS outgoing;
+};
+
+std::ostream& operator<<(std::ostream& o, const ServerS& srv)
+{
+	char buffer[48] = {0};
+	snprintf(buffer, 47, "access=0x%x, user=0x%x", srv.access, srv.username);
+	return o << "{ " << buffer << ", port=" << srv.port << ", name=\"" << srv.name << "\"}";
+}
+
+std::ostream& operator<<(std::ostream& o, const AccountSettingsS& as)
+{
+	o << "{ id=\"" << as.id << "\", name=\"" << as.displayName << "\",\n";
+	
+	return o << ".\n"
+		"\tIncoming: " << as.incoming << "\n"
+		"\tOutgoing: " << as.outgoing << "\n"
+		"}\n";
+}
+
+
+
+bool operator<(const ServerS& a, const ServerS& b)
 {
 	return std::tie(a.name, a.port, a.access, a.username, a.port) < std::tie(b.name, b.port, b.access, b.username, b.port);
 }
 
-bool operator==(const Server& a, const Server& b)
+bool operator==(const ServerS& a, const ServerS& b)
 {
 	return std::tie(a.name, a.port, a.access, a.username, a.port) == std::tie(b.name, b.port, b.access, b.username, b.port);
 }
 
-
-bool operator<(const AccountSettings& a, const AccountSettings& b)
+bool operator<(const AccountSettingsS& a, const AccountSettingsS& b)
 {
-	return std::tie(a.incoming, a.outgoing, a.domains) < std::tie(b.incoming, b.outgoing, b.domains);
+	return std::tie(a.id, a.displayName, a.incoming, a.outgoing) < std::tie(a.id, a.displayName, b.incoming, b.outgoing);
 }
 
-
-bool SameServers(const AccountSettings& a, const AccountSettings& b)
+bool operator!=(const AccountSettingsS& a, const AccountSettingsS& b)
 {
-	return (a.incoming == b.incoming) && (a.outgoing == b.outgoing);
+	return std::tie(a.id, a.displayName, a.incoming, a.outgoing) != std::tie(a.id, a.displayName, b.incoming, b.outgoing);
 }
 
-void AS_Merge(AccountSettings& merge, const AccountSettings& as)
+std::string Hex(unsigned u)
 {
-	if(!SameServers(merge,as))
-	{
-		throw std::runtime_error("Different servers in AccountSettings!");
-	}
-	
-	merge.domains.insert(as.domains.begin(), as.domains.end());
+	char buf[32];
+	snprintf(buf,31, "0x%x", u);
+	return buf;
 }
+
+typedef std::set<AccountSettingsS> AccountSettingsSet;
+AccountSettingsSet ass;
+
+std::set<std::string> problem_domains;
+
+std::map<std::string, AccountSettingsSet::const_iterator> isp_db;
+
 
 // adjacent merge
 template<class InputIter, class OutputIter, class Compare, class Merge>
@@ -63,8 +100,8 @@ void adjacent_merge(InputIter begin, InputIter end, OutputIter out, Compare comp
 	}
 }
 
-StringPool SP;
 
+StringPool SP;
 
 void pool_add(const std::string& s)
 {
@@ -76,16 +113,15 @@ void pool_add(const std::set<std::string>& v)
 	for(const auto& s:v) { SP.add(s); }
 }
 
-void pool_add(const Server& srv)
+void pool_add(const ServerS& srv)
 {
 	SP.add(srv.name);
 }
 
-void pool_add(const AccountSettings& a)
+void pool_add(const AccountSettingsS& a)
 {
 	pool_add(a.id);
 	pool_add(a.displayName);
-	pool_add(a.domains);
 	pool_add(a.incoming);
 	pool_add(a.outgoing);
 }
@@ -157,12 +193,12 @@ std::set<std::string> assignAllMembers(const tx::XMLElement* elem, const char* m
 	return v;
 }
 
-std::vector<Server> assignServers(const tx::XMLElement* elem, const char* memberName)
+std::vector<ServerS> assignServers(const tx::XMLElement* elem, const char* memberName)
 {
-	std::vector<Server> v;
+	std::vector<ServerS> v;
 	for(const tx::XMLElement* e = elem->FirstChildElement(memberName); e!=nullptr; e=e->NextSiblingElement(memberName) )
 	{
-		Server server;
+		ServerS server;
 		unsigned access = 0;
 		const std::string type = e->Attribute("type");
 		access |= mproto.at(type);
@@ -183,7 +219,7 @@ std::vector<Server> assignServers(const tx::XMLElement* elem, const char* member
 }
 
 
-bool serverPreference(const Server& a, const Server& b)
+bool serverPreference(const ServerS& a, const ServerS& b)
 {
 	// TODO: define a proper preference
 	return a.access > b.access;
@@ -211,7 +247,8 @@ try{
 			continue;
 		}
 		
-		AccountSettings as;
+		AccountSettingsS as;
+		
 		
 		const char* id = emailProvider->Attribute("id");
 		if(id==nullptr)
@@ -222,15 +259,17 @@ try{
 			std::cerr << "id=" << as.id;
 		}
 		as.displayName = assignMember(emailProvider, "displayName", "No displayName member");
-		as.domains = assignAllMembers(emailProvider, "domain");
-		std::vector<Server> incomingServers = assignServers(emailProvider, "incomingServer");
+		
+		const std::set<std::string> domains = assignAllMembers(emailProvider, "domain");
+		
+		std::vector<ServerS> incomingServers = assignServers(emailProvider, "incomingServer");
 		std::sort(incomingServers.begin(), incomingServers.end(), &serverPreference);
 		if(incomingServers.size()>0)
 		{
 			as.incoming = incomingServers.front();
 		}
 		
-		std::vector<Server> outgoingServers = assignServers(emailProvider, "outgoingServer");
+		std::vector<ServerS> outgoingServers = assignServers(emailProvider, "outgoingServer");
 		std::sort(outgoingServers.begin(), outgoingServers.end(), &serverPreference);
 		if(outgoingServers.size()>0)
 		{
@@ -238,27 +277,70 @@ try{
 		}
 		
 		pool_add(as);
-		std::cout << "\n" << as << std::flush;
+		pool_add(domains);
+		
+		const auto r = ass.insert(as);
+		std::cerr << (r.second ? "NEW" : "known") << " settings ";
+		if(domains.empty())
+		{
+			std::cerr << " PROBLEM: empty domain list! ";
+		}
+		for(const auto& domain : domains)
+		{
+			auto iter = isp_db.find(domain);
+			if(iter==isp_db.end())
+			{
+				isp_db.emplace( domain, r.first );
+			}else{
+				if(*iter->second != as)
+				{
+					std::cerr << " PROBLEM: domain \"" << domain << "\" has conflicting server entries!:\n"
+						"\t old: " << *iter->second << ", new:" << as << "\n";
+					
+					problem_domains.insert(domain);
+				}
+			}
+		}
+		
 		std::cerr << " pool_size=" << SP.size() << ".\n";
-		vas.push_back(std::move(as));
 	}
 	
-	std::sort(vas.begin(), vas.end());
-	adjacent_merge( vas.begin(), vas.end(), std::back_inserter(vas2), &SameServers, &AS_Merge);
-	
-	std::cout << "There are " << vas.size() << " entries originally, after merge there are " << vas2.size() << " entries.\n";
-	unsigned nr_of_domains=0;
-	std::set<std::string> domains;
-	for(const auto& v: vas2)
-	{
-		nr_of_domains += v.domains.size();
-		domains.insert(v.domains.begin(), v.domains.end());
-	}
-	std::cout << "There are data for " << domains.size() << " (" << nr_of_domains << ") domains.\n";
+	std::cerr << "There are " << ass.size() << " entries for " << isp_db.size() << " domains.\n";
+	std::cerr << problem_domains.size() << " problematic domains with conflicting entries.\n";
 	
 	SP.makePool();
-	std::cout << "\n ==== Pool ===\n\n";
-	SP.printPool(std::cout, "stringpool");
+	std::cout << "// ==== Auto generated ISP DB. ===\n"
+		"#include \"isp_db.hh\"\n\n"
+		"namespace account_settings {\n\n";
+	
+	SP.printPool(std::cout, "StringPool");
+	
+	// write account settings list
+	std::cout << "static const char* const SP = StringPool;\n\n";
+	std::cout << "const AccountSettings AccountList[] = {\n";
+	for(const auto& as : ass)
+	{
+		std::cout << "\t{ AccountSettings::Type::STATIC, SP+" << SP.getOffset(as.id) << ", SP+" << SP.getOffset(as.displayName) << ",\n"
+			"\t\t{ SP+" << SP.getOffset(as.incoming.name) << ", " << as.incoming.port << ", AS_ACCESS(" << Hex(as.incoming.access) << "), AS_USERNAME(" << Hex(as.incoming.username) << ") },\n"
+			"\t\t{ SP+" << SP.getOffset(as.outgoing.name) << ", " << as.outgoing.port << ", AS_ACCESS(" << Hex(as.outgoing.access) << "), AS_USERNAME(" << Hex(as.outgoing.username) << ") }\n"
+			"\t},\n";
+	}
+	
+	std::cout << "};\n\n"
+		"const unsigned AccountListSize = " << ass.size() << ";\n";
+
+	struct Domain2AS
+	{
+		const char* const domain;
+		const AccountSettings* as;
+	};
+
+	extern const Domain2AS* const IspDB;
+	extern const Domain2AS* const IspDBEnd;
+
+
+	std::cout << "\n} // end of namespace account_settings.\n\n";
+	
 }
 catch(std::runtime_error& e)
 {

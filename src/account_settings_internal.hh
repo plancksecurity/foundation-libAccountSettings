@@ -9,20 +9,19 @@
 #include <set>
 #include <ostream>
 
-
 struct Server
 {
-	std::string name;
-	int         port = -1;
-	AS_ACCESS   access = AS_ACCESS(-1);
-	AS_USERNAME username = AS_USERNAME(-1);
+	const char* name;
+	int         port;
+	AS_ACCESS   access;
+	AS_USERNAME username;
 };
 
 struct AccountSettings
 {
-	std::string id;
-	std::string displayName;
-	std::set<std::string> domains;
+	enum class Type { STATIC = 232323, DYNAMIC = 424242 } type;
+	const char* id;
+	const char* displayName;
 	Server incoming;
 	Server outgoing;
 };

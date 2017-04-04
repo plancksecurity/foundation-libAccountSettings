@@ -35,7 +35,7 @@ void StringPool::makePool()
 
 void StringPool::printPool(std::ostream& o, const std::string& name) const
 {
-	o << "const char* " << name << " = \"";
+	o << "const char* const " << name << " = \"";
 	bool need_linebreak = false;
 	bool can_linebreak = true;
 	
@@ -84,5 +84,6 @@ void StringPool::printPool(std::ostream& o, const std::string& name) const
 	}
 	
 	o << "\";\n\n"
-		"const unsigned " << name << "_size = " << pool.size() << ";\n" << std::endl;
+		"const char* const " << name << "End = " << name << " + " << pool.size() << ";\n"
+		"const unsigned " << name << "Size = " << pool.size() << ";\n" << std::endl;
 }
