@@ -70,8 +70,7 @@ typedef enum _AS_ACCESS
 	/// authentication types
 	AS_AUTH_NONE          = 0x00100,
 	AS_AUTH_CLIENT_IP     = 0x00500,
-	AS_AUTH_PLAIN         = 0x01000,  // TODO: is "plain" and "password-cleartext" the same?
-	AS_AUTH_PW_CLEARTEXT  = 0x01100,
+	AS_AUTH_PW_CLEARTEXT  = 0x01000,  ///< was written as "plain" in older XML files
 	AS_AUTH_PW_ENCRYPTED  = 0x02000,
 	AS_AUTH_OAUTH2        = 0x05000,
 	AS_AUTH_BITMASK       = 0x0FF00,  ///< bitmask for AS_AUTH...

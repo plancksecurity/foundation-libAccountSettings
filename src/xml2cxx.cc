@@ -150,7 +150,7 @@ const std::map<std::string, unsigned> mauth =
 		// authentication
 		{"none"              , AS_AUTH_NONE},
 		{"client-IP-address" , AS_AUTH_CLIENT_IP},
-		{"plain"             , AS_AUTH_PLAIN}, // is it the same as "password-cleartext"?
+		{"plain"             , AS_AUTH_PW_CLEARTEXT}, // older name for "password-cleartext"
 		{"password-cleartext", AS_AUTH_PW_CLEARTEXT},
 		{"password-encrypted", AS_AUTH_PW_ENCRYPTED},
 		{"OAuth2"            , AS_AUTH_OAUTH2},
