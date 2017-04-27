@@ -1,8 +1,10 @@
-.PHONY: all clear
+.PHONY: all clear isp_db
 
 CXX=c++ -Wall -O3  -std=c++11 -g -I../include/
 
-all: xml2cxx libAccountSettings.a
+all: libAccountSettings.a
+
+isp_db: isp_db.cc
 
 isp_db.cc: xml2cxx
 	./xml2cxx ../../autoconfig/* > $@
@@ -19,6 +21,5 @@ libAccountSettings.a: account_settings_internal.o implementation.o isp_db.o
 clean:
 	rm -vf *.o \
 		*.a \
-		isp_db.cc \
 		xml2cxx
 

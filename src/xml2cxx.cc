@@ -8,6 +8,7 @@
 #include <map>
 #include <vector>
 #include <tuple> // for std::tie().  :-)
+#include <algorithm>
 #include "isp_db.hh"
 
 
