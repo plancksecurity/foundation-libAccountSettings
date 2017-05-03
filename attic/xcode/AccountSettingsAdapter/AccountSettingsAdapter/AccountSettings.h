@@ -13,7 +13,7 @@
 #import "AccountSettingsProvider.h"
 
 
-@interface AccountSettings : NSObject
+@interface AccountSettings: NSObject
 
 /**
  Constructor for the object that wraps account configuration functions
@@ -22,9 +22,10 @@
  flags: the way that the account settings object will retrive the account settings
  credentials:  might be necessary to retrieve the account settings. Depends on flags, may be NULL.
  */
-+ (id _Nonnull )accountSettingsWithAccountName:(nonnull NSString*)accountName
-                            provider:(NSString*_Nullable)provider
-                               flags:(AS_FLAGS)flags credentials:(void*_Nullable)credentials;
++ (AccountSettings * _Nullable)accountSettingsWithAccountName:(NSString * _Nonnull)accountName
+                                                     provider:(NSString * _Nullable)provider
+                                                        flags:(AS_FLAGS)flags
+                                                  credentials:(void * _Nullable)credentials;
 
 /**
  wrap method for Release any memory that might be occupied by dynamically created AccountSetting objects.
@@ -39,17 +40,17 @@
 /**
  wrap method for get provider
  */
-- (AccountSettingsProvider *_Nonnull)getProvider;
+- (AccountSettingsProvider * _Nonnull)getProvider;
 
 /**
  wrap method for get the server settings for "incoming" messages
  */
-- (AccountSettingsServer *_Nonnull)getIncoming;
+- (AccountSettingsServer * _Nonnull)getIncoming;
 
 /**
  wrap method for get the server settings for "outgoing" messages
  */
-- (AccountSettingsServer *_Nonnull)getOutgoing;
+- (AccountSettingsServer * _Nonnull)getOutgoing;
 
 @end
 
