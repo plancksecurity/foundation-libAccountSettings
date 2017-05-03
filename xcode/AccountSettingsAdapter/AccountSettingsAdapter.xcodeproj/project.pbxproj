@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43018BE61EB99FF1004ABF26 /* account_settings_internal.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BDF1EB99FF1004ABF26 /* account_settings_internal.cc */; };
+		43018BE71EB99FF1004ABF26 /* accountSettings_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE01EB99FF1004ABF26 /* accountSettings_test.cc */; };
+		43018BE81EB99FF1004ABF26 /* implementation.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE11EB99FF1004ABF26 /* implementation.cc */; };
+		43018BE91EB99FF1004ABF26 /* isp_db.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE21EB99FF1004ABF26 /* isp_db.cc */; };
+		43018BEA1EB99FF1004ABF26 /* stringpool.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE31EB99FF1004ABF26 /* stringpool.cc */; };
+		43018BEB1EB99FF1004ABF26 /* tinyxml2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE41EB99FF1004ABF26 /* tinyxml2.cc */; };
+		43018BEC1EB99FF1004ABF26 /* xml2cxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE51EB99FF1004ABF26 /* xml2cxx.cc */; };
 		B7E050321EB2491E006EC1EC /* AccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E050311EB2491E006EC1EC /* AccountSettings.m */; };
 		B7E050331EB2491E006EC1EC /* AccountSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7E050301EB2491E006EC1EC /* AccountSettings.h */; };
-		B7E0505D1EB37C71006EC1EC /* account_settings_internal.cc in Sources */ = {isa = PBXBuildFile; fileRef = B7E050521EB37C71006EC1EC /* account_settings_internal.cc */; };
-		B7E0505E1EB37C71006EC1EC /* implementation.cc in Sources */ = {isa = PBXBuildFile; fileRef = B7E050541EB37C71006EC1EC /* implementation.cc */; };
-		B7E0505F1EB37C71006EC1EC /* isp_db.cc in Sources */ = {isa = PBXBuildFile; fileRef = B7E050551EB37C71006EC1EC /* isp_db.cc */; };
-		B7E050601EB37C71006EC1EC /* stringpool.cc in Sources */ = {isa = PBXBuildFile; fileRef = B7E050571EB37C71006EC1EC /* stringpool.cc */; };
-		B7E050611EB37C71006EC1EC /* tinyxml2.cc in Sources */ = {isa = PBXBuildFile; fileRef = B7E050591EB37C71006EC1EC /* tinyxml2.cc */; };
-		B7E050621EB37C71006EC1EC /* xml2cxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = B7E0505B1EB37C71006EC1EC /* xml2cxx.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,23 +32,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		43018BDF1EB99FF1004ABF26 /* account_settings_internal.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = account_settings_internal.cc; path = ../../src/account_settings_internal.cc; sourceTree = "<group>"; };
+		43018BE01EB99FF1004ABF26 /* accountSettings_test.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = accountSettings_test.cc; path = ../../src/accountSettings_test.cc; sourceTree = "<group>"; };
+		43018BE11EB99FF1004ABF26 /* implementation.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = implementation.cc; path = ../../src/implementation.cc; sourceTree = "<group>"; };
+		43018BE21EB99FF1004ABF26 /* isp_db.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = isp_db.cc; path = ../../src/isp_db.cc; sourceTree = "<group>"; };
+		43018BE31EB99FF1004ABF26 /* stringpool.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stringpool.cc; path = ../../src/stringpool.cc; sourceTree = "<group>"; };
+		43018BE41EB99FF1004ABF26 /* tinyxml2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cc; path = ../../src/tinyxml2.cc; sourceTree = "<group>"; };
+		43018BE51EB99FF1004ABF26 /* xml2cxx.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xml2cxx.cc; path = ../../src/xml2cxx.cc; sourceTree = "<group>"; };
+		43018BED1EB99FFE004ABF26 /* account_settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = account_settings.h; path = ../../include/account_settings.h; sourceTree = "<group>"; };
+		43018BEF1EB9A05A004ABF26 /* account_settings_internal.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = account_settings_internal.hh; path = ../../src/account_settings_internal.hh; sourceTree = "<group>"; };
+		43018BF01EB9A05A004ABF26 /* accountSettings_test.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = accountSettings_test.hh; path = ../../src/accountSettings_test.hh; sourceTree = "<group>"; };
+		43018BF11EB9A05A004ABF26 /* isp_db.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = isp_db.hh; path = ../../src/isp_db.hh; sourceTree = "<group>"; };
+		43018BF21EB9A05A004ABF26 /* stringpool.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stringpool.hh; path = ../../src/stringpool.hh; sourceTree = "<group>"; };
+		43018BF31EB9A05A004ABF26 /* tinyxml2.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tinyxml2.hh; path = ../../src/tinyxml2.hh; sourceTree = "<group>"; };
+		43018BF41EB9A05A004ABF26 /* xml2cxx.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xml2cxx.hh; path = ../../src/xml2cxx.hh; sourceTree = "<group>"; };
 		B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAccountSettingsAdapter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E050301EB2491E006EC1EC /* AccountSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettings.h; sourceTree = "<group>"; };
 		B7E050311EB2491E006EC1EC /* AccountSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountSettings.m; sourceTree = "<group>"; };
-		B7E050391EB2493E006EC1EC /* account_settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = account_settings.h; path = ../../../../libAccountSettings/include/account_settings.h; sourceTree = "<group>"; };
 		B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettingsServer.h; sourceTree = "<group>"; };
 		B7E050511EB34B84006EC1EC /* AccountSettingsProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettingsProvider.h; sourceTree = "<group>"; };
-		B7E050521EB37C71006EC1EC /* account_settings_internal.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = account_settings_internal.cc; path = ../../../../libAccountSettings/src/account_settings_internal.cc; sourceTree = "<group>"; };
-		B7E050531EB37C71006EC1EC /* account_settings_internal.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = account_settings_internal.hh; path = ../../../../libAccountSettings/src/account_settings_internal.hh; sourceTree = "<group>"; };
-		B7E050541EB37C71006EC1EC /* implementation.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = implementation.cc; path = ../../../../libAccountSettings/src/implementation.cc; sourceTree = "<group>"; };
-		B7E050551EB37C71006EC1EC /* isp_db.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = isp_db.cc; path = ../../../../libAccountSettings/src/isp_db.cc; sourceTree = "<group>"; };
-		B7E050561EB37C71006EC1EC /* isp_db.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = isp_db.hh; path = ../../../../libAccountSettings/src/isp_db.hh; sourceTree = "<group>"; };
-		B7E050571EB37C71006EC1EC /* stringpool.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stringpool.cc; path = ../../../../libAccountSettings/src/stringpool.cc; sourceTree = "<group>"; };
-		B7E050581EB37C71006EC1EC /* stringpool.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stringpool.hh; path = ../../../../libAccountSettings/src/stringpool.hh; sourceTree = "<group>"; };
-		B7E050591EB37C71006EC1EC /* tinyxml2.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tinyxml2.cc; path = ../../../../libAccountSettings/src/tinyxml2.cc; sourceTree = "<group>"; };
-		B7E0505A1EB37C71006EC1EC /* tinyxml2.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tinyxml2.hh; path = ../../../../libAccountSettings/src/tinyxml2.hh; sourceTree = "<group>"; };
-		B7E0505B1EB37C71006EC1EC /* xml2cxx.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = xml2cxx.cc; path = ../../../../libAccountSettings/src/xml2cxx.cc; sourceTree = "<group>"; };
-		B7E0505C1EB37C71006EC1EC /* xml2cxx.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xml2cxx.hh; path = ../../../../libAccountSettings/src/xml2cxx.hh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43018BEE1EB9A02B004ABF26 /* include_internal */ = {
+			isa = PBXGroup;
+			children = (
+				43018BEF1EB9A05A004ABF26 /* account_settings_internal.hh */,
+				43018BF01EB9A05A004ABF26 /* accountSettings_test.hh */,
+				43018BF11EB9A05A004ABF26 /* isp_db.hh */,
+				43018BF21EB9A05A004ABF26 /* stringpool.hh */,
+				43018BF31EB9A05A004ABF26 /* tinyxml2.hh */,
+				43018BF41EB9A05A004ABF26 /* xml2cxx.hh */,
+			);
+			name = include_internal;
+			sourceTree = "<group>";
+		};
 		B7E050241EB2491E006EC1EC = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +110,7 @@
 			children = (
 				B7E0503C1EB24973006EC1EC /* src */,
 				B7E0503B1EB24968006EC1EC /* Include */,
+				43018BEE1EB9A02B004ABF26 /* include_internal */,
 			);
 			name = AccountSettingsLibrary;
 			sourceTree = "<group>";
@@ -101,7 +118,7 @@
 		B7E0503B1EB24968006EC1EC /* Include */ = {
 			isa = PBXGroup;
 			children = (
-				B7E050391EB2493E006EC1EC /* account_settings.h */,
+				43018BED1EB99FFE004ABF26 /* account_settings.h */,
 			);
 			name = Include;
 			sourceTree = "<group>";
@@ -109,17 +126,13 @@
 		B7E0503C1EB24973006EC1EC /* src */ = {
 			isa = PBXGroup;
 			children = (
-				B7E050521EB37C71006EC1EC /* account_settings_internal.cc */,
-				B7E050531EB37C71006EC1EC /* account_settings_internal.hh */,
-				B7E050541EB37C71006EC1EC /* implementation.cc */,
-				B7E050551EB37C71006EC1EC /* isp_db.cc */,
-				B7E050561EB37C71006EC1EC /* isp_db.hh */,
-				B7E050571EB37C71006EC1EC /* stringpool.cc */,
-				B7E050581EB37C71006EC1EC /* stringpool.hh */,
-				B7E050591EB37C71006EC1EC /* tinyxml2.cc */,
-				B7E0505A1EB37C71006EC1EC /* tinyxml2.hh */,
-				B7E0505B1EB37C71006EC1EC /* xml2cxx.cc */,
-				B7E0505C1EB37C71006EC1EC /* xml2cxx.hh */,
+				43018BDF1EB99FF1004ABF26 /* account_settings_internal.cc */,
+				43018BE01EB99FF1004ABF26 /* accountSettings_test.cc */,
+				43018BE11EB99FF1004ABF26 /* implementation.cc */,
+				43018BE21EB99FF1004ABF26 /* isp_db.cc */,
+				43018BE31EB99FF1004ABF26 /* stringpool.cc */,
+				43018BE41EB99FF1004ABF26 /* tinyxml2.cc */,
+				43018BE51EB99FF1004ABF26 /* xml2cxx.cc */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -182,13 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E050601EB37C71006EC1EC /* stringpool.cc in Sources */,
-				B7E050621EB37C71006EC1EC /* xml2cxx.cc in Sources */,
-				B7E0505E1EB37C71006EC1EC /* implementation.cc in Sources */,
 				B7E050321EB2491E006EC1EC /* AccountSettings.m in Sources */,
-				B7E0505F1EB37C71006EC1EC /* isp_db.cc in Sources */,
-				B7E050611EB37C71006EC1EC /* tinyxml2.cc in Sources */,
-				B7E0505D1EB37C71006EC1EC /* account_settings_internal.cc in Sources */,
+				43018BE61EB99FF1004ABF26 /* account_settings_internal.cc in Sources */,
+				43018BEA1EB99FF1004ABF26 /* stringpool.cc in Sources */,
+				43018BE71EB99FF1004ABF26 /* accountSettings_test.cc in Sources */,
+				43018BEC1EB99FF1004ABF26 /* xml2cxx.cc in Sources */,
+				43018BEB1EB99FF1004ABF26 /* tinyxml2.cc in Sources */,
+				43018BE81EB99FF1004ABF26 /* implementation.cc in Sources */,
+				43018BE91EB99FF1004ABF26 /* isp_db.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +338,7 @@
 				B7E050381EB2491E006EC1EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
