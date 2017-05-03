@@ -89,11 +89,11 @@ typedef enum _AS_USERNAME
 } AS_USERNAME;
 
 
-/** get account settings - the main API function.
+/** get account settings - the main API function. @see AS_FLAGS
  *
  * @param accountName  the accountName, e.g. an e-mail address. MUST NOT be NULL.
  * @param provider     the name of a provider. May be NULL if unknown. @see get_known_providers()
- * @param flags        @see AS_FLAGS
+ * @param flags        the flags @see AS_FLAGS
  * @param credentials  additional credentials that might be necessary to retrieve the account settings. Depends on AS_FLAGS, may be NULL.
  * @return             the requested settings or NULL (only in case of out-of-memory)
  *                     Don't forget to call free_account_settings() when the result is no longer needed. free_account_settings(NULL) is a safe no-op.
@@ -137,7 +137,7 @@ const as_provider* AS_get_provider(const struct AccountSettings* accountSettings
  * @return the server for incoming messages associated with the accountSettings.
            The pointer points to internal r/o data in accountSettings, do not delete it!
  */
-const struct AS_Server* AS_get_incoming(const struct AccountSettings* as);
+const struct AS_Server* AS_get_incoming(const struct AccountSettings* accountSettings);
 
 
 /**  get the server settings for "outgoing" messages (e.g. SMTP)
@@ -145,7 +145,7 @@ const struct AS_Server* AS_get_incoming(const struct AccountSettings* as);
  * @return the server for outgoing messages associated with the accountSettings.
            The pointer points to internal r/o data in accountSettings, do not delete it!
  */
-const struct AS_Server* AS_get_outgoing(const struct AccountSettings* as);
+const struct AS_Server* AS_get_outgoing(const struct AccountSettings* accountSettings);
 
 
 /**  get the hostname of the server
