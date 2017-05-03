@@ -106,7 +106,7 @@ const struct AccountSettings* get_account_settings(const char* accountName, cons
  * @param account_settings  the account settings your want to get the status for
  * @return the status. Only if it is AS_OK the other query functions will return useful results!
  */
-AS_STATUS AS_get_status(struct AccountSettings* account_settings);
+AS_STATUS AS_get_status(const struct AccountSettings* account_settings);
 
 
 typedef struct _as_provider
