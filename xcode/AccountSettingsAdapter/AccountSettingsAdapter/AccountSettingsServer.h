@@ -6,7 +6,6 @@
 //  Copyright © 2017 pEp Security. All rights reserved.
 //
 
-
 #import <Foundation/Foundation.h>
 
 #import "account_settings.h"

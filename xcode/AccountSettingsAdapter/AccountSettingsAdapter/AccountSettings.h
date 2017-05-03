@@ -12,7 +12,6 @@
 #import "AccountSettingsServer.h"
 #import "AccountSettingsProvider.h"
 
-
 @interface AccountSettings: NSObject
 
 /**
@@ -29,11 +28,11 @@
 
 @property (nonatomic, readonly) AS_STATUS status;
 
-@property (nonatomic, readonly) AccountSettingsProvider* _Nonnull provider;
+@property (nonatomic, readonly, nonnull) AccountSettingsProvider *provider;
 
-@property (nonatomic, readonly) AccountSettingsProvider* _Nonnull incoming;
+@property (nonatomic, readonly, nonnull) AccountSettingsProvider *incoming;
 
-@property (nonatomic, readonly) AccountSettingsProvider* _Nonnull outgoing;
+@property (nonatomic, readonly, nonnull) AccountSettingsProvider *outgoing;
 
 @end
 
