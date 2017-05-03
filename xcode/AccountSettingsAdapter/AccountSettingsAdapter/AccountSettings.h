@@ -16,7 +16,7 @@
 @interface AccountSettings: NSObject
 
 /**
- Constructor for the object that wraps account configuration functions
+ Static constructor for the object that wraps account configuration functions
  accountName: name of the account that will be configured
  provider: the name of the provider, may be null
  flags: the way that the account settings object will retrive the account settings
@@ -27,30 +27,13 @@
                                                         flags:(AS_FLAGS)flags
                                                   credentials:(void * _Nullable)credentials;
 
-/**
- wrap method for Release any memory that might be occupied by dynamically created AccountSetting objects.
- */
-- (void)freeAcountSettings;
+@property (nonatomic, readonly) AS_STATUS status;
 
-/**
- wrap method for get the status of the account_settings
- */
-- (AS_STATUS)getStatus;
+@property (nonatomic, readonly) AccountSettingsProvider* _Nonnull provider;
 
-/**
- wrap method for get provider
- */
-- (AccountSettingsProvider * _Nonnull)getProvider;
+@property (nonatomic, readonly) AccountSettingsProvider* _Nonnull incoming;
 
-/**
- wrap method for get the server settings for "incoming" messages
- */
-- (AccountSettingsServer * _Nonnull)getIncoming;
-
-/**
- wrap method for get the server settings for "outgoing" messages
- */
-- (AccountSettingsServer * _Nonnull)getOutgoing;
+@property (nonatomic, readonly) AccountSettingsProvider* _Nonnull outgoing;
 
 @end
 
