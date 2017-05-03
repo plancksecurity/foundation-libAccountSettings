@@ -11,26 +11,41 @@
 
 @interface ASAccountSettings ()
 
-@property (nonatomic, nonnull) struct AccountSettings *as;
+@property (nonatomic, nonnull) const struct AccountSettings *accountSettings;
 
-- (instancetype) initWithAccountSettings:(struct AccountSettings * _Nonnull)internalAccountSettings;
+- (instancetype)initWithAccountSettings:(const struct AccountSettings * _Nonnull)accountSettings;
 
 @end
 
 @implementation ASAccountSettings
 
-+ (ASAccountSettings * _Nullable)aSAccountSettingsWithAccountName:(NSString * _Nonnull)accountName
-                                                         provider:(NSString * _Nullable)provider
-                                                            flags:(AS_FLAGS)flags
-                                                      credentials:(void * _Nullable)credentials
+- (instancetype)initWithAccountSettings:(const struct AccountSettings * _Nonnull)accountSettings
 {
-    struct AccountSettings *as = get_account_settings([[accountName precomposedStringWithCanonicalMapping] UTF8String], [[provider precomposedStringWithCanonicalMapping] UTF8String], flags, credentials);
+    if (self = [super init]) {
+        _accountSettings = accountSettings;
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    free_account_settings(self.accountSettings);
+}
+
++ (ASAccountSettings * _Nonnull)accountSettingsWithAccountName:(NSString * _Nonnull)accountName
+                                                      provider:(NSString * _Nullable)provider
+                                                         flags:(AS_FLAGS)flags
+                                                   credentials:(void * _Nullable)credentials
+{
+    const struct AccountSettings *as =
+    get_account_settings([[accountName
+                           precomposedStringWithCanonicalMapping] UTF8String],
+                         [[provider precomposedStringWithCanonicalMapping] UTF8String],
+                         flags, credentials);
 
     ASAccountSettings *acountsettings = [[ASAccountSettings alloc] initWithAccountSettings:(as)];
 
     return acountsettings;
 }
-
-
 
 @end
