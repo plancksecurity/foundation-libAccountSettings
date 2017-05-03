@@ -48,4 +48,9 @@
     return acountsettings;
 }
 
+- (AS_STATUS)status
+{
+    return AS_get_status(self.accountSettings);
+}
+
 @end
