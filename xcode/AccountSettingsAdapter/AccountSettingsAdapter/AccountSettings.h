@@ -12,7 +12,7 @@
 #import "AccountSettingsServer.h"
 #import "AccountSettingsProvider.h"
 
-@interface AccountSettings: NSObject
+@interface ASAccountSettings: NSObject
 
 /**
  Static constructor for the object that wraps account configuration functions
@@ -21,7 +21,7 @@
  flags: the way that the account settings object will retrive the account settings
  credentials:  might be necessary to retrieve the account settings. Depends on flags, may be NULL.
  */
-+ (AccountSettings * _Nullable)accountSettingsWithAccountName:(NSString * _Nonnull)accountName
++ (ASAccountSettings * _Nullable)aSAccountSettingsWithAccountName:(NSString * _Nonnull)accountName
                                                      provider:(NSString * _Nullable)provider
                                                         flags:(AS_FLAGS)flags
                                                   credentials:(void * _Nullable)credentials;

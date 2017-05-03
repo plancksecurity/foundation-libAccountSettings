@@ -8,6 +8,10 @@
 
 #import "AccountSettings.h"
 
-@implementation AccountSettings
+@interface ASAccountSettings ()
+//@property (nonatomic, nonnull) AccountSettingsAS;
+@end
+
+@implementation ASAccountSettings
 
 @end
