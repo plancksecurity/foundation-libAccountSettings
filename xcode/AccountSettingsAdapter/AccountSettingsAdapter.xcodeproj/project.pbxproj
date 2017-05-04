@@ -14,8 +14,9 @@
 		43018BEA1EB99FF1004ABF26 /* stringpool.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE31EB99FF1004ABF26 /* stringpool.cc */; };
 		43018BEB1EB99FF1004ABF26 /* tinyxml2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE41EB99FF1004ABF26 /* tinyxml2.cc */; };
 		43018BEC1EB99FF1004ABF26 /* xml2cxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE51EB99FF1004ABF26 /* xml2cxx.cc */; };
-		B7E050321EB2491E006EC1EC /* AccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E050311EB2491E006EC1EC /* AccountSettings.m */; };
-		B7E050331EB2491E006EC1EC /* AccountSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7E050301EB2491E006EC1EC /* AccountSettings.h */; };
+		B7089D901EBA2F1A0041F1E5 /* AccountSettingsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */; };
+		B7E050321EB2491E006EC1EC /* ASAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E050311EB2491E006EC1EC /* ASAccountSettings.m */; };
+		B7E050331EB2491E006EC1EC /* ASAccountSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7E050301EB2491E006EC1EC /* ASAccountSettings.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +26,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B7E050331EB2491E006EC1EC /* AccountSettings.h in CopyFiles */,
+				B7E050331EB2491E006EC1EC /* ASAccountSettings.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,9 +47,10 @@
 		43018BF21EB9A05A004ABF26 /* stringpool.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stringpool.hh; path = ../../src/stringpool.hh; sourceTree = "<group>"; };
 		43018BF31EB9A05A004ABF26 /* tinyxml2.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tinyxml2.hh; path = ../../src/tinyxml2.hh; sourceTree = "<group>"; };
 		43018BF41EB9A05A004ABF26 /* xml2cxx.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xml2cxx.hh; path = ../../src/xml2cxx.hh; sourceTree = "<group>"; };
+		B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsServer.m; sourceTree = "<group>"; };
 		B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAccountSettingsAdapter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E050301EB2491E006EC1EC /* AccountSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettings.h; sourceTree = "<group>"; };
-		B7E050311EB2491E006EC1EC /* AccountSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountSettings.m; sourceTree = "<group>"; };
+		B7E050301EB2491E006EC1EC /* ASAccountSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASAccountSettings.h; sourceTree = "<group>"; };
+		B7E050311EB2491E006EC1EC /* ASAccountSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASAccountSettings.m; sourceTree = "<group>"; };
 		B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettingsServer.h; sourceTree = "<group>"; };
 		B7E050511EB34B84006EC1EC /* AccountSettingsProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettingsProvider.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,9 +99,10 @@
 		B7E0502F1EB2491E006EC1EC /* AccountSettingsAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				B7E050301EB2491E006EC1EC /* AccountSettings.h */,
-				B7E050311EB2491E006EC1EC /* AccountSettings.m */,
+				B7E050301EB2491E006EC1EC /* ASAccountSettings.h */,
+				B7E050311EB2491E006EC1EC /* ASAccountSettings.m */,
 				B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */,
+				B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */,
 				B7E050511EB34B84006EC1EC /* AccountSettingsProvider.h */,
 			);
 			path = AccountSettingsAdapter;
@@ -195,7 +198,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7E050321EB2491E006EC1EC /* AccountSettings.m in Sources */,
+				B7E050321EB2491E006EC1EC /* ASAccountSettings.m in Sources */,
+				B7089D901EBA2F1A0041F1E5 /* AccountSettingsServer.m in Sources */,
 				43018BE61EB99FF1004ABF26 /* account_settings_internal.cc in Sources */,
 				43018BEA1EB99FF1004ABF26 /* stringpool.cc in Sources */,
 				43018BE71EB99FF1004ABF26 /* accountSettings_test.cc in Sources */,
