@@ -12,11 +12,12 @@
 
 @implementation AccountSettingsProvider
 
-- (instancetype)initWithName:(NSString * _Nonnull)name description:(NSString * _Nonnull)description
+- (instancetype)initWithName:(NSString * _Nonnull)name
+         providerDescription:(NSString * _Nonnull)providerDescription
 {
     if (self = [super init]) {
         _name = name;
-        _provierDescription = description;
+        _provierDescription = providerDescription;
     }
     return self;
 }
