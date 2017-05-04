@@ -8,6 +8,12 @@
 
 #import "ASAccountSettings.h"
 
+@interface AccountSettingsProvider ()
+
+- (instancetype)initWithName:(NSString * _Nonnull)name description:(NSString * _Nonnull)description;
+
+@end
+
 @interface ASAccountSettings ()
 
 @property (nonatomic, nonnull) const struct AccountSettings *accountSettings;
@@ -52,15 +58,13 @@
     return AS_get_status(self.accountSettings);
 }
 
-/*- (AccountSettingsProvider) provider
+- (AccountSettingsProvider *)provider
 {
     const as_provider *asp = AS_get_provider(self.accountSettings);
 
-    AccountSettingsProvider *accountSettingsProvider = [accountSettingsProvider alloc] initWith
-
-
-    return [[AccountSettingsProvider alloc] initWithName:()]
+    return [[AccountSettingsProvider alloc] initWithName:@"" description:@""];
 }
+
 /*
 - (AccountSettingsProvider) incoming
 {
@@ -70,6 +74,7 @@
 - (AccountSettingsProvider) outgoing
 {
     return NULL
-}*/
+}
+ */
 
 @end

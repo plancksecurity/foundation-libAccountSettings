@@ -10,12 +10,6 @@
 
 #import "AccountSettingsProvider.h"
 
-@interface AccountSettingsProvider ()
-
-- (instancetype)initWithName:(NSString * _Nonnull)name description:(NSString * _Nonnull)description;
-
-@end
-
 @implementation AccountSettingsProvider
 
 - (instancetype)initWithName:(NSString * _Nonnull)name description:(NSString * _Nonnull)description
