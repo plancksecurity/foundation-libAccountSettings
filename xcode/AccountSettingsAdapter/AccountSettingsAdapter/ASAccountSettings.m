@@ -6,8 +6,7 @@
 //  Copyright © 2017 pEp Security. All rights reserved.
 //
 
-#import "AccountSettings.h"
-//#import "account_settings.h"
+#import "ASAccountSettings.h"
 
 @interface ASAccountSettings ()
 
@@ -51,6 +50,21 @@
 - (AS_STATUS)status
 {
     return AS_get_status(self.accountSettings);
+}
+
+- (AccountSettingsProvider) provider
+{
+    return [[AccountSettingsProvider alloc] init]
+}
+
+- (AccountSettingsProvider) incoming
+{
+    return NULL
+}
+
+- (AccountSettingsProvider) outgoing
+{
+    return NULL
 }
 
 @end

@@ -30,9 +30,9 @@
 
 @property (nonatomic, readonly, nonnull) AccountSettingsProvider *provider;
 
-@property (nonatomic, readonly, nonnull) AccountSettingsProvider *incoming;
+@property (nonatomic, readonly, nonnull) AccountSettingsServer *incoming;
 
-@property (nonatomic, readonly, nonnull) AccountSettingsProvider *outgoing;
+@property (nonatomic, readonly, nonnull) AccountSettingsServer *outgoing;
 
 @end
 
