@@ -7,12 +7,9 @@
 //
 
 #import "ASAccountSettings.h"
+#import "AccountSettingsProvider+Internal.h"
 
-@interface AccountSettingsProvider ()
 
-- (instancetype)initWithName:(NSString * _Nonnull)name description:(NSString * _Nonnull)description;
-
-@end
 
 @interface ASAccountSettings ()
 
@@ -60,9 +57,12 @@
 
 - (AccountSettingsProvider *)provider
 {
-    const as_provider *asp = AS_get_provider(self.accountSettings);
+    const struct _as_provider *asp = AS_get_provider(self.accountSettings);
 
-    return [[AccountSettingsProvider alloc] initWithName:@"" description:@""];
+    NSString *name = [NSString stringWithUTF8String: asp->name];
+    NSString *description = [NSString stringWithUTF8String: asp->description];
+
+    return [[AccountSettingsProvider alloc] initWithName:name description:description];
 }
 
 /*
