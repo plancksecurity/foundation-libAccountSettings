@@ -52,11 +52,16 @@
     return AS_get_status(self.accountSettings);
 }
 
-- (AccountSettingsProvider) provider
+/*- (AccountSettingsProvider) provider
 {
-    return [[AccountSettingsProvider alloc] init]
-}
+    const as_provider *asp = AS_get_provider(self.accountSettings);
 
+    AccountSettingsProvider *accountSettingsProvider = [accountSettingsProvider alloc] initWith
+
+
+    return [[AccountSettingsProvider alloc] initWithName:()]
+}
+/*
 - (AccountSettingsProvider) incoming
 {
     return NULL
@@ -65,6 +70,6 @@
 - (AccountSettingsProvider) outgoing
 {
     return NULL
-}
+}*/
 
 @end
