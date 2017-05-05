@@ -8,8 +8,10 @@
 
 #import "ASAccountSettings.h"
 #import "AccountSettingsProvider+Internal.h"
+#import "AccountSettingsServer+Internal.h"
 
 AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struct _as_provider * provider);
+AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_Server * server);
 
 @interface ASAccountSettings ()
 
@@ -62,17 +64,20 @@ AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struc
     return convertASProviderToAccountSettingsProvider(asp);
 }
 
-/*
+
 - (AccountSettingsServer *) incoming
 {
+    const struct AS_Server *as = AS_get_incoming(self.accountSettings);
+    return convertASServerToAccountSettingsServer(as);
 
 }
+
 
 - (AccountSettingsServer *) outgoing
 {
-    return NULL
+    const struct AS_Server *as = AS_get_outgoing(self.accountSettings);
+    return convertASServerToAccountSettingsServer(as);
 }
- */
 
 @end
 
@@ -83,10 +88,8 @@ AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struc
 
     return [[AccountSettingsProvider alloc] initWithName:name description:description];
 }
-/*
+
 AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_Server * server)
 {
-
-    return [[AccountSettingsProvider alloc] initWithName:name description:description];
+    return [[AccountSettingsServer alloc] initWithAccountServer:server];
 }
-*/
