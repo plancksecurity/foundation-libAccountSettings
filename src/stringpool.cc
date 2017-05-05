@@ -1,5 +1,8 @@
 #include "stringpool.hh"
 #include <ostream>
+#include <climits>
+#include <cassert>
+
 
 void StringPool::clear()
 {
@@ -25,7 +28,8 @@ void StringPool::makePool()
 	pool.reserve(length);
 	for(auto& o : offset_map)
 	{
-		o.second.offset = pool.size();
+		assert(pool.size() < UINT_MAX);
+		o.second.offset = static_cast<unsigned>(pool.size());
 		pool.append(o.first);
 		pool += '\0';
 	}

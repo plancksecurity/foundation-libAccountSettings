@@ -341,9 +341,9 @@ try{
 	std::cout << "};\n\n"
 		"const unsigned IspDBSize = " << isp_db.size() << ";\n\n";
 
-	const unsigned string_pool_size = SP.size();
-	const unsigned ass_size = ass.size()*sizeof(AccountSettings);
-	const unsigned isp_size = isp_db.size()*sizeof(account_settings::Domain2AS);
+	const size_t string_pool_size = SP.size();
+	const size_t ass_size = ass.size()*sizeof(AccountSettings);
+	const size_t isp_size = isp_db.size()*sizeof(account_settings::Domain2AS);
 	
 	std::cout << "\n} // end of namespace account_settings.\n\n"
 		"// sizeof(Domain2AS) = " << sizeof(account_settings::Domain2AS) << "\n"
