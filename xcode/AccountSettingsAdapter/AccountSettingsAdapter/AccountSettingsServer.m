@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "AccountSettingsServer.h"
+#import "AccountSettingsServer+Internal.h"
 #import "account_settings.h"
 
 @interface AccountSettingsServer ()
@@ -18,6 +19,14 @@
 @end
 
 @implementation AccountSettingsServer
+
+- (instancetype _Nonnull)initWithAccountServer:(const struct AS_Server *)accountServer
+{
+    if (self = [super init]) {
+        _accountServer = accountServer;
+    }
+    return self;
+}
 
 - (NSInteger)port
 {
