@@ -9,7 +9,7 @@
 #import "ASAccountSettings.h"
 #import "AccountSettingsProvider+Internal.h"
 
-AccountSettingsProvider * convertStructure(const struct _as_provider * provider);
+AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struct _as_provider * provider);
 
 @interface ASAccountSettings ()
 
@@ -59,16 +59,16 @@ AccountSettingsProvider * convertStructure(const struct _as_provider * provider)
 {
     const struct _as_provider *asp = AS_get_provider(self.accountSettings);
 
-    return convertStructure(asp);
+    return convertASProviderToAccountSettingsProvider(asp);
 }
 
 /*
-- (AccountSettingsProvider *) incoming
+- (AccountSettingsServer *) incoming
 {
-    return NULL
-}
 
-- (AccountSettingsProvider *) outgoing
+}
+/*
+- (AccountSettingsServer *) outgoing
 {
     return NULL
 }
@@ -76,10 +76,17 @@ AccountSettingsProvider * convertStructure(const struct _as_provider * provider)
 
 @end
 
-AccountSettingsProvider * convertStructure(const struct _as_provider * provider)
+AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struct _as_provider * provider)
 {
     NSString *name = [NSString stringWithUTF8String: provider->name];
     NSString *description = [NSString stringWithUTF8String: provider->description];
 
     return [[AccountSettingsProvider alloc] initWithName:name description:description];
 }
+/*
+AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_Server * server)
+{
+
+    return [[AccountSettingsProvider alloc] initWithName:name description:description];
+}
+*/
