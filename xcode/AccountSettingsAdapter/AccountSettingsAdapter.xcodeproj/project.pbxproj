@@ -106,11 +106,11 @@
 				B7E050301EB2491E006EC1EC /* ASAccountSettings.h */,
 				B7E050311EB2491E006EC1EC /* ASAccountSettings.m */,
 				B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */,
-				B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */,
 				B781A9461EBC748700519E88 /* AccountSettingsServer+Internal.h */,
+				B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */,
 				B7E050511EB34B84006EC1EC /* AccountSettingsProvider.h */,
-				B72E63F71EBB5B4C0022A9D6 /* AccountSettingsProvider.m */,
 				B72E63F91EBB64210022A9D6 /* AccountSettingsProvider+Internal.h */,
+				B72E63F71EBB5B4C0022A9D6 /* AccountSettingsProvider.m */,
 			);
 			path = AccountSettingsAdapter;
 			sourceTree = "<group>";

@@ -13,7 +13,6 @@
 @interface AccountSettingsProvider: NSObject
 
 @property (nonatomic, nonnull) NSString *name;
-
 @property (nonatomic, nonnull) NSString *provierDescription;
 
 /**

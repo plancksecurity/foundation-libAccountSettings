@@ -7,10 +7,10 @@
 //
 
 #import "ASAccountSettings.h"
+
 #import "AccountSettingsProvider+Internal.h"
 #import "AccountSettingsServer+Internal.h"
 
-AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struct _as_provider * provider);
 AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_Server * server);
 
 @interface ASAccountSettings ()
@@ -46,7 +46,7 @@ AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_S
                            precomposedStringWithCanonicalMapping] UTF8String],
                          [[provider precomposedStringWithCanonicalMapping] UTF8String],
                          flags, credentials);
-
+    
     ASAccountSettings *acountsettings = [[ASAccountSettings alloc] initWithAccountSettings:(as)];
 
     return acountsettings;
@@ -59,11 +59,10 @@ AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_S
 
 - (AccountSettingsProvider *)provider
 {
-    const struct _as_provider *asp = AS_get_provider(self.accountSettings);
+    const as_provider *asp = AS_get_provider(self.accountSettings);
 
-    return convertASProviderToAccountSettingsProvider(asp);
+    return [[AccountSettingsProvider alloc] initWithProvider:asp];
 }
-
 
 - (AccountSettingsServer *) incoming
 {
@@ -72,7 +71,6 @@ AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_S
 
 }
 
-
 - (AccountSettingsServer *) outgoing
 {
     const struct AS_Server *as = AS_get_outgoing(self.accountSettings);
@@ -80,14 +78,6 @@ AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_S
 }
 
 @end
-
-AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struct _as_provider * provider)
-{
-    NSString *name = [NSString stringWithUTF8String: provider->name];
-    NSString *description = [NSString stringWithUTF8String: provider->description];
-
-    return [[AccountSettingsProvider alloc] initWithName:name description:description];
-}
 
 AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_Server * server)
 {

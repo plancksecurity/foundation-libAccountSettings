@@ -22,4 +22,12 @@
     return self;
 }
 
+- (instancetype _Nonnull)initWithProvider:(const as_provider *_Nonnull)provider
+{
+    NSString *name = [NSString stringWithUTF8String: provider->name];
+    NSString *providerDescription = [NSString stringWithUTF8String: provider->description];
+
+    return [self initWithName:name providerDescription:providerDescription];
+}
+
 @end

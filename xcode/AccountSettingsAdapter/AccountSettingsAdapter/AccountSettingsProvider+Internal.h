@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#import "account_settings.h"
+
 @interface AccountSettingsProvider ()
 
-- (instancetype _Nonnull )initWithName:(NSString * _Nonnull)name description:(NSString * _Nonnull)description;
+- (instancetype _Nonnull )initWithName:(NSString * _Nonnull)name
+                           description:(NSString * _Nonnull)description;
+
+- (instancetype _Nonnull)initWithProvider:(const as_provider *_Nonnull)provider;
 
 @end
