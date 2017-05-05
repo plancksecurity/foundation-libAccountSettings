@@ -11,8 +11,6 @@
 #import "AccountSettingsProvider+Internal.h"
 #import "AccountSettingsServer+Internal.h"
 
-AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_Server * server);
-
 @interface ASAccountSettings ()
 
 @property (nonatomic, nonnull) const struct AccountSettings *accountSettings;
@@ -64,22 +62,17 @@ AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_S
     return [[AccountSettingsProvider alloc] initWithProvider:asp];
 }
 
-- (AccountSettingsServer *) incoming
+- (AccountSettingsServer *)incoming
 {
-    const struct AS_Server *as = AS_get_incoming(self.accountSettings);
-    return convertASServerToAccountSettingsServer(as);
+    const struct AS_Server *asIncoming = AS_get_incoming(self.accountSettings);
+    return [[AccountSettingsServer alloc] initWithAccountServer:asIncoming];
 
 }
 
-- (AccountSettingsServer *) outgoing
+- (AccountSettingsServer *)outgoing
 {
-    const struct AS_Server *as = AS_get_outgoing(self.accountSettings);
-    return convertASServerToAccountSettingsServer(as);
+    const struct AS_Server *asOutgoing = AS_get_outgoing(self.accountSettings);
+    return [[AccountSettingsServer alloc] initWithAccountServer:asOutgoing];
 }
 
 @end
-
-AccountSettingsServer * convertASServerToAccountSettingsServer(const struct AS_Server * server)
-{
-    return [[AccountSettingsServer alloc] initWithAccountServer:server];
-}
