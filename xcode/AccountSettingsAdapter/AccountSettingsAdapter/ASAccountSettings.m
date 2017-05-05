@@ -67,7 +67,7 @@ AccountSettingsProvider * convertASProviderToAccountSettingsProvider(const struc
 {
 
 }
-/*
+
 - (AccountSettingsServer *) outgoing
 {
     return NULL
