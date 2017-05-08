@@ -15,10 +15,22 @@
 		43018BEB1EB99FF1004ABF26 /* tinyxml2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE41EB99FF1004ABF26 /* tinyxml2.cc */; };
 		43018BEC1EB99FF1004ABF26 /* xml2cxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE51EB99FF1004ABF26 /* xml2cxx.cc */; };
 		B7089D901EBA2F1A0041F1E5 /* AccountSettingsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */; };
+		B72A64DB1EC0525500F71131 /* AccountSettingsAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72A64DA1EC0525500F71131 /* AccountSettingsAdapterTests.m */; };
+		B72A64DD1EC0525500F71131 /* libAccountSettingsAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */; };
 		B72E63F81EBB5B4C0022A9D6 /* AccountSettingsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B72E63F71EBB5B4C0022A9D6 /* AccountSettingsProvider.m */; };
 		B7E050321EB2491E006EC1EC /* ASAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E050311EB2491E006EC1EC /* ASAccountSettings.m */; };
 		B7E050331EB2491E006EC1EC /* ASAccountSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7E050301EB2491E006EC1EC /* ASAccountSettings.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B72A64DE1EC0525500F71131 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7E050251EB2491E006EC1EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7E0502C1EB2491E006EC1EC;
+			remoteInfo = AccountSettingsAdapter;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B7E0502B1EB2491E006EC1EC /* CopyFiles */ = {
@@ -49,6 +61,9 @@
 		43018BF31EB9A05A004ABF26 /* tinyxml2.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tinyxml2.hh; path = ../../src/tinyxml2.hh; sourceTree = "<group>"; };
 		43018BF41EB9A05A004ABF26 /* xml2cxx.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xml2cxx.hh; path = ../../src/xml2cxx.hh; sourceTree = "<group>"; };
 		B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsServer.m; sourceTree = "<group>"; };
+		B72A64D81EC0525500F71131 /* AccountSettingsAdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountSettingsAdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B72A64DA1EC0525500F71131 /* AccountSettingsAdapterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsAdapterTests.m; sourceTree = "<group>"; };
+		B72A64DC1EC0525500F71131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B72E63F71EBB5B4C0022A9D6 /* AccountSettingsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsProvider.m; sourceTree = "<group>"; };
 		B72E63F91EBB64210022A9D6 /* AccountSettingsProvider+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountSettingsProvider+Internal.h"; sourceTree = "<group>"; };
 		B781A9461EBC748700519E88 /* AccountSettingsServer+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountSettingsServer+Internal.h"; sourceTree = "<group>"; };
@@ -60,6 +75,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B72A64D51EC0525500F71131 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B72A64DD1EC0525500F71131 /* libAccountSettingsAdapter.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7E0502A1EB2491E006EC1EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,11 +106,21 @@
 			name = include_internal;
 			sourceTree = "<group>";
 		};
+		B72A64D91EC0525500F71131 /* AccountSettingsAdapterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B72A64DA1EC0525500F71131 /* AccountSettingsAdapterTests.m */,
+				B72A64DC1EC0525500F71131 /* Info.plist */,
+			);
+			path = AccountSettingsAdapterTests;
+			sourceTree = "<group>";
+		};
 		B7E050241EB2491E006EC1EC = {
 			isa = PBXGroup;
 			children = (
 				B7E0503A1EB2494B006EC1EC /* AccountSettingsLibrary */,
 				B7E0502F1EB2491E006EC1EC /* AccountSettingsAdapter */,
+				B72A64D91EC0525500F71131 /* AccountSettingsAdapterTests */,
 				B7E0502E1EB2491E006EC1EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */,
+				B72A64D81EC0525500F71131 /* AccountSettingsAdapterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +184,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B72A64D71EC0525500F71131 /* AccountSettingsAdapterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B72A64E21EC0525500F71131 /* Build configuration list for PBXNativeTarget "AccountSettingsAdapterTests" */;
+			buildPhases = (
+				B72A64D41EC0525500F71131 /* Sources */,
+				B72A64D51EC0525500F71131 /* Frameworks */,
+				B72A64D61EC0525500F71131 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B72A64DF1EC0525500F71131 /* PBXTargetDependency */,
+			);
+			name = AccountSettingsAdapterTests;
+			productName = AccountSettingsAdapterTests;
+			productReference = B72A64D81EC0525500F71131 /* AccountSettingsAdapterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B7E0502C1EB2491E006EC1EC /* AccountSettingsAdapter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E050361EB2491E006EC1EC /* Build configuration list for PBXNativeTarget "AccountSettingsAdapter" */;
@@ -176,6 +228,11 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "pEp Security";
 				TargetAttributes = {
+					B72A64D71EC0525500F71131 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = SBPJ2E4G5X;
+						ProvisioningStyle = Automatic;
+					};
 					B7E0502C1EB2491E006EC1EC = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = SBPJ2E4G5X;
@@ -196,11 +253,30 @@
 			projectRoot = "";
 			targets = (
 				B7E0502C1EB2491E006EC1EC /* AccountSettingsAdapter */,
+				B72A64D71EC0525500F71131 /* AccountSettingsAdapterTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		B72A64D61EC0525500F71131 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		B72A64D41EC0525500F71131 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B72A64DB1EC0525500F71131 /* AccountSettingsAdapterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7E050291EB2491E006EC1EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,7 +296,37 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B72A64DF1EC0525500F71131 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7E0502C1EB2491E006EC1EC /* AccountSettingsAdapter */;
+			targetProxy = B72A64DE1EC0525500F71131 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B72A64E01EC0525500F71131 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				INFOPLIST_FILE = AccountSettingsAdapterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pEp.Security.AccountSettingsAdapterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B72A64E11EC0525500F71131 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				INFOPLIST_FILE = AccountSettingsAdapterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = pEp.Security.AccountSettingsAdapterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		B7E050341EB2491E006EC1EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -334,6 +440,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B72A64E21EC0525500F71131 /* Build configuration list for PBXNativeTarget "AccountSettingsAdapterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B72A64E01EC0525500F71131 /* Debug */,
+				B72A64E11EC0525500F71131 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B7E050281EB2491E006EC1EC /* Build configuration list for PBXProject "AccountSettingsAdapter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
