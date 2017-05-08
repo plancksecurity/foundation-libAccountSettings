@@ -57,9 +57,7 @@
 
 - (AccountSettingsProvider *)provider
 {
-    const as_provider *asp = AS_get_provider(self.accountSettings);
-
-    return [[AccountSettingsProvider alloc] initWithProvider:asp];
+    return [[AccountSettingsProvider alloc] initWithName:@"Missing" description:@"Missing"];
 }
 
 - (AccountSettingsServer *)incoming

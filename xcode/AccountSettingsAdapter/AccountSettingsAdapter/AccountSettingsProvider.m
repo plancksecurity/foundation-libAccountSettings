@@ -32,7 +32,8 @@
 
 + (NSArray<AccountSettingsProvider *> *_Nonnull)knownProviders
 {
-    const as_provider* current = AS_get_known_providers();
+    const as_provider theProvider = { nil, nil };
+    const as_provider* current = &theProvider;
 
     NSMutableArray *result = [NSMutableArray array];
     while (current->description && current->name) {
