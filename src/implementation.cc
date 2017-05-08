@@ -74,7 +74,7 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 }
 
 
-AS_STATUS AS_get_status(AccountSettings* account_settings)
+AS_STATUS AS_get_status(const struct AccountSettings* account_settings)
 {
 	return account_settings ? AS_STATUS(account_settings->type & ~AS_Type::MASK) : AS_ILLEGAL_VALUE;
 }
