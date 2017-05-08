@@ -17,7 +17,6 @@
 		B7089D901EBA2F1A0041F1E5 /* AccountSettingsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */; };
 		B72A64DB1EC0525500F71131 /* AccountSettingsAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72A64DA1EC0525500F71131 /* AccountSettingsAdapterTests.m */; };
 		B72A64DD1EC0525500F71131 /* libAccountSettingsAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */; };
-		B72A64E51EC0800F00F71131 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B72A64E41EC0800F00F71131 /* libc++.1.dylib */; };
 		B72A64E61EC0802B00F71131 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B72A64E41EC0800F00F71131 /* libc++.1.dylib */; };
 		B72E63F81EBB5B4C0022A9D6 /* AccountSettingsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B72E63F71EBB5B4C0022A9D6 /* AccountSettingsProvider.m */; };
 		B7E050321EB2491E006EC1EC /* ASAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E050311EB2491E006EC1EC /* ASAccountSettings.m */; };
@@ -92,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B72A64E51EC0800F00F71131 /* libc++.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,8 +347,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -397,8 +395,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -436,6 +434,8 @@
 		B7E050371EB2491E006EC1EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
@@ -450,6 +450,8 @@
 		B7E050381EB2491E006EC1EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
