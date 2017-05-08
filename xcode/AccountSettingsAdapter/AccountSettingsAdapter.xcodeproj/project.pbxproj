@@ -14,10 +14,11 @@
 		43018BEA1EB99FF1004ABF26 /* stringpool.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE31EB99FF1004ABF26 /* stringpool.cc */; };
 		43018BEB1EB99FF1004ABF26 /* tinyxml2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE41EB99FF1004ABF26 /* tinyxml2.cc */; };
 		43018BEC1EB99FF1004ABF26 /* xml2cxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE51EB99FF1004ABF26 /* xml2cxx.cc */; };
-		43B1F9251EC05AD3002794B9 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B1F9241EC05AD3002794B9 /* libstdc++.tbd */; };
 		B7089D901EBA2F1A0041F1E5 /* AccountSettingsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */; };
 		B72A64DB1EC0525500F71131 /* AccountSettingsAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72A64DA1EC0525500F71131 /* AccountSettingsAdapterTests.m */; };
 		B72A64DD1EC0525500F71131 /* libAccountSettingsAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */; };
+		B72A64E51EC0800F00F71131 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B72A64E41EC0800F00F71131 /* libc++.1.dylib */; };
+		B72A64E61EC0802B00F71131 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B72A64E41EC0800F00F71131 /* libc++.1.dylib */; };
 		B72E63F81EBB5B4C0022A9D6 /* AccountSettingsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B72E63F71EBB5B4C0022A9D6 /* AccountSettingsProvider.m */; };
 		B7E050321EB2491E006EC1EC /* ASAccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E050311EB2491E006EC1EC /* ASAccountSettings.m */; };
 		B7E050331EB2491E006EC1EC /* ASAccountSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7E050301EB2491E006EC1EC /* ASAccountSettings.h */; };
@@ -66,6 +67,7 @@
 		B72A64D81EC0525500F71131 /* AccountSettingsAdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountSettingsAdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72A64DA1EC0525500F71131 /* AccountSettingsAdapterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsAdapterTests.m; sourceTree = "<group>"; };
 		B72A64DC1EC0525500F71131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B72A64E41EC0800F00F71131 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
 		B72E63F71EBB5B4C0022A9D6 /* AccountSettingsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsProvider.m; sourceTree = "<group>"; };
 		B72E63F91EBB64210022A9D6 /* AccountSettingsProvider+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountSettingsProvider+Internal.h"; sourceTree = "<group>"; };
 		B781A9461EBC748700519E88 /* AccountSettingsServer+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountSettingsServer+Internal.h"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72A64E61EC0802B00F71131 /* libc++.1.dylib in Frameworks */,
 				B72A64DD1EC0525500F71131 /* libAccountSettingsAdapter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43B1F9251EC05AD3002794B9 /* libstdc++.tbd in Frameworks */,
+				B72A64E51EC0800F00F71131 /* libc++.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,7 @@
 		43B1F9231EC05AD3002794B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B72A64E41EC0800F00F71131 /* libc++.1.dylib */,
 				43B1F9241EC05AD3002794B9 /* libstdc++.tbd */,
 			);
 			name = Frameworks;
@@ -433,7 +437,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
-				OTHER_LDFLAGS = "-ObjC";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -443,7 +451,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
-				OTHER_LDFLAGS = "-ObjC";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
