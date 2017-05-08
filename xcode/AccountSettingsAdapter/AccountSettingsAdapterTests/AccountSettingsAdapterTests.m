@@ -27,9 +27,10 @@
 
 - (void)testNewAccountSettingsSetup {
 
-    ASAccountSettings as;
-
-
+    ASAccountSettings *as = [ASAccountSettings
+                             accountSettingsWithAccountName:@"someone@peptest.ch"
+                             provider:nil flags:AS_FLAG_USE_ANY
+                             credentials:nil];
 }
 
 - (void)testPerformanceExample {
