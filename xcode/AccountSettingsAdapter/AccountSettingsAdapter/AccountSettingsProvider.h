@@ -15,9 +15,4 @@
 @property (nonatomic, nonnull) NSString *name;
 @property (nonatomic, nonnull) NSString *provierDescription;
 
-/**
- method for get list of all known ISPs
- */
-+ (NSArray<AccountSettingsProvider *> *_Nonnull)knownProviders;
-
 @end

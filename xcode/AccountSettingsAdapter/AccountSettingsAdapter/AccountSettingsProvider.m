@@ -30,20 +30,4 @@
     return [self initWithName:name providerDescription:providerDescription];
 }
 
-+ (NSArray<AccountSettingsProvider *> *_Nonnull)knownProviders
-{
-    const as_provider theProvider = { nil, nil };
-    const as_provider* current = &theProvider;
-
-    NSMutableArray *result = [NSMutableArray array];
-    while (current->description && current->name) {
-        AccountSettingsProvider *provider = [[AccountSettingsProvider alloc]
-                                             initWithProvider:current];
-        [result addObject:provider];
-        current++;
-    }
-
-    return [NSArray arrayWithArray:result];
-}
-
 @end

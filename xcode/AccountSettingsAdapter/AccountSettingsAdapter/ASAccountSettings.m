@@ -55,11 +55,6 @@
     return AS_get_status(self.accountSettings);
 }
 
-- (AccountSettingsProvider *)provider
-{
-    return [[AccountSettingsProvider alloc] initWithName:@"Missing" description:@"Missing"];
-}
-
 - (AccountSettingsServer *)incoming
 {
     const struct AS_Server *asIncoming = AS_get_incoming(self.accountSettings);
