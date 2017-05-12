@@ -11,9 +11,9 @@ AccountSettings* create_dynamic_account_settings()
 {
 	static const AccountSettings dummyAS
 		{
-			AS_Type::DYNAMIC, nullptr, nullptr,
-				{nullptr, -1, AS_ACCESS(-1), AS_USERNAME(-1)}, 
-				{nullptr, -1, AS_ACCESS(-1), AS_USERNAME(-1)}
+			AS_ILLEGAL_VALUE, nullptr, nullptr,
+				{nullptr, -1, AS_ACCESS(-1), nullptr},
+				{nullptr, -1, AS_ACCESS(-1), nullptr}
 		};
 	
 	return new AccountSettings{dummyAS};
@@ -33,18 +33,15 @@ using namespace account_settings;
 
 void free_account_settings(const AccountSettings* account_settings)
 {
-	const unsigned type = (account_settings->type & AS_Type::MASK);
-	if(type == AS_Type::STATIC)
-	{
-		// nothing to do
-		return;
-	}else if(type == AS_Type::DYNAMIC)
-	{
-		delete[] account_settings->id; // all strings are in that array :-)
-		delete   account_settings;
-		return;
-	}
-	throw std::runtime_error("free_account_settings: illegal account settings type!");
+	delete[] account_settings->id; // all strings are in that array :-)
+	delete   account_settings;
+}
+
+
+const AccountSettings* create_account_settings_from_db( const AccountSettings_DB* asdb)
+{
+	// TODO: implement it!
+	return nullptr;
 }
 
 
@@ -59,7 +56,7 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	{
 		if( domain == StringPool + isp->domain_nr )
 		{
-			return AccountList + isp->as_nr;
+			return create_account_settings_from_db(AccountList + isp->as_nr);
 		}
 	}
 	
@@ -76,7 +73,7 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 
 AS_STATUS AS_get_status(const struct AccountSettings* account_settings)
 {
-	return account_settings ? AS_STATUS(account_settings->type & ~AS_Type::MASK) : AS_ILLEGAL_VALUE;
+	return account_settings ? account_settings->status : AS_ILLEGAL_VALUE;
 }
 
 
@@ -109,7 +106,7 @@ AS_ACCESS AS_get_access_method(const AS_Server* server)
 }
 
 
-AS_USERNAME AS_get_username(const AS_Server* server)
+const char* AS_get_username(const AS_Server* server)
 {
 	return server->username;
 }

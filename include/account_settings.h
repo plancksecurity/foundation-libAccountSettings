@@ -170,11 +170,11 @@ int AS_get_port(const struct AS_Server* server);
 AS_ACCESS AS_get_access_method(const struct AS_Server* server);
 
 
-/**  get the type of username is expected for authentication at the server
+/**  get the username for authentication at the server
  * @param  server  guess what
- * @return the expected type of username
+ * @return the user name/login name
  */
-AS_USERNAME AS_get_username(const struct AS_Server* server);
+const char* AS_get_username(const struct AS_Server* server);
 
 
 #ifdef __cplusplus

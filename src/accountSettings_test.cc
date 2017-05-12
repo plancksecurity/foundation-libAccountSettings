@@ -33,6 +33,11 @@ bool testServers( const TestData& testData, Function testFunc )
 	for(const auto& t : testData )
 	{
 		const AccountSettings* as = get_account_settings( t.key.c_str(), nullptr, AS_FLAG_USE_ANY, nullptr);
+		if(as==nullptr)
+		{
+			throw std::runtime_error("Got NULL AccountSettings*   :-(");
+		}
+		
 		const AS_Server* srv = testFunc(as);
 		const char* hostname = AS_get_hostname(srv);
 		if( hostname != t.value.name )

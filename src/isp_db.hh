@@ -9,8 +9,8 @@ namespace account_settings
 	extern const char* const StringPoolEnd;
 	extern const unsigned    StringPoolSize;
 
-	extern const AccountSettings AccountList[];
-	extern const unsigned        AccountListSize;
+	extern const AccountSettings_DB AccountList[];
+	extern const unsigned           AccountListSize;
 
 	struct Domain2AS
 	{
