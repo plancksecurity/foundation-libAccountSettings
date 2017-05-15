@@ -2105,7 +2105,7 @@ const unsigned IspDBSize = 789;
 } // end of namespace account_settings.
 
 // sizeof(Domain2AS) = 8
-// sizeof(AccountSettings) = 72
-// Data size: 18501 + 18072 + 6312 = 42885 Bytes.
+// sizeof(AccountSettings) = 64
+// Data size: 18501 + 16064 + 6312 = 40877 Bytes.
 // ===<End of generated file>===
 
