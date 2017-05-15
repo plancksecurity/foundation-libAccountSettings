@@ -11,17 +11,17 @@
 
 struct AS_Server
 {
-	const char* name;
+	std::string name;
 	int         port;
 	AS_ACCESS   access;
-	const char* username;
+	std::string username;
 };
 
 struct AccountSettings
 {
 	AS_STATUS status;
-	const char* id;
-	const char* displayName;
+	std::string id;
+	std::string displayName;
 	AS_Server incoming;
 	AS_Server outgoing;
 };

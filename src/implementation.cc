@@ -11,9 +11,9 @@ AccountSettings* create_dynamic_account_settings()
 {
 	static const AccountSettings dummyAS
 		{
-			AS_ILLEGAL_VALUE, nullptr, nullptr,
-				{nullptr, -1, AS_ACCESS(-1), nullptr},
-				{nullptr, -1, AS_ACCESS(-1), nullptr}
+			AS_ILLEGAL_VALUE, "", "",
+				{"", -1, AS_ACCESS(-1), ""},
+				{"", -1, AS_ACCESS(-1), ""}
 		};
 	
 	return new AccountSettings{dummyAS};
@@ -33,15 +33,31 @@ using namespace account_settings;
 
 void free_account_settings(const AccountSettings* account_settings)
 {
-	delete[] account_settings->id; // all strings are in that array :-)
 	delete   account_settings;
 }
 
 
-const AccountSettings* create_account_settings_from_db( const AccountSettings_DB* asdb)
+std::string type2username(AS_USERNAME username_type, const std::string& accountName, const std::string& provider)
 {
-	// TODO: implement it!
-	return nullptr;
+	throw std::logic_error(__PRETTY_FUNCTION__ + std::string(" is nimplemented"));
+}
+
+
+const AccountSettings* create_account_settings_from_db( const AccountSettings_DB* asdb, const std::string& accountName, const std::string& provider)
+{
+	auto as = create_dynamic_account_settings();
+	as->id = asdb->id;
+	as->displayName = asdb->displayName;
+	as->incoming.name = asdb->incoming.name;
+	as->outgoing.name = asdb->outgoing.name;
+	as->incoming.username = type2username(asdb->incoming.username_type, accountName, provider);
+	as->outgoing.username = type2username(asdb->outgoing.username_type, accountName, provider);
+	as->incoming.access = asdb->incoming.access;
+	as->outgoing.access = asdb->outgoing.access;
+	as->incoming.port   = asdb->incoming.port;
+	as->outgoing.port   = asdb->outgoing.port; 
+	as->status = AS_OK;
+	return as;
 }
 
 
@@ -56,7 +72,7 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	{
 		if( domain == StringPool + isp->domain_nr )
 		{
-			return create_account_settings_from_db(AccountList + isp->as_nr);
+			return create_account_settings_from_db(AccountList + isp->as_nr, accountName, provider);
 		}
 	}
 	
@@ -90,7 +106,7 @@ const AS_Server* AS_get_outgoing(const AccountSettings* as)
 
 const char* AS_get_hostname(const AS_Server* server)
 {
-	return server->name;
+	return server->name.c_str();
 }
 
 
@@ -108,5 +124,5 @@ AS_ACCESS AS_get_access_method(const AS_Server* server)
 
 const char* AS_get_username(const AS_Server* server)
 {
-	return server->username;
+	return server->username.c_str();
 }
