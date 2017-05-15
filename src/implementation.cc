@@ -39,7 +39,8 @@ void free_account_settings(const AccountSettings* account_settings)
 
 std::string type2username(AS_USERNAME username_type, const std::string& accountName, const std::string& provider)
 {
-	throw std::logic_error(__PRETTY_FUNCTION__ + std::string(" is nimplemented"));
+//	throw std::logic_error(__PRETTY_FUNCTION__ + std::string(" is nimplemented"));
+	return std::string();
 }
 
 

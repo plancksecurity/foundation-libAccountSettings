@@ -35,7 +35,7 @@ bool testServers( const TestData& testData, Function testFunc )
 		const AccountSettings* as = get_account_settings( t.key.c_str(), nullptr, AS_FLAG_USE_ANY, nullptr);
 		if(as==nullptr)
 		{
-			throw std::runtime_error("Got NULL AccountSettings*   :-(");
+			throw std::runtime_error("Got NULL AccountSettings* for testdata \"" + t.key + "\"!");
 		}
 		
 		const AS_Server* srv = testFunc(as);
