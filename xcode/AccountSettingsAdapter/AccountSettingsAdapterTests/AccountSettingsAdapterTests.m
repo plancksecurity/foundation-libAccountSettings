@@ -35,7 +35,6 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
                              provider:nil flags:AS_FLAG_USE_ANY
                              credentials:nil];
 
-    XCTAssertEqual(as.status, AS_OK)
     XCTAssertEqualObjects(@"mail.syhosting.ch", as.incoming.hostname);
     XCTAssertEqual(993, as.incoming.port);
     XCTAssertEqual(AMINCOMINGPEPTEST, as.incoming.accesMethod);
@@ -44,21 +43,6 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
     XCTAssertEqual(AMOUTGOINGPEPTEST, as.outgoing.accesMethod);
 
 
-}
-
-- (void)testNewAccountWithStrangeCharacter {
-    ASAccountSettings *as = [ASAccountSettings
-                             accountSettingsWithAccountName:@"someone@peptest.ch "
-                             provider:nil flags:AS_FLAG_USE_ANY
-                             credentials:nil];
-
-    XCTAssertEqual(as.status, AS_ILLEGAL_VALUE)
-    XCTAssertEqualObjects(@"mail.syhosting.ch", as.incoming.hostname);
-    XCTAssertEqual(993, as.incoming.port);
-    XCTAssertEqual(AMINCOMINGPEPTEST, as.incoming.accesMethod);
-    XCTAssertEqualObjects(@"mail.syhosting.ch", as.outgoing.hostname);
-    XCTAssertEqual(587, as.outgoing.port);
-    XCTAssertEqual(AMOUTGOINGPEPTEST, as.outgoing.accesMethod);
 }
 
 @end
