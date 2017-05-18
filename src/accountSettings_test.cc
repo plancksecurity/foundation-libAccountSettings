@@ -22,7 +22,7 @@ struct TestHost
 const std::vector< KeyValue< TestHost> > incomingServer =
 	{
 		{ "lib_as@peptest.ch", {"mail.syhosting.ch", 993} },
-		{ "example@gmx.de"   , {"imap.gmx.de", 143} },
+		{ "example@gmx.de"   , {"imap.gmx.net", 993} },
 		{ "example@yandex.ua", {"imap.yandex.com", 993} },
 	};
 
@@ -61,6 +61,6 @@ bool testServers( const TestData& testData, Function testFunc )
 int main()
 {
 	bool all_okay = testServers( incomingServer, &AS_get_incoming );
-	
+	std::cout << "***\t" << (all_okay ? "All tests are okay." : "ERROS happened") << std::endl;
 	return all_okay ? 0 : 2;
 }
