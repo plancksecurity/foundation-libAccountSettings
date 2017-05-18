@@ -33,7 +33,7 @@ void free_account_settings(const struct AccountSettings* account_settings);
 
 typedef enum _AS_STATUS
 {
-	AS_OK            = 0,    ///< account settings were found (or guessed). Please go on and query them. :-)
+	AS_OK            = 100,  ///< account settings were found (or guessed). Please go on and query them. :-)
 	AS_TIMEOUT       = 900,  ///< the query to a remote service to get the account settings timed out. You might try it again later.
 	AS_NOT_FOUND     = 950,  ///< for the given parameters & flags no account settings could be found
 	AS_ILLEGAL_VALUE = 999,  ///< one or more parameters of get_account_settings() was/were invalid
@@ -170,11 +170,11 @@ int AS_get_port(const struct AS_Server* server);
 AS_ACCESS AS_get_access_method(const struct AS_Server* server);
 
 
-/**  get the type of username is expected for authentication at the server
+/**  get the username for authentication at the server
  * @param  server  guess what
- * @return the expected type of username
+ * @return the user name/login name
  */
-AS_USERNAME AS_get_username(const struct AS_Server* server);
+const char* AS_get_username(const struct AS_Server* server);
 
 
 #ifdef __cplusplus

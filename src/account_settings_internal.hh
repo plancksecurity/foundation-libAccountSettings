@@ -11,25 +11,40 @@
 
 struct AS_Server
 {
-	const char* name;
+	std::string name;
 	int         port;
 	AS_ACCESS   access;
-	AS_USERNAME username;
+	std::string username;
 };
-
-
-enum AS_Type { STATIC = 0x23000, DYNAMIC = 0x42000, MASK = 0xFF000 };
 
 struct AccountSettings
 {
-	AS_Type type; // type & status
-	const char* id;
-	const char* displayName;
+	AS_STATUS status;
+	std::string id;
+	std::string displayName;
 	AS_Server incoming;
 	AS_Server outgoing;
 };
 
 std::ostream& operator<<(std::ostream& o, const AS_Server& srv);
 std::ostream& operator<<(std::ostream& o, const AccountSettings& as);
+
+
+// for static ISP DB:
+struct AS_Server_DB
+{
+	const char* name;
+	int         port;
+	AS_ACCESS   access;
+	AS_USERNAME username_type;
+};
+
+struct AccountSettings_DB
+{
+	const char* id;
+	const char* displayName;
+	AS_Server_DB incoming;
+	AS_Server_DB outgoing;
+};
 
 #endif // ACCOUNT_SETTINGS_INTERNAL_HH

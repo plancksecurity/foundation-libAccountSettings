@@ -251,7 +251,6 @@ try{
 		
 		AccountSettingsS as;
 		
-		
 		const char* id = emailProvider->Attribute("id");
 		if(id==nullptr)
 		{
@@ -319,10 +318,10 @@ try{
 	
 	// write account settings list
 	std::cout << "static const char* const SP = StringPool;\n\n";
-	std::cout << "const AccountSettings AccountList[] = {\n";
+	std::cout << "const AccountSettings_DB AccountList[] = {\n";
 	for(const auto& as : ass)
 	{
-		std::cout << "\t{ AS_Type::STATIC, SP+" << SP.getOffset(as.id) << ", SP+" << SP.getOffset(as.displayName) << ",\t// " << as.id << "\t" << as.displayName << "\n"
+		std::cout << "\t{ SP+" << SP.getOffset(as.id) << ", SP+" << SP.getOffset(as.displayName) << ",\t// " << as.id << "\t" << as.displayName << "\n"
 			"\t\t{ SP+" << SP.getOffset(as.incoming.name) << ", " << as.incoming.port << ", AS_ACCESS(" << Hex(as.incoming.access) << "), AS_USERNAME(" << Hex(as.incoming.username) << ") },\t// " << as.incoming.name << "\n"
 			"\t\t{ SP+" << SP.getOffset(as.outgoing.name) << ", " << as.outgoing.port << ", AS_ACCESS(" << Hex(as.outgoing.access) << "), AS_USERNAME(" << Hex(as.outgoing.username) << ") }\t// " << as.outgoing.name << "\n"
 			"\t},\n";
@@ -342,12 +341,12 @@ try{
 		"const unsigned IspDBSize = " << isp_db.size() << ";\n\n";
 
 	const size_t string_pool_size = SP.size();
-	const size_t ass_size = ass.size()*sizeof(AccountSettings);
+	const size_t ass_size = ass.size()*sizeof(AccountSettings_DB);
 	const size_t isp_size = isp_db.size()*sizeof(account_settings::Domain2AS);
 	
 	std::cout << "\n} // end of namespace account_settings.\n\n"
 		"// sizeof(Domain2AS) = " << sizeof(account_settings::Domain2AS) << "\n"
-		"// sizeof(AccountSettings) = " << sizeof(AccountSettings) << "\n"
+		"// sizeof(AccountSettings) = " << sizeof(AccountSettings_DB) << "\n"
 		"// Data size: " << string_pool_size << " + " << ass_size << " + " << isp_size << " = " << (string_pool_size+ass_size+isp_size) << " Bytes.\n"
 		"// ===<End of generated file>===\n\n";
 }
