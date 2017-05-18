@@ -30,10 +30,10 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
 
 - (void)testNewpEpTestAccountSettingsSetup {
 
-    ASAccountSettings *as = [ASAccountSettings
-                             accountSettingsWithAccountName:@"someone@peptest.ch"
-                             provider:nil flags:AS_FLAG_USE_ANY
-                             credentials:nil];
+    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+                                      initWithAccountName:@"someone@peptest.ch"
+                                      provider:nil flags:AS_FLAG_USE_ANY
+                                      credentials:nil];
 
     XCTAssertEqual(as.status, AS_OK);
     XCTAssertEqualObjects(@"mail.syhosting.ch", as.incoming.hostname);

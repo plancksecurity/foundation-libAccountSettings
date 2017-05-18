@@ -11,9 +11,29 @@
 #import "AccountSettingsProvider+Internal.h"
 #import "AccountSettingsServer+Internal.h"
 
-#import "ASAccountSettings+Internal.h"
+@interface ASAccountSettings ()
+
+@property (nonatomic, nonnull) const struct AccountSettings *accountSettings;
+
+- (instancetype _Nonnull )initWithAccountSettings:(const struct AccountSettings * _Nonnull)accountSettings;
+
+@end
 
 @implementation ASAccountSettings
+
+- (instancetype _Nonnull )initWithAccountName:(NSString * _Nonnull)accountName
+                                     provider:(NSString * _Nullable)provider
+                                        flags:(AS_FLAGS)flags
+                                  credentials:(void * _Nullable)credentials
+{
+    const struct AccountSettings *as =
+    get_account_settings([[accountName
+                           precomposedStringWithCanonicalMapping] UTF8String],
+                         [[provider precomposedStringWithCanonicalMapping] UTF8String],
+                         flags, credentials);
+
+    return [self initWithAccountSettings:as];
+}
 
 - (instancetype)initWithAccountSettings:(const struct AccountSettings * _Nonnull)accountSettings
 {

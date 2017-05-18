@@ -16,16 +16,16 @@
 @interface ASAccountSettings: NSObject <AccountSettingsProtocol>
 
 /**
- Static constructor for the object that wraps account configuration functions
- accountName: name of the account that will be configured
- provider: the name of the provider, may be null
- flags: the way that the account settings object will retrive the account settings
- credentials:  might be necessary to retrieve the account settings. Depends on flags, may be NULL.
+ @parameter accountName name of the account that will be configured
+ @parameter provider the name of the provider, may be null
+ @parameter flags the way that the account settings object will retrive the account settings
+ @parameter credentials might be necessary to retrieve the account settings. Depends on flags, may be NULL.
+ @return An object that wraps account configuration functions
  */
-+ (id<AccountSettingsProtocol>_Nonnull)accountSettingsWithAccountName:(NSString * _Nonnull)accountName
-                                                             provider:(NSString * _Nullable)provider
-                                                                flags:(AS_FLAGS)flags
-                                                          credentials:(void * _Nullable)credentials;
+- (instancetype _Nonnull )initWithAccountName:(NSString * _Nonnull)accountName
+                                     provider:(NSString * _Nullable)provider
+                                        flags:(AS_FLAGS)flags
+                                  credentials:(void * _Nullable)credentials;
 
 @property (nonatomic, readonly) AS_STATUS status;
 @property (nonatomic, readonly, nonnull) AccountSettingsProvider *provider;
@@ -33,4 +33,3 @@
 @property (nonatomic, readonly, nonnull) AccountSettingsServer *outgoing;
 
 @end
-
