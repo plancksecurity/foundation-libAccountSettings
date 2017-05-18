@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 
 #import "account_settings.h"
+#import "ASProtocols.h"
 
-@interface AccountSettingsProvider: NSObject
+@protocol AccountSettingsProviderProtocol;
+
+@interface AccountSettingsProvider: NSObject <AccountSettingsProviderProtocol>
 
 @property (nonatomic, nonnull) NSString *name;
 @property (nonatomic, nonnull) NSString *provierDescription;

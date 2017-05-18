@@ -11,13 +11,7 @@
 #import "AccountSettingsProvider+Internal.h"
 #import "AccountSettingsServer+Internal.h"
 
-@interface ASAccountSettings ()
-
-@property (nonatomic, nonnull) const struct AccountSettings *accountSettings;
-
-- (instancetype)initWithAccountSettings:(const struct AccountSettings * _Nonnull)accountSettings;
-
-@end
+#import "ASAccountSettings+Internal.h"
 
 @implementation ASAccountSettings
 

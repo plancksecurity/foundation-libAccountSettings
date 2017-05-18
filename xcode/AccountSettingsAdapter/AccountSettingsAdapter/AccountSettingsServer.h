@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 #import "account_settings.h"
+#import "ASProtocols.h"
 
-@interface AccountSettingsServer: NSObject
+@interface AccountSettingsServer: NSObject <AccountSettingsServerProtocol>
 
 @property (nonatomic, readonly) NSInteger port;
 @property (nonatomic, readonly, nonnull) NSString *hostname;
