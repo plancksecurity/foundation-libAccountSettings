@@ -73,7 +73,7 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	{
 		if( domain == StringPool + isp->domain_nr )
 		{
-			return create_account_settings_from_db(AccountList + isp->as_nr, accountName, provider);
+			return create_account_settings_from_db(AccountList + isp->as_nr, accountName, (provider?provider:""));
 		}
 	}
 	
