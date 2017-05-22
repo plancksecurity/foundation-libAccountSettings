@@ -47,9 +47,9 @@
     return value;
 }
 
-- (AS_USERNAME)username
+- (NSString *)username
 {
-    AS_USERNAME value = AS_get_username(self.accountServer);
+    NSString *value = [NSString stringWithUTF8String:AS_get_username(self.accountServer)];
     return value;
 }
 @end
