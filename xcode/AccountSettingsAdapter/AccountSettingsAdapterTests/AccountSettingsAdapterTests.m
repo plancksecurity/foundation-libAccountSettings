@@ -44,4 +44,25 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
     XCTAssertEqual(AMOUTGOINGPEPTEST, as.outgoing.accesMethod);
 }
 
+- (void)testNewpEpTestWrongFormatMailAccount {
+
+    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+                                      initWithAccountName:@" someone@peptest.ch "
+                                      provider:nil flags:AS_FLAG_USE_ANY
+                                      credentials:nil];
+
+    XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
+}
+
+//FIXME the current status vale us AS_ILLEGAL_VALUE in the future needs to be AS_NOT_FOUND
+- (void)testNewpEpTestUnexistentMailAccount {
+
+    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+                                      initWithAccountName:@"someone@example.com"
+                                      provider:nil flags:AS_FLAG_USE_ANY
+                                      credentials:nil];
+
+    XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
+}
+
 @end
