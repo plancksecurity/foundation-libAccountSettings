@@ -36,6 +36,7 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
                                       credentials:nil];
 
     XCTAssertEqual(as.status, AS_OK);
+    XCTAssertEqualObjects(@"someone@peptest.ch", as.incoming.username);
     XCTAssertEqualObjects(@"mail.syhosting.ch", as.incoming.hostname);
     XCTAssertEqual(993, as.incoming.port);
     XCTAssertEqual(AMINCOMINGPEPTEST, as.incoming.accesMethod);
