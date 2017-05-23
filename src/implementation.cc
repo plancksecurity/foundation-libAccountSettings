@@ -39,8 +39,16 @@ void free_account_settings(const AccountSettings* account_settings)
 
 std::string type2username(AS_USERNAME username_type, const std::string& accountName, const std::string& provider)
 {
-//	throw std::logic_error(__PRETTY_FUNCTION__ + std::string(" is nimplemented"));
-	return std::string();
+	const auto at_sign = accountName.rfind('@');
+	switch(username_type)
+	{
+		case AS_USERNAME_NONE:             return std::string();
+		case AS_USERNAME_EMAIL_ADDRESS:    return accountName;
+		case AS_USERNAME_EMAIL_LOCALPART:  return accountName.substr(0, at_sign);
+		case AS_USERNAME_EMAIL_LOCALPART_DOMAIN: return accountName.substr(0, at_sign) + "@" + provider;
+		case AS_USERNAME_OTHER : throw std::runtime_error("Username cannot be created algorithmically from accountName!");
+	}
+	throw std::logic_error("Unkown/unmplemented username type " + std::to_string(int(username_type)) );
 }
 
 
