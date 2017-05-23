@@ -1,6 +1,6 @@
 // unit test program for libAccountSettings
 
-#include "../include/account_settings.h"
+#include "../include/account_settings_c.h"
 #include <string>
 #include <vector>
 #include <iostream>

@@ -4,7 +4,7 @@
 #ifndef ACCOUNT_SETTINGS_INTERNAL_HH
 #define ACCOUNT_SETTINGS_INTERNAL_HH
 
-#include "account_settings.h"
+#include "account_settings_c.h"
 #include <string>
 #include <set>
 #include <ostream>
