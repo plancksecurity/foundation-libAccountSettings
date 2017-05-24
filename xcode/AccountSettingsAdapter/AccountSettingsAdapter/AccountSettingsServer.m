@@ -11,7 +11,7 @@
 #import "AccountSettingsServer.h"
 #import "AccountSettingsServer+Internal.h"
 
-#import "account_settings.h"
+#import "account_settings_c.h"
 
 @interface AccountSettingsServer ()
 

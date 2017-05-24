@@ -9,14 +9,7 @@
 #ifndef ASProtocols_h
 #define ASProtocols_h
 
-#import "account_settings.h"
-
-@protocol AccountSettingsProviderProtocol
-
-@property (nonatomic, nonnull) NSString *name;
-@property (nonatomic, nonnull) NSString *provierDescription;
-
-@end
+#import "account_settings_c.h"
 
 @protocol AccountSettingsServerProtocol
 
@@ -30,7 +23,6 @@
 @protocol AccountSettingsProtocol
 
 @property (nonatomic, readonly) AS_STATUS status;
-@property (nonatomic, readonly, nonnull) id<AccountSettingsProviderProtocol> provider;
 @property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> incoming;
 @property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> outgoing;
 

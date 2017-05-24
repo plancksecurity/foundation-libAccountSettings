@@ -1,5 +1,5 @@
 //
-//  AccountSettingsProvider+Internal.h
+//  AccountSettingsServer+Internal.h
 //  AccountSettingsAdapter
 //
 //  Created by Xavier Algarra on 04/05/2017.

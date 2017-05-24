@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "account_settings.h"
+#import "account_settings_c.h"
 #import "ASProtocols.h"
 
 @interface AccountSettingsServer: NSObject <AccountSettingsServerProtocol>

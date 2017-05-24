@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 #import "AccountSettingsServer.h"
-#import "AccountSettingsProvider.h"
 
 #import "ASProtocols.h"
 
@@ -28,7 +27,6 @@
                                   credentials:(void * _Nullable)credentials;
 
 @property (nonatomic, readonly) AS_STATUS status;
-@property (nonatomic, readonly, nonnull) AccountSettingsProvider *provider;
 @property (nonatomic, readonly, nonnull) AccountSettingsServer *incoming;
 @property (nonatomic, readonly, nonnull) AccountSettingsServer *outgoing;
 
