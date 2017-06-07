@@ -8,6 +8,8 @@
 
 #import "ASAccountSettings.h"
 
+#import "account_settings_c.h"
+
 #import "AccountSettingsServer+Internal.h"
 
 @interface ASAccountSettings ()

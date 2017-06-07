@@ -9,7 +9,7 @@
 #ifndef ASProtocols_h
 #define ASProtocols_h
 
-#import "account_settings_c.h"
+#import "account_settings_common.h"
 
 @protocol AccountSettingsServerProtocol
 
