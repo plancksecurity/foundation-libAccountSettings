@@ -20,7 +20,7 @@
 
 @implementation AccountSettingsServer
 
-- (instancetype _Nonnull)initWithAccountServer:(const struct AS_Server *)accountServer
+- (instancetype _Nonnull)initWithAccountServer:(const struct AS_Server * _Nonnull)accountServer
 {
     if (self = [super init]) {
         _accountServer = accountServer;

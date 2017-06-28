@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
 #import "account_settings_common.h"
+#import "account_settings_c.h"
 
 @interface AccountSettingsServer ()
 
