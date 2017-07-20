@@ -217,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7E050361EB2491E006EC1EC /* Build configuration list for PBXNativeTarget "AccountSettingsAdapter" */;
 			buildPhases = (
+				151573B91F2093D60049BB0B /* Build Time Start Script */,
 				B7E050291EB2491E006EC1EC /* Sources */,
 				B7E0502A1EB2491E006EC1EC /* Frameworks */,
 				B7E0502B1EB2491E006EC1EC /* CopyFiles */,
+				151573BA1F20940D0049BB0B /* Build Time Stop Script */,
 			);
 			buildRules = (
 			);
@@ -278,6 +280,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		151573B91F2093D60049BB0B /* Build Time Start Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Time Start Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"BUILD_TIME START AccountSettingsAdapter: \"`date \"+%Y_%m_%d--%H:%M:%S\"`";
+		};
+		151573BA1F20940D0049BB0B /* Build Time Stop Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Time Stop Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"BUILD_TIME STOP AccountSettingsAdapter: \"`date \"+%Y_%m_%d--%H:%M:%S\"`";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B72A64D41EC0525500F71131 /* Sources */ = {
