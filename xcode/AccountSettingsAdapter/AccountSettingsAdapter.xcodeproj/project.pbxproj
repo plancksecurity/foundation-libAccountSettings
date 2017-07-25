@@ -202,6 +202,7 @@
 				B72A64D41EC0525500F71131 /* Sources */,
 				B72A64D51EC0525500F71131 /* Frameworks */,
 				B72A64D61EC0525500F71131 /* Resources */,
+				150D6CA41F27539E00EB95CC /* Warnings for TODO++ Script */,
 			);
 			buildRules = (
 			);
@@ -222,6 +223,7 @@
 				B7E0502A1EB2491E006EC1EC /* Frameworks */,
 				B7E0502B1EB2491E006EC1EC /* CopyFiles */,
 				151573BA1F20940D0049BB0B /* Build Time Stop Script */,
+				150D6CA31F27538300EB95CC /* Warnings for TODO++ Script */,
 			);
 			buildRules = (
 			);
@@ -282,6 +284,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		150D6CA31F27538300EB95CC /* Warnings for TODO++ Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warnings for TODO++ Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#mark annotations defined below as warnings\nKEYWORDS=\"TODO|FIXME|BUFF|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
+		150D6CA41F27539E00EB95CC /* Warnings for TODO++ Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Warnings for TODO++ Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#mark annotations defined below as warnings\nKEYWORDS=\"TODO|FIXME|BUFF|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
+		};
 		151573B91F2093D60049BB0B /* Build Time Start Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
