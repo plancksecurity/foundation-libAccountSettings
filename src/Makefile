@@ -18,7 +18,9 @@ xml2cxx: xml2cxx.o tinyxml2.o account_settings_internal.o stringpool.o
 accountSettings_test: accountSettings_test.o
 	${CXX}  -o $@ $^ ./libAccountSettings.a
 
-libAccountSettings.a: account_settings_internal.o implementation.o isp_db.o
+libAccountSettings.a: account_settings_internal.o implementation.o \
+      isp_db.o \
+      from_srv.o
 	ar rcs $@ $^
 
 %.o : %.cc %.hh
