@@ -9,9 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "ASAccountSettings.h"
 
-const unsigned int AMINCOMINGPEPTEST = 0x81012;
-const unsigned int AMOUTGOINGPEPTEST = 0x41021;
-
 @interface AccountSettingsAdapterTests : XCTestCase
 
 @end
@@ -39,10 +36,8 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
     XCTAssertEqualObjects(@"someone@peptest.ch", as.incoming.username);
     XCTAssertEqualObjects(@"mail.syhosting.ch", as.incoming.hostname);
     XCTAssertEqual(993, as.incoming.port);
-    XCTAssertEqual(AMINCOMINGPEPTEST, as.incoming.accessMethod);
     XCTAssertEqualObjects(@"mail.syhosting.ch", as.outgoing.hostname);
     XCTAssertEqual(587, as.outgoing.port);
-    XCTAssertEqual(AMOUTGOINGPEPTEST, as.outgoing.accessMethod);
 }
 
 - (void)testNewpEpTestWrongFormatMailAccount {
