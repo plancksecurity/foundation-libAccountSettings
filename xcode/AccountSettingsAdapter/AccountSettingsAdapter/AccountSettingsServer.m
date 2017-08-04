@@ -40,7 +40,7 @@
     return value;
 }
 
-- (AS_ACCESS)accesMethod
+- (AS_ACCESS)accessMethod
 {
     AS_ACCESS value = AS_get_access_method(self.accountServer);
     return value;
