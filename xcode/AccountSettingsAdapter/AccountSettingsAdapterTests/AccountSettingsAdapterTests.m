@@ -39,10 +39,10 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
     XCTAssertEqualObjects(@"someone@peptest.ch", as.incoming.username);
     XCTAssertEqualObjects(@"mail.syhosting.ch", as.incoming.hostname);
     XCTAssertEqual(993, as.incoming.port);
-    XCTAssertEqual(AMINCOMINGPEPTEST, as.incoming.accesMethod);
+    XCTAssertEqual(AMINCOMINGPEPTEST, as.incoming.accessMethod);
     XCTAssertEqualObjects(@"mail.syhosting.ch", as.outgoing.hostname);
     XCTAssertEqual(587, as.outgoing.port);
-    XCTAssertEqual(AMOUTGOINGPEPTEST, as.outgoing.accesMethod);
+    XCTAssertEqual(AMOUTGOINGPEPTEST, as.outgoing.accessMethod);
 }
 
 - (void)testNewpEpTestWrongFormatMailAccount {
