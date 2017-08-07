@@ -11,7 +11,7 @@
 #import "account_settings_common.h"
 #import "ASProtocols.h"
 
-typedef NS_ENUM(NSInteger, AccountSettingsServerProtocol)
+typedef NS_ENUM(NSInteger, AccountSettingsServerProtocolType)
 {
     AccountSettingsServerProtocolPOP3,
     AccountSettingsServerProtocolIMAP,
