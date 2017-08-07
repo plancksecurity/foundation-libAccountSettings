@@ -61,7 +61,6 @@
     XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
 }
 
-//FIXME the current status vale us AS_ILLEGAL_VALUE in the future needs to be AS_NOT_FOUND
 - (void)testNewpEpTestUnexistentMailAccount {
 
     id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
