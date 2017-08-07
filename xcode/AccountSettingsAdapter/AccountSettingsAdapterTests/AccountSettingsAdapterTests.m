@@ -31,11 +31,11 @@
     [self testServerWithAddress:@"someone@peptest.ch" incomingHostName:hostName
                    incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
               incomingTransport:AccountSettingsServerTransportTLS
-             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordEncrypted
+             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
                outgoingHostName:hostName outgoingPort:587
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportStartTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordEncrypted];
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
 }
 
 - (void)testQueryPlaceiwannabe
@@ -44,11 +44,11 @@
     [self testServerWithAddress:@"someone@someplaceiwanna.be" incomingHostName:hostName
                    incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
               incomingTransport:AccountSettingsServerTransportTLS
-             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordEncrypted
+             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
                outgoingHostName:hostName outgoingPort:465
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordEncrypted];
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
 }
 
 - (void)testNewpEpTestWrongFormatMailAccount {

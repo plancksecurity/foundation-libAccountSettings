@@ -54,17 +54,53 @@
 
 - (AccountSettingsServerProtocolType)protocol
 {
-    return AccountSettingsServerTypePOP3;
+    AS_ACCESS flags = self.accessMethod & AS_PROTO_BITMASK;
+    if (flags == AS_PROTO_POP3) {
+        return AccountSettingsServerTypePOP3;
+    }
+    if (flags == AS_PROTO_IMAP) {
+        return AccountSettingsServerTypeIMAP;
+    }
+    if (flags == AS_PROTO_SMTP) {
+        return AccountSettingsServerTypeSMTP;
+    }
+    return AccountSettingsServerTypeUnknown;
 }
 
 - (AccountSettingsServerTransport)transport
 {
-    return AccountSettingsServerTransportPlain;
+    AS_ACCESS flags = self.accessMethod & AS_SOCK_BITMASK;
+    if (flags == AS_SOCK_PLAIN) {
+        return AccountSettingsServerTransportPlain;
+    }
+    if (flags == AS_SOCK_SSL) {
+        return AccountSettingsServerTransportTLS;
+    }
+    if (flags == AS_SOCK_STARTTLS) {
+        return AccountSettingsServerTransportStartTLS;
+    }
+    return AccountSettingsServerTransportUnknown;
 }
 
 - (AccountSettingsServerAuthMethod)authMethod
 {
-    return AccountSettingsServerAuthMethodNone;
+    AS_ACCESS flags = self.accessMethod & AS_AUTH_BITMASK;
+    if (flags == AS_AUTH_NONE) {
+        return AccountSettingsServerAuthMethodNone;
+    }
+    if (flags == AS_AUTH_OAUTH2) {
+        return AccountSettingsServerAuthMethodOAUTH2;
+    }
+    if (flags == AS_AUTH_CLIENT_IP) {
+        return AccountSettingsServerAuthMethodClientIP;
+    }
+    if (flags == AS_AUTH_PW_CLEARTEXT) {
+        return AccountSettingsServerAuthMethodPasswordClearText;
+    }
+    if (flags == AS_AUTH_PW_ENCRYPTED) {
+        return AccountSettingsServerAuthMethodPasswordEncrypted;
+    }
+    return AccountSettingsServerAuthMethodUnknown;
 }
 
 @end

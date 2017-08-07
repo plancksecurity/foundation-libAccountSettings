@@ -13,6 +13,7 @@
 
 typedef NS_ENUM(NSInteger, AccountSettingsServerProtocolType)
 {
+    AccountSettingsServerTypeUnknown,
     AccountSettingsServerTypePOP3,
     AccountSettingsServerTypeIMAP,
     AccountSettingsServerTypeSMTP
@@ -20,6 +21,7 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerProtocolType)
 
 typedef NS_ENUM(NSInteger, AccountSettingsServerTransport)
 {
+    AccountSettingsServerTransportUnknown,
     AccountSettingsServerTransportPlain,
     AccountSettingsServerTransportStartTLS,
     AccountSettingsServerTransportTLS
@@ -27,6 +29,7 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerTransport)
 
 typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
 {
+    AccountSettingsServerAuthMethodUnknown,
     AccountSettingsServerAuthMethodNone,
     AccountSettingsServerAuthMethodClientIP,
     AccountSettingsServerAuthMethodPasswordClearText,
