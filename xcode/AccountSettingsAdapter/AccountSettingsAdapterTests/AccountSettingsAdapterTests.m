@@ -68,7 +68,7 @@
                                       provider:nil flags:AS_FLAG_USE_ANY
                                       credentials:nil];
 
-    XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
+    XCTAssertEqual(as.status, AS_NOT_FOUND);
 }
 
 // MARK: - Helpers
