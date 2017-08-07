@@ -11,29 +11,6 @@
 #import "account_settings_common.h"
 #import "ASProtocols.h"
 
-typedef NS_ENUM(NSInteger, AccountSettingsServerProtocolType)
-{
-    AccountSettingsServerProtocolPOP3,
-    AccountSettingsServerProtocolIMAP,
-    AccountSettingsServerProtocolSMTP
-};
-
-typedef NS_ENUM(NSInteger, AccountSettingsServerSockType)
-{
-    AccountSettingsServerSockTypePlain,
-    AccountSettingsServerSockTypeStartTLS,
-    AccountSettingsServerSockTypeTLS
-};
-
-typedef NS_ENUM(NSInteger, AccountSettingsServerAuth)
-{
-    AccountSettingsServerAuthNone,
-    AccountSettingsServerAuthClientIP,
-    AccountSettingsServerAuthPasswordClearText,
-    AccountSettingsServerAuthPasswordEncrypted,
-    AccountSettingsServerAuthOAUTH2
-};
-
 @interface AccountSettingsServer: NSObject <AccountSettingsServerProtocol>
 
 @property (nonatomic, readonly) NSInteger port;

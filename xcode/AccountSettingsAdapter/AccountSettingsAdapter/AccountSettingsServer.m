@@ -51,4 +51,20 @@
     NSString *value = [NSString stringWithUTF8String:AS_get_username(self.accountServer)];
     return value;
 }
+
+- (AccountSettingsServerProtocolType)protocol
+{
+    return AccountSettingsServerTypePOP3;
+}
+
+- (AccountSettingsServerTransport)transport
+{
+    return AccountSettingsServerTransportPlain;
+}
+
+- (AccountSettingsServerAuthMethod)authMethod
+{
+    return AccountSettingsServerAuthMethodNone;
+}
+
 @end
