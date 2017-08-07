@@ -11,12 +11,40 @@
 
 #import "account_settings_common.h"
 
+typedef NS_ENUM(NSInteger, AccountSettingsServerProtocolType)
+{
+    AccountSettingsServerTypeUnknown,
+    AccountSettingsServerTypePOP3,
+    AccountSettingsServerTypeIMAP,
+    AccountSettingsServerTypeSMTP
+};
+
+typedef NS_ENUM(NSInteger, AccountSettingsServerTransport)
+{
+    AccountSettingsServerTransportUnknown,
+    AccountSettingsServerTransportPlain,
+    AccountSettingsServerTransportStartTLS,
+    AccountSettingsServerTransportTLS
+};
+
+typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
+{
+    AccountSettingsServerAuthMethodUnknown,
+    AccountSettingsServerAuthMethodNone,
+    AccountSettingsServerAuthMethodClientIP,
+    AccountSettingsServerAuthMethodPasswordClearText,
+    AccountSettingsServerAuthMethodPasswordEncrypted,
+    AccountSettingsServerAuthMethodOAUTH2
+};
+
 @protocol AccountSettingsServerProtocol
 
 @property (nonatomic, readonly) NSInteger port;
 @property (nonatomic, readonly, nonnull) NSString *hostname;
-@property (nonatomic, readonly) AS_ACCESS accesMethod;
 @property (nonatomic, readonly, nonnull) NSString *username;
+@property (nonatomic, readonly) AccountSettingsServerProtocolType protocol;
+@property (nonatomic, readonly) AccountSettingsServerTransport transport;
+@property (nonatomic, readonly) AccountSettingsServerAuthMethod authMethod;
 
 @end
 

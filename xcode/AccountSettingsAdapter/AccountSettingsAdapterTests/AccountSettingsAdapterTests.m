@@ -9,9 +9,6 @@
 #import <XCTest/XCTest.h>
 #import "ASAccountSettings.h"
 
-const unsigned int AMINCOMINGPEPTEST = 0x81012;
-const unsigned int AMOUTGOINGPEPTEST = 0x41021;
-
 @interface AccountSettingsAdapterTests : XCTestCase
 
 @end
@@ -28,21 +25,30 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
     [super tearDown];
 }
 
-- (void)testNewpEpTestAccountSettingsSetup {
+- (void)testQueryPeptest
+{
+    NSString *hostName = @"mail.syhosting.ch";
+    [self testServerWithAddress:@"someone@peptest.ch" incomingHostName:hostName
+                   incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
+              incomingTransport:AccountSettingsServerTransportTLS
+             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
+               outgoingHostName:hostName outgoingPort:587
+               outgoingProtocol:AccountSettingsServerTypeSMTP
+              outgoingTransport:AccountSettingsServerTransportStartTLS
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
+}
 
-    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
-                                      initWithAccountName:@"someone@peptest.ch"
-                                      provider:nil flags:AS_FLAG_USE_ANY
-                                      credentials:nil];
-
-    XCTAssertEqual(as.status, AS_OK);
-    XCTAssertEqualObjects(@"someone@peptest.ch", as.incoming.username);
-    XCTAssertEqualObjects(@"mail.syhosting.ch", as.incoming.hostname);
-    XCTAssertEqual(993, as.incoming.port);
-    XCTAssertEqual(AMINCOMINGPEPTEST, as.incoming.accesMethod);
-    XCTAssertEqualObjects(@"mail.syhosting.ch", as.outgoing.hostname);
-    XCTAssertEqual(587, as.outgoing.port);
-    XCTAssertEqual(AMOUTGOINGPEPTEST, as.outgoing.accesMethod);
+- (void)testQueryPlaceiwannabe
+{
+    NSString *hostName = @"ssl0.ovh.net";
+    [self testServerWithAddress:@"someone@someplaceiwanna.be" incomingHostName:hostName
+                   incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
+              incomingTransport:AccountSettingsServerTransportTLS
+             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
+               outgoingHostName:hostName outgoingPort:465
+               outgoingProtocol:AccountSettingsServerTypeSMTP
+              outgoingTransport:AccountSettingsServerTransportTLS
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
 }
 
 - (void)testNewpEpTestWrongFormatMailAccount {
@@ -55,7 +61,6 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
     XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
 }
 
-//FIXME the current status vale us AS_ILLEGAL_VALUE in the future needs to be AS_NOT_FOUND
 - (void)testNewpEpTestUnexistentMailAccount {
 
     id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
@@ -64,6 +69,42 @@ const unsigned int AMOUTGOINGPEPTEST = 0x41021;
                                       credentials:nil];
 
     XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
+}
+
+// MARK: - Helpers
+
+- (void)testServerWithAddress:(NSString *)address
+             incomingHostName:(NSString *)incomingHostName
+                 incomingPort:(NSInteger)incomingPort
+             incomingProtocol:(AccountSettingsServerProtocolType)incomingProtocol
+            incomingTransport:(AccountSettingsServerTransport)incomingTransport
+           incomingAuthMethod:(AccountSettingsServerAuthMethod)incomingAuthMethod
+             outgoingHostName:(NSString *)outgoingHostName
+                 outgoingPort:(NSInteger)outgoingPort
+             outgoingProtocol:(AccountSettingsServerProtocolType)outgoingProtocol
+            outgoingTransport:(AccountSettingsServerTransport)outgoingTransport
+           outgoingAuthMethod:(AccountSettingsServerAuthMethod)outgoingAuthMethod
+{
+    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+                                      initWithAccountName:address
+                                      provider:nil flags:AS_FLAG_USE_ANY
+                                      credentials:nil];
+
+    XCTAssertEqual(as.status, AS_OK);
+
+    XCTAssertEqualObjects(as.incoming.username, address);
+    XCTAssertEqualObjects(as.incoming.hostname, incomingHostName);
+    XCTAssertEqual(as.incoming.port, incomingPort);
+    XCTAssertEqual(as.incoming.transport, incomingTransport);
+    XCTAssertEqual(as.incoming.authMethod, incomingAuthMethod);
+    XCTAssertEqual(as.incoming.protocol, incomingProtocol);
+
+    XCTAssertEqualObjects(as.outgoing.username, address);
+    XCTAssertEqualObjects(as.outgoing.hostname, outgoingHostName);
+    XCTAssertEqual(as.outgoing.port, outgoingPort);
+    XCTAssertEqual(as.outgoing.transport, outgoingTransport);
+    XCTAssertEqual(as.outgoing.authMethod, outgoingAuthMethod);
+    XCTAssertEqual(as.outgoing.protocol, outgoingProtocol);
 }
 
 @end

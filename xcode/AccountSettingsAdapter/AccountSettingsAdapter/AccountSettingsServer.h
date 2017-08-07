@@ -15,7 +15,6 @@
 
 @property (nonatomic, readonly) NSInteger port;
 @property (nonatomic, readonly, nonnull) NSString *hostname;
-@property (nonatomic, readonly) AS_ACCESS accesMethod;
 @property (nonatomic, readonly, nonnull) NSString *username;
 
 @end
