@@ -11,7 +11,7 @@ AccountSettings* create_dynamic_account_settings()
 {
 	static const AccountSettings dummyAS
 		{
-			AS_ILLEGAL_VALUE, "", "",
+			AS_NOT_FOUND, "", "",
 				{"", -1, AS_ACCESS(-1), ""},
 				{"", -1, AS_ACCESS(-1), ""}
 		};
