@@ -90,8 +90,13 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	const unsigned port = ldns_rdf_get_type(rdf_port)==LDNS_RDF_TYPE_INT16 ? ldns_rdf2native_int16(rdf_port) : -1;
 
 	const ldns_rdf* rdf_host = ldns_rr_rdf(rr0, 3);
-	const std::string host = ldns_rdf_get_type(rdf_host)==LDNS_RDF_TYPE_DNAME ? std::string( (const char*)ldns_rdf_data(rdf_host), ldns_rdf_size(rdf_host)) : "{°?°}";
-
+	ldns_buffer* buf_host = ldns_buffer_new(128);
+	ldns_rdf2buffer_str_dname( buf_host, rdf_host);
+	
+	const std::string host = ldns_rdf_get_type(rdf_host)==LDNS_RDF_TYPE_DNAME ? std::string( (const char*)buf_host->_data, buf_host->_limit) : "{°?°}";
+	ldns_buffer_free(buf_host);
+	buf_host=nullptr;
+	
 	printf("***\tPrio: %u, Weight: %u, Port: %u, Host: \"%s\".\n", priority, weight, port, host.c_str());
 	}
 	ldns_rr_list_print(stdout, rr);
