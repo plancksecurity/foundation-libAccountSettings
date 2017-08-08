@@ -55,7 +55,7 @@
 
 - (void)testQueryYahoo
 {
-    [self testServerWithAddress:@"hlplus18@yahoo.com" incomingHostName:@"imap.mail.yahoo.com"
+    [self testServerWithAddress:@"blahblah@yahoo.com" incomingHostName:@"imap.mail.yahoo.com"
                    incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
               incomingTransport:AccountSettingsServerTransportTLS
              incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
