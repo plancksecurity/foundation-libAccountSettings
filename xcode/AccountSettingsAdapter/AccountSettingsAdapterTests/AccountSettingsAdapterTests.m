@@ -15,19 +15,21 @@
 
 @implementation AccountSettingsAdapterTests
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
-- (void)tearDown {
+- (void)tearDown
+{
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
 - (void)testQueryPeptest
 {
-    NSString *hostName = @"mail.syhosting.ch";
+    NSString *hostName = @"peptest.ch";
     [self testServerWithAddress:@"someone@peptest.ch" incomingHostName:hostName
                    incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
               incomingTransport:AccountSettingsServerTransportTLS
@@ -51,24 +53,48 @@
              outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
 }
 
-- (void)testNewpEpTestWrongFormatMailAccount {
+- (void)testQueryYahoo
+{
+    [self testServerWithAddress:@"blahblah@yahoo.com" incomingHostName:@"imap.mail.yahoo.com"
+                   incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
+              incomingTransport:AccountSettingsServerTransportTLS
+             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
+               outgoingHostName:@"smtp.mail.yahoo.com" outgoingPort:465
+               outgoingProtocol:AccountSettingsServerTypeSMTP
+              outgoingTransport:AccountSettingsServerTransportTLS
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
+}
+
+- (void)testNewpEpTestWrongFormatMailAccount
+{
 
     id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
-                                      initWithAccountName:@" someone@peptest.ch "
+                                      initWithAccountName:@" someone@peptest.ch"
                                       provider:nil flags:AS_FLAG_USE_ANY
                                       credentials:nil];
 
-    XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
+    XCTAssertEqual(as.status, AS_OK);
 }
 
-- (void)testNewpEpTestUnexistentMailAccount {
+- (void)testNewpEpTestWrongFormatMailAccountDomain
+{
 
+    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+                                      initWithAccountName:@"someone@peptest.ch "
+                                      provider:nil flags:AS_FLAG_USE_ANY
+                                      credentials:nil];
+
+    XCTAssertEqual(as.status, AS_NOT_FOUND);
+}
+
+- (void)testNewpEpTestUnexistentMailAccount
+{
     id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
                                       initWithAccountName:@"someone@example.com"
                                       provider:nil flags:AS_FLAG_USE_ANY
                                       credentials:nil];
 
-    XCTAssertEqual(as.status, AS_ILLEGAL_VALUE);
+    XCTAssertEqual(as.status, AS_NOT_FOUND);
 }
 
 // MARK: - Helpers

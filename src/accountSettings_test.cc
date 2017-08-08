@@ -22,7 +22,7 @@ struct TestHost
 
 const std::vector< KeyValue< TestHost> > incomingServer =
 	{
-		{ "lib_as@peptest.ch", {"mail.syhosting.ch", 993} },
+		{ "lib_as@peptest.ch", {"peptest.ch", 993} },
 		{ "example@gmx.de"   , {"imap.gmx.net", 993} },
 		{ "example@yandex.ua", {"imap.yandex.com", 993} },
 	};
