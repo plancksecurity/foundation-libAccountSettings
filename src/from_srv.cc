@@ -6,10 +6,13 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	ldns_resolver* res    = nullptr;
 	ldns_pkt* p           = nullptr;
 	ldns_rr_list*  rr     = nullptr;  // list of DNS Resource Records (RR)
+	const ldns_rr* rr0 = nullptr; 
 	ldns_status    status;
 	
+	const std::string imap_domain = "_imap._tcp." + domain;
+	
 	// RDATA
-	ldns_rdf* dom = ldns_dname_new_frm_str( domain.c_str() );
+	ldns_rdf* dom = ldns_dname_new_frm_str( imap_domain.c_str() );
 	if(dom == nullptr)
 	{
 		fprintf(stderr, "dom==nullptr!\n");
@@ -36,7 +39,7 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	// DNS packet
 	p = ldns_resolver_search(res,
 	                         dom,
-	                         LDNS_RR_TYPE_MX,
+	                         LDNS_RR_TYPE_SRV,
 	                         LDNS_RR_CLASS_IN,
 	                         LDNS_RD); // RD = recursion desired
 	
@@ -49,7 +52,7 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	
 	// list of DNS Resource Records (RR)
 	rr = ldns_pkt_rr_list_by_type(p,
-	                              LDNS_RR_TYPE_MX,
+	                              LDNS_RR_TYPE_SRV,
 	                              LDNS_SECTION_ANSWER);
 	
 	if(rr == nullptr)
@@ -58,7 +61,39 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 		goto end;
 	}
 
-	ldns_rr_list_sort(rr);
+	
+	if(ldns_rr_list_rr_count(rr)==0)
+	{
+		fprintf(stderr, "empty rr_list\n");
+		goto end;
+	}
+	
+	ldns_rr_list_sort(rr); // FIXME: sort by priority?
+	rr0 = ldns_rr_list_rr( rr, 0 );  // get the 1st (=highest priority?) entry
+	
+	if( ldns_rr_get_type(rr0) != LDNS_RR_TYPE_SRV)
+	{
+		fprintf(stderr, "got unexpected RR type %u\n", unsigned( ldns_rr_get_type(rr0) ));
+		goto end;
+	}
+	
+	printf("Number of rd entries: %zu.\n", ldns_rr_rd_count(rr0) );
+	
+	{
+	const ldns_rdf* rdf_prio = ldns_rr_rdf(rr0, 0);
+	const unsigned priority = ldns_rdf_get_type(rdf_prio)==LDNS_RDF_TYPE_INT16 ? ldns_rdf2native_int16(rdf_prio) : -1;
+
+	const ldns_rdf* rdf_weight = ldns_rr_rdf(rr0, 1);
+	const unsigned weight = ldns_rdf_get_type(rdf_weight)==LDNS_RDF_TYPE_INT16 ? ldns_rdf2native_int16(rdf_weight) : -1;
+
+	const ldns_rdf* rdf_port = ldns_rr_rdf(rr0, 2);
+	const unsigned port = ldns_rdf_get_type(rdf_port)==LDNS_RDF_TYPE_INT16 ? ldns_rdf2native_int16(rdf_port) : -1;
+
+	const ldns_rdf* rdf_host = ldns_rr_rdf(rr0, 3);
+	const std::string host = ldns_rdf_get_type(rdf_host)==LDNS_RDF_TYPE_DNAME ? std::string( (const char*)ldns_rdf_data(rdf_host), ldns_rdf_size(rdf_host)) : "{°?°}";
+
+	printf("***\tPrio: %u, Weight: %u, Port: %u, Host: \"%s\".\n", priority, weight, port, host.c_str());
+	}
 	ldns_rr_list_print(stdout, rr);
 
 end:
