@@ -1,7 +1,24 @@
 #include "from_srv.hh"
 #include <ldns/ldns.h>
 
-AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& accountName, const std::string& domain, const std::string& provider)
+namespace
+{
+
+struct SRV
+{
+	unsigned priority;
+	unsigned weight;
+	unsigned port;
+	std::string hostname;
+	
+	bool is_valid() const
+	{
+		return hostname.size();
+	}
+};
+
+
+SRV get_srv_server(const std::string& domain, const std::string& service)
 {
 	ldns_resolver* res    = nullptr;
 	ldns_pkt* p           = nullptr;
@@ -9,14 +26,14 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	const ldns_rr* rr0 = nullptr; 
 	ldns_status    status;
 	
-	const std::string imap_domain = "_imap._tcp." + domain;
+	const std::string service_domain = service + "." + domain;
 	
 	// RDATA
-	ldns_rdf* dom = ldns_dname_new_frm_str( imap_domain.c_str() );
+	ldns_rdf* dom = ldns_dname_new_frm_str( service_domain.c_str() );
 	if(dom == nullptr)
 	{
-		fprintf(stderr, "dom==nullptr!\n");
-		return as;
+		throw std::runtime_error("dom==nullptr!");
+		
 	}
 	
 	if (! ldns_dname_str_absolute(domain.c_str()) && ldns_dname_absolute(dom))
@@ -98,12 +115,35 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	buf_host=nullptr;
 	
 	printf("***\tPrio: %u, Weight: %u, Port: %u, Host: \"%s\".\n", priority, weight, port, host.c_str());
+	return SRV{ priority, weight, port, host };
 	}
 	ldns_rr_list_print(stdout, rr);
 
 end:
 	ldns_rr_list_deep_free(rr);
 	ldns_resolver_free( res );
-	return as;
+	throw -1;
 }
 
+} // end of anonymous namespace
+
+
+AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& accountName, const std::string& domain, const std::string& provider)
+{
+	const SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
+	const SRV smtp_srv = get_srv_server( domain, "_submission._tcp" );
+	
+	if(imap_srv.is_valid())
+	{
+		as->incoming.name = imap_srv.hostname;
+		as->incoming.port = imap_srv.port;
+	}
+
+	if(smtp_srv.is_valid())
+	{
+		as->outgoing.name = smtp_srv.hostname;
+		as->outgoing.port = smtp_srv.port;
+	}
+	
+	return as;
+}
