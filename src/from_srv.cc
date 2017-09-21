@@ -30,77 +30,86 @@ struct SRV
 };
 
 
+template<class T, void(*D)(T*)>
+void Petze( T* obj)
+{
+	fprintf(stderr, "Petze: %s %p \n", typeid(T).name(), (void*)obj );
+	D(obj);
+}
+
+
 SRV get_srv_server(const std::string& domain, const std::string& service)
 {
 	ldns_resolver* res    = nullptr;
-	ldns_pkt* p           = nullptr;
-	ldns_rr_list*  rr     = nullptr;  // list of DNS Resource Records (RR)
+//	ldns_pkt* p           = nullptr;
+//	ldns_rr_list*  rr     = nullptr;  // list of DNS Resource Records (RR)
 	const ldns_rr* rr0 = nullptr; 
 	ldns_status    status;
 	
 	const std::string service_domain = service + "." + domain;
 	
 	// RDATA
-	C_Ptr<ldns_rdf> dom { ldns_dname_new_frm_str( service_domain.c_str() ), &ldns_rdf_free };
+	C_Ptr<ldns_rdf> dom { ldns_dname_new_frm_str( service_domain.c_str() ), &ldns_rdf_deep_free };
 	if(!dom)
 	{
 		throw DNS_error("dom==nullptr!", domain);
 	}
 
-#if 0
+/*
 	if (! ldns_dname_str_absolute(domain.c_str()) && ldns_dname_absolute(dom.get()))
 	{
 		fprintf(stderr, "not absolute.\n");
-		/* ldns_dname_new_frm_str makes absolute dnames always!
-		 * So deabsolutify domain.
-		 * TODO: Create ldns_dname_new_frm_str_relative? Yuck!
-		 */
+		// ldns_dname_new_frm_str makes absolute dnames always!
+		// So deabsolutify domain.
+		// TODO: Create ldns_dname_new_frm_str_relative? Yuck!
 		ldns_rdf_set_size(dom.get(), ldns_rdf_size(dom.get()) - 1);
 	}
-#endif
+*/
 	
 	// create resolver
 	status = ldns_resolver_new_frm_file( &res, nullptr );  // nullptr == use system default, e.g. /etc/resolv.conf 
+	C_Ptr<ldns_resolver> res_ptr { res, &Petze<ldns_resolver, &ldns_resolver_free> };
+	
 	if( status != LDNS_STATUS_OK)
 	{
-		fprintf(stderr, "status = %ld.\n", (long)status);
-		goto end;
+		throw DNS_error("ldns_resolver_new_from_file returned " + std::to_string(status), domain );
 	}
 	
 	// DNS packet
-	p = ldns_resolver_search(res,
+	C_Ptr<ldns_pkt> p { ldns_resolver_search(res,
 	                         dom.get(),
 	                         LDNS_RR_TYPE_SRV,
 	                         LDNS_RR_CLASS_IN,
-	                         LDNS_RD); // RD = recursion desired
+	                         LDNS_RD) // RD = recursion desired
+	                    , & ldns_pkt_free };
 	
-	if(p == nullptr)
+	if(!p)
 	{
-		fprintf(stderr, "p==nullptr!\n");
-		goto end;
+		throw DNS_error("p==nullptr!", domain);
 	}
 	
 	
 	// list of DNS Resource Records (RR)
-	rr = ldns_pkt_rr_list_by_type(p,
+	C_Ptr<ldns_rr_list> rr {ldns_pkt_rr_list_by_type(p.get(),
 	                              LDNS_RR_TYPE_SRV,
-	                              LDNS_SECTION_ANSWER);
+	                              LDNS_SECTION_ANSWER)
+	                        , & ldns_rr_list_deep_free };
 	
-	if(rr == nullptr)
+	if(!rr)
 	{
 		fprintf(stderr, "rr==nullptr!\n");
 		goto end;
 	}
 
 	
-	if(ldns_rr_list_rr_count(rr)==0)
+	if(ldns_rr_list_rr_count(rr.get())==0)
 	{
 		fprintf(stderr, "empty rr_list\n");
 		goto end;
 	}
 	
-	ldns_rr_list_sort(rr); // FIXME: sort by priority?
-	rr0 = ldns_rr_list_rr( rr, 0 );  // get the 1st (=highest priority?) entry
+	ldns_rr_list_sort(rr.get()); // FIXME: sort by priority?
+	rr0 = ldns_rr_list_rr( rr.get(), 0 );  // get the 1st (=highest priority?) entry
 	
 	if( ldns_rr_get_type(rr0) != LDNS_RR_TYPE_SRV)
 	{
@@ -131,11 +140,10 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	printf("***\tPrio: %u, Weight: %u, Port: %u, Host: \"%s\".\n", priority, weight, port, host.c_str());
 	return SRV{ priority, weight, port, host };
 	}
-	ldns_rr_list_print(stdout, rr);
 
 end:
-	ldns_rr_list_deep_free(rr);
-	ldns_resolver_free( res );
+	//ldns_rr_list_deep_free(rr);
+	//ldns_resolver_free( res ); 
 	throw -1;
 }
 
