@@ -42,10 +42,11 @@ void StringPool::printPool(std::ostream& o, const std::string& name) const
 	o << "const char* const " << name << " = \"";
 	bool need_linebreak = false;
 	bool can_linebreak = true;
+	unsigned line_length = 0;
 	
 	for(unsigned ofs=0; ofs<pool.size(); ++ofs)
 	{
-		if(ofs % 64 == 0)
+		if(line_length>64)
 		{
 			need_linebreak = true;
 		}
@@ -53,20 +54,20 @@ void StringPool::printPool(std::ostream& o, const std::string& name) const
 		if( need_linebreak && can_linebreak )
 		{
 			o << "\"\n\t\"";
+			line_length = 0;
 			need_linebreak = false;
+			
 		}
 		
 		const char c = pool.at(ofs);
 		can_linebreak = (uint8_t(c)<0x80);
+		++line_length;
 		
 		switch(c)
 		{
-			case '\0' : if(ofs<pool.size()-1 && pool[ofs+1]>='0' && pool[ofs+1]<='7')
-						{
-							o << "\\0\"\""; // to avoid octal sequences: \01, \007 etc
-						}else{
-							o << "\\0";
-						}
+			case '\0' : o << "\\0";
+						need_linebreak = true;
+						
 						break;
 			case '?'  : if(ofs>0 && pool[ofs-1]=='?')
 						{
