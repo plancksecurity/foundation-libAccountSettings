@@ -1,6 +1,6 @@
 .PHONY: all clear isp_db test
 
-CXX=c++ -Wall -O0  -std=c++11 -g -I../include/
+CXX=c++ -Wall -O0  -std=c++11 -g -I../include/ -I/usr/local/include -L/usr/local/lib
 
 all: libAccountSettings.a test
 

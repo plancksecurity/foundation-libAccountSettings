@@ -1,8 +1,20 @@
 #include "from_srv.hh"
 #include <ldns/ldns.h>
+#include <stdexcept>
+#include <memory>
 
 namespace
 {
+
+	template<class T>
+	using C_Ptr = std::unique_ptr<T, void(*)(T*)>;
+
+	struct DNS_error : public std::runtime_error
+	{
+		DNS_error(const std::string& cause, const std::string& domain)
+		: runtime_error(cause + " for domain \"" + domain + "\"")
+		{}
+	};
 
 struct SRV
 {
@@ -13,7 +25,7 @@ struct SRV
 	
 	bool is_valid() const
 	{
-		return hostname.size();
+		return hostname.size() > 0;
 	}
 };
 
@@ -29,21 +41,23 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	const std::string service_domain = service + "." + domain;
 	
 	// RDATA
-	ldns_rdf* dom = ldns_dname_new_frm_str( service_domain.c_str() );
-	if(dom == nullptr)
+	C_Ptr<ldns_rdf> dom { ldns_dname_new_frm_str( service_domain.c_str() ), &ldns_rdf_free };
+	if(!dom)
 	{
-		throw std::runtime_error("dom==nullptr!");
-		
+		throw DNS_error("dom==nullptr!", domain);
 	}
-	
-	if (! ldns_dname_str_absolute(domain.c_str()) && ldns_dname_absolute(dom))
+
+#if 0
+	if (! ldns_dname_str_absolute(domain.c_str()) && ldns_dname_absolute(dom.get()))
 	{
+		fprintf(stderr, "not absolute.\n");
 		/* ldns_dname_new_frm_str makes absolute dnames always!
 		 * So deabsolutify domain.
 		 * TODO: Create ldns_dname_new_frm_str_relative? Yuck!
 		 */
-		ldns_rdf_set_size(dom, ldns_rdf_size(dom) - 1);
+		ldns_rdf_set_size(dom.get(), ldns_rdf_size(dom.get()) - 1);
 	}
+#endif
 	
 	// create resolver
 	status = ldns_resolver_new_frm_file( &res, nullptr );  // nullptr == use system default, e.g. /etc/resolv.conf 
@@ -55,7 +69,7 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	
 	// DNS packet
 	p = ldns_resolver_search(res,
-	                         dom,
+	                         dom.get(),
 	                         LDNS_RR_TYPE_SRV,
 	                         LDNS_RR_CLASS_IN,
 	                         LDNS_RD); // RD = recursion desired
@@ -130,7 +144,10 @@ end:
 
 AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& accountName, const std::string& domain, const std::string& provider)
 {
+	fprintf(stderr, "== IMAP ==\n");
 	const SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
+	
+	fprintf(stderr, "== SMTP ==\n");
 	const SRV smtp_srv = get_srv_server( domain, "_submission._tcp" );
 	
 	if(imap_srv.is_valid())

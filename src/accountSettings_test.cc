@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <memory>
 
 
 template<class Value>
@@ -66,7 +67,8 @@ int main(int argc, char** argv)
 		for(int a=1; a<argc; ++a)
 		{
 			printf("#%d : ", a);
-			get_settings_from_srv( nullptr, "foo@bar.com", argv[a], "dummy");
+			auto as = std::unique_ptr<AccountSettings>{ new AccountSettings };
+			get_settings_from_srv( as.get(), "foo@bar.com", argv[a], "dummy");
 			printf("\n");
 		}
 	}
