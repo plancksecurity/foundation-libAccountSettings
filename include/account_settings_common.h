@@ -34,6 +34,7 @@ typedef enum _AS_FLAGS
 	AS_FLAG_USE_HEURISTICS     = 0x0020, ///<  use heuristics from account's domain name
 	AS_FLAG_USE_ANY_LOCAL      = 0x00FF, ///<  use all local (without communication to 3rd parties) methods in ascending order
 	AS_FLAG_USE_DNS_AUTOCONFIG = 0x0100, ///<  fetch account config from "autodiscover/autoconfig" servers
+	AS_FLAG_USE_DNS_SRV        = 0x0110, ///<  use DNS SRV records for the mail domain
 	AS_FLAG_USE_ONLINE_ISP_DB  = 0x0800, ///<  ask https://live.mozillamessaging.com/autoconfig/v1.1/$DOMAINNAME
 	AS_FLAG_USE_ANY            = 0xFFFF  ///<  try first local, than network methods
 } AS_FLAGS;

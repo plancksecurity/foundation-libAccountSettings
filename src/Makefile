@@ -1,6 +1,6 @@
 .PHONY: all clear isp_db test
 
-CXX=c++ -Wall -O3  -std=c++11 -g -I../include/
+CXX=c++ -Wall -O0  -std=c++11 -g -I../include/ -I/usr/local/include -L/usr/local/lib
 
 all: libAccountSettings.a test
 
@@ -15,10 +15,12 @@ isp_db.cc: xml2cxx
 xml2cxx: xml2cxx.o tinyxml2.o account_settings_internal.o stringpool.o
 	${CXX}  -o $@ $^
 
-accountSettings_test: accountSettings_test.o
-	${CXX}  -o $@ $^ ./libAccountSettings.a
+accountSettings_test: accountSettings_test.o libAccountSettings.a
+	${CXX}  -o $@ $^  -lldns
 
-libAccountSettings.a: account_settings_internal.o implementation.o isp_db.o
+libAccountSettings.a: account_settings_internal.o implementation.o \
+      isp_db.o \
+      from_srv.o
 	ar rcs $@ $^
 
 %.o : %.cc %.hh

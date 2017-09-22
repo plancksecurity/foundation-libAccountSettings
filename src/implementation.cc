@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <stdexcept>
 
+#include "from_srv.hh"
 
 namespace
 {
@@ -91,6 +92,11 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	//  - implement heuristics
 	//  - implement automx
 	//  - fetch from Mozilla's DB (still necessary when we have their data already in our local DB?)
+	
+	if( dyn_as->status != AS_OK && (flags & AS_FLAG_USE_DNS_SRV) )
+	{
+		get_settings_from_srv(dyn_as, accountName, domain, provider );
+	}
 	
 	return dyn_as;
 }

@@ -1,9 +1,11 @@
 // unit test program for libAccountSettings
 
 #include "../include/account_settings_c.h"
+#include "from_srv.hh"
 #include <string>
 #include <vector>
 #include <iostream>
+#include <memory>
 
 
 template<class Value>
@@ -52,14 +54,26 @@ bool testServers( const TestData& testData, Function testFunc )
 			std::cerr << "Got port " << port << ", expected " << t.value.port << " for account " << t.key << "!\n";
 			okay = false;
 		}
+		
+		free_account_settings(as);
 	}
 	
 	return okay;
 }
 
 
-int main()
+int main(int argc, char** argv)
 {
+	if(argc>1)
+	{
+		for(int a=1; a<argc; ++a)
+		{
+			printf("#%d : ", a);
+			auto as = std::unique_ptr<AccountSettings>{ new AccountSettings };
+			get_settings_from_srv( as.get(), "foo@bar.com", argv[a], "dummy");
+			printf("\n");
+		}
+	}
 	bool all_okay = testServers( incomingServer, &AS_get_incoming );
 	std::cout << "***\t" << (all_okay ? "All tests are okay." : "ERROS happened") << std::endl;
 	return all_okay ? 0 : 2;
