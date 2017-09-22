@@ -30,12 +30,14 @@ struct SRV
 };
 
 
+/* // only for debugging
 template<class T, void(*D)(T*)>
 void Petze( T* obj)
 {
 	fprintf(stderr, "Petze: %s %p \n", typeid(T).name(), (void*)obj );
 	D(obj);
 }
+*/
 
 
 SRV get_srv_server(const std::string& domain, const std::string& service)
@@ -68,7 +70,7 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	
 	// create resolver
 	status = ldns_resolver_new_frm_file( &res, nullptr );  // nullptr == use system default, e.g. /etc/resolv.conf 
-	C_Ptr<ldns_resolver> res_ptr { res, &Petze<ldns_resolver, &ldns_resolver_free> };
+	C_Ptr<ldns_resolver> res_ptr { res, &ldns_resolver_deep_free };
 	
 	if( status != LDNS_STATUS_OK)
 	{
@@ -97,15 +99,13 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	
 	if(!rr)
 	{
-		fprintf(stderr, "rr==nullptr!\n");
-		goto end;
+		throw DNS_error("rr==nullptr!", domain);
 	}
 
 	
 	if(ldns_rr_list_rr_count(rr.get())==0)
 	{
-		fprintf(stderr, "empty rr_list\n");
-		goto end;
+		throw DNS_error("empty rr_list", domain);
 	}
 	
 	ldns_rr_list_sort(rr.get()); // FIXME: sort by priority?
@@ -113,13 +113,11 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	
 	if( ldns_rr_get_type(rr0) != LDNS_RR_TYPE_SRV)
 	{
-		fprintf(stderr, "got unexpected RR type %u\n", unsigned( ldns_rr_get_type(rr0) ));
-		goto end;
+		throw DNS_error("got unexpected RR type " + std::to_string( unsigned( ldns_rr_get_type(rr0) )), domain);
 	}
 	
-	printf("Number of rd entries: %zu.\n", ldns_rr_rd_count(rr0) );
+//	printf("Number of rd entries: %zu.\n", ldns_rr_rd_count(rr0) );
 	
-	{
 	const ldns_rdf* rdf_prio = ldns_rr_rdf(rr0, 0);
 	const unsigned priority = ldns_rdf_get_type(rdf_prio)==LDNS_RDF_TYPE_INT16 ? ldns_rdf2native_int16(rdf_prio) : -1;
 
@@ -137,14 +135,9 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	ldns_buffer_free(buf_host);
 	buf_host=nullptr;
 	
-	printf("***\tPrio: %u, Weight: %u, Port: %u, Host: \"%s\".\n", priority, weight, port, host.c_str());
+//	printf("***\tPrio: %u, Weight: %u, Port: %u, Host: \"%s\".\n", priority, weight, port, host.c_str());
+	
 	return SRV{ priority, weight, port, host };
-	}
-
-end:
-	//ldns_rr_list_deep_free(rr);
-	//ldns_resolver_free( res ); 
-	throw -1;
 }
 
 } // end of anonymous namespace
@@ -152,10 +145,15 @@ end:
 
 AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& accountName, const std::string& domain, const std::string& provider)
 {
-	fprintf(stderr, "== IMAP ==\n");
+	if(as==nullptr)
+	{
+		throw std::runtime_error("get_settings_from_srv shall not be called with NULL pointer!");
+	}
+
+//	fprintf(stderr, "== IMAP ==\n");
 	const SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
 	
-	fprintf(stderr, "== SMTP ==\n");
+//	fprintf(stderr, "== SMTP ==\n");
 	const SRV smtp_srv = get_srv_server( domain, "_submission._tcp" );
 	
 	if(imap_srv.is_valid())

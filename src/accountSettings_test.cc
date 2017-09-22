@@ -54,6 +54,8 @@ bool testServers( const TestData& testData, Function testFunc )
 			std::cerr << "Got port " << port << ", expected " << t.value.port << " for account " << t.key << "!\n";
 			okay = false;
 		}
+		
+		free_account_settings(as);
 	}
 	
 	return okay;
