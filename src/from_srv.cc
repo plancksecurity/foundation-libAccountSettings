@@ -151,21 +151,29 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	}
 
 //	fprintf(stderr, "== IMAP ==\n");
-	const SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
-	
-//	fprintf(stderr, "== SMTP ==\n");
-	const SRV smtp_srv = get_srv_server( domain, "_submission._tcp" );
-	
-	if(imap_srv.is_valid())
+	try{
+		const SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
+		if(imap_srv.is_valid())
+		{
+			as->incoming.name = imap_srv.hostname;
+			as->incoming.port = imap_srv.port;
+		}
+	}catch( const DNS_error& )
 	{
-		as->incoming.name = imap_srv.hostname;
-		as->incoming.port = imap_srv.port;
+		// ignore unsuccessful DNS queries
 	}
 
-	if(smtp_srv.is_valid())
+//	fprintf(stderr, "== SMTP ==\n");
+	try{
+		const SRV smtp_srv = get_srv_server( domain, "_submission._tcp" );
+		if(smtp_srv.is_valid())
+		{
+			as->outgoing.name = smtp_srv.hostname;
+			as->outgoing.port = smtp_srv.port;
+		}
+	}catch( const DNS_error& )
 	{
-		as->outgoing.name = smtp_srv.hostname;
-		as->outgoing.port = smtp_srv.port;
+		// ignore unsuccessful DNS queries
 	}
 	
 	return as;
