@@ -21,6 +21,7 @@ struct TestHost
 	int port;
 };
 
+// stored in ISP DB
 const std::vector< KeyValue< TestHost> > incomingServer =
 	{
 		{ "lib_as@peptest.ch", {"peptest.ch", 993} },
@@ -28,6 +29,16 @@ const std::vector< KeyValue< TestHost> > incomingServer =
 		{ "example@yandex.ua", {"imap.yandex.com", 993} },
 	};
 
+// stored in ISP DB
+const std::vector< KeyValue< TestHost> > outgoingServer =
+	{
+		{ "lib_as@peptest.ch", {"peptest.ch", 587} },
+		{ "example@gmx.de"   , {"mail.gmx.net", 465} },
+		{ "example@yandex.ua", {"smtp.yandex.com", 465} },
+	};
+
+
+// 
 template<class TestData, class Function >
 bool testServers( const TestData& testData, Function testFunc )
 {
@@ -62,8 +73,17 @@ bool testServers( const TestData& testData, Function testFunc )
 }
 
 
-int main(int argc, char** argv)
+bool testSRV()
 {
+	std::cout << "Test DNS queries for SRV records. These tests might fail due to network problems." << std::endl;
+	bool okay = true;
+	
+	return okay;
+}
+
+
+int main(int argc, char** argv)
+try{
 	if(argc>1)
 	{
 		for(int a=1; a<argc; ++a)
@@ -74,7 +94,22 @@ int main(int argc, char** argv)
 			printf("\n");
 		}
 	}
-	bool all_okay = testServers( incomingServer, &AS_get_incoming );
+	bool all_okay = true;
+	all_okay &= testServers( incomingServer, &AS_get_incoming );
+	all_okay &= testServers( outgoingServer, &AS_get_outgoing );
+	
+	all_okay &= testSRV();
+	
 	std::cout << "***\t" << (all_okay ? "All tests are okay." : "ERROS happened") << std::endl;
 	return all_okay ? 0 : 2;
+}
+catch(const std::runtime_error& e)
+{
+	std::cerr << "Exception: " << e.what() << std::endl;
+	return 4;
+}
+catch(...)
+{
+	std::cerr << "Unknown exception! :-(" << std::endl;
+	return 23;
 }
