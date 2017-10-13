@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include <memory>
 
+#include "boost_asio.hh"
+
 
 class protocol_error : public std::runtime_error
 {
