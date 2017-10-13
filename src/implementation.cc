@@ -4,6 +4,7 @@
 #include <stdexcept>
 
 #include "from_srv.hh"
+#include "from_heuristics.hh"
 
 namespace
 {
@@ -96,6 +97,11 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	if( dyn_as->status != AS_OK && (flags & AS_FLAG_USE_DNS_SRV) )
 	{
 		get_settings_from_srv(dyn_as, accountName, domain, provider );
+	}
+
+	if( dyn_as->status != AS_OK && (flags & AS_FLAG_USE_HEURISTICS) )
+	{
+		get_settings_from_heuristics(dyn_as, accountName, domain, provider );
 	}
 	
 	return dyn_as;

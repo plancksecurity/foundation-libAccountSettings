@@ -20,6 +20,7 @@ accountSettings_test: accountSettings_test.o libAccountSettings.a
 
 libAccountSettings.a: account_settings_internal.o implementation.o \
       isp_db.o \
+      from_heuristics.o \
       from_srv.o
 	ar rcs $@ $^
 
