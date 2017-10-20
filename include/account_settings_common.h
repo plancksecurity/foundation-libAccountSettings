@@ -43,6 +43,8 @@ typedef enum _AS_FLAGS
 //! Combination of protocol, socket type & authentication type
 typedef enum _AS_ACCESS
 {
+	AS_ACCESS_UNKNOWN     = 0,        ///< unknown / undetermined authentication type. Used as error value.
+
 	/// protocols
 	AS_PROTO_POP3         = 0x00011,  ///< incoming
 	AS_PROTO_IMAP         = 0x00012,  ///< incoming
