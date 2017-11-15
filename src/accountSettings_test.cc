@@ -21,11 +21,12 @@ struct TestHost
 
 const std::vector< KeyValue< TestHost> > incomingServer =
 	{
-		{ "lib_as@peptest.ch", {"peptest.ch", 993} },
+		{ "lib_as@peptest.ch", {"mail.peptest.ch", 993} },
 		{ "example@gmx.de"   , {"imap.gmx.net", 993} },
 		{ "example@yandex.ua", {"imap.yandex.com", 993} },
 	};
 
+		{ "lib_as@peptest.ch", {"mail.peptest.ch", 587} },
 template<class TestData, class Function >
 bool testServers( const TestData& testData, Function testFunc )
 {
