@@ -24,7 +24,7 @@ struct TestHost
 // stored in ISP DB
 const std::vector< KeyValue< TestHost> > incomingServer =
 	{
-		{ "lib_as@peptest.ch", {"peptest.ch", 993} },
+		{ "lib_as@peptest.ch", {"mail.peptest.ch", 993} },
 		{ "example@gmx.de"   , {"imap.gmx.net", 993} },
 		{ "example@yandex.ua", {"imap.yandex.com", 993} },
 	};
@@ -32,7 +32,7 @@ const std::vector< KeyValue< TestHost> > incomingServer =
 // stored in ISP DB
 const std::vector< KeyValue< TestHost> > outgoingServer =
 	{
-		{ "lib_as@peptest.ch", {"peptest.ch", 587} },
+		{ "lib_as@peptest.ch", {"mail.peptest.ch", 587} },
 		{ "example@gmx.de"   , {"mail.gmx.net", 465} },
 		{ "example@yandex.ua", {"smtp.yandex.com", 465} },
 	};
