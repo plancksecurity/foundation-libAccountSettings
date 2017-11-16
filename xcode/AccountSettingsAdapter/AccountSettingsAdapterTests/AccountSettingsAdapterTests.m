@@ -29,7 +29,7 @@
 
 - (void)testQueryPeptest
 {
-    NSString *hostName = @"peptest.ch";
+    NSString *hostName = @"mail.peptest.ch";
     [self testServerWithAddress:@"someone@peptest.ch" incomingHostName:hostName
                    incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
               incomingTransport:AccountSettingsServerTransportTLS
