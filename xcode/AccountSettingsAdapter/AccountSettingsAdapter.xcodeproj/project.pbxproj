@@ -15,6 +15,7 @@
 		43018BEB1EB99FF1004ABF26 /* tinyxml2.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE41EB99FF1004ABF26 /* tinyxml2.cc */; };
 		43018BEC1EB99FF1004ABF26 /* xml2cxx.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE51EB99FF1004ABF26 /* xml2cxx.cc */; };
 		4344E4371FCC4EA700EEEA90 /* from_srv.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4344E4361FCC4EA700EEEA90 /* from_srv.cc */; };
+		43754AA81FCD61EF009A8E63 /* ldns_xcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43754AA91FCD61EF009A8E63 /* ldns_xcode.framework */; };
 		B7089D901EBA2F1A0041F1E5 /* AccountSettingsServer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */; };
 		B72A64DB1EC0525500F71131 /* AccountSettingsAdapterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B72A64DA1EC0525500F71131 /* AccountSettingsAdapterTests.m */; };
 		B72A64DD1EC0525500F71131 /* libAccountSettingsAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */; };
@@ -62,6 +63,7 @@
 		43018BF41EB9A05A004ABF26 /* xml2cxx.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xml2cxx.hh; path = ../../src/xml2cxx.hh; sourceTree = "<group>"; };
 		431C06531ECDF350003C2B29 /* ASProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASProtocols.h; sourceTree = "<group>"; };
 		4344E4361FCC4EA700EEEA90 /* from_srv.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = from_srv.cc; path = ../../src/from_srv.cc; sourceTree = "<group>"; };
+		43754AA91FCD61EF009A8E63 /* ldns_xcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ldns_xcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1F9241EC05AD3002794B9 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		B7089D8F1EBA2F1A0041F1E5 /* AccountSettingsServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSettingsServer.m; sourceTree = "<group>"; };
 		B72A64D81EC0525500F71131 /* AccountSettingsAdapterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountSettingsAdapterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43754AA81FCD61EF009A8E63 /* ldns_xcode.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +116,7 @@
 		43B1F9231EC05AD3002794B9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43754AA91FCD61EF009A8E63 /* ldns_xcode.framework */,
 				B72A64E41EC0800F00F71131 /* libc++.1.dylib */,
 				43B1F9241EC05AD3002794B9 /* libstdc++.tbd */,
 			);
@@ -500,6 +504,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../ldns",
+					"$(SRCROOT)/../../../OpenSSL-for-iPhone/include",
+				);
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -516,6 +524,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "compiler-default";
 				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../ldns",
+					"$(SRCROOT)/../../../OpenSSL-for-iPhone/include",
+				);
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = (
 					"-ObjC",
