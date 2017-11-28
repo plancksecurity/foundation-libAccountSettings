@@ -4,14 +4,14 @@
     <displayName>pEp Test</displayName>
     <displayShortName>pEp Test</displayShortName>
     <incomingServer type="imap">
-      <hostname>mail.peptest.ch</hostname>
+      <hostname>peptest.ch</hostname>
       <port>993</port>
       <socketType>SSL</socketType>
       <username>%EMAILADDRESS%</username>
       <authentication>password-cleartext</authentication>
     </incomingServer>
     <outgoingServer type="smtp">
-      <hostname>mail.peptest.ch</hostname>
+      <hostname>peptest.ch</hostname>
       <port>587</port>
       <socketType>STARTTLS</socketType>
       <username>%EMAILADDRESS%</username>
