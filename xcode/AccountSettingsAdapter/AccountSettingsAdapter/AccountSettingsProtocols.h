@@ -50,6 +50,10 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
 
 @protocol AccountSettingsProtocol
 
+@property (nonatomic, readonly, nonnull) NSString *accountName;
+@property (nonatomic, readonly, nullable) NSString *provider;
+@property (nonatomic, readonly) AS_FLAGS flags;
+
 @property (nonatomic, readonly) AS_STATUS status;
 @property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> incoming;
 @property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> outgoing;
