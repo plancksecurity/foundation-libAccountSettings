@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "ASAccountSettings.h"
+#import "AccountSettings.h"
 
 @interface AccountSettingsAdapterTests : XCTestCase
 
@@ -68,7 +68,7 @@
 - (void)testNewpEpTestWrongFormatMailAccount
 {
 
-    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+    id<AccountSettingsProtocol> as = [[AccountSettings alloc]
                                       initWithAccountName:@" someone@peptest.ch"
                                       provider:nil flags:AS_FLAG_USE_ANY
                                       credentials:nil];
@@ -79,7 +79,7 @@
 - (void)testNewpEpTestWrongFormatMailAccountDomain
 {
 
-    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+    id<AccountSettingsProtocol> as = [[AccountSettings alloc]
                                       initWithAccountName:@"someone@peptest.ch "
                                       provider:nil flags:AS_FLAG_USE_ANY
                                       credentials:nil];
@@ -89,7 +89,7 @@
 
 - (void)testNewpEpTestUnexistentMailAccount
 {
-    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+    id<AccountSettingsProtocol> as = [[AccountSettings alloc]
                                       initWithAccountName:@"someone@example.com"
                                       provider:nil flags:AS_FLAG_USE_ANY
                                       credentials:nil];
@@ -111,7 +111,7 @@
             outgoingTransport:(AccountSettingsServerTransport)outgoingTransport
            outgoingAuthMethod:(AccountSettingsServerAuthMethod)outgoingAuthMethod
 {
-    id<AccountSettingsProtocol> as = [[ASAccountSettings alloc]
+    id<AccountSettingsProtocol> as = [[AccountSettings alloc]
                                       initWithAccountName:address
                                       provider:nil flags:AS_FLAG_USE_ANY
                                       credentials:nil];
