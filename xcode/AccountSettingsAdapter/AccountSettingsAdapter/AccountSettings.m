@@ -1,18 +1,18 @@
 //
-//  AccountSettingsAdapter.m
+//  AccountSettings.m
 //  AccountSettingsAdapter
 //
 //  Created by Xavier Algarra on 27/04/2017.
 //  Copyright © 2017 pEp Security. All rights reserved.
 //
 
-#import "ASAccountSettings.h"
+#import "AccountSettings.h"
 
 #import "account_settings_c.h"
 
 #import "AccountSettingsServer+Internal.h"
 
-@interface ASAccountSettings ()
+@interface AccountSettings ()
 
 @property (nonatomic, nonnull) const struct AccountSettings *accountSettings;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ASAccountSettings
+@implementation AccountSettings
 
 - (instancetype _Nonnull )initWithAccountName:(NSString * _Nonnull)accountName
                                      provider:(NSString * _Nullable)provider
@@ -49,10 +49,10 @@
     free_account_settings(self.accountSettings);
 }
 
-+ (ASAccountSettings * _Nonnull)accountSettingsWithAccountName:(NSString * _Nonnull)accountName
-                                                      provider:(NSString * _Nullable)provider
-                                                         flags:(AS_FLAGS)flags
-                                                   credentials:(void * _Nullable)credentials
++ (AccountSettings * _Nonnull)accountSettingsWithAccountName:(NSString * _Nonnull)accountName
+                                                    provider:(NSString * _Nullable)provider
+                                                       flags:(AS_FLAGS)flags
+                                                 credentials:(void * _Nullable)credentials
 {
     const struct AccountSettings *as =
     get_account_settings([[accountName
@@ -60,7 +60,7 @@
                          [[provider precomposedStringWithCanonicalMapping] UTF8String],
                          flags, credentials);
     
-    ASAccountSettings *acountsettings = [[ASAccountSettings alloc] initWithAccountSettings:(as)];
+    AccountSettings *acountsettings = [[AccountSettings alloc] initWithAccountSettings:(as)];
 
     return acountsettings;
 }

@@ -1,5 +1,5 @@
 //
-//  AccountSettingsAdapter.h
+//  AccountSettings.h
 //  AccountSettingsAdapter
 //
 //  Created by Xavier Algarra on 27/04/2017.
@@ -12,7 +12,7 @@
 
 #import "AccountSettingsProtocols.h"
 
-@interface ASAccountSettings: NSObject <AccountSettingsProtocol>
+@interface AccountSettings: NSObject <AccountSettingsProtocol>
 
 /**
  @parameter accountName name of the account that will be configured
