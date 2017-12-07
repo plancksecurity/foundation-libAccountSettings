@@ -62,7 +62,7 @@
 		43018BF21EB9A05A004ABF26 /* stringpool.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stringpool.hh; path = ../../src/stringpool.hh; sourceTree = "<group>"; };
 		43018BF31EB9A05A004ABF26 /* tinyxml2.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = tinyxml2.hh; path = ../../src/tinyxml2.hh; sourceTree = "<group>"; };
 		43018BF41EB9A05A004ABF26 /* xml2cxx.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = xml2cxx.hh; path = ../../src/xml2cxx.hh; sourceTree = "<group>"; };
-		431C06531ECDF350003C2B29 /* ASProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASProtocols.h; sourceTree = "<group>"; };
+		431C06531ECDF350003C2B29 /* AccountSettingsProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettingsProtocols.h; sourceTree = "<group>"; };
 		4344E4361FCC4EA700EEEA90 /* from_srv.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = from_srv.cc; path = ../../src/from_srv.cc; sourceTree = "<group>"; };
 		43754AA91FCD61EF009A8E63 /* ldns_xcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ldns_xcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43754ACA1FCD9645009A8E63 /* ldns_xcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ldns_xcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +159,7 @@
 		B7E0502F1EB2491E006EC1EC /* AccountSettingsAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				431C06531ECDF350003C2B29 /* ASProtocols.h */,
+				431C06531ECDF350003C2B29 /* AccountSettingsProtocols.h */,
 				B7E050301EB2491E006EC1EC /* ASAccountSettings.h */,
 				B7E050311EB2491E006EC1EC /* ASAccountSettings.m */,
 				B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */,

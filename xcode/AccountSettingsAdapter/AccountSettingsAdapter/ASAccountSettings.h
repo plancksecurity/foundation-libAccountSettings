@@ -10,7 +10,7 @@
 
 #import "AccountSettingsServer.h"
 
-#import "ASProtocols.h"
+#import "AccountSettingsProtocols.h"
 
 @interface ASAccountSettings: NSObject <AccountSettingsProtocol>
 

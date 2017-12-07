@@ -1,13 +1,13 @@
 //
-//  ASProtocols.h
+//  AccountSettingsProtocols.h
 //  AccountSettingsAdapter
 //
 //  Created by Dirk Zimmermann on 18.05.17.
 //  Copyright © 2017 pEp Security. All rights reserved.
 //
 
-#ifndef ASProtocols_h
-#define ASProtocols_h
+#ifndef AccountSettingsProtocols_h
+#define AccountSettingsProtocols_h
 
 #import "account_settings_common.h"
 
@@ -56,4 +56,4 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
 
 @end
 
-#endif /* ASProtocols_h */
+#endif /* AccountSettingsProtocols_h */
