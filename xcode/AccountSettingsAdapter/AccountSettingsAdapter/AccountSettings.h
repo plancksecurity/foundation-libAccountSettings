@@ -34,9 +34,4 @@
 @property (nonatomic, readonly, nullable) AccountSettingsServer *incoming;
 @property (nonatomic, readonly, nullable) AccountSettingsServer *outgoing;
 
-/**
- Tries to lookup account data based on the parameters given in init.
- */
-- (void)lookup;
-
 @end

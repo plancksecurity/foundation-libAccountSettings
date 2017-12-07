@@ -54,9 +54,26 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
 @property (nonatomic, readonly, nullable) NSString *provider;
 @property (nonatomic, readonly) AS_FLAGS flags;
 
+/**
+ Defined *after* lookup has finished.
+ */
 @property (nonatomic, readonly) AS_STATUS status;
+
+/**
+ Defined *after* lookup has finished, and status is AS_OK.
+ */
 @property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> incoming;
+
+/**
+ Defined *after* lookup has finished, and status is AS_OK.
+ */
 @property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> outgoing;
+
+/**
+ Tries to lookup account data based on the parameters given in init.
+ @Note This will make blocking network access.
+ */
+- (void)lookup;
 
 @end
 
