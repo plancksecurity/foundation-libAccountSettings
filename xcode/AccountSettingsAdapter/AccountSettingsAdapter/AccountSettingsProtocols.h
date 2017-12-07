@@ -62,12 +62,12 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
 /**
  Defined *after* lookup has finished, and status is AS_OK.
  */
-@property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> incoming;
+@property (nonatomic, readonly, nullable) id<AccountSettingsServerProtocol> incoming;
 
 /**
  Defined *after* lookup has finished, and status is AS_OK.
  */
-@property (nonatomic, readonly, nonnull) id<AccountSettingsServerProtocol> outgoing;
+@property (nonatomic, readonly, nullable) id<AccountSettingsServerProtocol> outgoing;
 
 /**
  Tries to lookup account data based on the parameters given in init.
