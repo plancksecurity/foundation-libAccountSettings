@@ -14,9 +14,8 @@
 
 @interface AccountSettings ()
 
-@property (nonatomic, nonnull) const struct AccountSettings *accountSettings;
-
-- (instancetype _Nonnull )initWithAccountSettings:(const struct AccountSettings * _Nonnull)accountSettings;
+@property (nonatomic, nullable) const struct AccountSettings *accountSettings;
+@property (nonatomic, nullable) void *credentials;
 
 @end
 
@@ -27,21 +26,23 @@
                                         flags:(AS_FLAGS)flags
                                   credentials:(void * _Nullable)credentials
 {
-    const struct AccountSettings *as =
-    get_account_settings([[accountName
-                           precomposedStringWithCanonicalMapping] UTF8String],
-                         [[provider precomposedStringWithCanonicalMapping] UTF8String],
-                         flags, credentials);
-
-    return [self initWithAccountSettings:as];
-}
-
-- (instancetype)initWithAccountSettings:(const struct AccountSettings * _Nonnull)accountSettings
-{
     if (self = [super init]) {
-        _accountSettings = accountSettings;
+        _accountName = accountName;
+        _provider = provider;
+        _flags = flags;
+        _credentials = credentials;
     }
     return self;
+}
+
+- (void)lookup
+{
+    const struct AccountSettings *as =
+    get_account_settings([[self.accountName
+                           precomposedStringWithCanonicalMapping] UTF8String],
+                         [[self.provider precomposedStringWithCanonicalMapping] UTF8String],
+                         self.flags, self.credentials);
+    self.accountSettings = as;
 }
 
 - (void)dealloc
@@ -54,20 +55,18 @@
                                                        flags:(AS_FLAGS)flags
                                                  credentials:(void * _Nullable)credentials
 {
-    const struct AccountSettings *as =
-    get_account_settings([[accountName
-                           precomposedStringWithCanonicalMapping] UTF8String],
-                         [[provider precomposedStringWithCanonicalMapping] UTF8String],
-                         flags, credentials);
-    
-    AccountSettings *acountsettings = [[AccountSettings alloc] initWithAccountSettings:(as)];
-
-    return acountsettings;
+    return [[AccountSettings alloc]
+            initWithAccountName:accountName provider:provider
+            flags:flags credentials:credentials];
 }
 
 - (AS_STATUS)status
 {
-    return AS_get_status(self.accountSettings);
+    if (self.accountSettings) {
+        return AS_get_status(self.accountSettings);
+    } else {
+        return AS_ILLEGAL_VALUE;
+    }
 }
 
 - (AccountSettingsServer *)incoming

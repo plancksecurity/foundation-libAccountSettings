@@ -31,7 +31,12 @@
 @property (nonatomic, readonly) AS_FLAGS flags;
 
 @property (nonatomic, readonly) AS_STATUS status;
-@property (nonatomic, readonly, nonnull) AccountSettingsServer *incoming;
-@property (nonatomic, readonly, nonnull) AccountSettingsServer *outgoing;
+@property (nonatomic, readonly, nullable) AccountSettingsServer *incoming;
+@property (nonatomic, readonly, nullable) AccountSettingsServer *outgoing;
+
+/**
+ Tries to lookup account data based on the parameters given in init.
+ */
+- (void)lookup;
 
 @end
