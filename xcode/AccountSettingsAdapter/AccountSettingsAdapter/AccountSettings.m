@@ -16,6 +16,7 @@
 
 @property (nonatomic, nullable) const struct AccountSettings *accountSettings;
 @property (nonatomic, nullable) void *credentials;
+@property (nonatomic, nonnull) dispatch_queue_t backgroundQueue;
 
 @end
 
@@ -31,6 +32,8 @@
         _provider = provider;
         _flags = flags;
         _credentials = credentials;
+        _backgroundQueue = dispatch_queue_create("AccountSettings.backgroundQueue",
+                                                 DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
@@ -43,6 +46,17 @@
                          [[self.provider precomposedStringWithCanonicalMapping] UTF8String],
                          self.flags, self.credentials);
     self.accountSettings = as;
+}
+
+- (void)lookupCompletion:(AccountSettingsCompletionBlock _Nullable)completionBlock
+{
+    dispatch_async(self.backgroundQueue, ^ {
+        __weak typeof(self) weakSelf = self;
+        [weakSelf lookup];
+        if (weakSelf) {
+            completionBlock(weakSelf);
+        }
+    });
 }
 
 - (void)dealloc

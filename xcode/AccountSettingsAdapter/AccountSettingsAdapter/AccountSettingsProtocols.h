@@ -50,6 +50,11 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
 
 @protocol AccountSettingsProtocol
 
+/**
+ Type for completion blocks into this library.
+ */
+typedef void (^AccountSettingsCompletionBlock)(id<AccountSettingsProtocol> _Nonnull);
+
 @property (nonatomic, readonly, nonnull) NSString *accountName;
 @property (nonatomic, readonly, nullable) NSString *provider;
 @property (nonatomic, readonly) AS_FLAGS flags;
@@ -74,6 +79,11 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
  @Note This will make blocking network access.
  */
 - (void)lookup;
+
+/**
+ Will make an asynchronous lookup and call the provided block when finished.
+ */
+- (void)lookupCompletion:(AccountSettingsCompletionBlock _Nullable)completionBlock;
 
 @end
 
