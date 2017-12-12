@@ -95,7 +95,7 @@ const AccountSettings* get_account_settings(const char* accountName, const char*
 	
 	if( dyn_as->status != AS_OK && (flags & AS_FLAG_USE_DNS_SRV) )
 	{
-		get_settings_from_srv(dyn_as, accountName, domain, provider );
+		get_settings_from_srv(dyn_as, accountName, domain, (provider?provider:"") );
 	}
 	
 	return dyn_as;
