@@ -1,5 +1,5 @@
 //
-//  AccountSettingsAdapter.h
+//  AccountSettings.h
 //  AccountSettingsAdapter
 //
 //  Created by Xavier Algarra on 27/04/2017.
@@ -10,9 +10,9 @@
 
 #import "AccountSettingsServer.h"
 
-#import "ASProtocols.h"
+#import "AccountSettingsProtocols.h"
 
-@interface ASAccountSettings: NSObject <AccountSettingsProtocol>
+@interface AccountSettings: NSObject <AccountSettingsProtocol>
 
 /**
  @parameter accountName name of the account that will be configured
@@ -26,8 +26,12 @@
                                         flags:(AS_FLAGS)flags
                                   credentials:(void * _Nullable)credentials;
 
+@property (nonatomic, readonly, nonnull) NSString *accountName;
+@property (nonatomic, readonly, nullable) NSString *provider;
+@property (nonatomic, readonly) AS_FLAGS flags;
+
 @property (nonatomic, readonly) AS_STATUS status;
-@property (nonatomic, readonly, nonnull) AccountSettingsServer *incoming;
-@property (nonatomic, readonly, nonnull) AccountSettingsServer *outgoing;
+@property (nonatomic, readonly, nullable) AccountSettingsServer *incoming;
+@property (nonatomic, readonly, nullable) AccountSettingsServer *outgoing;
 
 @end
