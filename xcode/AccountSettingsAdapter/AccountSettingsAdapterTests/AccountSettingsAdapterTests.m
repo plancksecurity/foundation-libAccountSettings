@@ -78,8 +78,6 @@
     XCTAssertEqual(as.status, AS_OK);
 }
 
-// Is currently crashing, waiting for LAS-14 to get fixed.
-#if 0
 - (void)testNewpEpTestUnexistentMailAccount
 {
     id<AccountSettingsProtocol> as = [[AccountSettings alloc]
@@ -90,7 +88,6 @@
 
     XCTAssertEqual(as.status, AS_NOT_FOUND);
 }
-#endif
 
 // MARK: - Helpers
 
