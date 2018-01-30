@@ -1588,10 +1588,6 @@ const AccountSettings_DB AccountList[] = {
 		{ SP+15051, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.mail.ru
 	},
 	{ SP+17950, SP+1497,	// yahoo.com	Yahoo! Mail
-		{ SP+6927, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.mail.yahoo.com
-		{ SP+15127, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.mail.yahoo.com
-	},
-	{ SP+17950, SP+1497,	// yahoo.com	Yahoo! Mail
 		{ SP+6927, 993, AS_ACCESS(0x85012), AS_USERNAME(0x4001) },	// imap.mail.yahoo.com
 		{ SP+15127, 465, AS_ACCESS(0x85021), AS_USERNAME(0x4001) }	// smtp.mail.yahoo.com
 	},
@@ -2321,18 +2317,18 @@ const AccountSettings_DB AccountList[] = {
 	},
 };
 
-const unsigned AccountListSize = 253;
+const unsigned AccountListSize = 252;
 const Domain2AS IspDB[] = {
-	{ 19, 151},	// 1031.inord.dk
-	{ 33, 151},	// 123mail.dk
+	{ 19, 150},	// 1031.inord.dk
+	{ 33, 150},	// 123mail.dk
 	{ 44, 46},	// 126.com
-	{ 52, 151},	// 12fuel.dk
-	{ 62, 151},	// 12mail.dk
-	{ 72, 151},	// 12move.dk
+	{ 52, 150},	// 12fuel.dk
+	{ 62, 150},	// 12mail.dk
+	{ 72, 150},	// 12move.dk
 	{ 82, 47},	// 163.com
 	{ 99, 67},	// 2die4.com
-	{ 109, 151},	// 2senior.dk
-	{ 1598, 215},	// a1.net
+	{ 109, 150},	// 2senior.dk
+	{ 1598, 214},	// a1.net
 	{ 1626, 3},	// abc.plala.or.jp
 	{ 1642, 67},	// accountant.com
 	{ 1657, 34},	// active24.com
@@ -2344,34 +2340,34 @@ const Domain2AS IspDB[] = {
 	{ 1764, 67},	// aircraftmail.com
 	{ 1781, 67},	// alabama.usa.com
 	{ 1797, 67},	// alaska.usa.com
-	{ 1812, 104},	// alice.it
+	{ 1812, 103},	// alice.it
 	{ 1821, 67},	// allergist.com
 	{ 1835, 67},	// alumni.com
 	{ 1846, 67},	// alumnidirector.com
 	{ 1888, 5},	// amail.plala.or.jp
 	{ 1929, 6},	// amber.plala.or.jp
 	{ 1947, 67},	// americamail.com
-	{ 1963, 105},	// ameritech.net
-	{ 1977, 120},	// amethyst.broba.cc
-	{ 1995, 196},	// amorki.pl
+	{ 1963, 104},	// ameritech.net
+	{ 1977, 119},	// amethyst.broba.cc
+	{ 1995, 195},	// amorki.pl
 	{ 2005, 67},	// amorous.com
-	{ 2017, 151},	// anarki.dk
-	{ 2027, 151},	// anderledes.dk
+	{ 2017, 150},	// anarki.dk
+	{ 2027, 150},	// anderledes.dk
 	{ 2041, 67},	// angelic.com
 	{ 2053, 49},	// aol.com
-	{ 2061, 215},	// aon.at
+	{ 2061, 214},	// aon.at
 	{ 2091, 7},	// apost.plala.or.jp
 	{ 2131, 8},	// aqua.plala.or.jp
 	{ 2148, 67},	// archaeologist.com
 	{ 2166, 50},	// arcor.de
 	{ 2175, 67},	// arizona.usa.com
 	{ 2191, 67},	// artlover.com
-	{ 2204, 103},	// arubapec.it
+	{ 2204, 102},	// arubapec.it
 	{ 2216, 67},	// asia-mail.com
 	{ 2244, 67},	// atheist.com
-	{ 2256, 105},	// att.net
+	{ 2256, 104},	// att.net
 	{ 2264, 67},	// australiamail.com
-	{ 2282, 196},	// autograf.pl
+	{ 2282, 195},	// autograf.pl
 	{ 2319, 9},	// ballade.plala.or.jp
 	{ 2339, 67},	// bartender.net
 	{ 2353, 10},	// bay.gunmanet.ne.jp
@@ -2379,80 +2375,80 @@ const Domain2AS IspDB[] = {
 	{ 2391, 10},	// bay.wind.co.jp
 	{ 2406, 10},	// bay.wind.jp
 	{ 2418, 10},	// bay.wind.ne.jp
-	{ 2433, 181},	// bb-niigata.jp
-	{ 2447, 157},	// bc.iij4u.or.jp
-	{ 2462, 151},	// begavet.dk
+	{ 2433, 180},	// bb-niigata.jp
+	{ 2447, 156},	// bc.iij4u.or.jp
+	{ 2462, 150},	// begavet.dk
 	{ 2496, 11},	// beige.plala.or.jp
-	{ 2514, 76},	// belgacom.net
+	{ 2514, 75},	// belgacom.net
 	{ 2527, 51},	// bell.net
-	{ 2536, 105},	// bellsouth.net
+	{ 2536, 104},	// bellsouth.net
 	{ 2550, 67},	// berlin.com
 	{ 2561, 67},	// bigger.com
-	{ 2572, 119},	// biglobe.ne.jp
-	{ 2586, 84},	// bigpond.com
-	{ 2598, 84},	// bigpond.net
-	{ 2610, 84},	// bigpond.net.au
+	{ 2572, 118},	// biglobe.ne.jp
+	{ 2586, 83},	// bigpond.com
+	{ 2598, 83},	// bigpond.net
+	{ 2610, 83},	// bigpond.net.au
 	{ 2625, 67},	// bikerider.com
 	{ 2639, 67},	// birdlover.com
-	{ 2653, 151},	// bitnisse.dk
-	{ 2665, 157},	// bk.iij4u.or.jp
+	{ 2653, 150},	// bitnisse.dk
+	{ 2665, 156},	// bk.iij4u.or.jp
 	{ 2680, 69},	// bk.ru
 	{ 2686, 67},	// blader.com
-	{ 2697, 100},	// blu.it
+	{ 2697, 99},	// blu.it
 	{ 2726, 12},	// blue.plala.or.jp
-	{ 2743, 101},	// bluemail.ch
-	{ 2755, 102},	// bluewin.ch
-	{ 2766, 96},	// blueyonder.co.uk
+	{ 2743, 100},	// bluemail.ch
+	{ 2755, 101},	// bluewin.ch
+	{ 2766, 95},	// blueyonder.co.uk
 	{ 2806, 13},	// bmail.plala.or.jp
 	{ 2824, 67},	// boardermail.com
 	{ 2840, 52},	// bol.com.br
 	{ 2875, 14},	// bolero.plala.or.jp
-	{ 2894, 157},	// bp.iij4u.or.jp
+	{ 2894, 156},	// bp.iij4u.or.jp
 	{ 2932, 15},	// bpost.plala.or.jp
 	{ 2950, 67},	// brazilmail.com
 	{ 2965, 67},	// brew-master.com
 	{ 3013, 16},	// brown.plala.or.jp
-	{ 3031, 121},	// btinternet.com
-	{ 3046, 121},	// btopenworld.com
-	{ 3062, 157},	// bu.iij4u.or.jp
-	{ 3077, 196},	// buziaczek.pl
+	{ 3031, 120},	// btinternet.com
+	{ 3046, 120},	// btopenworld.com
+	{ 3062, 156},	// bu.iij4u.or.jp
+	{ 3077, 195},	// buziaczek.pl
 	{ 3090, 67},	// california.usa.com
 	{ 3109, 67},	// californiamail.com
 	{ 3151, 17},	// camel.plala.or.jp
 	{ 3192, 18},	// cameo.plala.or.jp
 	{ 3210, 67},	// caress.com
-	{ 3221, 94},	// casema.nl
+	{ 3221, 93},	// casema.nl
 	{ 3231, 67},	// catlover.com
-	{ 3244, 182},	// cc9.ne.jp
-	{ 3254, 122},	// cek.ne.jp
-	{ 3264, 123},	// centurylink.net
-	{ 3280, 183},	// centurytel.net
-	{ 3295, 173},	// cgl.ucsf.edu
-	{ 3308, 161},	// charter.com
-	{ 3320, 161},	// charter.net
+	{ 3244, 181},	// cc9.ne.jp
+	{ 3254, 121},	// cek.ne.jp
+	{ 3264, 122},	// centurylink.net
+	{ 3280, 182},	// centurytel.net
+	{ 3295, 172},	// cgl.ucsf.edu
+	{ 3308, 160},	// charter.com
+	{ 3320, 160},	// charter.net
 	{ 3332, 67},	// cheerful.com
 	{ 3345, 67},	// chef.net
-	{ 3354, 94},	// chello.nl
+	{ 3354, 93},	// chello.nl
 	{ 3364, 67},	// chemist.com
 	{ 3376, 67},	// chinamail.com
-	{ 3390, 151},	// city.dk
-	{ 3398, 183},	// clds.net
+	{ 3390, 150},	// city.dk
+	{ 3398, 182},	// clds.net
 	{ 3407, 67},	// clerk.com
 	{ 3417, 67},	// cliffhanger.com
-	{ 3433, 125},	// clio.ne.jp
+	{ 3433, 124},	// clio.ne.jp
 	{ 3444, 0},	// cloudnine-net.jp
-	{ 3461, 81},	// club-internet.fr
-	{ 3478, 126},	// clustermail.de
+	{ 3461, 80},	// club-internet.fr
+	{ 3478, 125},	// clustermail.de
 	{ 3516, 19},	// cmail.plala.or.jp
-	{ 3534, 164},	// cneweb.de
+	{ 3534, 163},	// cneweb.de
 	{ 3544, 20},	// co1.wind.jp
 	{ 3556, 20},	// co1.wind.ne.jp
 	{ 3571, 21},	// co2.wind.jp
 	{ 3583, 21},	// co2.wind.ne.jp
 	{ 3598, 22},	// co3.wind.jp
 	{ 3610, 22},	// co3.wind.ne.jp
-	{ 3625, 183},	// coastalnow.net
-	{ 3640, 183},	// cochill.net
+	{ 3625, 182},	// coastalnow.net
+	{ 3640, 182},	// cochill.net
 	{ 3675, 23},	// cocoa.plala.or.jp
 	{ 3715, 24},	// coda.plala.or.jp
 	{ 3732, 67},	// collector.org
@@ -2463,9 +2459,9 @@ const Domain2AS IspDB[] = {
 	{ 3823, 25},	// concerto.plala.or.jp
 	{ 3844, 67},	// consultant.com
 	{ 3859, 67},	// contractor.net
-	{ 3874, 151},	// cool.dk
+	{ 3874, 150},	// cool.dk
 	{ 3882, 67},	// coolsite.net
-	{ 3895, 120},	// coral.broba.ccv
+	{ 3895, 119},	// coral.broba.ccv
 	{ 3934, 26},	// coral.plala.or.jp
 	{ 3952, 69},	// corp.mail.ru
 	{ 3965, 67},	// counsellor.com
@@ -2475,15 +2471,15 @@ const Domain2AS IspDB[] = {
 	{ 4048, 54},	// cox.net
 	{ 4079, 28},	// cpost.plala.or.jp
 	{ 4120, 29},	// cream.plala.or.jp
-	{ 4138, 183},	// cswnet.com
-	{ 4149, 199},	// cty-net.com
-	{ 4161, 199},	// cty-net.ne.jp
+	{ 4138, 182},	// cswnet.com
+	{ 4149, 198},	// cty-net.com
+	{ 4161, 198},	// cty-net.ne.jp
 	{ 4175, 67},	// cutey.com
 	{ 4185, 67},	// cyber-wizard.com
 	{ 4202, 67},	// cyberdude.com
-	{ 4216, 151},	// cyberdude.dk
+	{ 4216, 150},	// cyberdude.dk
 	{ 4229, 67},	// cybergal.com
-	{ 4242, 151},	// cyberjunkie.dk
+	{ 4242, 150},	// cyberjunkie.dk
 	{ 4257, 67},	// dallasmail.com
 	{ 4272, 30},	// dan.gunmanet.ne.jp
 	{ 4291, 30},	// dan.gunmanet.or.jp
@@ -2492,13 +2488,13 @@ const Domain2AS IspDB[] = {
 	{ 4337, 30},	// dan.wind.ne.jp
 	{ 4375, 31},	// dance.plala.or.jp
 	{ 4393, 67},	// dbzmail.com
-	{ 4405, 157},	// dd.iij4u.or.jp
+	{ 4405, 156},	// dd.iij4u.or.jp
 	{ 4420, 67},	// deliveryman.com
-	{ 4442, 120},	// diamond.broba.cc
+	{ 4442, 119},	// diamond.broba.cc
 	{ 4459, 67},	// diplomats.com
 	{ 4473, 67},	// disciples.com
-	{ 4487, 151},	// dk-online.dk
-	{ 4500, 151},	// dk2net.dk
+	{ 4487, 150},	// dk-online.dk
+	{ 4500, 150},	// dk2net.dk
 	{ 4533, 32},	// dmail.plala.or.jp
 	{ 4551, 67},	// doctor.com
 	{ 4562, 67},	// doglover.com
@@ -2506,64 +2502,64 @@ const Domain2AS IspDB[] = {
 	{ 4604, 67},	// doramail.com
 	{ 4617, 67},	// dr.com
 	{ 4624, 67},	// dublin.com
-	{ 4635, 158},	// e23.jp
+	{ 4635, 157},	// e23.jp
 	{ 4642, 67},	// earthling.net
 	{ 4656, 56},	// earthlink.net
 	{ 4693, 33},	// ebony.plala.or.jp
-	{ 4711, 151},	// elinstallatoer.dk
-	{ 4729, 127},	// elpasotel.net
-	{ 4743, 151},	// elsker.dk
-	{ 4753, 151},	// elvis.dk
+	{ 4711, 150},	// elinstallatoer.dk
+	{ 4729, 126},	// elpasotel.net
+	{ 4743, 150},	// elsker.dk
+	{ 4753, 150},	// elvis.dk
 	{ 4762, 67},	// elvisfan.com
-	{ 4775, 183},	// emadisonriver.com
-	{ 4793, 183},	// emadisonriver.net
+	{ 4775, 182},	// emadisonriver.com
+	{ 4793, 182},	// emadisonriver.net
 	{ 4830, 67},	// email.com
-	{ 4840, 80},	// email.cz
-	{ 4849, 151},	// email.dk
-	{ 4858, 99},	// email.it
+	{ 4840, 79},	// email.cz
+	{ 4849, 150},	// email.dk
+	{ 4858, 98},	// email.it
 	{ 4890, 35},	// email.plala.or.jp
-	{ 4908, 213},	// emailsrvr.com
-	{ 4922, 123},	// embarqmail.com
+	{ 4908, 212},	// emailsrvr.com
+	{ 4922, 122},	// embarqmail.com
 	{ 4937, 67},	// engineer.com
 	{ 4950, 67},	// englandmail.com
 	{ 4966, 67},	// europe.com
 	{ 4977, 67},	// europemail.com
-	{ 4992, 184},	// ewe.net
-	{ 5000, 184},	// ewetel.de
+	{ 4992, 183},	// ewe.net
+	{ 5000, 183},	// ewetel.de
 	{ 5010, 67},	// execs.com
-	{ 5020, 151},	// fald.dk
+	{ 5020, 150},	// fald.dk
 	{ 5028, 67},	// fan.com
 	{ 5061, 36},	// fantasy.plala.or.jp
 	{ 5081, 58},	// fastwebnet.it
-	{ 5095, 151},	// fedt.dk
+	{ 5095, 150},	// fedt.dk
 	{ 5103, 67},	// feelings.com
-	{ 5116, 151},	// feminin.dk
-	{ 5127, 157},	// ff.iij4u.or.jp
-	{ 5142, 151},	// film.dk
+	{ 5116, 150},	// feminin.dk
+	{ 5127, 156},	// ff.iij4u.or.jp
+	{ 5142, 150},	// film.dk
 	{ 5150, 67},	// financier.com
 	{ 5164, 67},	// fireman.net
 	{ 5202, 37},	// flamenco.plala.or.jp
-	{ 5223, 105},	// flash.net
+	{ 5223, 104},	// flash.net
 	{ 5233, 67},	// florida.usa.com
 	{ 5272, 38},	// fmail.plala.or.jp
-	{ 5290, 164},	// foni.net
+	{ 5290, 163},	// foni.net
 	{ 5299, 67},	// footballer.com
-	{ 5314, 151},	// forening.dk
+	{ 5314, 150},	// forening.dk
 	{ 5326, 59},	// free.fr
-	{ 5334, 162},	// freenet.de
+	{ 5334, 161},	// freenet.de
 	{ 5367, 39},	// fuga.plala.or.jp
-	{ 5384, 151},	// gadefejer.dk
-	{ 5397, 183},	// gallatinriver.net
-	{ 5415, 128},	// gandi.net
+	{ 5384, 150},	// gadefejer.dk
+	{ 5397, 182},	// gallatinriver.net
+	{ 5415, 127},	// gandi.net
 	{ 5425, 67},	// gardener.com
-	{ 5438, 120},	// garnet.broba.cc
-	{ 5454, 151},	// gason.dk
-	{ 5463, 164},	// gelsennet.de
+	{ 5438, 119},	// garnet.broba.cc
+	{ 5454, 150},	// gason.dk
+	{ 5463, 163},	// gelsennet.de
 	{ 5476, 67},	// geologist.com
 	{ 5490, 67},	// germanymail.com
-	{ 5506, 100},	// giallo.it
-	{ 5516, 129},	// gigahost.dk
-	{ 5528, 103},	// gigapec.it
+	{ 5506, 99},	// giallo.it
+	{ 5516, 128},	// gigahost.dk
+	{ 5528, 102},	// gigapec.it
 	{ 5539, 60},	// gmail.com
 	{ 5572, 40},	// gmail.plala.or.jp
 	{ 5590, 62},	// gmx.at
@@ -2597,10 +2593,10 @@ const Domain2AS IspDB[] = {
 	{ 5810, 61},	// gmx.tw
 	{ 5817, 61},	// gmx.us
 	{ 5824, 41},	// go.tvm.ne.jp
-	{ 5837, 179},	// go2.pl
+	{ 5837, 178},	// go2.pl
 	{ 5844, 48},	// go4more.de
 	{ 5861, 63},	// goneo.de
-	{ 5899, 185},	// goo.jp
+	{ 5899, 184},	// goo.jp
 	{ 5906, 60},	// google.com
 	{ 5917, 60},	// googlemail.com
 	{ 5932, 67},	// graduate.org
@@ -2608,22 +2604,22 @@ const Domain2AS IspDB[] = {
 	{ 5979, 42},	// grape.plala.or.jp
 	{ 5997, 67},	// graphic-designer.com
 	{ 6040, 43},	// gray.plala.or.jp
-	{ 6057, 183},	// grics.net
-	{ 6067, 151},	// grin.dk
-	{ 6075, 151},	// grov.dk
-	{ 6083, 183},	// gulftel.com
+	{ 6057, 182},	// grics.net
+	{ 6067, 150},	// grin.dk
+	{ 6075, 150},	// grov.dk
+	{ 6083, 182},	// gulftel.com
 	{ 6095, 67},	// hackermail.com
-	{ 6110, 94},	// hahah.nl
+	{ 6110, 93},	// hahah.nl
 	{ 6119, 67},	// hairdresser.net
-	{ 6135, 130},	// hal.ne.jp
-	{ 6145, 131},	// hana.or.jp
-	{ 6156, 151},	// hardworking.dk
-	{ 6171, 151},	// heaven.dk
-	{ 6181, 151},	// hemmelig.dk
-	{ 6193, 157},	// hh.iij4u.or.jp
+	{ 6135, 129},	// hal.ne.jp
+	{ 6145, 130},	// hana.or.jp
+	{ 6156, 150},	// hardworking.dk
+	{ 6171, 150},	// heaven.dk
+	{ 6181, 150},	// hemmelig.dk
+	{ 6193, 156},	// hh.iij4u.or.jp
 	{ 6208, 67},	// hilarious.com
 	{ 6222, 67},	// hockeymail.com
-	{ 6237, 94},	// home.nl
+	{ 6237, 93},	// home.nl
 	{ 6245, 67},	// homemail.com
 	{ 6258, 67},	// hot-shot.com
 	{ 6271, 45},	// hotmail.co.jp
@@ -2635,88 +2631,88 @@ const Domain2AS IspDB[] = {
 	{ 6348, 45},	// hotmail.fr
 	{ 6359, 45},	// hotmail.it
 	{ 6370, 67},	// hour.com
-	{ 6379, 151},	// huleboer.dk
+	{ 6379, 150},	// huleboer.dk
 	{ 6391, 67},	// humanoid.net
-	{ 6404, 82},	// i.softbank.jp
-	{ 6418, 132},	// ic-net.or.jp
+	{ 6404, 81},	// i.softbank.jp
+	{ 6418, 131},	// ic-net.or.jp
 	{ 6431, 68},	// icloud.com
-	{ 6442, 158},	// iijmio-mail.jp
-	{ 6457, 133},	// iiyama-catv.ne.jp
+	{ 6442, 157},	// iijmio-mail.jp
+	{ 6457, 132},	// iiyama-catv.ne.jp
 	{ 6475, 67},	// illinois.usa.com
-	{ 6492, 151},	// image.dk
+	{ 6492, 150},	// image.dk
 	{ 6524, 44},	// imail.plala.or.jp
 	{ 7468, 67},	// iname.com
-	{ 7494, 151},	// inbound.dk
-	{ 7505, 134},	// inbox.lt
-	{ 7514, 135},	// inbox.lv
+	{ 7494, 150},	// inbound.dk
+	{ 7505, 133},	// inbox.lt
+	{ 7514, 134},	// inbox.lv
 	{ 7523, 69},	// inbox.ru
-	{ 7532, 151},	// indbakke.dk
-	{ 7568, 106},	// indigo.plala.or.jp
-	{ 7587, 176},	// inet-shibata.or.jp
-	{ 7606, 151},	// infile.dk
-	{ 7616, 151},	// info.dk
-	{ 7624, 103},	// ingpec.eu
+	{ 7532, 150},	// indbakke.dk
+	{ 7568, 105},	// indigo.plala.or.jp
+	{ 7587, 175},	// inet-shibata.or.jp
+	{ 7606, 150},	// infile.dk
+	{ 7616, 150},	// info.dk
+	{ 7624, 102},	// ingpec.eu
 	{ 7634, 67},	// innocent.com
 	{ 7647, 67},	// inorbit.com
 	{ 7659, 67},	// instruction.com
 	{ 7675, 67},	// instructor.net
 	{ 7690, 67},	// insurer.com
 	{ 7702, 64},	// internetserver.cz
-	{ 7720, 136},	// internode.on.net
-	{ 7737, 100},	// inwind.it
-	{ 7747, 151},	// io.dk
-	{ 7753, 100},	// iol.it
-	{ 7760, 137},	// ipax.at
+	{ 7720, 135},	// internode.on.net
+	{ 7737, 99},	// inwind.it
+	{ 7747, 150},	// io.dk
+	{ 7753, 99},	// iol.it
+	{ 7760, 136},	// ipax.at
 	{ 7768, 67},	// irelandmail.com
-	{ 7784, 226},	// ispgateway.de
-	{ 7798, 151},	// it.dk
+	{ 7784, 225},	// ispgateway.de
+	{ 7798, 150},	// it.dk
 	{ 7804, 67},	// italymail.com
-	{ 7841, 107},	// ivory.plala.or.jp
-	{ 7859, 177},	// iwafune.ne.jp
+	{ 7841, 106},	// ivory.plala.or.jp
+	{ 7859, 176},	// iwafune.ne.jp
 	{ 7873, 56},	// ix.netcom.com
-	{ 7909, 108},	// jade.plala.or.jp
-	{ 7926, 117},	// janis.or.jp
+	{ 7909, 107},	// jade.plala.or.jp
+	{ 7926, 116},	// janis.or.jp
 	{ 7938, 67},	// japan.com
 	{ 7948, 60},	// jazztel.es
 	{ 7959, 65},	// jet.ne.jp
-	{ 7969, 190},	// ji.jet.ne.jp
-	{ 8005, 109},	// jmail.plala.or.jp
+	{ 7969, 189},	// ji.jet.ne.jp
+	{ 8005, 108},	// jmail.plala.or.jp
 	{ 8023, 67},	// journalist.com
-	{ 8038, 151},	// jyde.dk
-	{ 8046, 111},	// k1.gunmanet.ne.jp
-	{ 8064, 111},	// k1.gunmanet.or.jp
-	{ 8082, 111},	// k1.wind.jp
-	{ 8093, 111},	// k1.wind.ne.jp
-	{ 8107, 192},	// kabelmail.de
-	{ 8120, 191},	// kelcom.net
+	{ 8038, 150},	// jyde.dk
+	{ 8046, 110},	// k1.gunmanet.ne.jp
+	{ 8064, 110},	// k1.gunmanet.or.jp
+	{ 8082, 110},	// k1.wind.jp
+	{ 8093, 110},	// k1.wind.ne.jp
+	{ 8107, 191},	// kabelmail.de
+	{ 8120, 190},	// kelcom.net
 	{ 8131, 67},	// keromail.com
-	{ 8167, 110},	// khaki.plala.or.jp
-	{ 8185, 76},	// kidcity.be
+	{ 8167, 109},	// khaki.plala.or.jp
+	{ 8185, 75},	// kidcity.be
 	{ 8196, 67},	// kittymail.com
-	{ 8210, 157},	// kk.iij4u.or.jp
-	{ 8225, 111},	// kl.gunmanet.ne.jp
-	{ 8243, 111},	// kl.gunmanet.or.jp
-	{ 8261, 111},	// kl.wind.co.jp
-	{ 8275, 111},	// kl.wind.jp
-	{ 8286, 111},	// kl.wind.ne.jp
-	{ 8300, 151},	// klog.dk
-	{ 8331, 112},	// kmail.plala.or.jp
-	{ 8349, 151},	// knus.dk
-	{ 8357, 139},	// kokuyou.ne.jp
+	{ 8210, 156},	// kk.iij4u.or.jp
+	{ 8225, 110},	// kl.gunmanet.ne.jp
+	{ 8243, 110},	// kl.gunmanet.or.jp
+	{ 8261, 110},	// kl.wind.co.jp
+	{ 8275, 110},	// kl.wind.jp
+	{ 8286, 110},	// kl.wind.ne.jp
+	{ 8300, 150},	// klog.dk
+	{ 8331, 111},	// kmail.plala.or.jp
+	{ 8349, 150},	// knus.dk
+	{ 8357, 138},	// kokuyou.ne.jp
 	{ 8371, 67},	// koreamail.com
-	{ 8385, 151},	// krudt.dk
-	{ 8394, 151},	// kulturel.dk
+	{ 8385, 150},	// krudt.dk
+	{ 8394, 150},	// kulturel.dk
 	{ 8406, 48},	// kundenserver.de
-	{ 8445, 113},	// lapis.plala.or.jp
+	{ 8445, 112},	// lapis.plala.or.jp
 	{ 8463, 66},	// laposte.net
-	{ 8475, 151},	// larsen.dk
+	{ 8475, 150},	// larsen.dk
 	{ 8485, 67},	// lawyer.com
-	{ 8496, 151},	// lazy.dk
+	{ 8496, 150},	// lazy.dk
 	{ 8504, 67},	// legislator.com
-	{ 8542, 114},	// lemon.plala.or.jp
-	{ 8560, 100},	// libero.it
-	{ 8593, 115},	// lilac.plala.or.jp
-	{ 8633, 116},	// lime.plala.or.jp
+	{ 8542, 113},	// lemon.plala.or.jp
+	{ 8560, 99},	// libero.it
+	{ 8593, 114},	// lilac.plala.or.jp
+	{ 8633, 115},	// lime.plala.or.jp
 	{ 8650, 67},	// linuxmail.org
 	{ 8664, 69},	// list.ru
 	{ 8672, 45},	// live.co.jp
@@ -2729,63 +2725,63 @@ const Domain2AS IspDB[] = {
 	{ 8735, 67},	// london.com
 	{ 8746, 67},	// loveable.com
 	{ 8759, 67},	// lovecat.com
-	{ 8771, 151},	// lystig.dk
-	{ 8781, 199},	// m2.cty-net.ne.jp
-	{ 8798, 199},	// m3.cty-net.ne.jp
-	{ 8815, 199},	// m4.cty-net.ne.jp
-	{ 8832, 199},	// m5.cty-net.ne.jp
-	{ 8849, 199},	// m6.cty-net.ne.jp
-	{ 8866, 199},	// m7.cty-net.ne.jp
-	{ 8883, 199},	// m8.cty-net.ne.jp
-	{ 8900, 199},	// m9.cty-net.ne.jp
+	{ 8771, 150},	// lystig.dk
+	{ 8781, 198},	// m2.cty-net.ne.jp
+	{ 8798, 198},	// m3.cty-net.ne.jp
+	{ 8815, 198},	// m4.cty-net.ne.jp
+	{ 8832, 198},	// m5.cty-net.ne.jp
+	{ 8849, 198},	// m6.cty-net.ne.jp
+	{ 8866, 198},	// m7.cty-net.ne.jp
+	{ 8883, 198},	// m8.cty-net.ne.jp
+	{ 8900, 198},	// m9.cty-net.ne.jp
 	{ 8917, 2},	// ma100.tiki.ne.jp
 	{ 8934, 68},	// mac.com
 	{ 8942, 67},	// mad.scientist.com
-	{ 8960, 183},	// madisonriver.biz
+	{ 8960, 182},	// madisonriver.biz
 	{ 8977, 67},	// madonnafan.com
 	{ 8992, 67},	// madrid.com
-	{ 9003, 140},	// mahoroba.ne.jp
+	{ 9003, 139},	// mahoroba.ne.jp
 	{ 9215, 67},	// mail.com
-	{ 9224, 151},	// mail.dia.dk
-	{ 9236, 193},	// mail.dk
-	{ 9321, 154},	// mail.gunmanet.jp
-	{ 9338, 154},	// mail.gunmanet.ne.jp
-	{ 9358, 154},	// mail.gunmanet.or.jp
-	{ 9513, 138},	// mail.iwafune.ne.jp
+	{ 9224, 150},	// mail.dia.dk
+	{ 9236, 192},	// mail.dk
+	{ 9321, 153},	// mail.gunmanet.jp
+	{ 9338, 153},	// mail.gunmanet.ne.jp
+	{ 9358, 153},	// mail.gunmanet.or.jp
+	{ 9513, 137},	// mail.iwafune.ne.jp
 	{ 9616, 67},	// mail.org
 	{ 9707, 69},	// mail.ru
-	{ 9753, 151},	// mail.telenor.dk
-	{ 9797, 154},	// mail.wind.co.jp
-	{ 9813, 154},	// mail.wind.jp
-	{ 9826, 154},	// mail.wind.ne.jp
+	{ 9753, 150},	// mail.telenor.dk
+	{ 9797, 153},	// mail.wind.co.jp
+	{ 9813, 153},	// mail.wind.jp
+	{ 9826, 153},	// mail.wind.ne.jp
 	{ 9896, 67},	// marchmail.com
-	{ 9934, 156},	// maroon.plala.or.jp
-	{ 9953, 151},	// maskulin.dk
+	{ 9934, 155},	// maroon.plala.or.jp
+	{ 9953, 150},	// maskulin.dk
 	{ 10002, 68},	// me.com
-	{ 10009, 183},	// mebtel.net
+	{ 10009, 182},	// mebtel.net
 	{ 10020, 57},	// messagingengine.com
 	{ 10040, 67},	// mexicomail.com
-	{ 10055, 151},	// min-postkasse.dk
+	{ 10055, 150},	// min-postkasse.dk
 	{ 10072, 67},	// mindless.com
 	{ 10085, 56},	// mindspring.com
 	{ 10100, 67},	// minister.com
-	{ 10137, 159},	// minuet.plala.or.jp
-	{ 10156, 158},	// miobox.jp
-	{ 10166, 158},	// miomio.jp
-	{ 10176, 160},	// ml.murakami.ne.jp
+	{ 10137, 158},	// minuet.plala.or.jp
+	{ 10156, 157},	// miobox.jp
+	{ 10166, 157},	// miomio.jp
+	{ 10176, 159},	// ml.murakami.ne.jp
 	{ 10194, 1},	// ml.shibata.ne.jp
-	{ 10211, 141},	// mnet.ne.jp
-	{ 10222, 151},	// mobil.dk
+	{ 10211, 140},	// mnet.ne.jp
+	{ 10222, 150},	// mobil.dk
 	{ 10250, 67},	// mobsters.com
 	{ 10263, 67},	// monarchy.com
-	{ 10285, 142},	// mopera.net
+	{ 10285, 141},	// mopera.net
 	{ 10296, 67},	// moscowmail.com
 	{ 10311, 45},	// msn.com
-	{ 10319, 94},	// multiweb.nl
+	{ 10319, 93},	// multiweb.nl
 	{ 10331, 67},	// munich.com
 	{ 10342, 67},	// musician.org
 	{ 10355, 67},	// muslim.com
-	{ 10366, 151},	// musling.dk
+	{ 10366, 150},	// musling.dk
 	{ 10420, 2},	// mx1.tiki.ne.jp
 	{ 10435, 2},	// mx2.et.tiki.ne.jp
 	{ 10453, 2},	// mx2.tiki.ne.jp
@@ -2816,312 +2812,312 @@ const Domain2AS IspDB[] = {
 	{ 10859, 2},	// mx82.tiki.ne.jp
 	{ 10875, 2},	// mx9.tiki.ne.jp
 	{ 10890, 2},	// mx91.tiki.ne.jp
-	{ 10906, 103},	// mypec.eu
+	{ 10906, 102},	// mypec.eu
 	{ 10915, 67},	// myself.com
-	{ 10926, 92},	// narod.ru
-	{ 10935, 151},	// natteliv.dk
-	{ 10969, 165},	// navy.plala.or.jp
-	{ 10986, 151},	// netbruger.dk
+	{ 10926, 91},	// narod.ru
+	{ 10935, 150},	// natteliv.dk
+	{ 10969, 164},	// navy.plala.or.jp
+	{ 10986, 150},	// netbruger.dk
 	{ 10999, 49},	// netscape.net
-	{ 11012, 81},	// neuf.fr
+	{ 11012, 80},	// neuf.fr
 	{ 11020, 67},	// newyork.usa.com
-	{ 11036, 187},	// nifty.com
-	{ 11046, 157},	// nn.iij4u.or.jp
-	{ 11061, 143},	// nsat.jp
-	{ 11069, 72},	// ntlworld.com
+	{ 11036, 186},	// nifty.com
+	{ 11046, 156},	// nn.iij4u.or.jp
+	{ 11061, 142},	// nsat.jp
+	{ 11069, 71},	// ntlworld.com
 	{ 11082, 67},	// null.net
-	{ 11091, 105},	// nvbell.net
+	{ 11091, 104},	// nvbell.net
 	{ 11102, 67},	// nycmail.com
-	{ 11124, 179},	// o2.pl
+	{ 11124, 178},	// o2.pl
 	{ 11130, 67},	// oath.com
-	{ 11139, 188},	// ocn.ad.jp
-	{ 11149, 188},	// ocn.ne.jp
-	{ 11182, 166},	// olive.plala.or.jp
-	{ 11200, 73},	// one.com
-	{ 11208, 78},	// one.cz
-	{ 11215, 196},	// onet.eu
-	{ 11223, 196},	// onet.pl
+	{ 11139, 187},	// ocn.ad.jp
+	{ 11149, 187},	// ocn.ne.jp
+	{ 11182, 165},	// olive.plala.or.jp
+	{ 11200, 72},	// one.com
+	{ 11208, 77},	// one.cz
+	{ 11215, 195},	// onet.eu
+	{ 11223, 195},	// onet.pl
 	{ 11231, 48},	// online.de
 	{ 11241, 48},	// onlinehome.de
-	{ 11255, 196},	// op.pl
-	{ 11283, 167},	// opal.plala.or.jp
+	{ 11255, 195},	// op.pl
+	{ 11283, 166},	// opal.plala.or.jp
 	{ 11300, 67},	// optician.com
-	{ 11313, 74},	// orange.fr
-	{ 11347, 168},	// orange.plala.or.jp
-	{ 11390, 169},	// orchid.plala.or.jp
+	{ 11313, 73},	// orange.fr
+	{ 11347, 167},	// orange.plala.or.jp
+	{ 11390, 168},	// orchid.plala.or.jp
 	{ 11439, 45},	// outlook.com
-	{ 11451, 225},	// ovh.net
-	{ 11468, 105},	// pacbell.net
+	{ 11451, 224},	// ovh.net
+	{ 11468, 104},	// pacbell.net
 	{ 11480, 67},	// pacificwest.com
-	{ 11496, 144},	// pal.kijimadaira.jp
-	{ 11540, 170},	// palette.plala.or.jp
-	{ 11560, 195},	// parabox.or.jp
-	{ 11574, 203},	// pdx.edu
-	{ 11605, 171},	// peach.plala.or.jp
-	{ 11623, 103},	// pec.it
-	{ 11630, 151},	// pedal.dk
-	{ 11639, 151},	// pengemand.dk
-	{ 11652, 75},	// peoplepc.com
-	{ 11665, 172},	// peptest.ch
+	{ 11496, 143},	// pal.kijimadaira.jp
+	{ 11540, 169},	// palette.plala.or.jp
+	{ 11560, 194},	// parabox.or.jp
+	{ 11574, 202},	// pdx.edu
+	{ 11605, 170},	// peach.plala.or.jp
+	{ 11623, 102},	// pec.it
+	{ 11630, 150},	// pedal.dk
+	{ 11639, 150},	// pengemand.dk
+	{ 11652, 74},	// peoplepc.com
+	{ 11665, 171},	// peptest.ch
 	{ 11676, 67},	// petlover.com
 	{ 11689, 67},	// photographer.net
 	{ 11725, 67},	// playful.com
-	{ 11759, 174},	// plum.plala.or.jp
-	{ 11776, 175},	// po.dcn.ne.jp
-	{ 11789, 178},	// po.gunmanet.ne.jp
-	{ 11807, 178},	// po.gunmanet.or.jp
-	{ 11864, 178},	// po.wind.co.jp
-	{ 11878, 178},	// po.wind.jp
-	{ 11889, 178},	// po.wind.ne.jp
-	{ 11903, 146},	// pobox.com
-	{ 11926, 196},	// poczta.onet.eu
-	{ 11941, 196},	// poczta.onet.pl
+	{ 11759, 173},	// plum.plala.or.jp
+	{ 11776, 174},	// po.dcn.ne.jp
+	{ 11789, 177},	// po.gunmanet.ne.jp
+	{ 11807, 177},	// po.gunmanet.or.jp
+	{ 11864, 177},	// po.wind.co.jp
+	{ 11878, 177},	// po.wind.jp
+	{ 11889, 177},	// po.wind.ne.jp
+	{ 11903, 145},	// pobox.com
+	{ 11926, 195},	// poczta.onet.eu
+	{ 11941, 195},	// poczta.onet.pl
 	{ 11956, 67},	// poetic.com
-	{ 11967, 151},	// pokerface.dk
+	{ 11967, 150},	// pokerface.dk
 	{ 11980, 67},	// politician.com
-	{ 12018, 180},	// polka.plala.or.jp
+	{ 12018, 179},	// polka.plala.or.jp
 	{ 12167, 1},	// pop.shibata.ne.jp
 	{ 12390, 67},	// popstar.com
 	{ 12402, 67},	// post.com
-	{ 12411, 151},	// post.cybercity.dk
-	{ 12429, 80},	// post.cz
-	{ 12437, 151},	// post.dia.dk
-	{ 12449, 201},	// posteo.af
-	{ 12459, 201},	// posteo.at
-	{ 12469, 201},	// posteo.be
-	{ 12479, 201},	// posteo.ch
-	{ 12489, 201},	// posteo.cl
-	{ 12499, 201},	// posteo.co
-	{ 12509, 201},	// posteo.co.uk
-	{ 12522, 201},	// posteo.com.br
-	{ 12536, 201},	// posteo.cr
-	{ 12546, 201},	// posteo.cz
-	{ 12556, 201},	// posteo.de
-	{ 12566, 201},	// posteo.dk
-	{ 12576, 201},	// posteo.ee
-	{ 12586, 201},	// posteo.es
-	{ 12596, 201},	// posteo.eu
-	{ 12606, 201},	// posteo.fi
-	{ 12616, 201},	// posteo.gl
-	{ 12626, 201},	// posteo.gr
-	{ 12636, 201},	// posteo.hn
-	{ 12646, 201},	// posteo.hr
-	{ 12656, 201},	// posteo.hu
-	{ 12666, 201},	// posteo.ie
-	{ 12676, 201},	// posteo.in
-	{ 12686, 201},	// posteo.is
-	{ 12696, 201},	// posteo.jp
-	{ 12706, 201},	// posteo.la
-	{ 12716, 201},	// posteo.li
-	{ 12726, 201},	// posteo.lt
-	{ 12736, 201},	// posteo.lu
-	{ 12746, 201},	// posteo.me
-	{ 12756, 201},	// posteo.mx
-	{ 12766, 201},	// posteo.my
-	{ 12776, 201},	// posteo.net
-	{ 12787, 201},	// posteo.nl
-	{ 12797, 201},	// posteo.no
-	{ 12807, 201},	// posteo.nz
-	{ 12817, 201},	// posteo.org
-	{ 12828, 201},	// posteo.pe
-	{ 12838, 201},	// posteo.pl
-	{ 12848, 201},	// posteo.pm
-	{ 12858, 201},	// posteo.pt
-	{ 12868, 201},	// posteo.ro
-	{ 12878, 201},	// posteo.ru
-	{ 12888, 201},	// posteo.se
-	{ 12898, 201},	// posteo.sg
-	{ 12908, 201},	// posteo.si
-	{ 12918, 201},	// posteo.tn
-	{ 12928, 201},	// posteo.uk
-	{ 12938, 201},	// posteo.us
-	{ 12948, 151},	// postman.dk
-	{ 12959, 157},	// pp.iij4u.or.jp
+	{ 12411, 150},	// post.cybercity.dk
+	{ 12429, 79},	// post.cz
+	{ 12437, 150},	// post.dia.dk
+	{ 12449, 200},	// posteo.af
+	{ 12459, 200},	// posteo.at
+	{ 12469, 200},	// posteo.be
+	{ 12479, 200},	// posteo.ch
+	{ 12489, 200},	// posteo.cl
+	{ 12499, 200},	// posteo.co
+	{ 12509, 200},	// posteo.co.uk
+	{ 12522, 200},	// posteo.com.br
+	{ 12536, 200},	// posteo.cr
+	{ 12546, 200},	// posteo.cz
+	{ 12556, 200},	// posteo.de
+	{ 12566, 200},	// posteo.dk
+	{ 12576, 200},	// posteo.ee
+	{ 12586, 200},	// posteo.es
+	{ 12596, 200},	// posteo.eu
+	{ 12606, 200},	// posteo.fi
+	{ 12616, 200},	// posteo.gl
+	{ 12626, 200},	// posteo.gr
+	{ 12636, 200},	// posteo.hn
+	{ 12646, 200},	// posteo.hr
+	{ 12656, 200},	// posteo.hu
+	{ 12666, 200},	// posteo.ie
+	{ 12676, 200},	// posteo.in
+	{ 12686, 200},	// posteo.is
+	{ 12696, 200},	// posteo.jp
+	{ 12706, 200},	// posteo.la
+	{ 12716, 200},	// posteo.li
+	{ 12726, 200},	// posteo.lt
+	{ 12736, 200},	// posteo.lu
+	{ 12746, 200},	// posteo.me
+	{ 12756, 200},	// posteo.mx
+	{ 12766, 200},	// posteo.my
+	{ 12776, 200},	// posteo.net
+	{ 12787, 200},	// posteo.nl
+	{ 12797, 200},	// posteo.no
+	{ 12807, 200},	// posteo.nz
+	{ 12817, 200},	// posteo.org
+	{ 12828, 200},	// posteo.pe
+	{ 12838, 200},	// posteo.pl
+	{ 12848, 200},	// posteo.pm
+	{ 12858, 200},	// posteo.pt
+	{ 12868, 200},	// posteo.ro
+	{ 12878, 200},	// posteo.ru
+	{ 12888, 200},	// posteo.se
+	{ 12898, 200},	// posteo.sg
+	{ 12908, 200},	// posteo.si
+	{ 12918, 200},	// posteo.tn
+	{ 12928, 200},	// posteo.uk
+	{ 12938, 200},	// posteo.us
+	{ 12948, 150},	// postman.dk
+	{ 12959, 156},	// pp.iij4u.or.jp
 	{ 12974, 67},	// presidency.com
 	{ 12989, 67},	// priest.com
-	{ 13000, 151},	// privat.dia.dk
-	{ 13014, 151},	// privatmail.dk
-	{ 13028, 105},	// prodigy.net
+	{ 13000, 150},	// privat.dia.dk
+	{ 13014, 150},	// privatmail.dk
+	{ 13028, 104},	// prodigy.net
 	{ 13040, 67},	// programmer.net
-	{ 13055, 179},	// prokonto.pl
-	{ 13083, 76},	// proximus.be
-	{ 13111, 202},	// ptd.net
+	{ 13055, 178},	// prokonto.pl
+	{ 13083, 75},	// proximus.be
+	{ 13111, 201},	// ptd.net
 	{ 13119, 67},	// publicist.com
-	{ 13157, 204},	// purple.plala.or.jp
-	{ 13176, 147},	// q.com
-	{ 13182, 77},	// qq.com
-	{ 13189, 151},	// quake.dk
-	{ 13198, 94},	// quicknet.nl
-	{ 13235, 205},	// rainbow.plala.or.jp
-	{ 13255, 148},	// rambler.ru
-	{ 13266, 94},	// razcall.com
-	{ 13278, 94},	// razcall.nl
-	{ 13289, 151},	// ready.dk
+	{ 13157, 203},	// purple.plala.or.jp
+	{ 13176, 146},	// q.com
+	{ 13182, 76},	// qq.com
+	{ 13189, 150},	// quake.dk
+	{ 13198, 93},	// quicknet.nl
+	{ 13235, 204},	// rainbow.plala.or.jp
+	{ 13255, 147},	// rambler.ru
+	{ 13266, 93},	// razcall.com
+	{ 13278, 93},	// razcall.nl
+	{ 13289, 150},	// ready.dk
 	{ 13298, 67},	// realtyagent.com
 	{ 13314, 67},	// reborn.com
-	{ 13346, 206},	// red.plala.or.jp
+	{ 13346, 205},	// red.plala.or.jp
 	{ 13362, 67},	// reggaefan.com
 	{ 13394, 67},	// religious.com
 	{ 13408, 67},	// repairman.com
 	{ 13422, 67},	// representative.com
-	{ 13441, 196},	// republika.pl
+	{ 13441, 195},	// republika.pl
 	{ 13454, 67},	// rescueteam.com
 	{ 13469, 67},	// revenue.com
-	{ 13504, 207},	// rmail.plala.or.jp
+	{ 13504, 206},	// rmail.plala.or.jp
 	{ 13522, 70},	// rocketmail.com
 	{ 13537, 67},	// rocketship.com
 	{ 13552, 67},	// rockfan.com
 	{ 13564, 67},	// rome.com
-	{ 13596, 208},	// rondo.plala.or.jp
-	{ 13636, 209},	// rose.plala.or.jp
-	{ 13676, 210},	// rouge.plala.or.jp
+	{ 13596, 207},	// rondo.plala.or.jp
+	{ 13636, 208},	// rose.plala.or.jp
+	{ 13676, 209},	// rouge.plala.or.jp
 	{ 13694, 67},	// royal.net
-	{ 13704, 152},	// rr.com
-	{ 13711, 157},	// rr.iij4u.or.jp
-	{ 13748, 211},	// ruby.plala.or.jp
-	{ 13765, 164},	// ruhrnet-online.de
-	{ 13783, 149},	// runestone.net
-	{ 13797, 83},	// rzone.de
+	{ 13704, 151},	// rr.com
+	{ 13711, 156},	// rr.iij4u.or.jp
+	{ 13748, 210},	// ruby.plala.or.jp
+	{ 13765, 163},	// ruhrnet-online.de
+	{ 13783, 148},	// runestone.net
+	{ 13797, 82},	// rzone.de
 	{ 13806, 67},	// saintly.com
-	{ 13818, 150},	// sakunet.ne.jp
+	{ 13818, 149},	// sakunet.ne.jp
 	{ 13832, 67},	// salesperson.net
 	{ 13848, 67},	// sanfranmail.com
-	{ 13864, 105},	// sbcglobal.net
+	{ 13864, 104},	// sbcglobal.net
 	{ 13878, 48},	// schlund.de
 	{ 13889, 67},	// scientist.com
 	{ 13903, 67},	// scotlandmail.com
-	{ 13941, 212},	// sea.plala.or.jp
-	{ 13957, 151},	// secret.dk
+	{ 13941, 211},	// sea.plala.or.jp
+	{ 13957, 150},	// secret.dk
 	{ 13967, 67},	// secretary.net
-	{ 14043, 79},	// secureserver.net
+	{ 14043, 78},	// secureserver.net
 	{ 14083, 67},	// seductive.com
-	{ 14149, 216},	// sepia.plala.or.jp
-	{ 14193, 217},	// serenade.plala.or.jp
-	{ 14214, 80},	// seznam.cz
-	{ 14224, 81},	// sfr.fr
-	{ 14253, 218},	// silk.plala.or.jp
-	{ 14294, 219},	// silver.plala.or.jp
+	{ 14149, 215},	// sepia.plala.or.jp
+	{ 14193, 216},	// serenade.plala.or.jp
+	{ 14214, 79},	// seznam.cz
+	{ 14224, 80},	// sfr.fr
+	{ 14253, 217},	// silk.plala.or.jp
+	{ 14294, 218},	// silver.plala.or.jp
 	{ 14313, 67},	// singapore.com
-	{ 14327, 86},	// sky.com
-	{ 14356, 220},	// sky.plala.or.jp
-	{ 14372, 76},	// skynet.be
-	{ 14382, 151},	// sleepy.dk
-	{ 14415, 221},	// smail.plala.or.jp
+	{ 14327, 85},	// sky.com
+	{ 14356, 219},	// sky.plala.or.jp
+	{ 14372, 75},	// skynet.be
+	{ 14382, 150},	// sleepy.dk
+	{ 14415, 220},	// smail.plala.or.jp
 	{ 14673, 34},	// smtp.cz
 	{ 15915, 67},	// snakebite.com
-	{ 15929, 105},	// snet.net
-	{ 15960, 222},	// snow.plala.or.jp
-	{ 15977, 223},	// so.wind.jp
-	{ 15988, 223},	// so.wind.ne.jp
+	{ 15929, 104},	// snet.net
+	{ 15960, 221},	// snow.plala.or.jp
+	{ 15977, 222},	// so.wind.jp
+	{ 15988, 222},	// so.wind.ne.jp
 	{ 16002, 48},	// sofort-start.de
 	{ 16018, 48},	// sofort-surf.de
 	{ 16033, 48},	// sofortstart.de
 	{ 16048, 48},	// sofortsurf.de
-	{ 16062, 225},	// someplaceiwanna.be
-	{ 16105, 224},	// sonata.plala.or.jp
+	{ 16062, 224},	// someplaceiwanna.be
+	{ 16105, 223},	// sonata.plala.or.jp
 	{ 16124, 67},	// songwriter.net
 	{ 16139, 67},	// soon.com
 	{ 16148, 67},	// spainmail.com
-	{ 16162, 80},	// spoluzaci.cz
-	{ 16175, 151},	// sporty.dk
-	{ 16185, 157},	// ss.iij4u.or.jp
-	{ 16239, 83},	// strato.de
-	{ 16249, 235},	// studenti.univr.it
-	{ 16290, 227},	// suite.plala.or.jp
-	{ 16308, 151},	// superbruger.dk
-	{ 16323, 105},	// swbell.net
+	{ 16162, 79},	// spoluzaci.cz
+	{ 16175, 150},	// sporty.dk
+	{ 16185, 156},	// ss.iij4u.or.jp
+	{ 16239, 82},	// strato.de
+	{ 16249, 234},	// studenti.univr.it
+	{ 16290, 226},	// suite.plala.or.jp
+	{ 16308, 150},	// superbruger.dk
+	{ 16323, 104},	// swbell.net
 	{ 16334, 51},	// sympatico.ca
-	{ 16373, 228},	// symphony.plala.or.jp
-	{ 16394, 214},	// t-online.de
-	{ 16406, 151},	// talent.dk
-	{ 16416, 121},	// talk21.com
-	{ 16427, 151},	// tanke.dk
-	{ 16459, 229},	// taupe.plala.or.jp
-	{ 16477, 151},	// taxidriver.dk
+	{ 16373, 227},	// symphony.plala.or.jp
+	{ 16394, 213},	// t-online.de
+	{ 16406, 150},	// talent.dk
+	{ 16416, 120},	// talk21.com
+	{ 16427, 150},	// tanke.dk
+	{ 16459, 228},	// taupe.plala.or.jp
+	{ 16477, 150},	// taxidriver.dk
 	{ 16491, 67},	// teachers.org
 	{ 16504, 67},	// techie.com
 	{ 16515, 67},	// technologist.com
-	{ 16532, 151},	// teens.dk
-	{ 16541, 151},	// teknik.dk
-	{ 16551, 164},	// telebel.de
-	{ 16562, 164},	// telelev.de
-	{ 16573, 184},	// teleos-web.de
-	{ 16587, 84},	// telstra.com
-	{ 16599, 97},	// terra.es
+	{ 16532, 150},	// teens.dk
+	{ 16541, 150},	// teknik.dk
+	{ 16551, 163},	// telebel.de
+	{ 16562, 163},	// telelev.de
+	{ 16573, 183},	// teleos-web.de
+	{ 16587, 83},	// telstra.com
+	{ 16599, 96},	// terra.es
 	{ 16608, 67},	// texas.usa.com
 	{ 16622, 67},	// thegame.com
 	{ 16634, 67},	// therapist.net
-	{ 16648, 124},	// thinline.cz
-	{ 16660, 163},	// tiki.ne.jp
-	{ 16671, 194},	// tiscali.cz
-	{ 16682, 85},	// tiscali.it
-	{ 16693, 151},	// tjekket.dk
-	{ 16704, 179},	// tlen.pl
-	{ 16735, 230},	// tmail.plala.or.jp
-	{ 16778, 231},	// toccata.plala.or.jp
+	{ 16648, 123},	// thinline.cz
+	{ 16660, 162},	// tiki.ne.jp
+	{ 16671, 193},	// tiscali.cz
+	{ 16682, 84},	// tiscali.it
+	{ 16693, 150},	// tjekket.dk
+	{ 16704, 178},	// tlen.pl
+	{ 16735, 229},	// tmail.plala.or.jp
+	{ 16778, 230},	// toccata.plala.or.jp
 	{ 16798, 67},	// toke.com
 	{ 16807, 67},	// tokyo.com
 	{ 16817, 67},	// toothfairy.com
-	{ 16855, 232},	// topaz.plala.or.jp
-	{ 16873, 151},	// traceroute.dk
-	{ 16909, 233},	// trio.plala.or.jp
-	{ 16926, 151},	// tv.dk
+	{ 16855, 231},	// topaz.plala.or.jp
+	{ 16873, 150},	// traceroute.dk
+	{ 16909, 232},	// trio.plala.or.jp
+	{ 16926, 150},	// tv.dk
 	{ 16932, 67},	// tvstar.com
-	{ 16943, 151},	// ugenstilbud.dk
-	{ 16981, 234},	// umail.plala.or.jp
-	{ 16999, 153},	// umich.edu
+	{ 16943, 150},	// ugenstilbud.dk
+	{ 16981, 233},	// umail.plala.or.jp
+	{ 16999, 152},	// umich.edu
 	{ 17009, 67},	// umpire.com
-	{ 17020, 151},	// ungdom.dk
-	{ 17076, 87},	// uol.com.br
-	{ 17087, 94},	// upcmail.nl
+	{ 17020, 150},	// ungdom.dk
+	{ 17076, 86},	// uol.com.br
+	{ 17087, 93},	// upcmail.nl
 	{ 17098, 67},	// usa.com
 	{ 17106, 67},	// uymail.com
-	{ 17117, 189},	// verizon.net
-	{ 17129, 164},	// versanet.de
-	{ 17141, 164},	// versatel.de
-	{ 17153, 151},	// video.dk
-	{ 17186, 236},	// violet.plala.or.jp
-	{ 17205, 151},	// vip.cybercity.dk
-	{ 17222, 98},	// virgin.net
-	{ 17233, 88},	// virginmedia.com
-	{ 17249, 151},	// vittig.dk
-	{ 17259, 118},	// vm.aikis.or.jp
-	{ 17297, 237},	// vmail.plala.or.jp
-	{ 17315, 196},	// vp.pl
-	{ 17321, 238},	// vp.tiki.ne.jp
+	{ 17117, 188},	// verizon.net
+	{ 17129, 163},	// versanet.de
+	{ 17141, 163},	// versatel.de
+	{ 17153, 150},	// video.dk
+	{ 17186, 235},	// violet.plala.or.jp
+	{ 17205, 150},	// vip.cybercity.dk
+	{ 17222, 97},	// virgin.net
+	{ 17233, 87},	// virginmedia.com
+	{ 17249, 150},	// vittig.dk
+	{ 17259, 117},	// vm.aikis.or.jp
+	{ 17297, 236},	// vmail.plala.or.jp
+	{ 17315, 195},	// vp.pl
+	{ 17321, 237},	// vp.tiki.ne.jp
 	{ 17349, 67},	// wallet.com
-	{ 17383, 239},	// waltz.plala.or.jp
-	{ 17401, 74},	// wanadoo.fr
-	{ 17412, 105},	// wans.net
-	{ 17443, 240},	// wave.plala.or.jp
-	{ 17460, 89},	// web.de
-	{ 17467, 90},	// webhuset.no
+	{ 17383, 238},	// waltz.plala.or.jp
+	{ 17401, 73},	// wanadoo.fr
+	{ 17412, 104},	// wans.net
+	{ 17443, 239},	// wave.plala.or.jp
+	{ 17460, 88},	// web.de
+	{ 17467, 89},	// webhuset.no
 	{ 17479, 67},	// webname.com
 	{ 17491, 67},	// weirdness.com
-	{ 17528, 241},	// white.plala.or.jp
+	{ 17528, 240},	// white.plala.or.jp
 	{ 17546, 67},	// who.net
 	{ 17554, 67},	// whoever.com
-	{ 17608, 242},	// wine.plala.or.jp
+	{ 17608, 241},	// wine.plala.or.jp
 	{ 17625, 67},	// winning.com
 	{ 17637, 67},	// witty.com
-	{ 17670, 243},	// wmail.plala.or.jp
-	{ 17688, 194},	// wo.cz
-	{ 17694, 151},	// wol.dk
+	{ 17670, 242},	// wmail.plala.or.jp
+	{ 17688, 193},	// wo.cz
+	{ 17694, 150},	// wol.dk
 	{ 17701, 67},	// worker.com
 	{ 17712, 67},	// workmail.com
-	{ 17725, 194},	// worldmail.cz
-	{ 17738, 194},	// worldonline.cz
-	{ 17753, 151},	// worldonline.dk
-	{ 17768, 91},	// wp.pl
+	{ 17725, 193},	// worldmail.cz
+	{ 17738, 193},	// worldonline.cz
+	{ 17753, 150},	// worldonline.dk
+	{ 17768, 90},	// wp.pl
 	{ 17774, 67},	// writeme.com
-	{ 17786, 158},	// x-il.jp
-	{ 17817, 244},	// xmail.plala.or.jp
-	{ 17835, 245},	// xp.wind.jp
-	{ 17869, 246},	// xpost.plala.or.jp
-	{ 17887, 200},	// xs4all.nl
-	{ 17897, 198},	// xtra.co.nz
-	{ 17908, 92},	// ya.ru
-	{ 17914, 186},	// yahoo.co.jp
+	{ 17786, 157},	// x-il.jp
+	{ 17817, 243},	// xmail.plala.or.jp
+	{ 17835, 244},	// xp.wind.jp
+	{ 17869, 245},	// xpost.plala.or.jp
+	{ 17887, 199},	// xs4all.nl
+	{ 17897, 197},	// xtra.co.nz
+	{ 17908, 91},	// ya.ru
+	{ 17914, 185},	// yahoo.co.jp
 	{ 17926, 70},	// yahoo.co.nz
 	{ 17938, 70},	// yahoo.co.uk
 	{ 17950, 70},	// yahoo.com
@@ -3135,29 +3131,29 @@ const Domain2AS IspDB[] = {
 	{ 18039, 70},	// yahoo.it
 	{ 18048, 70},	// yahoo.se
 	{ 18057, 70},	// yahoodns.net
-	{ 18070, 92},	// yandex.by
-	{ 18080, 92},	// yandex.com
-	{ 18091, 92},	// yandex.kz
-	{ 18101, 92},	// yandex.net
-	{ 18112, 92},	// yandex.ru
-	{ 18122, 92},	// yandex.ua
-	{ 18132, 247},	// ybb.ne.jp
-	{ 18191, 93},	// yeah.net
-	{ 18224, 248},	// yellow.plala.or.jp
+	{ 18070, 91},	// yandex.by
+	{ 18080, 91},	// yandex.com
+	{ 18091, 91},	// yandex.kz
+	{ 18101, 91},	// yandex.net
+	{ 18112, 91},	// yandex.ru
+	{ 18122, 91},	// yandex.ua
+	{ 18132, 246},	// ybb.ne.jp
+	{ 18191, 92},	// yeah.net
+	{ 18224, 247},	// yellow.plala.or.jp
 	{ 18243, 70},	// ymail.com
-	{ 18276, 249},	// ymail.plala.or.jp
+	{ 18276, 248},	// ymail.plala.or.jp
 	{ 18294, 67},	// yours.com
-	{ 18327, 250},	// ypost.plala.or.jp
-	{ 18345, 155},	// zeelandnet.nl
-	{ 18359, 94},	// zeggis.com
-	{ 18370, 94},	// zeggis.nl
-	{ 18380, 94},	// ziggo.nl
-	{ 18389, 94},	// ziggomail.com
-	{ 18403, 94},	// zinders.nl
-	{ 18437, 251},	// zmail.plala.or.jp
-	{ 18455, 95},	// zoho.com
-	{ 18464, 95},	// zohomail.com
-	{ 18500, 252},	// zpost.plala.or.jp
+	{ 18327, 249},	// ypost.plala.or.jp
+	{ 18345, 154},	// zeelandnet.nl
+	{ 18359, 93},	// zeggis.com
+	{ 18370, 93},	// zeggis.nl
+	{ 18380, 93},	// ziggo.nl
+	{ 18389, 93},	// ziggomail.com
+	{ 18403, 93},	// zinders.nl
+	{ 18437, 250},	// zmail.plala.or.jp
+	{ 18455, 94},	// zoho.com
+	{ 18464, 94},	// zohomail.com
+	{ 18500, 251},	// zpost.plala.or.jp
 };
 
 const unsigned IspDBSize = 835;
@@ -3167,6 +3163,6 @@ const unsigned IspDBSize = 835;
 
 // sizeof(Domain2AS) = 8
 // sizeof(AccountSettings) = 64
-// Data size: 18977 + 16192 + 6680 = 41849 Bytes.
+// Data size: 18977 + 16128 + 6680 = 41785 Bytes.
 // ===<End of generated file>===
 
