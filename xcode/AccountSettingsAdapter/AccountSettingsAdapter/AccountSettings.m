@@ -96,4 +96,16 @@
     return [[AccountSettingsServer alloc] initWithAccountServer:asOutgoing];
 }
 
+- (BOOL)supportsOAuth2
+{
+    AccountSettingsServer *theIncoming = self.incoming;
+    AccountSettingsServer *theOutgoing = self.outgoing;
+    if (theIncoming && theOutgoing &&
+        theIncoming.authMethod == AccountSettingsServerAuthMethodOAUTH2 &&
+        theOutgoing.authMethod == AccountSettingsServerAuthMethodOAUTH2) {
+        return YES;
+    }
+    return NO;
+}
+
 @end
