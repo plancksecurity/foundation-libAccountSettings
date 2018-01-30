@@ -34,4 +34,6 @@
 @property (nonatomic, readonly, nullable) AccountSettingsServer *incoming;
 @property (nonatomic, readonly, nullable) AccountSettingsServer *outgoing;
 
+@property (nonatomic, readonly) BOOL supportsOAuth2;
+
 @end
