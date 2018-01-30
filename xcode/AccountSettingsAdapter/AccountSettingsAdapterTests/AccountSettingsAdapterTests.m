@@ -133,36 +133,40 @@
             outgoingTransport:(AccountSettingsServerTransport)outgoingTransport
            outgoingAuthMethod:(AccountSettingsServerAuthMethod)outgoingAuthMethod
 {
-    for (NSInteger i = 0; i < 2; ++i) {
-        id<AccountSettingsProtocol> as = [[AccountSettings alloc]
-                                          initWithAccountName:address
-                                          provider:nil flags:AS_FLAG_USE_ANY
-                                          credentials:nil];
+    AS_FLAGS flagsToTest[] = { AS_FLAG_USE_ANY, AS_FLAG_USE_ANY_LOCAL };
 
-        if (i == 0) {
-            [as lookup];
-        } else {
-            XCTestExpectation *expLookedUp = [self expectationWithDescription:@"expLookedUp"];
-            [as lookupCompletion:^(id<AccountSettingsProtocol> asParam) {
-                XCTAssertEqualObjects(as, asParam);
-                [self verifyAccountSettings:asParam address:address
-                           incomingHostName:incomingHostName
-                               incomingPort:incomingPort incomingProtocol:incomingProtocol
-                          incomingTransport:incomingTransport incomingAuthMethod:incomingAuthMethod
-                           outgoingHostName:outgoingHostName outgoingPort:outgoingPort
-                           outgoingProtocol:outgoingProtocol outgoingTransport:outgoingTransport
-                         outgoingAuthMethod:outgoingAuthMethod];
-                [expLookedUp fulfill];
-            }];
-            [self waitForExpectations:@[expLookedUp] timeout:30];
+    for (NSInteger flagIndex = 0; flagIndex < sizeof(flagsToTest)/sizeof(AS_FLAGS); ++flagIndex) {
+        for (NSInteger i = 0; i < 2; ++i) {
+            id<AccountSettingsProtocol> as = [[AccountSettings alloc]
+                                              initWithAccountName:address
+                                              provider:nil flags:flagsToTest[flagIndex]
+                                              credentials:nil];
+
+            if (i == 0) {
+                [as lookup];
+            } else {
+                XCTestExpectation *expLookedUp = [self expectationWithDescription:@"expLookedUp"];
+                [as lookupCompletion:^(id<AccountSettingsProtocol> asParam) {
+                    XCTAssertEqualObjects(as, asParam);
+                    [self verifyAccountSettings:asParam address:address
+                               incomingHostName:incomingHostName
+                                   incomingPort:incomingPort incomingProtocol:incomingProtocol
+                              incomingTransport:incomingTransport incomingAuthMethod:incomingAuthMethod
+                               outgoingHostName:outgoingHostName outgoingPort:outgoingPort
+                               outgoingProtocol:outgoingProtocol outgoingTransport:outgoingTransport
+                             outgoingAuthMethod:outgoingAuthMethod];
+                    [expLookedUp fulfill];
+                }];
+                [self waitForExpectations:@[expLookedUp] timeout:30];
+            }
+
+            [self verifyAccountSettings:as address:address incomingHostName:incomingHostName
+                           incomingPort:incomingPort incomingProtocol:incomingProtocol
+                      incomingTransport:incomingTransport incomingAuthMethod:incomingAuthMethod
+                       outgoingHostName:outgoingHostName outgoingPort:outgoingPort
+                       outgoingProtocol:outgoingProtocol outgoingTransport:outgoingTransport
+                     outgoingAuthMethod:outgoingAuthMethod];
         }
-
-        [self verifyAccountSettings:as address:address incomingHostName:incomingHostName
-                       incomingPort:incomingPort incomingProtocol:incomingProtocol
-                  incomingTransport:incomingTransport incomingAuthMethod:incomingAuthMethod
-                   outgoingHostName:outgoingHostName outgoingPort:outgoingPort
-                   outgoingProtocol:outgoingProtocol outgoingTransport:outgoingTransport
-                 outgoingAuthMethod:outgoingAuthMethod];
     }
 }
 
