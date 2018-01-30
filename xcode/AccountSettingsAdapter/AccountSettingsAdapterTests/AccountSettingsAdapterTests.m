@@ -46,11 +46,11 @@
     [self testServerWithAddress:@"blahblah@yahoo.com" incomingHostName:@"imap.mail.yahoo.com"
                    incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
               incomingTransport:AccountSettingsServerTransportTLS
-             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
+             incomingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
                outgoingHostName:@"smtp.mail.yahoo.com" outgoingPort:465
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
+             outgoingAuthMethod:AccountSettingsServerAuthMethodOAUTH2];
 }
 
 - (void)testNewpEpTestWrongFormatMailAccount
