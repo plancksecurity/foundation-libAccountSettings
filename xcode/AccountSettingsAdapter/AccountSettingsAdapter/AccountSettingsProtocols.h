@@ -85,6 +85,11 @@ typedef void (^AccountSettingsCompletionBlock)(id<AccountSettingsProtocol> _Nonn
  */
 - (void)lookupCompletion:(AccountSettingsCompletionBlock _Nullable)completionBlock;
 
+/**
+ Does the given provider support OAuth2?
+ */
+@property (nonatomic, readonly) BOOL supportsOAuth2;
+
 @end
 
 #endif /* AccountSettingsProtocols_h */
