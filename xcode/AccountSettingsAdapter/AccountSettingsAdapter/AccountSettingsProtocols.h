@@ -56,8 +56,11 @@ typedef NS_ENUM(NSInteger, AccountSettingsServerAuthMethod)
 typedef void (^AccountSettingsCompletionBlock)(id<AccountSettingsProtocol> _Nonnull);
 
 @property (nonatomic, readonly, nonnull) NSString *accountName;
+
+/** The provider name as provided by the client */
 @property (nonatomic, readonly, nullable) NSString *provider;
-@property (nonatomic, readonly) AS_FLAGS flags;
+
+ @property (nonatomic, readonly) AS_FLAGS flags;
 
 /**
  Defined *after* lookup has finished.
@@ -89,6 +92,11 @@ typedef void (^AccountSettingsCompletionBlock)(id<AccountSettingsProtocol> _Nonn
  Does the given provider support OAuth2?
  */
 @property (nonatomic, readonly) BOOL supportsOAuth2;
+
+/**
+ The provider ID, which might be set for local DB lookups.
+ */
+@property (nonatomic, readonly, nullable) NSString *providerID;
 
 @end
 

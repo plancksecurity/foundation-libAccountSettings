@@ -108,4 +108,14 @@
     return NO;
 }
 
+- (NSString *)providerID
+{
+    if (self.accountSettings) {
+        return [NSString stringWithCString:AS_get_provider_id(self.accountSettings)
+                                  encoding:NSUTF8StringEncoding];
+    } else {
+        return nil;
+    }
+}
+
 @end

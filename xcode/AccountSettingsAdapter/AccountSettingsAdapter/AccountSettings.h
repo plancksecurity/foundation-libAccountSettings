@@ -36,4 +36,6 @@
 
 @property (nonatomic, readonly) BOOL supportsOAuth2;
 
+@property (nonatomic, readonly, nullable) NSString *providerID;
+
 @end

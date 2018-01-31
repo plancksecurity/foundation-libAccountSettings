@@ -25,7 +25,8 @@
                outgoingHostName:hostName outgoingPort:587
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportStartTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
+                     providerID: @"peptest.ch"];
 }
 
 - (void)testQueryPlaceiwannabe
@@ -38,7 +39,8 @@
                outgoingHostName:hostName outgoingPort:465
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText];
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
+                     providerID: @"ovh.net"];
 }
 
 - (void)testQueryYahoo
@@ -50,7 +52,8 @@
                outgoingHostName:@"smtp.mail.yahoo.com" outgoingPort:465
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodOAUTH2];
+             outgoingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
+                     providerID: @"yahoo.com"];
 }
 
 - (void)testNewpEpTestWrongFormatMailAccount
@@ -91,6 +94,7 @@
              outgoingProtocol:(AccountSettingsServerProtocolType)outgoingProtocol
             outgoingTransport:(AccountSettingsServerTransport)outgoingTransport
            outgoingAuthMethod:(AccountSettingsServerAuthMethod)outgoingAuthMethod
+                   providerID:(NSString *)providerID
 {
     XCTAssertEqual(accountSettings.status, AS_OK);
 
@@ -107,6 +111,7 @@
     XCTAssertEqual(accountSettings.outgoing.transport, outgoingTransport);
     XCTAssertEqual(accountSettings.outgoing.authMethod, outgoingAuthMethod);
     XCTAssertEqual(accountSettings.outgoing.protocol, outgoingProtocol);
+    XCTAssertEqualObjects(accountSettings.providerID, providerID);
 }
 
 - (void)testServerWithAddress:(NSString *)address
@@ -120,6 +125,7 @@
              outgoingProtocol:(AccountSettingsServerProtocolType)outgoingProtocol
             outgoingTransport:(AccountSettingsServerTransport)outgoingTransport
            outgoingAuthMethod:(AccountSettingsServerAuthMethod)outgoingAuthMethod
+                   providerID:(NSString *)providerID
 {
     AS_FLAGS flagsToTest[] = { AS_FLAG_USE_ANY, AS_FLAG_USE_ANY_LOCAL };
 
@@ -142,7 +148,8 @@
                               incomingTransport:incomingTransport incomingAuthMethod:incomingAuthMethod
                                outgoingHostName:outgoingHostName outgoingPort:outgoingPort
                                outgoingProtocol:outgoingProtocol outgoingTransport:outgoingTransport
-                             outgoingAuthMethod:outgoingAuthMethod];
+                             outgoingAuthMethod:outgoingAuthMethod
+                                     providerID: providerID];
                     [expLookedUp fulfill];
                 }];
                 [self waitForExpectations:@[expLookedUp] timeout:30];
@@ -153,7 +160,8 @@
                       incomingTransport:incomingTransport incomingAuthMethod:incomingAuthMethod
                        outgoingHostName:outgoingHostName outgoingPort:outgoingPort
                        outgoingProtocol:outgoingProtocol outgoingTransport:outgoingTransport
-                     outgoingAuthMethod:outgoingAuthMethod];
+                     outgoingAuthMethod:outgoingAuthMethod
+                             providerID: providerID];
         }
     }
 }
