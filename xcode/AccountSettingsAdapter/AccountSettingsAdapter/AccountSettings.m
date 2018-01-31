@@ -12,6 +12,9 @@
 
 #import "AccountSettingsServer+Internal.h"
 
+NSString * const _Nonnull AccountSettingsProviderIDGmail = @"googlemail.com";
+NSString * const _Nonnull AccountSettingsProviderIDYahoo = @"yahoo.com";
+
 @interface AccountSettings ()
 
 @property (nonatomic, nullable) const struct AccountSettings *accountSettings;

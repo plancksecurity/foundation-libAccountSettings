@@ -53,7 +53,7 @@
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportTLS
              outgoingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
-                     providerID: @"yahoo.com"];
+                     providerID: AccountSettingsProviderIDYahoo];
 }
 
 - (void)testQueryGmail
@@ -66,7 +66,7 @@
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportTLS
              outgoingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
-                     providerID: @"googlemail.com"];
+                     providerID: AccountSettingsProviderIDGmail];
 }
 
 - (void)testNewpEpTestWrongFormatMailAccount

@@ -11,6 +11,9 @@
 
 #import "account_settings_common.h"
 
+extern NSString * const _Nonnull AccountSettingsProviderIDGmail;
+extern NSString * const _Nonnull AccountSettingsProviderIDYahoo;
+
 typedef NS_ENUM(NSInteger, AccountSettingsServerProtocolType)
 {
     AccountSettingsServerTypeUnknown,
