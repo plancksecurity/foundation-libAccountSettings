@@ -56,6 +56,19 @@
                      providerID: @"yahoo.com"];
 }
 
+- (void)testQueryGmail
+{
+    [self testServerWithAddress:@"blahblah@gmail.com" incomingHostName:@"imap.gmail.com"
+                   incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
+              incomingTransport:AccountSettingsServerTransportTLS
+             incomingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
+               outgoingHostName:@"smtp.gmail.com" outgoingPort:465
+               outgoingProtocol:AccountSettingsServerTypeSMTP
+              outgoingTransport:AccountSettingsServerTransportTLS
+             outgoingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
+                     providerID: @"googlemail.com"];
+}
+
 - (void)testNewpEpTestWrongFormatMailAccount
 {
 
