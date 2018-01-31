@@ -52,6 +52,15 @@ const struct AccountSettings* get_account_settings(const char* accountName, cons
 AS_STATUS AS_get_status(const struct AccountSettings* account_settings);
 
 
+/** get the privder id string of the account_settings
+ *
+ * @param account_settings the account settings your want to get provider id
+ * @return the provider id, if any. Might be NULL or empty string.
+           The pointer points to internal r/o data in accountSettings, do not delete it!
+ */
+const char* AS_get_provider_id(const struct AccountSettings* account_settings);
+
+
 /**  get the server settings for "incoming" messages (e.g. IMAP or POP3)
  * @param  accountSettings  guess what
  * @return the server for incoming messages associated with the accountSettings.

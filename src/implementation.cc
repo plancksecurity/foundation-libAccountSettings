@@ -108,6 +108,12 @@ AS_STATUS AS_get_status(const struct AccountSettings* account_settings)
 }
 
 
+const char* AS_get_provider_id(const struct AccountSettings* account_settings)
+{
+	return account_settings ? account_settings->id.c_str() : nullptr;
+}
+
+
 const AS_Server* AS_get_incoming(const AccountSettings* as)
 {
 	return &as->incoming;
