@@ -149,6 +149,9 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	{
 		throw std::runtime_error("get_settings_from_srv shall not be called with NULL pointer!");
 	}
+	
+	bool imap_okay = false;
+	bool smtp_okay = false;
 
 //	fprintf(stderr, "== IMAP ==\n");
 	try{
@@ -157,6 +160,7 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 		{
 			as->incoming.name = imap_srv.hostname;
 			as->incoming.port = imap_srv.port;
+			imap_okay = true;
 		}
 	}catch( const DNS_error& )
 	{
@@ -170,10 +174,16 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 		{
 			as->outgoing.name = smtp_srv.hostname;
 			as->outgoing.port = smtp_srv.port;
+			smtp_okay = true;
 		}
 	}catch( const DNS_error& )
 	{
 		// ignore unsuccessful DNS queries
+	}
+	
+	if(imap_okay && smtp_okay)
+	{
+		as->status = AS_OK;
 	}
 	
 	return as;
