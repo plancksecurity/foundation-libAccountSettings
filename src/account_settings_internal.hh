@@ -9,6 +9,7 @@
 #include <set>
 #include <ostream>
 
+// public names, must be accessible from C, so no namespace here:
 struct AS_Server
 {
 	std::string name;
@@ -30,6 +31,7 @@ std::ostream& operator<<(std::ostream& o, const AS_Server& srv);
 std::ostream& operator<<(std::ostream& o, const AccountSettings& as);
 
 
+namespace account_settings {
 // for static ISP DB:
 struct AS_Server_DB
 {
@@ -46,5 +48,7 @@ struct AccountSettings_DB
 	AS_Server_DB incoming;
 	AS_Server_DB outgoing;
 };
+
+} // end of namespace account_settings
 
 #endif // ACCOUNT_SETTINGS_INTERNAL_HH
