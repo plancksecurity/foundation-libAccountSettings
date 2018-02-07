@@ -131,9 +131,14 @@ SRV get_srv_server(const std::string& domain, const std::string& service)
 	ldns_buffer* buf_host = ldns_buffer_new(128);
 	ldns_rdf2buffer_str_dname( buf_host, rdf_host);
 	
-	const std::string host = ldns_rdf_get_type(rdf_host)==LDNS_RDF_TYPE_DNAME ? std::string( (const char*)buf_host->_data, buf_host->_limit) : "{°?°}";
+	std::string host = ldns_rdf_get_type(rdf_host)==LDNS_RDF_TYPE_DNAME ? std::string( (const char*)buf_host->_data, buf_host->_position) : "{°?°}";
 	ldns_buffer_free(buf_host);
 	buf_host=nullptr;
+	
+	while( (host.size() > 0) && (host.back() == '.') )
+	{
+		host.pop_back();
+	}
 	
 //	printf("***\tPrio: %u, Weight: %u, Port: %u, Host: \"%s\".\n", priority, weight, port, host.c_str());
 	

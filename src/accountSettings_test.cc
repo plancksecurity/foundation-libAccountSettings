@@ -1,6 +1,7 @@
 // unit test program for libAccountSettings
 
 #include "../include/account_settings_c.h"
+#include "account_settings_internal.hh"
 #include "from_srv.hh"
 #include <string>
 #include <vector>
@@ -97,10 +98,15 @@ try{
 	{
 		for(int a=1; a<argc; ++a)
 		{
-			printf("#%d : ", a);
+			std::cout << a << ": " << std::endl;
 			auto as = std::unique_ptr<AccountSettings>{ new AccountSettings };
 			get_settings_from_srv( as.get(), "foo@bar.com", argv[a], "dummy");
-			printf("\n");
+			if( AS_get_status( as.get() ) == AS_OK )
+			{
+				std::cout << *as.get() << std::endl;
+			}else{
+				std::cout << "No SRV record for \"" << argv[a] << "\". :-(" << std::endl;
+			}
 		}
 	}
 	bool all_okay = true;
