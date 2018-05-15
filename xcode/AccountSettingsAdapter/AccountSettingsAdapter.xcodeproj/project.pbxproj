@@ -256,7 +256,7 @@
 				TargetAttributes = {
 					B72A64D71EC0525500F71131 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = SBPJ2E4G5X;
+						DevelopmentTeam = NQLYU6MGPN;
 						ProvisioningStyle = Automatic;
 					};
 					B7E0502C1EB2491E006EC1EC = {
@@ -393,7 +393,7 @@
 		B72A64E01EC0525500F71131 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				DEVELOPMENT_TEAM = NQLYU6MGPN;
 				INFOPLIST_FILE = AccountSettingsAdapterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pEp.Security.AccountSettingsAdapterTests;
@@ -404,7 +404,7 @@
 		B72A64E11EC0525500F71131 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				DEVELOPMENT_TEAM = NQLYU6MGPN;
 				INFOPLIST_FILE = AccountSettingsAdapterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pEp.Security.AccountSettingsAdapterTests;
