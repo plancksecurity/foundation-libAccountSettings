@@ -261,7 +261,7 @@
 					};
 					B7E0502C1EB2491E006EC1EC = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = SBPJ2E4G5X;
+						DevelopmentTeam = NQLYU6MGPN;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -519,7 +519,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				DEVELOPMENT_TEAM = NQLYU6MGPN;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../ldns",
 					"$(SRCROOT)/../../../OpenSSL-for-iPhone/include",
@@ -539,7 +539,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_CXX_LIBRARY = "compiler-default";
-				DEVELOPMENT_TEAM = SBPJ2E4G5X;
+				DEVELOPMENT_TEAM = NQLYU6MGPN;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../ldns",
 					"$(SRCROOT)/../../../OpenSSL-for-iPhone/include",
