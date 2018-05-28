@@ -10,7 +10,7 @@ test: accountSettings_test
 isp_db: isp_db.cc
 
 isp_db.cc: xml2cxx
-	./xml2cxx ../../autoconfig/* > $@
+	./xml2cxx ../../autoconfig/* ../example/* > $@
 
 xml2cxx: xml2cxx.o tinyxml2.o account_settings_internal.o stringpool.o
 	${CXX}  -o $@ $^
