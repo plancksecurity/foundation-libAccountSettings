@@ -1,0 +1,21 @@
+<clientConfig version="1.1">
+  <emailProvider id="pep.security">
+    <domain>pep.security</domain>
+    <displayName>p≡p Security S.A.</displayName>
+    <displayShortName>p≡p Security S.A.</displayShortName>
+    <incomingServer type="imap">
+      <hostname>exchange.pep.security</hostname>
+      <port>993</port>
+      <socketType>SSL</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </incomingServer>
+    <outgoingServer type="smtp">
+      <hostname>mail.pep.security</hostname>
+      <port>587</port>
+      <socketType>STARTTLS</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </outgoingServer>
+  </emailProvider>
+</clientConfig>
