@@ -160,12 +160,22 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 
 //	fprintf(stderr, "== IMAP ==\n");
 	try{
-		const SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
+		SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
 		if(imap_srv.is_valid())
 		{
 			as->incoming.name = imap_srv.hostname;
 			as->incoming.port = imap_srv.port;
+			as->incoming.access = AS_PROTO_IMAP;
 			imap_okay = true;
+		}else{
+			imap_srv = get_srv_server( domain, "_imaps._tcp" );
+			if(imap_srv.is_valid())
+			{
+				as->incoming.name = imap_srv.hostname;
+				as->incoming.port = imap_srv.port;
+				as->incoming.access = AS_ACCESS(AS_PROTO_IMAP | AS_SOCK_SSL);
+				imap_okay = true;
+			}
 		}
 	}catch( const DNS_error& )
 	{
@@ -179,6 +189,7 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 		{
 			as->outgoing.name = smtp_srv.hostname;
 			as->outgoing.port = smtp_srv.port;
+			as->outgoing.access = AS_PROTO_SMTP;
 			smtp_okay = true;
 		}
 	}catch( const DNS_error& )
