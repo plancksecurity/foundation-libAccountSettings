@@ -158,24 +158,31 @@ AccountSettings* get_settings_from_srv(AccountSettings* as, const std::string& a
 	bool imap_okay = false;
 	bool smtp_okay = false;
 
-//	fprintf(stderr, "== IMAP ==\n");
+//	fprintf(stderr, "== IMAPS ==\n");
 	try{
-		SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
+		const SRV imap_srv = get_srv_server( domain, "_imaps._tcp" );
+		if(imap_srv.is_valid())
+		{
+			as->incoming.name = imap_srv.hostname;
+			as->incoming.port = imap_srv.port;
+			as->incoming.access = AS_ACCESS(AS_PROTO_IMAP | AS_SOCK_SSL);
+			imap_okay = true;
+		}
+	}catch( const DNS_error& )
+	{
+		// ignore unsuccessful DNS queries
+	}
+	
+//	fprintf(stderr, "== IMAP ==\n");
+	if( !imap_okay ) // let's try with plain IMAP nexr (with possibly STARTTLS later)
+	try{
+		const SRV imap_srv = get_srv_server( domain, "_imap._tcp" );
 		if(imap_srv.is_valid())
 		{
 			as->incoming.name = imap_srv.hostname;
 			as->incoming.port = imap_srv.port;
 			as->incoming.access = AS_PROTO_IMAP;
 			imap_okay = true;
-		}else{
-			imap_srv = get_srv_server( domain, "_imaps._tcp" );
-			if(imap_srv.is_valid())
-			{
-				as->incoming.name = imap_srv.hostname;
-				as->incoming.port = imap_srv.port;
-				as->incoming.access = AS_ACCESS(AS_PROTO_IMAP | AS_SOCK_SSL);
-				imap_okay = true;
-			}
 		}
 	}catch( const DNS_error& )
 	{
