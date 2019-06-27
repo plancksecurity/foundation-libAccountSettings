@@ -684,7 +684,6 @@ const char* const StringPool = "\0"
 	"mail.pal.kijimadaira.jp\0"
 	"mail.pep-security.net\0"
 	"mail.pep.security\0"
-	"mail.peptest.ch\0"
 	"mail.pobox.com\0"
 	"mail.q.com\0"
 	"mail.rambler.ru\0"
@@ -1308,8 +1307,8 @@ const char* const StringPool = "\0"
 	"長和町黒耀の里ゆいねっと\0"
 	"ＢＢにいがた\0";
 
-const char* const StringPoolEnd = StringPool + 19107;
-const unsigned StringPoolSize = 19107;
+const char* const StringPoolEnd = StringPool + 19091;
+const unsigned StringPoolSize = 19091;
 
 static const char* const SP = StringPool;
 
@@ -1318,135 +1317,135 @@ const AccountSettings_DB AccountList[] = {
 		{ SP+0, -1, AS_ACCESS(0xffffffff), AS_USERNAME(0xffffffff) },	// 
 		{ SP+0, -1, AS_ACCESS(0xffffffff), AS_USERNAME(0xffffffff) }	// 
 	},
-	{ SP+12277, SP+18767,	// pop.shibata.ne.jp	インターネット新発田
+	{ SP+12261, SP+18751,	// pop.shibata.ne.jp	インターネット新発田
 		{ SP+1, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// %EMAILDOMAIN%
 		{ SP+1, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// %EMAILDOMAIN%
 	},
-	{ SP+10482, SP+1219,	// mx1.tiki.ne.jp	TikiTikiインターネット
+	{ SP+10466, SP+1219,	// mx1.tiki.ne.jp	TikiTikiインターネット
 		{ SP+1, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// %EMAILDOMAIN%
-		{ SP+14563, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp-auth.tiki.ne.jp
+		{ SP+14547, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp-auth.tiki.ne.jp
 	},
-	{ SP+1626, SP+18689,	// abc.plala.or.jp	ぷらら
+	{ SP+1626, SP+18673,	// abc.plala.or.jp	ぷらら
 		{ SP+1605, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// abc.mail.plala.or.jp
 		{ SP+1605, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// abc.mail.plala.or.jp
 	},
-	{ SP+1732, SP+18689,	// agate.plala.or.jp	ぷらら
+	{ SP+1732, SP+18673,	// agate.plala.or.jp	ぷらら
 		{ SP+1709, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// agate.mail.plala.or.jp
 		{ SP+1709, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// agate.mail.plala.or.jp
 	},
-	{ SP+1888, SP+18689,	// amail.plala.or.jp	ぷらら
+	{ SP+1888, SP+18673,	// amail.plala.or.jp	ぷらら
 		{ SP+1865, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// amail.mail.plala.or.jp
 		{ SP+1865, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// amail.mail.plala.or.jp
 	},
-	{ SP+1929, SP+18689,	// amber.plala.or.jp	ぷらら
+	{ SP+1929, SP+18673,	// amber.plala.or.jp	ぷらら
 		{ SP+1906, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// amber.mail.plala.or.jp
 		{ SP+1906, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// amber.mail.plala.or.jp
 	},
-	{ SP+2091, SP+18689,	// apost.plala.or.jp	ぷらら
+	{ SP+2091, SP+18673,	// apost.plala.or.jp	ぷらら
 		{ SP+2068, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// apost.mail.plala.or.jp
 		{ SP+2068, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// apost.mail.plala.or.jp
 	},
-	{ SP+2131, SP+18689,	// aqua.plala.or.jp	ぷらら
+	{ SP+2131, SP+18673,	// aqua.plala.or.jp	ぷらら
 		{ SP+2109, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// aqua.mail.plala.or.jp
 		{ SP+2109, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// aqua.mail.plala.or.jp
 	},
-	{ SP+2319, SP+18689,	// ballade.plala.or.jp	ぷらら
+	{ SP+2319, SP+18673,	// ballade.plala.or.jp	ぷらら
 		{ SP+2294, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ballade.mail.plala.or.jp
 		{ SP+2294, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ballade.mail.plala.or.jp
 	},
-	{ SP+2418, SP+19023,	// bay.wind.ne.jp	群馬インターネット
+	{ SP+2418, SP+19007,	// bay.wind.ne.jp	群馬インターネット
 		{ SP+2418, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// bay.wind.ne.jp
 		{ SP+2418, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// bay.wind.ne.jp
 	},
-	{ SP+2496, SP+18689,	// beige.plala.or.jp	ぷらら
+	{ SP+2496, SP+18673,	// beige.plala.or.jp	ぷらら
 		{ SP+2473, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// beige.mail.plala.or.jp
 		{ SP+2473, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// beige.mail.plala.or.jp
 	},
-	{ SP+2726, SP+18689,	// blue.plala.or.jp	ぷらら
+	{ SP+2726, SP+18673,	// blue.plala.or.jp	ぷらら
 		{ SP+2704, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// blue.mail.plala.or.jp
 		{ SP+2704, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// blue.mail.plala.or.jp
 	},
-	{ SP+2806, SP+18689,	// bmail.plala.or.jp	ぷらら
+	{ SP+2806, SP+18673,	// bmail.plala.or.jp	ぷらら
 		{ SP+2783, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// bmail.mail.plala.or.jp
 		{ SP+2783, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// bmail.mail.plala.or.jp
 	},
-	{ SP+2875, SP+18689,	// bolero.plala.or.jp	ぷらら
+	{ SP+2875, SP+18673,	// bolero.plala.or.jp	ぷらら
 		{ SP+2851, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// bolero.mail.plala.or.jp
 		{ SP+2851, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// bolero.mail.plala.or.jp
 	},
-	{ SP+2932, SP+18689,	// bpost.plala.or.jp	ぷらら
+	{ SP+2932, SP+18673,	// bpost.plala.or.jp	ぷらら
 		{ SP+2909, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// bpost.mail.plala.or.jp
 		{ SP+2909, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// bpost.mail.plala.or.jp
 	},
-	{ SP+3013, SP+18689,	// brown.plala.or.jp	ぷらら
+	{ SP+3013, SP+18673,	// brown.plala.or.jp	ぷらら
 		{ SP+2990, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// brown.mail.plala.or.jp
 		{ SP+2990, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// brown.mail.plala.or.jp
 	},
-	{ SP+3151, SP+18689,	// camel.plala.or.jp	ぷらら
+	{ SP+3151, SP+18673,	// camel.plala.or.jp	ぷらら
 		{ SP+3128, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// camel.mail.plala.or.jp
 		{ SP+3128, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// camel.mail.plala.or.jp
 	},
-	{ SP+3192, SP+18689,	// cameo.plala.or.jp	ぷらら
+	{ SP+3192, SP+18673,	// cameo.plala.or.jp	ぷらら
 		{ SP+3169, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// cameo.mail.plala.or.jp
 		{ SP+3169, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// cameo.mail.plala.or.jp
 	},
-	{ SP+3516, SP+18689,	// cmail.plala.or.jp	ぷらら
+	{ SP+3516, SP+18673,	// cmail.plala.or.jp	ぷらら
 		{ SP+3493, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// cmail.mail.plala.or.jp
 		{ SP+3493, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// cmail.mail.plala.or.jp
 	},
-	{ SP+3556, SP+19023,	// co1.wind.ne.jp	群馬インターネット
+	{ SP+3556, SP+19007,	// co1.wind.ne.jp	群馬インターネット
 		{ SP+3556, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// co1.wind.ne.jp
 		{ SP+3556, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// co1.wind.ne.jp
 	},
-	{ SP+3583, SP+19023,	// co2.wind.ne.jp	群馬インターネット
+	{ SP+3583, SP+19007,	// co2.wind.ne.jp	群馬インターネット
 		{ SP+3583, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// co2.wind.ne.jp
 		{ SP+3583, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// co2.wind.ne.jp
 	},
-	{ SP+3610, SP+19023,	// co3.wind.ne.jp	群馬インターネット
+	{ SP+3610, SP+19007,	// co3.wind.ne.jp	群馬インターネット
 		{ SP+3610, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// co3.wind.ne.jp
 		{ SP+3610, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// co3.wind.ne.jp
 	},
-	{ SP+3675, SP+18689,	// cocoa.plala.or.jp	ぷらら
+	{ SP+3675, SP+18673,	// cocoa.plala.or.jp	ぷらら
 		{ SP+3652, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// cocoa.mail.plala.or.jp
 		{ SP+3652, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// cocoa.mail.plala.or.jp
 	},
-	{ SP+3715, SP+18689,	// coda.plala.or.jp	ぷらら
+	{ SP+3715, SP+18673,	// coda.plala.or.jp	ぷらら
 		{ SP+3693, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// coda.mail.plala.or.jp
 		{ SP+3693, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// coda.mail.plala.or.jp
 	},
-	{ SP+3823, SP+18689,	// concerto.plala.or.jp	ぷらら
+	{ SP+3823, SP+18673,	// concerto.plala.or.jp	ぷらら
 		{ SP+3797, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// concerto.mail.plala.or.jp
 		{ SP+3797, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// concerto.mail.plala.or.jp
 	},
-	{ SP+3934, SP+18689,	// coral.plala.or.jp	ぷらら
+	{ SP+3934, SP+18673,	// coral.plala.or.jp	ぷらら
 		{ SP+3911, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// coral.mail.plala.or.jp
 		{ SP+3911, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// coral.mail.plala.or.jp
 	},
-	{ SP+4027, SP+18689,	// courante.plala.or.jp	ぷらら
+	{ SP+4027, SP+18673,	// courante.plala.or.jp	ぷらら
 		{ SP+4001, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// courante.mail.plala.or.jp
 		{ SP+4001, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// courante.mail.plala.or.jp
 	},
-	{ SP+4079, SP+18689,	// cpost.plala.or.jp	ぷらら
+	{ SP+4079, SP+18673,	// cpost.plala.or.jp	ぷらら
 		{ SP+4056, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// cpost.mail.plala.or.jp
 		{ SP+4056, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// cpost.mail.plala.or.jp
 	},
-	{ SP+4120, SP+18689,	// cream.plala.or.jp	ぷらら
+	{ SP+4120, SP+18673,	// cream.plala.or.jp	ぷらら
 		{ SP+4097, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// cream.mail.plala.or.jp
 		{ SP+4097, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// cream.mail.plala.or.jp
 	},
-	{ SP+4337, SP+19023,	// dan.wind.ne.jp	群馬インターネット
+	{ SP+4337, SP+19007,	// dan.wind.ne.jp	群馬インターネット
 		{ SP+4337, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// dan.wind.ne.jp
 		{ SP+4337, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// dan.wind.ne.jp
 	},
-	{ SP+4375, SP+18689,	// dance.plala.or.jp	ぷらら
+	{ SP+4375, SP+18673,	// dance.plala.or.jp	ぷらら
 		{ SP+4352, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// dance.mail.plala.or.jp
 		{ SP+4352, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// dance.mail.plala.or.jp
 	},
-	{ SP+4533, SP+18689,	// dmail.plala.or.jp	ぷらら
+	{ SP+4533, SP+18673,	// dmail.plala.or.jp	ぷらら
 		{ SP+4510, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// dmail.mail.plala.or.jp
 		{ SP+4510, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// dmail.mail.plala.or.jp
 	},
-	{ SP+4693, SP+18689,	// ebony.plala.or.jp	ぷらら
+	{ SP+4693, SP+18673,	// ebony.plala.or.jp	ぷらら
 		{ SP+4670, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ebony.mail.plala.or.jp
 		{ SP+4670, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ebony.mail.plala.or.jp
 	},
@@ -1454,69 +1453,69 @@ const AccountSettings_DB AccountList[] = {
 		{ SP+4811, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// email.active24.com
 		{ SP+4811, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// email.active24.com
 	},
-	{ SP+4890, SP+18689,	// email.plala.or.jp	ぷらら
+	{ SP+4890, SP+18673,	// email.plala.or.jp	ぷらら
 		{ SP+4867, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// email.mail.plala.or.jp
 		{ SP+4867, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// email.mail.plala.or.jp
 	},
-	{ SP+11762, SP+13286,	// pep.security	p≡p Security S.A.
+	{ SP+11746, SP+13270,	// pep.security	p≡p Security S.A.
 		{ SP+5010, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// exchange.pep.security
 		{ SP+9693, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// mail.pep.security
 	},
-	{ SP+5083, SP+18689,	// fantasy.plala.or.jp	ぷらら
+	{ SP+5083, SP+18673,	// fantasy.plala.or.jp	ぷらら
 		{ SP+5058, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// fantasy.mail.plala.or.jp
 		{ SP+5058, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// fantasy.mail.plala.or.jp
 	},
-	{ SP+5224, SP+18689,	// flamenco.plala.or.jp	ぷらら
+	{ SP+5224, SP+18673,	// flamenco.plala.or.jp	ぷらら
 		{ SP+5198, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// flamenco.mail.plala.or.jp
 		{ SP+5198, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// flamenco.mail.plala.or.jp
 	},
-	{ SP+5294, SP+18689,	// fmail.plala.or.jp	ぷらら
+	{ SP+5294, SP+18673,	// fmail.plala.or.jp	ぷらら
 		{ SP+5271, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// fmail.mail.plala.or.jp
 		{ SP+5271, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// fmail.mail.plala.or.jp
 	},
-	{ SP+5389, SP+18689,	// fuga.plala.or.jp	ぷらら
+	{ SP+5389, SP+18673,	// fuga.plala.or.jp	ぷらら
 		{ SP+5367, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// fuga.mail.plala.or.jp
 		{ SP+5367, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// fuga.mail.plala.or.jp
 	},
-	{ SP+5594, SP+18689,	// gmail.plala.or.jp	ぷらら
+	{ SP+5594, SP+18673,	// gmail.plala.or.jp	ぷらら
 		{ SP+5571, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// gmail.mail.plala.or.jp
 		{ SP+5571, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// gmail.mail.plala.or.jp
 	},
-	{ SP+5846, SP+18870,	// go.tvm.ne.jp	テレビ松本ケーブルインターネットサービス
+	{ SP+5846, SP+18854,	// go.tvm.ne.jp	テレビ松本ケーブルインターネットサービス
 		{ SP+5846, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// go.tvm.ne.jp
 		{ SP+5846, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// go.tvm.ne.jp
 	},
-	{ SP+6001, SP+18689,	// grape.plala.or.jp	ぷらら
+	{ SP+6001, SP+18673,	// grape.plala.or.jp	ぷらら
 		{ SP+5978, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// grape.mail.plala.or.jp
 		{ SP+5978, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// grape.mail.plala.or.jp
 	},
-	{ SP+6062, SP+18689,	// gray.plala.or.jp	ぷらら
+	{ SP+6062, SP+18673,	// gray.plala.or.jp	ぷらら
 		{ SP+6040, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// gray.mail.plala.or.jp
 		{ SP+6040, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// gray.mail.plala.or.jp
 	},
-	{ SP+6546, SP+18689,	// imail.plala.or.jp	ぷらら
+	{ SP+6546, SP+18673,	// imail.plala.or.jp	ぷらら
 		{ SP+6523, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// imail.mail.plala.or.jp
 		{ SP+6523, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// imail.mail.plala.or.jp
 	},
-	{ SP+11501, SP+907,	// outlook.com	Outlook.com (Microsoft)
+	{ SP+11485, SP+907,	// outlook.com	Outlook.com (Microsoft)
 		{ SP+6564, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap-mail.outlook.com
-		{ SP+14584, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp-mail.outlook.com
+		{ SP+14568, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp-mail.outlook.com
 	},
 	{ SP+44, SP+44,	// 126.com	126.com
 		{ SP+6586, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.126.com
-		{ SP+14625, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.126.com
+		{ SP+14609, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.126.com
 	},
 	{ SP+82, SP+82,	// 163.com	163.com
 		{ SP+6599, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.163.com
-		{ SP+14638, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.163.com
+		{ SP+14622, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.163.com
 	},
 	{ SP+90, SP+15,	// 1und1.de	1&1
 		{ SP+6612, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.1und1.de
-		{ SP+14651, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.1und1.de
+		{ SP+14635, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.1und1.de
 	},
 	{ SP+2053, SP+148,	// aol.com	AOL Mail
 		{ SP+6626, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.aol.com
-		{ SP+14665, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.aol.com
+		{ SP+14649, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.aol.com
 	},
 	{ SP+2166, SP+187,	// arcor.de	Arcor
 		{ SP+6639, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.arcor.de
@@ -1524,43 +1523,43 @@ const AccountSettings_DB AccountList[] = {
 	},
 	{ SP+2527, SP+231,	// bell.net	Bell Canada email
 		{ SP+6653, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.bell.net
-		{ SP+15883, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtphm.sympatico.ca
+		{ SP+15867, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtphm.sympatico.ca
 	},
 	{ SP+2840, SP+203,	// bol.com.br	BOL - Brasil Online
 		{ SP+6667, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.bol.com.br
-		{ SP+15956, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtps.bol.com.br
+		{ SP+15940, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtps.bol.com.br
 	},
 	{ SP+3760, SP+425,	// comcast.net	Comcast
 		{ SP+6683, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.comcast.net
-		{ SP+14773, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.comcast.net
+		{ SP+14757, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.comcast.net
 	},
 	{ SP+4048, SP+446,	// cox.net	Cox
 		{ SP+6700, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.cox.net
-		{ SP+14790, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.cox.net
+		{ SP+14774, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.cox.net
 	},
 	{ SP+4589, SP+487,	// dondominio.com	DonDominio/MrDomain
 		{ SP+6713, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.dondominio.com
-		{ SP+14811, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.dondominio.com
+		{ SP+14795, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.dondominio.com
 	},
 	{ SP+4656, SP+516,	// earthlink.net	EarthLink
 		{ SP+6733, 143, AS_ACCESS(0x12012), AS_USERNAME(0x4001) },	// imap.earthlink.net
-		{ SP+15817, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// smtpauth.earthlink.net
+		{ SP+15801, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// smtpauth.earthlink.net
 	},
 	{ SP+819, SP+540,	// MessagingEngine	FastMail
 		{ SP+6752, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.fastmail.com
-		{ SP+14877, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.fastmail.com
+		{ SP+14861, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.fastmail.com
 	},
 	{ SP+5103, SP+5103,	// fastwebnet.it	fastwebnet.it
 		{ SP+6770, 143, AS_ACCESS(0x42012), AS_USERNAME(0x4001) },	// imap.fastwebnet.it
-		{ SP+14895, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// smtp.fastwebnet.it
+		{ SP+14879, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// smtp.fastwebnet.it
 	},
 	{ SP+5348, SP+549,	// free.fr	Free Telecom
 		{ SP+6789, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.free.fr
-		{ SP+14914, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.free.fr
+		{ SP+14898, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.free.fr
 	},
 	{ SP+5939, SP+639,	// googlemail.com	Google Mail
 		{ SP+6802, 993, AS_ACCESS(0x85012), AS_USERNAME(0x4001) },	// imap.gmail.com
-		{ SP+14944, 465, AS_ACCESS(0x85021), AS_USERNAME(0x4001) }	// smtp.gmail.com
+		{ SP+14928, 465, AS_ACCESS(0x85021), AS_USERNAME(0x4001) }	// smtp.gmail.com
 	},
 	{ SP+5668, SP+601,	// gmx.com	GMX Freemail
 		{ SP+6817, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.gmx.com
@@ -1572,221 +1571,225 @@ const AccountSettings_DB AccountList[] = {
 	},
 	{ SP+5883, SP+5877,	// goneo.de	goneo
 		{ SP+6843, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.goneo.de
-		{ SP+14959, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtp.goneo.de
+		{ SP+14943, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtp.goneo.de
 	},
 	{ SP+5967, SP+575,	// gransy.com	G-Hosting.cz a Station.cz
 		{ SP+6857, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.gransy.com
-		{ SP+14973, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.gransy.com
+		{ SP+14957, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.gransy.com
 	},
 	{ SP+7981, SP+747,	// jet.ne.jp	JETINTERNET
 		{ SP+6873, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4002) },	// imap.jet.ne.jp
-		{ SP+15030, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4002) }	// smtp.jet.ne.jp
+		{ SP+15014, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4002) }	// smtp.jet.ne.jp
 	},
 	{ SP+8485, SP+799,	// laposte.net	LaPoste
 		{ SP+6888, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.laposte.net
-		{ SP+15098, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.laposte.net
+		{ SP+15082, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.laposte.net
 	},
 	{ SP+9237, SP+9237,	// mail.com	mail.com
 		{ SP+6905, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.mail.com
-		{ SP+15130, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.mail.com
+		{ SP+15114, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.mail.com
 	},
-	{ SP+10064, SP+174,	// me.com	Apple iCloud
+	{ SP+10048, SP+174,	// me.com	Apple iCloud
 		{ SP+6919, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.mail.me.com
-		{ SP+15164, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtp.mail.me.com
+		{ SP+15148, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtp.mail.me.com
 	},
-	{ SP+9769, SP+9769,	// mail.ru	mail.ru
+	{ SP+9753, SP+9753,	// mail.ru	mail.ru
 		{ SP+6936, 993, AS_ACCESS(0x85012), AS_USERNAME(0x4001) },	// imap.mail.ru
-		{ SP+15181, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.mail.ru
+		{ SP+15165, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.mail.ru
 	},
-	{ SP+18080, SP+1497,	// yahoo.com	Yahoo! Mail
+	{ SP+18064, SP+1497,	// yahoo.com	Yahoo! Mail
+		{ SP+6949, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.mail.yahoo.com
+		{ SP+15241, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.mail.yahoo.com
+	},
+	{ SP+18064, SP+1497,	// yahoo.com	Yahoo! Mail
 		{ SP+6949, 993, AS_ACCESS(0x85012), AS_USERNAME(0x4001) },	// imap.mail.yahoo.com
-		{ SP+15257, 465, AS_ACCESS(0x85021), AS_USERNAME(0x4001) }	// smtp.mail.yahoo.com
+		{ SP+15241, 465, AS_ACCESS(0x85021), AS_USERNAME(0x4001) }	// smtp.mail.yahoo.com
 	},
-	{ SP+11131, SP+863,	// ntlworld.com	NTL World: Virgin Media Mail
+	{ SP+11115, SP+863,	// ntlworld.com	NTL World: Virgin Media Mail
 		{ SP+6969, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.ntlworld.com
-		{ SP+15292, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.ntlworld.com
+		{ SP+15276, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.ntlworld.com
 	},
-	{ SP+11262, SP+11262,	// one.com	one.com
+	{ SP+11246, SP+11246,	// one.com	one.com
 		{ SP+6987, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.one.com
-		{ SP+14227, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// send.one.com
+		{ SP+14211, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// send.one.com
 	},
-	{ SP+11375, SP+900,	// orange.fr	Orange
+	{ SP+11359, SP+900,	// orange.fr	Orange
 		{ SP+7000, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.orange.fr
-		{ SP+15325, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.orange.fr
+		{ SP+15309, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.orange.fr
 	},
-	{ SP+11732, SP+943,	// peoplepc.com	PeoplePC
+	{ SP+11716, SP+943,	// peoplepc.com	PeoplePC
 		{ SP+7015, 143, AS_ACCESS(0x12012), AS_USERNAME(0x4001) },	// imap.peoplepc.com
-		{ SP+15840, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// smtpauth.peoplepc.com
+		{ SP+15824, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// smtpauth.peoplepc.com
 	},
-	{ SP+14502, SP+1032,	// skynet.be	Proximus
+	{ SP+14486, SP+1032,	// skynet.be	Proximus
 		{ SP+7033, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.proximus.be
-		{ SP+13506, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// relay.proximus.be
+		{ SP+13490, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// relay.proximus.be
 	},
-	{ SP+13312, SP+13312,	// qq.com	qq.com
+	{ SP+13296, SP+13296,	// qq.com	qq.com
 		{ SP+7050, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.qq.com
-		{ SP+15429, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.qq.com
+		{ SP+15413, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.qq.com
 	},
-	{ SP+11270, SP+1440,	// one.cz	Webhosting Registrator.cz Mail
+	{ SP+11254, SP+1440,	// one.cz	Webhosting Registrator.cz Mail
 		{ SP+7062, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.registrator.cz
-		{ SP+15441, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.registrator.cz
+		{ SP+15425, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.registrator.cz
 	},
-	{ SP+17696, SP+1538,	// wildwestdomains.com	Your WildWest domain
+	{ SP+17680, SP+1538,	// wildwestdomains.com	Your WildWest domain
 		{ SP+7082, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.secureserver.net
-		{ SP+15903, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtpout.secureserver.net
+		{ SP+15887, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtpout.secureserver.net
 	},
-	{ SP+14344, SP+1140,	// seznam.cz	Seznam
+	{ SP+14328, SP+1140,	// seznam.cz	Seznam
 		{ SP+7104, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.seznam.cz
-		{ SP+15480, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.seznam.cz
+		{ SP+15464, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.seznam.cz
 	},
-	{ SP+14354, SP+1129,	// sfr.fr	SFR / Neuf
+	{ SP+14338, SP+1129,	// sfr.fr	SFR / Neuf
 		{ SP+7119, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.sfr.fr
-		{ SP+15495, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.sfr.fr
+		{ SP+15479, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.sfr.fr
 	},
 	{ SP+6426, SP+1156,	// i.softbank.jp	SoftBank
 		{ SP+7131, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.softbank.jp
-		{ SP+15507, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.softbank.jp
+		{ SP+15491, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.softbank.jp
 	},
-	{ SP+16369, SP+1165,	// strato.de	Strato
+	{ SP+16353, SP+1165,	// strato.de	Strato
 		{ SP+7148, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4001) },	// imap.strato.de
-		{ SP+15524, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtp.strato.de
+		{ SP+15508, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtp.strato.de
 	},
 	{ SP+2586, SP+1206,	// bigpond.com	Telstra Mail
 		{ SP+7163, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.telstra.com
-		{ SP+15539, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.telstra.com
+		{ SP+15523, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.telstra.com
 	},
-	{ SP+16812, SP+1257,	// tiscali.it	Tiscali Italy
+	{ SP+16796, SP+1257,	// tiscali.it	Tiscali Italy
 		{ SP+7180, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4001) },	// imap.tiscali.it
-		{ SP+15556, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtp.tiscali.it
+		{ SP+15540, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtp.tiscali.it
 	},
-	{ SP+14457, SP+1147,	// sky.com	Sky Mail
+	{ SP+14441, SP+1147,	// sky.com	Sky Mail
 		{ SP+7196, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.tools.sky.com
-		{ SP+15572, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.tools.sky.com
+		{ SP+15556, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.tools.sky.com
 	},
-	{ SP+17206, SP+1300,	// uol.com.br	UOL
+	{ SP+17190, SP+1300,	// uol.com.br	UOL
 		{ SP+7215, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.uol.com.br
-		{ SP+16012, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtps.uol.com.br
+		{ SP+15996, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtps.uol.com.br
 	},
-	{ SP+17363, SP+1376,	// virginmedia.com	Virgin Media Mail
+	{ SP+17347, SP+1376,	// virginmedia.com	Virgin Media Mail
 		{ SP+7231, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.virginmedia.com
-		{ SP+15657, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.virginmedia.com
+		{ SP+15641, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.virginmedia.com
 	},
-	{ SP+17590, SP+1424,	// web.de	WEB.DE Freemail
+	{ SP+17574, SP+1424,	// web.de	WEB.DE Freemail
 		{ SP+7252, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.web.de
-		{ SP+15678, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtp.web.de
+		{ SP+15662, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtp.web.de
 	},
-	{ SP+17597, SP+1471,	// webhuset.no	Webhuset
+	{ SP+17581, SP+1471,	// webhuset.no	Webhuset
 		{ SP+7264, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.webhuset.no
-		{ SP+15690, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.webhuset.no
+		{ SP+15674, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.webhuset.no
 	},
-	{ SP+17898, SP+970,	// wp.pl	Poczta Wirtualna Polska
+	{ SP+17882, SP+970,	// wp.pl	Poczta Wirtualna Polska
 		{ SP+7281, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imap.wp.pl
-		{ SP+15707, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.wp.pl
+		{ SP+15691, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.wp.pl
 	},
-	{ SP+18242, SP+1526,	// yandex.ru	Yandex Mail
+	{ SP+18226, SP+1526,	// yandex.ru	Yandex Mail
 		{ SP+7292, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.yandex.com
-		{ SP+15718, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.yandex.com
+		{ SP+15702, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.yandex.com
 	},
-	{ SP+18321, SP+18321,	// yeah.net	yeah.net
+	{ SP+18305, SP+18305,	// yeah.net	yeah.net
 		{ SP+7308, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.yeah.net
-		{ SP+15734, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.yeah.net
+		{ SP+15718, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.yeah.net
 	},
-	{ SP+18510, SP+1577,	// ziggo.nl	Ziggo Mail
+	{ SP+18494, SP+1577,	// ziggo.nl	Ziggo Mail
 		{ SP+7322, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.ziggo.nl
-		{ SP+15748, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.ziggo.nl
+		{ SP+15732, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.ziggo.nl
 	},
-	{ SP+18585, SP+1588,	// zoho.com	Zoho Mail
+	{ SP+18569, SP+1588,	// zoho.com	Zoho Mail
 		{ SP+7336, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap.zoho.com
-		{ SP+15762, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.zoho.com
+		{ SP+15746, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.zoho.com
 	},
 	{ SP+2766, SP+257,	// blueyonder.co.uk	Blueyonder: Virgin Media Mail
 		{ SP+7350, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap4.blueyonder.co.uk
-		{ SP+14678, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.blueyonder.co.uk
+		{ SP+14662, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.blueyonder.co.uk
 	},
-	{ SP+16729, SP+433,	// terra.es	Correo Terra
+	{ SP+16713, SP+433,	// terra.es	Correo Terra
 		{ SP+7373, 143, AS_ACCESS(0x11012), AS_USERNAME(0x4001) },	// imap4.terra.es
-		{ SP+9940, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// mailhost.terra.es
+		{ SP+9924, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// mailhost.terra.es
 	},
-	{ SP+17352, SP+1394,	// virgin.net	Virgin.net: Virgin Media Mail
+	{ SP+17336, SP+1394,	// virgin.net	Virgin.net: Virgin Media Mail
 		{ SP+7388, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imap4.virgin.net
-		{ SP+15641, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.virgin.net
+		{ SP+15625, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.virgin.net
 	},
 	{ SP+4858, SP+4858,	// email.it	email.it
 		{ SP+7405, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4001) },	// imapmail.email.it
-		{ SP+14850, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.email.it
+		{ SP+14834, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.email.it
 	},
 	{ SP+8582, SP+807,	// libero.it	Libero Mail
 		{ SP+7423, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imapmail.libero.it
-		{ SP+15115, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.libero.it
+		{ SP+15099, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.libero.it
 	},
 	{ SP+2743, SP+2755,	// bluemail.ch	bluewin.ch
 		{ SP+7442, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imaps.bluewin.ch
-		{ SP+15862, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtpauths.bluewin.ch
+		{ SP+15846, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// smtpauths.bluewin.ch
 	},
 	{ SP+2755, SP+2755,	// bluewin.ch	bluewin.ch
 		{ SP+7442, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// imaps.bluewin.ch
-		{ SP+15862, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4002) }	// smtpauths.bluewin.ch
+		{ SP+15846, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4002) }	// smtpauths.bluewin.ch
 	},
 	{ SP+2204, SP+193,	// arubapec.it	Aruba PEC
 		{ SP+7459, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// imaps.pec.aruba.it
-		{ SP+15993, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtps.pec.aruba.it
+		{ SP+15977, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtps.pec.aruba.it
 	},
 	{ SP+1812, SP+162,	// alice.it	Alice Italy
 		{ SP+7478, 143, AS_ACCESS(0x11012), AS_USERNAME(0x4001) },	// in.alice.it
-		{ SP+11471, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// out.alice.it
+		{ SP+11455, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// out.alice.it
 	},
 	{ SP+2256, SP+157,	// att.net	AT&T
 		{ SP+7500, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// inbound.att.net
-		{ SP+11484, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// outbound.att.net
+		{ SP+11468, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// outbound.att.net
 	},
-	{ SP+7590, SP+18689,	// indigo.plala.or.jp	ぷらら
+	{ SP+7590, SP+18673,	// indigo.plala.or.jp	ぷらら
 		{ SP+7566, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// indigo.mail.plala.or.jp
 		{ SP+7566, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// indigo.mail.plala.or.jp
 	},
-	{ SP+7863, SP+18689,	// ivory.plala.or.jp	ぷらら
+	{ SP+7863, SP+18673,	// ivory.plala.or.jp	ぷらら
 		{ SP+7840, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ivory.mail.plala.or.jp
 		{ SP+7840, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ivory.mail.plala.or.jp
 	},
-	{ SP+7931, SP+18689,	// jade.plala.or.jp	ぷらら
+	{ SP+7931, SP+18673,	// jade.plala.or.jp	ぷらら
 		{ SP+7909, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// jade.mail.plala.or.jp
 		{ SP+7909, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// jade.mail.plala.or.jp
 	},
-	{ SP+8027, SP+18689,	// jmail.plala.or.jp	ぷらら
+	{ SP+8027, SP+18673,	// jmail.plala.or.jp	ぷらら
 		{ SP+8004, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// jmail.mail.plala.or.jp
 		{ SP+8004, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// jmail.mail.plala.or.jp
 	},
-	{ SP+8189, SP+18689,	// khaki.plala.or.jp	ぷらら
+	{ SP+8189, SP+18673,	// khaki.plala.or.jp	ぷらら
 		{ SP+8166, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// khaki.mail.plala.or.jp
 		{ SP+8166, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// khaki.mail.plala.or.jp
 	},
-	{ SP+8308, SP+19023,	// kl.wind.ne.jp	群馬インターネット
+	{ SP+8308, SP+19007,	// kl.wind.ne.jp	群馬インターネット
 		{ SP+8308, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// kl.wind.ne.jp
 		{ SP+8308, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// kl.wind.ne.jp
 	},
-	{ SP+8353, SP+18689,	// kmail.plala.or.jp	ぷらら
+	{ SP+8353, SP+18673,	// kmail.plala.or.jp	ぷらら
 		{ SP+8330, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// kmail.mail.plala.or.jp
 		{ SP+8330, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// kmail.mail.plala.or.jp
 	},
-	{ SP+8467, SP+18689,	// lapis.plala.or.jp	ぷらら
+	{ SP+8467, SP+18673,	// lapis.plala.or.jp	ぷらら
 		{ SP+8444, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// lapis.mail.plala.or.jp
 		{ SP+8444, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// lapis.mail.plala.or.jp
 	},
-	{ SP+8564, SP+18689,	// lemon.plala.or.jp	ぷらら
+	{ SP+8564, SP+18673,	// lemon.plala.or.jp	ぷらら
 		{ SP+8541, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// lemon.mail.plala.or.jp
 		{ SP+8541, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// lemon.mail.plala.or.jp
 	},
-	{ SP+8615, SP+18689,	// lilac.plala.or.jp	ぷらら
+	{ SP+8615, SP+18673,	// lilac.plala.or.jp	ぷらら
 		{ SP+8592, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// lilac.mail.plala.or.jp
 		{ SP+8592, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// lilac.mail.plala.or.jp
 	},
-	{ SP+8655, SP+18689,	// lime.plala.or.jp	ぷらら
+	{ SP+8655, SP+18673,	// lime.plala.or.jp	ぷらら
 		{ SP+8633, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// lime.mail.plala.or.jp
 		{ SP+8633, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// lime.mail.plala.or.jp
 	},
 	{ SP+7948, SP+759,	// janis.or.jp	Janis
 		{ SP+9040, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.%EMAILDOMAIN%
-		{ SP+14606, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.%EMAILDOMAIN%
+		{ SP+14590, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.%EMAILDOMAIN%
 	},
-	{ SP+17389, SP+1750,	// vm.aikis.or.jp	aikis
+	{ SP+17373, SP+1750,	// vm.aikis.or.jp	aikis
 		{ SP+9059, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// mail.aikis.or.jp
 		{ SP+9059, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// mail.aikis.or.jp
 	},
@@ -1794,7 +1797,7 @@ const AccountSettings_DB AccountList[] = {
 		{ SP+9090, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// mail.biglobe.ne.jp
 		{ SP+9090, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4001) }	// mail.biglobe.ne.jp
 	},
-	{ SP+2981, SP+18689,	// broba.cc	ぷらら
+	{ SP+2981, SP+18673,	// broba.cc	ぷらら
 		{ SP+9109, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// mail.broba.cc
 		{ SP+9109, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// mail.broba.cc
 	},
@@ -1802,17 +1805,17 @@ const AccountSettings_DB AccountList[] = {
 		{ SP+9123, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.btinternet.com
 		{ SP+9123, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// mail.btinternet.com
 	},
-	{ SP+3254, SP+18798,	// cek.ne.jp	エコーシティー・駒ケ岳
+	{ SP+3254, SP+18782,	// cek.ne.jp	エコーシティー・駒ケ岳
 		{ SP+9143, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.cek.ne.jp
-		{ SP+14715, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.cek.ne.jp
+		{ SP+14699, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.cek.ne.jp
 	},
 	{ SP+3264, SP+360,	// centurylink.net	CenturyLink.net
 		{ SP+9158, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.centurylink.net
-		{ SP+14730, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.centurylink.net
+		{ SP+14714, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.centurylink.net
 	},
-	{ SP+16778, SP+18648,	// thinline.cz	Český hosting
+	{ SP+16762, SP+18632,	// thinline.cz	Český hosting
 		{ SP+9179, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.cesky-hosting.cz
-		{ SP+14751, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.cesky-hosting.cz
+		{ SP+14735, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.cesky-hosting.cz
 	},
 	{ SP+3433, SP+324,	// clio.ne.jp	CLIO-Net移管サービス
 		{ SP+9201, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.clio.ne.jp
@@ -1824,7 +1827,7 @@ const AccountSettings_DB AccountList[] = {
 	},
 	{ SP+4729, SP+526,	// elpasotel.net	Elpasotel.net
 		{ SP+9266, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.elpasotel.net
-		{ SP+14831, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.elpasotel.net
+		{ SP+14815, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.elpasotel.net
 	},
 	{ SP+5437, SP+614,	// gandi.net	Gandi Mail
 		{ SP+9285, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.gandi.net
@@ -1832,23 +1835,23 @@ const AccountSettings_DB AccountList[] = {
 	},
 	{ SP+5538, SP+625,	// gigahost.dk	Gigahost Mail
 		{ SP+9300, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.gigahost.dk
-		{ SP+14927, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.gigahost.dk
+		{ SP+14911, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.gigahost.dk
 	},
-	{ SP+6157, SP+18931,	// hal.ne.jp	ハルインターネット
+	{ SP+6157, SP+18915,	// hal.ne.jp	ハルインターネット
 		{ SP+9400, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// mail.hal.ne.jp
 		{ SP+9400, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4002) }	// mail.hal.ne.jp
 	},
-	{ SP+6167, SP+18664,	// hana.or.jp	きたうら花ねっと
+	{ SP+6167, SP+18648,	// hana.or.jp	きたうら花ねっと
 		{ SP+9415, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.hana.or.jp
 		{ SP+9415, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// mail.hana.or.jp
 	},
 	{ SP+6440, SP+651,	// ic-net.or.jp	IC-NET
 		{ SP+9431, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.ic-net.or.jp
-		{ SP+14989, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.ic-net.or.jp
+		{ SP+14973, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.ic-net.or.jp
 	},
-	{ SP+6479, SP+18832,	// iiyama-catv.ne.jp	ケーブルテレビiネット飯山
+	{ SP+6479, SP+18816,	// iiyama-catv.ne.jp	ケーブルテレビiネット飯山
 		{ SP+9449, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.iiyama-catv.ne.jp
-		{ SP+15007, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.iiyama-catv.ne.jp
+		{ SP+14991, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.iiyama-catv.ne.jp
 	},
 	{ SP+7527, SP+719,	// inbox.lt	Inbox.lt
 		{ SP+9472, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// mail.inbox.lt
@@ -1866,469 +1869,465 @@ const AccountSettings_DB AccountList[] = {
 		{ SP+9522, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.ipax.at
 		{ SP+9522, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// mail.ipax.at
 	},
-	{ SP+9535, SP+18699,	// mail.iwafune.ne.jp	インターネットいわふね
+	{ SP+9535, SP+18683,	// mail.iwafune.ne.jp	インターネットいわふね
 		{ SP+9535, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.iwafune.ne.jp
 		{ SP+9535, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// mail.iwafune.ne.jp
 	},
-	{ SP+8379, SP+19051,	// kokuyou.ne.jp	長和町黒耀の里ゆいねっと
+	{ SP+8379, SP+19035,	// kokuyou.ne.jp	長和町黒耀の里ゆいねっと
 		{ SP+9554, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.kokuyou.ne.jp
-		{ SP+15079, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.kokuyou.ne.jp
+		{ SP+15063, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.kokuyou.ne.jp
 	},
-	{ SP+9025, SP+18733,	// mahoroba.ne.jp	インターネットまほろば
+	{ SP+9025, SP+18717,	// mahoroba.ne.jp	インターネットまほろば
 		{ SP+9573, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.mahoroba.ne.jp
 		{ SP+9573, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// mail.mahoroba.ne.jp
 	},
-	{ SP+10273, SP+835,	// mnet.ne.jp	Mnet メール サービス
+	{ SP+10257, SP+835,	// mnet.ne.jp	Mnet メール サービス
 		{ SP+9593, 110, AS_ACCESS(0x12011), AS_USERNAME(0x4001) },	// mail.mnet.ne.jp
 		{ SP+9593, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4001) }	// mail.mnet.ne.jp
 	},
-	{ SP+10347, SP+10338,	// mopera.net	mopera U
+	{ SP+10331, SP+10322,	// mopera.net	mopera U
 		{ SP+9609, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// mail.mopera.net
 		{ SP+9609, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4002) }	// mail.mopera.net
 	},
-	{ SP+11123, SP+19088,	// nsat.jp	ＢＢにいがた
+	{ SP+11107, SP+19072,	// nsat.jp	ＢＢにいがた
 		{ SP+9625, 110, AS_ACCESS(0x12011), AS_USERNAME(0x4001) },	// mail.nsat.jp
 		{ SP+9625, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4001) }	// mail.nsat.jp
 	},
-	{ SP+11576, SP+19006,	// pal.kijimadaira.jp	木島平村FTTH
+	{ SP+11560, SP+18990,	// pal.kijimadaira.jp	木島平村FTTH
 		{ SP+9647, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.pal.kijimadaira.jp
-		{ SP+15340, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.pal.kijimadaira.jp
+		{ SP+15324, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.pal.kijimadaira.jp
 	},
-	{ SP+11745, SP+11521,	// pep-security.net	pEp Security S.A.
+	{ SP+11729, SP+11505,	// pep-security.net	pEp Security S.A.
 		{ SP+9671, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.pep-security.net
 		{ SP+9671, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// mail.pep-security.net
 	},
-	{ SP+11775, SP+11539,	// peptest.ch	pEp Test
-		{ SP+9711, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.peptest.ch
-		{ SP+9711, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// mail.peptest.ch
+	{ SP+11997, SP+952,	// pobox.com	Pobox
+		{ SP+9711, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.pobox.com
+		{ SP+15367, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.pobox.com
 	},
-	{ SP+12013, SP+952,	// pobox.com	Pobox
-		{ SP+9727, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.pobox.com
-		{ SP+15383, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.pobox.com
+	{ SP+13290, SP+1041,	// q.com	Q.com
+		{ SP+9726, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.q.com
+		{ SP+15402, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.q.com
 	},
-	{ SP+13306, SP+1041,	// q.com	Q.com
-		{ SP+9742, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.q.com
-		{ SP+15418, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.q.com
+	{ SP+13369, SP+1071,	// rambler.ru	Rambler Mail
+		{ SP+9737, 995, AS_ACCESS(0x82011), AS_USERNAME(0x4001) },	// mail.rambler.ru
+		{ SP+9737, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// mail.rambler.ru
 	},
-	{ SP+13385, SP+1071,	// rambler.ru	Rambler Mail
-		{ SP+9753, 995, AS_ACCESS(0x82011), AS_USERNAME(0x4001) },	// mail.rambler.ru
-		{ SP+9753, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// mail.rambler.ru
+	{ SP+13897, SP+1099,	// runestone.net	Runestone Telecom Association
+		{ SP+9761, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// mail.runestone.net
+		{ SP+9761, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// mail.runestone.net
 	},
-	{ SP+13913, SP+1099,	// runestone.net	Runestone Telecom Association
-		{ SP+9777, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// mail.runestone.net
-		{ SP+9777, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// mail.runestone.net
+	{ SP+13932, SP+18962,	// sakunet.ne.jp	佐久ケーブルテレビ
+		{ SP+9780, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.sakunet.ne.jp
+		{ SP+15445, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.sakunet.ne.jp
 	},
-	{ SP+13948, SP+18978,	// sakunet.ne.jp	佐久ケーブルテレビ
-		{ SP+9796, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.sakunet.ne.jp
-		{ SP+15461, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.sakunet.ne.jp
+	{ SP+9799, SP+1190,	// mail.telenor.dk	Telenor Danmark
+		{ SP+9799, 143, AS_ACCESS(0x41012), AS_USERNAME(0x4001) },	// mail.telenor.dk
+		{ SP+9799, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// mail.telenor.dk
 	},
-	{ SP+9815, SP+1190,	// mail.telenor.dk	Telenor Danmark
-		{ SP+9815, 143, AS_ACCESS(0x41012), AS_USERNAME(0x4001) },	// mail.telenor.dk
-		{ SP+9815, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// mail.telenor.dk
+	{ SP+13818, SP+1084,	// rr.com	RoadRunner/TWC
+		{ SP+9815, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.twc.com
+		{ SP+9815, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// mail.twc.com
 	},
-	{ SP+13834, SP+1084,	// rr.com	RoadRunner/TWC
-		{ SP+9831, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mail.twc.com
-		{ SP+9831, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// mail.twc.com
+	{ SP+17113, SP+1286,	// umich.edu	UM ITCS Email
+		{ SP+9828, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// mail.umich.edu
+		{ SP+15199, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtp.mail.umich.edu
 	},
-	{ SP+17129, SP+1286,	// umich.edu	UM ITCS Email
-		{ SP+9844, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// mail.umich.edu
-		{ SP+15215, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// smtp.mail.umich.edu
+	{ SP+9872, SP+19007,	// mail.wind.ne.jp	群馬インターネット
+		{ SP+9872, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.wind.ne.jp
+		{ SP+9872, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// mail.wind.ne.jp
 	},
-	{ SP+9888, SP+19023,	// mail.wind.ne.jp	群馬インターネット
-		{ SP+9888, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mail.wind.ne.jp
-		{ SP+9888, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// mail.wind.ne.jp
+	{ SP+18459, SP+1559,	// zeelandnet.nl	ZeelandNet e-mail
+		{ SP+9888, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// mail.zeelandnet.nl
+		{ SP+9888, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// mail.zeelandnet.nl
 	},
-	{ SP+18475, SP+1559,	// zeelandnet.nl	ZeelandNet e-mail
-		{ SP+9904, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// mail.zeelandnet.nl
-		{ SP+9904, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// mail.zeelandnet.nl
-	},
-	{ SP+9996, SP+18689,	// maroon.plala.or.jp	ぷらら
-		{ SP+9972, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// maroon.mail.plala.or.jp
-		{ SP+9972, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// maroon.mail.plala.or.jp
+	{ SP+9980, SP+18673,	// maroon.plala.or.jp	ぷらら
+		{ SP+9956, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// maroon.mail.plala.or.jp
+		{ SP+9956, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// maroon.mail.plala.or.jp
 	},
 	{ SP+4405, SP+658,	// dd.iij4u.or.jp	IIJ4U
-		{ SP+10027, 110, AS_ACCESS(0x42011), AS_USERNAME(0x4003) },	// mbox.iij4u.or.jp
-		{ SP+10027, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4003) }	// mbox.iij4u.or.jp
+		{ SP+10011, 110, AS_ACCESS(0x42011), AS_USERNAME(0x4003) },	// mbox.iij4u.or.jp
+		{ SP+10011, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4003) }	// mbox.iij4u.or.jp
 	},
 	{ SP+6464, SP+664,	// iijmio-mail.jp	IIJmio セーフティメール
-		{ SP+10044, 110, AS_ACCESS(0x42011), AS_USERNAME(0x4003) },	// mbox.iijmio-mail.jp
-		{ SP+10044, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4003) }	// mbox.iijmio-mail.jp
+		{ SP+10028, 110, AS_ACCESS(0x42011), AS_USERNAME(0x4003) },	// mbox.iijmio-mail.jp
+		{ SP+10028, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4003) }	// mbox.iijmio-mail.jp
 	},
-	{ SP+10199, SP+18689,	// minuet.plala.or.jp	ぷらら
-		{ SP+10175, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// minuet.mail.plala.or.jp
-		{ SP+10175, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// minuet.mail.plala.or.jp
+	{ SP+10183, SP+18673,	// minuet.plala.or.jp	ぷらら
+		{ SP+10159, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// minuet.mail.plala.or.jp
+		{ SP+10159, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// minuet.mail.plala.or.jp
 	},
-	{ SP+10238, SP+18699,	// ml.murakami.ne.jp	インターネットいわふね
-		{ SP+10238, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ml.murakami.ne.jp
-		{ SP+10238, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ml.murakami.ne.jp
+	{ SP+10222, SP+18683,	// ml.murakami.ne.jp	インターネットいわふね
+		{ SP+10222, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ml.murakami.ne.jp
+		{ SP+10222, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ml.murakami.ne.jp
 	},
 	{ SP+3308, SP+391,	// charter.com	Charter Commuications
-		{ SP+10293, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mobile.charter.net
-		{ SP+10293, 587, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// mobile.charter.net
+		{ SP+10277, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// mobile.charter.net
+		{ SP+10277, 587, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// mobile.charter.net
 	},
 	{ SP+5356, SP+562,	// freenet.de	Freenet Mail
-		{ SP+10439, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4001) },	// mx.freenet.de
-		{ SP+10439, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// mx.freenet.de
+		{ SP+10423, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4001) },	// mx.freenet.de
+		{ SP+10423, 587, AS_ACCESS(0x42021), AS_USERNAME(0x4001) }	// mx.freenet.de
 	},
-	{ SP+16790, SP+1219,	// tiki.ne.jp	TikiTikiインターネット
-		{ SP+10453, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mx.tiki.ne.jp
-		{ SP+14563, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp-auth.tiki.ne.jp
+	{ SP+16774, SP+1219,	// tiki.ne.jp	TikiTikiインターネット
+		{ SP+10437, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// mx.tiki.ne.jp
+		{ SP+14547, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp-auth.tiki.ne.jp
 	},
-	{ SP+17271, SP+1367,	// versatel.de	Versatel
-		{ SP+10467, 143, AS_ACCESS(0x11012), AS_USERNAME(0x4001) },	// mx.versatel.de
-		{ SP+15624, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp.versatel.de
+	{ SP+17255, SP+1367,	// versatel.de	Versatel
+		{ SP+10451, 143, AS_ACCESS(0x11012), AS_USERNAME(0x4001) },	// mx.versatel.de
+		{ SP+15608, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp.versatel.de
 	},
-	{ SP+11031, SP+18689,	// navy.plala.or.jp	ぷらら
-		{ SP+11009, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// navy.mail.plala.or.jp
-		{ SP+11009, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// navy.mail.plala.or.jp
+	{ SP+11015, SP+18673,	// navy.plala.or.jp	ぷらら
+		{ SP+10993, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// navy.mail.plala.or.jp
+		{ SP+10993, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// navy.mail.plala.or.jp
 	},
-	{ SP+11244, SP+18689,	// olive.plala.or.jp	ぷらら
-		{ SP+11221, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// olive.mail.plala.or.jp
-		{ SP+11221, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// olive.mail.plala.or.jp
+	{ SP+11228, SP+18673,	// olive.plala.or.jp	ぷらら
+		{ SP+11205, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// olive.mail.plala.or.jp
+		{ SP+11205, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// olive.mail.plala.or.jp
 	},
-	{ SP+11345, SP+18689,	// opal.plala.or.jp	ぷらら
-		{ SP+11323, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// opal.mail.plala.or.jp
-		{ SP+11323, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// opal.mail.plala.or.jp
+	{ SP+11329, SP+18673,	// opal.plala.or.jp	ぷらら
+		{ SP+11307, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// opal.mail.plala.or.jp
+		{ SP+11307, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// opal.mail.plala.or.jp
 	},
-	{ SP+11409, SP+18689,	// orange.plala.or.jp	ぷらら
-		{ SP+11385, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// orange.mail.plala.or.jp
-		{ SP+11385, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// orange.mail.plala.or.jp
+	{ SP+11393, SP+18673,	// orange.plala.or.jp	ぷらら
+		{ SP+11369, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// orange.mail.plala.or.jp
+		{ SP+11369, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// orange.mail.plala.or.jp
 	},
-	{ SP+11452, SP+18689,	// orchid.plala.or.jp	ぷらら
-		{ SP+11428, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// orchid.mail.plala.or.jp
-		{ SP+11428, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// orchid.mail.plala.or.jp
+	{ SP+11436, SP+18673,	// orchid.plala.or.jp	ぷらら
+		{ SP+11412, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// orchid.mail.plala.or.jp
+		{ SP+11412, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// orchid.mail.plala.or.jp
 	},
-	{ SP+11620, SP+18689,	// palette.plala.or.jp	ぷらら
-		{ SP+11595, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// palette.mail.plala.or.jp
-		{ SP+11595, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// palette.mail.plala.or.jp
+	{ SP+11604, SP+18673,	// palette.plala.or.jp	ぷらら
+		{ SP+11579, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// palette.mail.plala.or.jp
+		{ SP+11579, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// palette.mail.plala.or.jp
 	},
-	{ SP+11685, SP+18689,	// peach.plala.or.jp	ぷらら
-		{ SP+11662, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// peach.mail.plala.or.jp
-		{ SP+11662, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// peach.mail.plala.or.jp
+	{ SP+11669, SP+18673,	// peach.plala.or.jp	ぷらら
+		{ SP+11646, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// peach.mail.plala.or.jp
+		{ SP+11646, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// peach.mail.plala.or.jp
 	},
-	{ SP+11775, SP+11539,	// peptest.ch	pEp Test
-		{ SP+11775, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// peptest.ch
-		{ SP+11775, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// peptest.ch
+	{ SP+11759, SP+11523,	// peptest.ch	pEp Test
+		{ SP+11759, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// peptest.ch
+		{ SP+11759, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// peptest.ch
 	},
 	{ SP+3295, SP+1271,	// cgl.ucsf.edu	UCSF CGL email
-		{ SP+11816, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// plato.cgl.ucsf.edu
-		{ SP+11816, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// plato.cgl.ucsf.edu
+		{ SP+11800, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// plato.cgl.ucsf.edu
+		{ SP+11800, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// plato.cgl.ucsf.edu
 	},
-	{ SP+11869, SP+18689,	// plum.plala.or.jp	ぷらら
-		{ SP+11847, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// plum.mail.plala.or.jp
-		{ SP+11847, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// plum.mail.plala.or.jp
+	{ SP+11853, SP+18673,	// plum.plala.or.jp	ぷらら
+		{ SP+11831, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// plum.mail.plala.or.jp
+		{ SP+11831, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// plum.mail.plala.or.jp
 	},
-	{ SP+11886, SP+450,	// po.dcn.ne.jp	DCNインターネットサービス
-		{ SP+11886, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.dcn.ne.jp
-		{ SP+11886, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// po.dcn.ne.jp
+	{ SP+11870, SP+450,	// po.dcn.ne.jp	DCNインターネットサービス
+		{ SP+11870, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.dcn.ne.jp
+		{ SP+11870, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// po.dcn.ne.jp
 	},
-	{ SP+7609, SP+18767,	// inet-shibata.or.jp	インターネット新発田
-		{ SP+11935, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.inet-shibata.or.jp
-		{ SP+11935, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// po.inet-shibata.or.jp
+	{ SP+7609, SP+18751,	// inet-shibata.or.jp	インターネット新発田
+		{ SP+11919, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.inet-shibata.or.jp
+		{ SP+11919, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// po.inet-shibata.or.jp
 	},
-	{ SP+7881, SP+18699,	// iwafune.ne.jp	インターネットいわふね
-		{ SP+11957, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.iwafune.ne.jp
-		{ SP+11957, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// po.iwafune.ne.jp
+	{ SP+7881, SP+18683,	// iwafune.ne.jp	インターネットいわふね
+		{ SP+11941, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.iwafune.ne.jp
+		{ SP+11941, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// po.iwafune.ne.jp
 	},
-	{ SP+11999, SP+19023,	// po.wind.ne.jp	群馬インターネット
-		{ SP+11999, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.wind.ne.jp
-		{ SP+11999, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// po.wind.ne.jp
+	{ SP+11983, SP+19007,	// po.wind.ne.jp	群馬インターネット
+		{ SP+11983, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// po.wind.ne.jp
+		{ SP+11983, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// po.wind.ne.jp
 	},
-	{ SP+11186, SP+11176,	// o2.pl	o2 Poczta
-		{ SP+12023, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// poczta.o2.pl
-		{ SP+12023, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// poczta.o2.pl
+	{ SP+11170, SP+11160,	// o2.pl	o2 Poczta
+		{ SP+12007, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// poczta.o2.pl
+		{ SP+12007, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// poczta.o2.pl
 	},
-	{ SP+12128, SP+18689,	// polka.plala.or.jp	ぷらら
-		{ SP+12105, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// polka.mail.plala.or.jp
-		{ SP+12105, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// polka.mail.plala.or.jp
+	{ SP+12112, SP+18673,	// polka.plala.or.jp	ぷらら
+		{ SP+12089, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// polka.mail.plala.or.jp
+		{ SP+12089, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// polka.mail.plala.or.jp
 	},
-	{ SP+2433, SP+19088,	// bb-niigata.jp	ＢＢにいがた
-		{ SP+12146, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop.bb-niigata.jp
-		{ SP+12146, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// pop.bb-niigata.jp
+	{ SP+2433, SP+19072,	// bb-niigata.jp	ＢＢにいがた
+		{ SP+12130, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop.bb-niigata.jp
+		{ SP+12130, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// pop.bb-niigata.jp
 	},
 	{ SP+3244, SP+287,	// cc9.ne.jp	CC9インターネットサービス
-		{ SP+12164, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop.cc9.ne.jp
-		{ SP+14700, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.cc9.ne.jp
+		{ SP+12148, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop.cc9.ne.jp
+		{ SP+14684, 25, AS_ACCESS(0x10121), AS_USERNAME(0x4000) }	// smtp.cc9.ne.jp
 	},
 	{ SP+3280, SP+376,	// centurytel.net	CenturyTel.net
-		{ SP+12178, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop.centurytel.net
-		{ SP+15793, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtpauth.centurytel.net
+		{ SP+12162, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop.centurytel.net
+		{ SP+15777, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtpauth.centurytel.net
 	},
 	{ SP+4992, SP+507,	// ewe.net	EWE Mail
-		{ SP+12197, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop.ewe.net
-		{ SP+14864, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.ewe.net
+		{ SP+12181, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop.ewe.net
+		{ SP+14848, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// smtp.ewe.net
 	},
 	{ SP+5921, SP+5892,	// goo.jp	goo メールアドバンス
-		{ SP+12209, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop.mail.goo.ne.jp
-		{ SP+15144, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.mail.goo.ne.jp
+		{ SP+12193, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop.mail.goo.ne.jp
+		{ SP+15128, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.mail.goo.ne.jp
 	},
-	{ SP+18044, SP+1509,	// yahoo.co.jp	Yahoo! メール
-		{ SP+12228, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pop.mail.yahoo.co.jp
-		{ SP+15235, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.mail.yahoo.co.jp
+	{ SP+18028, SP+1509,	// yahoo.co.jp	Yahoo! メール
+		{ SP+12212, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pop.mail.yahoo.co.jp
+		{ SP+15219, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.mail.yahoo.co.jp
 	},
-	{ SP+11098, SP+120,	// nifty.com	@nifty
-		{ SP+12249, 110, AS_ACCESS(0x12011), AS_USERNAME(0x4002) },	// pop.nifty.com
-		{ SP+15277, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4002) }	// smtp.nifty.com
+	{ SP+11082, SP+120,	// nifty.com	@nifty
+		{ SP+12233, 110, AS_ACCESS(0x12011), AS_USERNAME(0x4002) },	// pop.nifty.com
+		{ SP+15261, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4002) }	// smtp.nifty.com
 	},
-	{ SP+11211, SP+892,	// ocn.ne.jp	OCN
-		{ SP+12263, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop.ocn.ne.jp
-		{ SP+15310, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.ocn.ne.jp
+	{ SP+11195, SP+892,	// ocn.ne.jp	OCN
+		{ SP+12247, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop.ocn.ne.jp
+		{ SP+15294, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.ocn.ne.jp
 	},
-	{ SP+17247, SP+1352,	// verizon.net	Verizon Online
-		{ SP+12295, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pop.verizon.net
-		{ SP+15607, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.verizon.net
+	{ SP+17231, SP+1352,	// verizon.net	Verizon Online
+		{ SP+12279, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pop.verizon.net
+		{ SP+15591, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtp.verizon.net
 	},
 	{ SP+7991, SP+747,	// ji.jet.ne.jp	JETINTERNET
-		{ SP+12311, 110, AS_ACCESS(0x12011), AS_USERNAME(0x4002) },	// pop02.jet.ne.jp
-		{ SP+15776, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4002) }	// smtp02.jet.ne.jp
+		{ SP+12295, 110, AS_ACCESS(0x12011), AS_USERNAME(0x4002) },	// pop02.jet.ne.jp
+		{ SP+15760, 587, AS_ACCESS(0x12021), AS_USERNAME(0x4002) }	// smtp02.jet.ne.jp
 	},
 	{ SP+8142, SP+765,	// kelcom.net	KELCOM Internet
-		{ SP+12327, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop1.kelcom.net
-		{ SP+15063, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp.kelcom.net
+		{ SP+12311, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop1.kelcom.net
+		{ SP+15047, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp.kelcom.net
 	},
 	{ SP+8129, SP+781,	// kabelmail.de	Kabel Deutschland
-		{ SP+12343, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop3.kabelmail.de
-		{ SP+15045, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.kabelmail.de
+		{ SP+12327, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop3.kabelmail.de
+		{ SP+15029, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.kabelmail.de
 	},
 	{ SP+9258, SP+1181,	// mail.dk	TDC (DK)
-		{ SP+12361, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop3.mail.dk
+		{ SP+12345, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop3.mail.dk
 		{ SP+2230, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// asmtp.mail.dk
 	},
-	{ SP+16801, SP+1249,	// tiscali.cz	Tiscali
-		{ SP+12374, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop3.mail.tiscali.cz
-		{ SP+15194, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp.mail.tiscali.cz
+	{ SP+16785, SP+1249,	// tiscali.cz	Tiscali
+		{ SP+12358, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop3.mail.tiscali.cz
+		{ SP+15178, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// smtp.mail.tiscali.cz
 	},
-	{ SP+11640, SP+18959,	// parabox.or.jp	パラボックス
-		{ SP+12395, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop3.parabox.or.jp
-		{ SP+15364, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.parabox.or.jp
+	{ SP+11624, SP+18943,	// parabox.or.jp	パラボックス
+		{ SP+12379, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// pop3.parabox.or.jp
+		{ SP+15348, 25, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smtp.parabox.or.jp
 	},
-	{ SP+11285, SP+958,	// onet.pl	Poczta Onet
-		{ SP+12414, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop3.poczta.onet.pl
-		{ SP+15398, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.poczta.onet.pl
+	{ SP+11269, SP+958,	// onet.pl	Poczta Onet
+		{ SP+12398, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pop3.poczta.onet.pl
+		{ SP+15382, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtp.poczta.onet.pl
 	},
-	{ SP+17217, SP+1304,	// upcmail.nl	UPC Nederland
-		{ SP+12434, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop3.upcmail.nl
-		{ SP+15591, 25, AS_ACCESS(0x10521), AS_USERNAME(0x4001) }	// smtp.upcmail.nl
+	{ SP+17201, SP+1304,	// upcmail.nl	UPC Nederland
+		{ SP+12418, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4001) },	// pop3.upcmail.nl
+		{ SP+15575, 25, AS_ACCESS(0x10521), AS_USERNAME(0x4001) }	// smtp.upcmail.nl
 	},
-	{ SP+18027, SP+1497,	// xtra.co.nz	Yahoo! Mail
-		{ SP+12450, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pop3.xtra.co.nz
-		{ SP+14240, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// send.xtra.co.nz
+	{ SP+18011, SP+1497,	// xtra.co.nz	Yahoo! Mail
+		{ SP+12434, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pop3.xtra.co.nz
+		{ SP+14224, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// send.xtra.co.nz
 	},
 	{ SP+4161, SP+351,	// cty-net.ne.jp	CTY Mail
-		{ SP+12466, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pops.cty-net.ne.jp
-		{ SP+15973, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtps.cty-net.ne.jp
+		{ SP+12450, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4001) },	// pops.cty-net.ne.jp
+		{ SP+15957, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtps.cty-net.ne.jp
 	},
-	{ SP+18017, SP+1480,	// xs4all.nl	XS4All
-		{ SP+12485, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pops.xs4all.nl
-		{ SP+16029, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtps.xs4all.nl
+	{ SP+18001, SP+1480,	// xs4all.nl	XS4All
+		{ SP+12469, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// pops.xs4all.nl
+		{ SP+16013, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// smtps.xs4all.nl
 	},
-	{ SP+12666, SP+1025,	// posteo.de	Posteo
-		{ SP+12666, 143, AS_ACCESS(0x41012), AS_USERNAME(0x4001) },	// posteo.de
-		{ SP+12666, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// posteo.de
+	{ SP+12650, SP+1025,	// posteo.de	Posteo
+		{ SP+12650, 143, AS_ACCESS(0x41012), AS_USERNAME(0x4001) },	// posteo.de
+		{ SP+12650, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// posteo.de
 	},
-	{ SP+13221, SP+931,	// ptd.net	PenTeleData
-		{ SP+13177, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// promail.ptd.net
-		{ SP+13177, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// promail.ptd.net
+	{ SP+13205, SP+931,	// ptd.net	PenTeleData
+		{ SP+13161, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4002) },	// promail.ptd.net
+		{ SP+13161, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4002) }	// promail.ptd.net
 	},
-	{ SP+11654, SP+994,	// pdx.edu	Portland State University Mail
-		{ SP+13205, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4001) },	// psumail.pdx.edu
-		{ SP+9923, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// mailhost.pdx.edu
+	{ SP+11638, SP+994,	// pdx.edu	Portland State University Mail
+		{ SP+13189, 993, AS_ACCESS(0x82012), AS_USERNAME(0x4001) },	// psumail.pdx.edu
+		{ SP+9907, 465, AS_ACCESS(0x82021), AS_USERNAME(0x4001) }	// mailhost.pdx.edu
 	},
-	{ SP+13267, SP+18689,	// purple.plala.or.jp	ぷらら
-		{ SP+13243, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// purple.mail.plala.or.jp
-		{ SP+13243, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// purple.mail.plala.or.jp
+	{ SP+13251, SP+18673,	// purple.plala.or.jp	ぷらら
+		{ SP+13227, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// purple.mail.plala.or.jp
+		{ SP+13227, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// purple.mail.plala.or.jp
 	},
-	{ SP+13365, SP+18689,	// rainbow.plala.or.jp	ぷらら
-		{ SP+13340, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rainbow.mail.plala.or.jp
-		{ SP+13340, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rainbow.mail.plala.or.jp
+	{ SP+13349, SP+18673,	// rainbow.plala.or.jp	ぷらら
+		{ SP+13324, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rainbow.mail.plala.or.jp
+		{ SP+13324, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rainbow.mail.plala.or.jp
 	},
-	{ SP+13476, SP+18689,	// red.plala.or.jp	ぷらら
-		{ SP+13455, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// red.mail.plala.or.jp
-		{ SP+13455, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// red.mail.plala.or.jp
+	{ SP+13460, SP+18673,	// red.plala.or.jp	ぷらら
+		{ SP+13439, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// red.mail.plala.or.jp
+		{ SP+13439, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// red.mail.plala.or.jp
 	},
-	{ SP+13634, SP+18689,	// rmail.plala.or.jp	ぷらら
-		{ SP+13611, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rmail.mail.plala.or.jp
-		{ SP+13611, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rmail.mail.plala.or.jp
+	{ SP+13618, SP+18673,	// rmail.plala.or.jp	ぷらら
+		{ SP+13595, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rmail.mail.plala.or.jp
+		{ SP+13595, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rmail.mail.plala.or.jp
 	},
-	{ SP+13726, SP+18689,	// rondo.plala.or.jp	ぷらら
-		{ SP+13703, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rondo.mail.plala.or.jp
-		{ SP+13703, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rondo.mail.plala.or.jp
+	{ SP+13710, SP+18673,	// rondo.plala.or.jp	ぷらら
+		{ SP+13687, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rondo.mail.plala.or.jp
+		{ SP+13687, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rondo.mail.plala.or.jp
 	},
-	{ SP+13766, SP+18689,	// rose.plala.or.jp	ぷらら
-		{ SP+13744, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rose.mail.plala.or.jp
-		{ SP+13744, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rose.mail.plala.or.jp
+	{ SP+13750, SP+18673,	// rose.plala.or.jp	ぷらら
+		{ SP+13728, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rose.mail.plala.or.jp
+		{ SP+13728, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rose.mail.plala.or.jp
 	},
-	{ SP+13806, SP+18689,	// rouge.plala.or.jp	ぷらら
-		{ SP+13783, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rouge.mail.plala.or.jp
-		{ SP+13783, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rouge.mail.plala.or.jp
+	{ SP+13790, SP+18673,	// rouge.plala.or.jp	ぷらら
+		{ SP+13767, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// rouge.mail.plala.or.jp
+		{ SP+13767, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// rouge.mail.plala.or.jp
 	},
-	{ SP+13878, SP+18689,	// ruby.plala.or.jp	ぷらら
-		{ SP+13856, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ruby.mail.plala.or.jp
-		{ SP+13856, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ruby.mail.plala.or.jp
+	{ SP+13862, SP+18673,	// ruby.plala.or.jp	ぷらら
+		{ SP+13840, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ruby.mail.plala.or.jp
+		{ SP+13840, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ruby.mail.plala.or.jp
 	},
-	{ SP+14071, SP+18689,	// sea.plala.or.jp	ぷらら
-		{ SP+14050, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sea.mail.plala.or.jp
-		{ SP+14050, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sea.mail.plala.or.jp
+	{ SP+14055, SP+18673,	// sea.plala.or.jp	ぷらら
+		{ SP+14034, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sea.mail.plala.or.jp
+		{ SP+14034, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sea.mail.plala.or.jp
 	},
 	{ SP+4908, SP+1047,	// emailsrvr.com	Rackspace Email Hosting
-		{ SP+14111, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// secure.emailsrvr.com
-		{ SP+14111, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// secure.emailsrvr.com
+		{ SP+14095, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// secure.emailsrvr.com
+		{ SP+14095, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// secure.emailsrvr.com
 	},
-	{ SP+16524, SP+1172,	// t-online.de	T-Online
-		{ SP+14132, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// secureimap.t-online.de
-		{ SP+14190, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// securesmtp.t-online.de
+	{ SP+16508, SP+1172,	// t-online.de	T-Online
+		{ SP+14116, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// secureimap.t-online.de
+		{ SP+14174, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// securesmtp.t-online.de
 	},
 	{ SP+1598, SP+1598,	// a1.net	a1.net
-		{ SP+14155, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// securemail.a1.net
-		{ SP+14155, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// securemail.a1.net
+		{ SP+14139, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// securemail.a1.net
+		{ SP+14139, 587, AS_ACCESS(0x41021), AS_USERNAME(0x4001) }	// securemail.a1.net
 	},
-	{ SP+14279, SP+18689,	// sepia.plala.or.jp	ぷらら
-		{ SP+14256, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sepia.mail.plala.or.jp
-		{ SP+14256, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sepia.mail.plala.or.jp
+	{ SP+14263, SP+18673,	// sepia.plala.or.jp	ぷらら
+		{ SP+14240, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sepia.mail.plala.or.jp
+		{ SP+14240, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sepia.mail.plala.or.jp
 	},
-	{ SP+14323, SP+18689,	// serenade.plala.or.jp	ぷらら
-		{ SP+14297, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// serenade.mail.plala.or.jp
-		{ SP+14297, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// serenade.mail.plala.or.jp
+	{ SP+14307, SP+18673,	// serenade.plala.or.jp	ぷらら
+		{ SP+14281, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// serenade.mail.plala.or.jp
+		{ SP+14281, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// serenade.mail.plala.or.jp
 	},
-	{ SP+14383, SP+18689,	// silk.plala.or.jp	ぷらら
-		{ SP+14361, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// silk.mail.plala.or.jp
-		{ SP+14361, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// silk.mail.plala.or.jp
+	{ SP+14367, SP+18673,	// silk.plala.or.jp	ぷらら
+		{ SP+14345, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// silk.mail.plala.or.jp
+		{ SP+14345, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// silk.mail.plala.or.jp
 	},
-	{ SP+14424, SP+18689,	// silver.plala.or.jp	ぷらら
-		{ SP+14400, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// silver.mail.plala.or.jp
-		{ SP+14400, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// silver.mail.plala.or.jp
+	{ SP+14408, SP+18673,	// silver.plala.or.jp	ぷらら
+		{ SP+14384, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// silver.mail.plala.or.jp
+		{ SP+14384, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// silver.mail.plala.or.jp
 	},
-	{ SP+14486, SP+18689,	// sky.plala.or.jp	ぷらら
-		{ SP+14465, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sky.mail.plala.or.jp
-		{ SP+14465, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sky.mail.plala.or.jp
+	{ SP+14470, SP+18673,	// sky.plala.or.jp	ぷらら
+		{ SP+14449, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sky.mail.plala.or.jp
+		{ SP+14449, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sky.mail.plala.or.jp
 	},
-	{ SP+14545, SP+18689,	// smail.plala.or.jp	ぷらら
-		{ SP+14522, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// smail.mail.plala.or.jp
-		{ SP+14522, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smail.mail.plala.or.jp
+	{ SP+14529, SP+18673,	// smail.plala.or.jp	ぷらら
+		{ SP+14506, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// smail.mail.plala.or.jp
+		{ SP+14506, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// smail.mail.plala.or.jp
 	},
-	{ SP+16090, SP+18689,	// snow.plala.or.jp	ぷらら
-		{ SP+16068, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// snow.mail.plala.or.jp
-		{ SP+16068, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// snow.mail.plala.or.jp
+	{ SP+16074, SP+18673,	// snow.plala.or.jp	ぷらら
+		{ SP+16052, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// snow.mail.plala.or.jp
+		{ SP+16052, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// snow.mail.plala.or.jp
 	},
-	{ SP+16118, SP+19023,	// so.wind.ne.jp	群馬インターネット
-		{ SP+16118, 143, AS_ACCESS(0x11012), AS_USERNAME(0x4002) },	// so.wind.ne.jp
-		{ SP+16118, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// so.wind.ne.jp
+	{ SP+16102, SP+19007,	// so.wind.ne.jp	群馬インターネット
+		{ SP+16102, 143, AS_ACCESS(0x11012), AS_USERNAME(0x4002) },	// so.wind.ne.jp
+		{ SP+16102, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// so.wind.ne.jp
 	},
-	{ SP+16235, SP+18689,	// sonata.plala.or.jp	ぷらら
-		{ SP+16211, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sonata.mail.plala.or.jp
-		{ SP+16211, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sonata.mail.plala.or.jp
+	{ SP+16219, SP+18673,	// sonata.plala.or.jp	ぷらら
+		{ SP+16195, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// sonata.mail.plala.or.jp
+		{ SP+16195, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// sonata.mail.plala.or.jp
 	},
-	{ SP+11513, SP+896,	// ovh.net	OVH
-		{ SP+16330, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// ssl0.ovh.net
-		{ SP+16330, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// ssl0.ovh.net
+	{ SP+11497, SP+896,	// ovh.net	OVH
+		{ SP+16314, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// ssl0.ovh.net
+		{ SP+16314, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// ssl0.ovh.net
 	},
 	{ SP+4436, SP+4575,	// df.eu	domainFACTORY
-		{ SP+16343, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// sslmailpool.ispgateway.de
-		{ SP+15928, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtprelaypool.ispgateway.de
+		{ SP+16327, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// sslmailpool.ispgateway.de
+		{ SP+15912, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// smtprelaypool.ispgateway.de
 	},
-	{ SP+16420, SP+18689,	// suite.plala.or.jp	ぷらら
-		{ SP+16397, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// suite.mail.plala.or.jp
-		{ SP+16397, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// suite.mail.plala.or.jp
+	{ SP+16404, SP+18673,	// suite.plala.or.jp	ぷらら
+		{ SP+16381, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// suite.mail.plala.or.jp
+		{ SP+16381, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// suite.mail.plala.or.jp
 	},
-	{ SP+16503, SP+18689,	// symphony.plala.or.jp	ぷらら
-		{ SP+16477, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// symphony.mail.plala.or.jp
-		{ SP+16477, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// symphony.mail.plala.or.jp
+	{ SP+16487, SP+18673,	// symphony.plala.or.jp	ぷらら
+		{ SP+16461, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// symphony.mail.plala.or.jp
+		{ SP+16461, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// symphony.mail.plala.or.jp
 	},
-	{ SP+16589, SP+18689,	// taupe.plala.or.jp	ぷらら
-		{ SP+16566, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// taupe.mail.plala.or.jp
-		{ SP+16566, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// taupe.mail.plala.or.jp
+	{ SP+16573, SP+18673,	// taupe.plala.or.jp	ぷらら
+		{ SP+16550, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// taupe.mail.plala.or.jp
+		{ SP+16550, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// taupe.mail.plala.or.jp
 	},
-	{ SP+16865, SP+18689,	// tmail.plala.or.jp	ぷらら
-		{ SP+16842, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// tmail.mail.plala.or.jp
-		{ SP+16842, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// tmail.mail.plala.or.jp
+	{ SP+16849, SP+18673,	// tmail.plala.or.jp	ぷらら
+		{ SP+16826, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// tmail.mail.plala.or.jp
+		{ SP+16826, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// tmail.mail.plala.or.jp
 	},
-	{ SP+16908, SP+18689,	// toccata.plala.or.jp	ぷらら
-		{ SP+16883, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// toccata.mail.plala.or.jp
-		{ SP+16883, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// toccata.mail.plala.or.jp
+	{ SP+16892, SP+18673,	// toccata.plala.or.jp	ぷらら
+		{ SP+16867, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// toccata.mail.plala.or.jp
+		{ SP+16867, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// toccata.mail.plala.or.jp
 	},
-	{ SP+16985, SP+18689,	// topaz.plala.or.jp	ぷらら
-		{ SP+16962, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// topaz.mail.plala.or.jp
-		{ SP+16962, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// topaz.mail.plala.or.jp
+	{ SP+16969, SP+18673,	// topaz.plala.or.jp	ぷらら
+		{ SP+16946, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// topaz.mail.plala.or.jp
+		{ SP+16946, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// topaz.mail.plala.or.jp
 	},
-	{ SP+17039, SP+18689,	// trio.plala.or.jp	ぷらら
-		{ SP+17017, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// trio.mail.plala.or.jp
-		{ SP+17017, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// trio.mail.plala.or.jp
+	{ SP+17023, SP+18673,	// trio.plala.or.jp	ぷらら
+		{ SP+17001, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// trio.mail.plala.or.jp
+		{ SP+17001, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// trio.mail.plala.or.jp
 	},
-	{ SP+17111, SP+18689,	// umail.plala.or.jp	ぷらら
-		{ SP+17088, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// umail.mail.plala.or.jp
-		{ SP+17088, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// umail.mail.plala.or.jp
+	{ SP+17095, SP+18673,	// umail.plala.or.jp	ぷらら
+		{ SP+17072, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// umail.mail.plala.or.jp
+		{ SP+17072, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// umail.mail.plala.or.jp
 	},
-	{ SP+16379, SP+1318,	// studenti.univr.it	Università degli Studi di Verona
-		{ SP+17160, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// univr.mail.cineca.it
-		{ SP+17181, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// univr.smtpauth.cineca.it
+	{ SP+16363, SP+1318,	// studenti.univr.it	Università degli Studi di Verona
+		{ SP+17144, 993, AS_ACCESS(0x81012), AS_USERNAME(0x4001) },	// univr.mail.cineca.it
+		{ SP+17165, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4001) }	// univr.smtpauth.cineca.it
 	},
-	{ SP+17316, SP+18689,	// violet.plala.or.jp	ぷらら
-		{ SP+17292, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// violet.mail.plala.or.jp
-		{ SP+17292, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// violet.mail.plala.or.jp
+	{ SP+17300, SP+18673,	// violet.plala.or.jp	ぷらら
+		{ SP+17276, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// violet.mail.plala.or.jp
+		{ SP+17276, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// violet.mail.plala.or.jp
 	},
-	{ SP+17427, SP+18689,	// vmail.plala.or.jp	ぷらら
-		{ SP+17404, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// vmail.mail.plala.or.jp
-		{ SP+17404, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// vmail.mail.plala.or.jp
+	{ SP+17411, SP+18673,	// vmail.plala.or.jp	ぷらら
+		{ SP+17388, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// vmail.mail.plala.or.jp
+		{ SP+17388, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// vmail.mail.plala.or.jp
 	},
-	{ SP+17451, SP+1219,	// vp.tiki.ne.jp	TikiTikiインターネット
-		{ SP+17451, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// vp.tiki.ne.jp
-		{ SP+17465, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// vs.tiki.ne.jp
+	{ SP+17435, SP+1219,	// vp.tiki.ne.jp	TikiTikiインターネット
+		{ SP+17435, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// vp.tiki.ne.jp
+		{ SP+17449, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4001) }	// vs.tiki.ne.jp
 	},
-	{ SP+17513, SP+18689,	// waltz.plala.or.jp	ぷらら
-		{ SP+17490, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// waltz.mail.plala.or.jp
-		{ SP+17490, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// waltz.mail.plala.or.jp
+	{ SP+17497, SP+18673,	// waltz.plala.or.jp	ぷらら
+		{ SP+17474, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// waltz.mail.plala.or.jp
+		{ SP+17474, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// waltz.mail.plala.or.jp
 	},
-	{ SP+17573, SP+18689,	// wave.plala.or.jp	ぷらら
-		{ SP+17551, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// wave.mail.plala.or.jp
-		{ SP+17551, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// wave.mail.plala.or.jp
+	{ SP+17557, SP+18673,	// wave.plala.or.jp	ぷらら
+		{ SP+17535, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// wave.mail.plala.or.jp
+		{ SP+17535, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// wave.mail.plala.or.jp
 	},
-	{ SP+17658, SP+18689,	// white.plala.or.jp	ぷらら
-		{ SP+17635, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// white.mail.plala.or.jp
-		{ SP+17635, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// white.mail.plala.or.jp
+	{ SP+17642, SP+18673,	// white.plala.or.jp	ぷらら
+		{ SP+17619, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// white.mail.plala.or.jp
+		{ SP+17619, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// white.mail.plala.or.jp
 	},
-	{ SP+17738, SP+18689,	// wine.plala.or.jp	ぷらら
-		{ SP+17716, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// wine.mail.plala.or.jp
-		{ SP+17716, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// wine.mail.plala.or.jp
+	{ SP+17722, SP+18673,	// wine.plala.or.jp	ぷらら
+		{ SP+17700, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// wine.mail.plala.or.jp
+		{ SP+17700, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// wine.mail.plala.or.jp
 	},
-	{ SP+17800, SP+18689,	// wmail.plala.or.jp	ぷらら
-		{ SP+17777, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// wmail.mail.plala.or.jp
-		{ SP+17777, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// wmail.mail.plala.or.jp
+	{ SP+17784, SP+18673,	// wmail.plala.or.jp	ぷらら
+		{ SP+17761, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// wmail.mail.plala.or.jp
+		{ SP+17761, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// wmail.mail.plala.or.jp
 	},
-	{ SP+17947, SP+18689,	// xmail.plala.or.jp	ぷらら
-		{ SP+17924, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// xmail.mail.plala.or.jp
-		{ SP+17924, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// xmail.mail.plala.or.jp
+	{ SP+17931, SP+18673,	// xmail.plala.or.jp	ぷらら
+		{ SP+17908, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// xmail.mail.plala.or.jp
+		{ SP+17908, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// xmail.mail.plala.or.jp
 	},
-	{ SP+17965, SP+19023,	// xp.wind.jp	群馬インターネット
-		{ SP+17965, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// xp.wind.jp
-		{ SP+17965, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// xp.wind.jp
+	{ SP+17949, SP+19007,	// xp.wind.jp	群馬インターネット
+		{ SP+17949, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// xp.wind.jp
+		{ SP+17949, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// xp.wind.jp
 	},
-	{ SP+17999, SP+18689,	// xpost.plala.or.jp	ぷらら
-		{ SP+17976, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// xpost.mail.plala.or.jp
-		{ SP+17976, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// xpost.mail.plala.or.jp
+	{ SP+17983, SP+18673,	// xpost.plala.or.jp	ぷらら
+		{ SP+17960, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// xpost.mail.plala.or.jp
+		{ SP+17960, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// xpost.mail.plala.or.jp
 	},
-	{ SP+18262, SP+1487,	// ybb.ne.jp	Yahoo! BB
-		{ SP+18272, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// ybbpop.mail.yahoo.co.jp
-		{ SP+18296, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// ybbsmtp.mail.yahoo.co.jp
+	{ SP+18246, SP+1487,	// ybb.ne.jp	Yahoo! BB
+		{ SP+18256, 995, AS_ACCESS(0x81011), AS_USERNAME(0x4002) },	// ybbpop.mail.yahoo.co.jp
+		{ SP+18280, 465, AS_ACCESS(0x81021), AS_USERNAME(0x4002) }	// ybbsmtp.mail.yahoo.co.jp
 	},
-	{ SP+18354, SP+18689,	// yellow.plala.or.jp	ぷらら
-		{ SP+18330, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// yellow.mail.plala.or.jp
-		{ SP+18330, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// yellow.mail.plala.or.jp
+	{ SP+18338, SP+18673,	// yellow.plala.or.jp	ぷらら
+		{ SP+18314, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// yellow.mail.plala.or.jp
+		{ SP+18314, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// yellow.mail.plala.or.jp
 	},
-	{ SP+18406, SP+18689,	// ymail.plala.or.jp	ぷらら
-		{ SP+18383, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ymail.mail.plala.or.jp
-		{ SP+18383, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ymail.mail.plala.or.jp
+	{ SP+18390, SP+18673,	// ymail.plala.or.jp	ぷらら
+		{ SP+18367, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ymail.mail.plala.or.jp
+		{ SP+18367, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ymail.mail.plala.or.jp
 	},
-	{ SP+18457, SP+18689,	// ypost.plala.or.jp	ぷらら
-		{ SP+18434, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ypost.mail.plala.or.jp
-		{ SP+18434, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ypost.mail.plala.or.jp
+	{ SP+18441, SP+18673,	// ypost.plala.or.jp	ぷらら
+		{ SP+18418, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// ypost.mail.plala.or.jp
+		{ SP+18418, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// ypost.mail.plala.or.jp
 	},
-	{ SP+18567, SP+18689,	// zmail.plala.or.jp	ぷらら
-		{ SP+18544, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// zmail.mail.plala.or.jp
-		{ SP+18544, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// zmail.mail.plala.or.jp
+	{ SP+18551, SP+18673,	// zmail.plala.or.jp	ぷらら
+		{ SP+18528, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// zmail.mail.plala.or.jp
+		{ SP+18528, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// zmail.mail.plala.or.jp
 	},
-	{ SP+18630, SP+18689,	// zpost.plala.or.jp	ぷらら
-		{ SP+18607, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// zpost.mail.plala.or.jp
-		{ SP+18607, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// zpost.mail.plala.or.jp
+	{ SP+18614, SP+18673,	// zpost.plala.or.jp	ぷらら
+		{ SP+18591, 110, AS_ACCESS(0x11011), AS_USERNAME(0x4002) },	// zpost.mail.plala.or.jp
+		{ SP+18591, 587, AS_ACCESS(0x11021), AS_USERNAME(0x4002) }	// zpost.mail.plala.or.jp
 	},
 };
 
@@ -2355,15 +2354,15 @@ const Domain2AS IspDB[] = {
 	{ 1764, 68},	// aircraftmail.com
 	{ 1781, 68},	// alabama.usa.com
 	{ 1797, 68},	// alaska.usa.com
-	{ 1812, 104},	// alice.it
+	{ 1812, 105},	// alice.it
 	{ 1821, 68},	// allergist.com
 	{ 1835, 68},	// alumni.com
 	{ 1846, 68},	// alumnidirector.com
 	{ 1888, 5},	// amail.plala.or.jp
 	{ 1929, 6},	// amber.plala.or.jp
 	{ 1947, 68},	// americamail.com
-	{ 1963, 105},	// ameritech.net
-	{ 1977, 120},	// amethyst.broba.cc
+	{ 1963, 106},	// ameritech.net
+	{ 1977, 121},	// amethyst.broba.cc
 	{ 1995, 197},	// amorki.pl
 	{ 2005, 68},	// amorous.com
 	{ 2017, 152},	// anarki.dk
@@ -2377,10 +2376,10 @@ const Domain2AS IspDB[] = {
 	{ 2166, 51},	// arcor.de
 	{ 2175, 68},	// arizona.usa.com
 	{ 2191, 68},	// artlover.com
-	{ 2204, 103},	// arubapec.it
+	{ 2204, 104},	// arubapec.it
 	{ 2216, 68},	// asia-mail.com
 	{ 2244, 68},	// atheist.com
-	{ 2256, 105},	// att.net
+	{ 2256, 106},	// att.net
 	{ 2264, 68},	// australiamail.com
 	{ 2282, 197},	// autograf.pl
 	{ 2319, 9},	// ballade.plala.or.jp
@@ -2394,26 +2393,26 @@ const Domain2AS IspDB[] = {
 	{ 2447, 158},	// bc.iij4u.or.jp
 	{ 2462, 152},	// begavet.dk
 	{ 2496, 11},	// beige.plala.or.jp
-	{ 2514, 76},	// belgacom.net
+	{ 2514, 77},	// belgacom.net
 	{ 2527, 52},	// bell.net
-	{ 2536, 105},	// bellsouth.net
+	{ 2536, 106},	// bellsouth.net
 	{ 2550, 68},	// berlin.com
 	{ 2561, 68},	// bigger.com
-	{ 2572, 119},	// biglobe.ne.jp
-	{ 2586, 84},	// bigpond.com
-	{ 2598, 84},	// bigpond.net
-	{ 2610, 84},	// bigpond.net.au
+	{ 2572, 120},	// biglobe.ne.jp
+	{ 2586, 85},	// bigpond.com
+	{ 2598, 85},	// bigpond.net
+	{ 2610, 85},	// bigpond.net.au
 	{ 2625, 68},	// bikerider.com
 	{ 2639, 68},	// birdlover.com
 	{ 2653, 152},	// bitnisse.dk
 	{ 2665, 158},	// bk.iij4u.or.jp
 	{ 2680, 70},	// bk.ru
 	{ 2686, 68},	// blader.com
-	{ 2697, 100},	// blu.it
+	{ 2697, 101},	// blu.it
 	{ 2726, 12},	// blue.plala.or.jp
-	{ 2743, 101},	// bluemail.ch
-	{ 2755, 102},	// bluewin.ch
-	{ 2766, 96},	// blueyonder.co.uk
+	{ 2743, 102},	// bluemail.ch
+	{ 2755, 103},	// bluewin.ch
+	{ 2766, 97},	// blueyonder.co.uk
 	{ 2806, 13},	// bmail.plala.or.jp
 	{ 2824, 68},	// boardermail.com
 	{ 2840, 53},	// bol.com.br
@@ -2423,8 +2422,8 @@ const Domain2AS IspDB[] = {
 	{ 2950, 68},	// brazilmail.com
 	{ 2965, 68},	// brew-master.com
 	{ 3013, 16},	// brown.plala.or.jp
-	{ 3031, 121},	// btinternet.com
-	{ 3046, 121},	// btopenworld.com
+	{ 3031, 122},	// btinternet.com
+	{ 3046, 122},	// btopenworld.com
 	{ 3062, 158},	// bu.iij4u.or.jp
 	{ 3077, 197},	// buziaczek.pl
 	{ 3090, 68},	// california.usa.com
@@ -2432,28 +2431,28 @@ const Domain2AS IspDB[] = {
 	{ 3151, 17},	// camel.plala.or.jp
 	{ 3192, 18},	// cameo.plala.or.jp
 	{ 3210, 68},	// caress.com
-	{ 3221, 94},	// casema.nl
+	{ 3221, 95},	// casema.nl
 	{ 3231, 68},	// catlover.com
 	{ 3244, 183},	// cc9.ne.jp
-	{ 3254, 122},	// cek.ne.jp
-	{ 3264, 123},	// centurylink.net
+	{ 3254, 123},	// cek.ne.jp
+	{ 3264, 124},	// centurylink.net
 	{ 3280, 184},	// centurytel.net
 	{ 3295, 174},	// cgl.ucsf.edu
 	{ 3308, 162},	// charter.com
 	{ 3320, 162},	// charter.net
 	{ 3332, 68},	// cheerful.com
 	{ 3345, 68},	// chef.net
-	{ 3354, 94},	// chello.nl
+	{ 3354, 95},	// chello.nl
 	{ 3364, 68},	// chemist.com
 	{ 3376, 68},	// chinamail.com
 	{ 3390, 152},	// city.dk
 	{ 3398, 184},	// clds.net
 	{ 3407, 68},	// clerk.com
 	{ 3417, 68},	// cliffhanger.com
-	{ 3433, 125},	// clio.ne.jp
+	{ 3433, 126},	// clio.ne.jp
 	{ 3444, 0},	// cloudnine-net.jp
-	{ 3461, 81},	// club-internet.fr
-	{ 3478, 126},	// clustermail.de
+	{ 3461, 82},	// club-internet.fr
+	{ 3478, 127},	// clustermail.de
 	{ 3516, 19},	// cmail.plala.or.jp
 	{ 3534, 165},	// cneweb.de
 	{ 3544, 20},	// co1.wind.jp
@@ -2476,7 +2475,7 @@ const Domain2AS IspDB[] = {
 	{ 3859, 68},	// contractor.net
 	{ 3874, 152},	// cool.dk
 	{ 3882, 68},	// coolsite.net
-	{ 3895, 120},	// coral.broba.ccv
+	{ 3895, 121},	// coral.broba.ccv
 	{ 3934, 26},	// coral.plala.or.jp
 	{ 3952, 70},	// corp.mail.ru
 	{ 3965, 68},	// counsellor.com
@@ -2505,7 +2504,7 @@ const Domain2AS IspDB[] = {
 	{ 4393, 68},	// dbzmail.com
 	{ 4405, 158},	// dd.iij4u.or.jp
 	{ 4420, 68},	// deliveryman.com
-	{ 4442, 120},	// diamond.broba.cc
+	{ 4442, 121},	// diamond.broba.cc
 	{ 4459, 68},	// diplomats.com
 	{ 4473, 68},	// disciples.com
 	{ 4487, 152},	// dk-online.dk
@@ -2522,19 +2521,19 @@ const Domain2AS IspDB[] = {
 	{ 4656, 57},	// earthlink.net
 	{ 4693, 33},	// ebony.plala.or.jp
 	{ 4711, 152},	// elinstallatoer.dk
-	{ 4729, 127},	// elpasotel.net
+	{ 4729, 128},	// elpasotel.net
 	{ 4743, 152},	// elsker.dk
 	{ 4753, 152},	// elvis.dk
 	{ 4762, 68},	// elvisfan.com
 	{ 4775, 184},	// emadisonriver.com
 	{ 4793, 184},	// emadisonriver.net
 	{ 4830, 68},	// email.com
-	{ 4840, 80},	// email.cz
+	{ 4840, 81},	// email.cz
 	{ 4849, 152},	// email.dk
-	{ 4858, 99},	// email.it
+	{ 4858, 100},	// email.it
 	{ 4890, 35},	// email.plala.or.jp
 	{ 4908, 214},	// emailsrvr.com
-	{ 4922, 123},	// embarqmail.com
+	{ 4922, 124},	// embarqmail.com
 	{ 4937, 68},	// engineer.com
 	{ 4950, 68},	// englandmail.com
 	{ 4966, 68},	// europe.com
@@ -2554,7 +2553,7 @@ const Domain2AS IspDB[] = {
 	{ 5172, 68},	// financier.com
 	{ 5186, 68},	// fireman.net
 	{ 5224, 38},	// flamenco.plala.or.jp
-	{ 5245, 105},	// flash.net
+	{ 5245, 106},	// flash.net
 	{ 5255, 68},	// florida.usa.com
 	{ 5294, 39},	// fmail.plala.or.jp
 	{ 5312, 165},	// foni.net
@@ -2565,16 +2564,16 @@ const Domain2AS IspDB[] = {
 	{ 5389, 40},	// fuga.plala.or.jp
 	{ 5406, 152},	// gadefejer.dk
 	{ 5419, 184},	// gallatinriver.net
-	{ 5437, 128},	// gandi.net
+	{ 5437, 129},	// gandi.net
 	{ 5447, 68},	// gardener.com
-	{ 5460, 120},	// garnet.broba.cc
+	{ 5460, 121},	// garnet.broba.cc
 	{ 5476, 152},	// gason.dk
 	{ 5485, 165},	// gelsennet.de
 	{ 5498, 68},	// geologist.com
 	{ 5512, 68},	// germanymail.com
-	{ 5528, 100},	// giallo.it
-	{ 5538, 129},	// gigahost.dk
-	{ 5550, 103},	// gigapec.it
+	{ 5528, 101},	// giallo.it
+	{ 5538, 130},	// gigahost.dk
+	{ 5550, 104},	// gigapec.it
 	{ 5561, 61},	// gmail.com
 	{ 5594, 41},	// gmail.plala.or.jp
 	{ 5612, 63},	// gmx.at
@@ -2624,17 +2623,17 @@ const Domain2AS IspDB[] = {
 	{ 6097, 152},	// grov.dk
 	{ 6105, 184},	// gulftel.com
 	{ 6117, 68},	// hackermail.com
-	{ 6132, 94},	// hahah.nl
+	{ 6132, 95},	// hahah.nl
 	{ 6141, 68},	// hairdresser.net
-	{ 6157, 130},	// hal.ne.jp
-	{ 6167, 131},	// hana.or.jp
+	{ 6157, 131},	// hal.ne.jp
+	{ 6167, 132},	// hana.or.jp
 	{ 6178, 152},	// hardworking.dk
 	{ 6193, 152},	// heaven.dk
 	{ 6203, 152},	// hemmelig.dk
 	{ 6215, 158},	// hh.iij4u.or.jp
 	{ 6230, 68},	// hilarious.com
 	{ 6244, 68},	// hockeymail.com
-	{ 6259, 94},	// home.nl
+	{ 6259, 95},	// home.nl
 	{ 6267, 68},	// homemail.com
 	{ 6280, 68},	// hot-shot.com
 	{ 6293, 46},	// hotmail.co.jp
@@ -2648,86 +2647,86 @@ const Domain2AS IspDB[] = {
 	{ 6392, 68},	// hour.com
 	{ 6401, 152},	// huleboer.dk
 	{ 6413, 68},	// humanoid.net
-	{ 6426, 82},	// i.softbank.jp
-	{ 6440, 132},	// ic-net.or.jp
+	{ 6426, 83},	// i.softbank.jp
+	{ 6440, 133},	// ic-net.or.jp
 	{ 6453, 69},	// icloud.com
 	{ 6464, 159},	// iijmio-mail.jp
-	{ 6479, 133},	// iiyama-catv.ne.jp
+	{ 6479, 134},	// iiyama-catv.ne.jp
 	{ 6497, 68},	// illinois.usa.com
 	{ 6514, 152},	// image.dk
 	{ 6546, 45},	// imail.plala.or.jp
 	{ 7490, 68},	// iname.com
 	{ 7516, 152},	// inbound.dk
-	{ 7527, 134},	// inbox.lt
-	{ 7536, 135},	// inbox.lv
+	{ 7527, 135},	// inbox.lt
+	{ 7536, 136},	// inbox.lv
 	{ 7545, 70},	// inbox.ru
 	{ 7554, 152},	// indbakke.dk
-	{ 7590, 106},	// indigo.plala.or.jp
+	{ 7590, 107},	// indigo.plala.or.jp
 	{ 7609, 177},	// inet-shibata.or.jp
 	{ 7628, 152},	// infile.dk
 	{ 7638, 152},	// info.dk
-	{ 7646, 103},	// ingpec.eu
+	{ 7646, 104},	// ingpec.eu
 	{ 7656, 68},	// innocent.com
 	{ 7669, 68},	// inorbit.com
 	{ 7681, 68},	// instruction.com
 	{ 7697, 68},	// instructor.net
 	{ 7712, 68},	// insurer.com
 	{ 7724, 65},	// internetserver.cz
-	{ 7742, 136},	// internode.on.net
-	{ 7759, 100},	// inwind.it
+	{ 7742, 137},	// internode.on.net
+	{ 7759, 101},	// inwind.it
 	{ 7769, 152},	// io.dk
-	{ 7775, 100},	// iol.it
-	{ 7782, 137},	// ipax.at
+	{ 7775, 101},	// iol.it
+	{ 7782, 138},	// ipax.at
 	{ 7790, 68},	// irelandmail.com
 	{ 7806, 227},	// ispgateway.de
 	{ 7820, 152},	// it.dk
 	{ 7826, 68},	// italymail.com
-	{ 7863, 107},	// ivory.plala.or.jp
+	{ 7863, 108},	// ivory.plala.or.jp
 	{ 7881, 178},	// iwafune.ne.jp
 	{ 7895, 57},	// ix.netcom.com
-	{ 7931, 108},	// jade.plala.or.jp
-	{ 7948, 117},	// janis.or.jp
+	{ 7931, 109},	// jade.plala.or.jp
+	{ 7948, 118},	// janis.or.jp
 	{ 7960, 68},	// japan.com
 	{ 7970, 61},	// jazztel.es
 	{ 7981, 66},	// jet.ne.jp
 	{ 7991, 191},	// ji.jet.ne.jp
-	{ 8027, 109},	// jmail.plala.or.jp
+	{ 8027, 110},	// jmail.plala.or.jp
 	{ 8045, 68},	// journalist.com
 	{ 8060, 152},	// jyde.dk
-	{ 8068, 111},	// k1.gunmanet.ne.jp
-	{ 8086, 111},	// k1.gunmanet.or.jp
-	{ 8104, 111},	// k1.wind.jp
-	{ 8115, 111},	// k1.wind.ne.jp
+	{ 8068, 112},	// k1.gunmanet.ne.jp
+	{ 8086, 112},	// k1.gunmanet.or.jp
+	{ 8104, 112},	// k1.wind.jp
+	{ 8115, 112},	// k1.wind.ne.jp
 	{ 8129, 193},	// kabelmail.de
 	{ 8142, 192},	// kelcom.net
 	{ 8153, 68},	// keromail.com
-	{ 8189, 110},	// khaki.plala.or.jp
-	{ 8207, 76},	// kidcity.be
+	{ 8189, 111},	// khaki.plala.or.jp
+	{ 8207, 77},	// kidcity.be
 	{ 8218, 68},	// kittymail.com
 	{ 8232, 158},	// kk.iij4u.or.jp
-	{ 8247, 111},	// kl.gunmanet.ne.jp
-	{ 8265, 111},	// kl.gunmanet.or.jp
-	{ 8283, 111},	// kl.wind.co.jp
-	{ 8297, 111},	// kl.wind.jp
-	{ 8308, 111},	// kl.wind.ne.jp
+	{ 8247, 112},	// kl.gunmanet.ne.jp
+	{ 8265, 112},	// kl.gunmanet.or.jp
+	{ 8283, 112},	// kl.wind.co.jp
+	{ 8297, 112},	// kl.wind.jp
+	{ 8308, 112},	// kl.wind.ne.jp
 	{ 8322, 152},	// klog.dk
-	{ 8353, 112},	// kmail.plala.or.jp
+	{ 8353, 113},	// kmail.plala.or.jp
 	{ 8371, 152},	// knus.dk
-	{ 8379, 139},	// kokuyou.ne.jp
+	{ 8379, 140},	// kokuyou.ne.jp
 	{ 8393, 68},	// koreamail.com
 	{ 8407, 152},	// krudt.dk
 	{ 8416, 152},	// kulturel.dk
 	{ 8428, 49},	// kundenserver.de
-	{ 8467, 113},	// lapis.plala.or.jp
+	{ 8467, 114},	// lapis.plala.or.jp
 	{ 8485, 67},	// laposte.net
 	{ 8497, 152},	// larsen.dk
 	{ 8507, 68},	// lawyer.com
 	{ 8518, 152},	// lazy.dk
 	{ 8526, 68},	// legislator.com
-	{ 8564, 114},	// lemon.plala.or.jp
-	{ 8582, 100},	// libero.it
-	{ 8615, 115},	// lilac.plala.or.jp
-	{ 8655, 116},	// lime.plala.or.jp
+	{ 8564, 115},	// lemon.plala.or.jp
+	{ 8582, 101},	// libero.it
+	{ 8615, 116},	// lilac.plala.or.jp
+	{ 8655, 117},	// lime.plala.or.jp
 	{ 8672, 68},	// linuxmail.org
 	{ 8686, 70},	// list.ru
 	{ 8694, 46},	// live.co.jp
@@ -2755,422 +2754,422 @@ const Domain2AS IspDB[] = {
 	{ 8982, 184},	// madisonriver.biz
 	{ 8999, 68},	// madonnafan.com
 	{ 9014, 68},	// madrid.com
-	{ 9025, 140},	// mahoroba.ne.jp
+	{ 9025, 141},	// mahoroba.ne.jp
 	{ 9237, 68},	// mail.com
 	{ 9246, 152},	// mail.dia.dk
 	{ 9258, 194},	// mail.dk
 	{ 9343, 155},	// mail.gunmanet.jp
 	{ 9360, 155},	// mail.gunmanet.ne.jp
 	{ 9380, 155},	// mail.gunmanet.or.jp
-	{ 9535, 138},	// mail.iwafune.ne.jp
+	{ 9535, 139},	// mail.iwafune.ne.jp
 	{ 9638, 68},	// mail.org
-	{ 9769, 70},	// mail.ru
-	{ 9815, 152},	// mail.telenor.dk
-	{ 9859, 155},	// mail.wind.co.jp
-	{ 9875, 155},	// mail.wind.jp
-	{ 9888, 155},	// mail.wind.ne.jp
-	{ 9958, 68},	// marchmail.com
-	{ 9996, 157},	// maroon.plala.or.jp
-	{ 10015, 152},	// maskulin.dk
-	{ 10064, 69},	// me.com
-	{ 10071, 184},	// mebtel.net
-	{ 10082, 58},	// messagingengine.com
-	{ 10102, 68},	// mexicomail.com
-	{ 10117, 152},	// min-postkasse.dk
-	{ 10134, 68},	// mindless.com
-	{ 10147, 57},	// mindspring.com
-	{ 10162, 68},	// minister.com
-	{ 10199, 160},	// minuet.plala.or.jp
-	{ 10218, 159},	// miobox.jp
-	{ 10228, 159},	// miomio.jp
-	{ 10238, 161},	// ml.murakami.ne.jp
-	{ 10256, 1},	// ml.shibata.ne.jp
-	{ 10273, 141},	// mnet.ne.jp
-	{ 10284, 152},	// mobil.dk
-	{ 10312, 68},	// mobsters.com
-	{ 10325, 68},	// monarchy.com
-	{ 10347, 142},	// mopera.net
-	{ 10358, 68},	// moscowmail.com
-	{ 10373, 46},	// msn.com
-	{ 10381, 94},	// multiweb.nl
-	{ 10393, 68},	// munich.com
-	{ 10404, 68},	// musician.org
-	{ 10417, 68},	// muslim.com
-	{ 10428, 152},	// musling.dk
-	{ 10482, 2},	// mx1.tiki.ne.jp
-	{ 10497, 2},	// mx2.et.tiki.ne.jp
-	{ 10515, 2},	// mx2.tiki.ne.jp
-	{ 10530, 2},	// mx2.wt.tiki.ne.jp
-	{ 10548, 2},	// mx21.tiki.ne.jp
-	{ 10564, 2},	// mx22.tiki.ne.jp
-	{ 10580, 2},	// mx3.et.tiki.ne.jp
-	{ 10598, 2},	// mx3.tiki.ne.jp
-	{ 10613, 2},	// mx31.tiki.ne.jp
-	{ 10629, 2},	// mx32.tiki.ne.jp
-	{ 10645, 2},	// mx35.tiki.ne.jp
-	{ 10661, 2},	// mx36.tiki.ne.jp
-	{ 10677, 2},	// mx4.et.tiki.ne.jp
-	{ 10695, 2},	// mx4.tiki.ne.jp
-	{ 10710, 2},	// mx41.tiki.ne.jp
-	{ 10726, 2},	// mx5.et.tiki.ne.jp
-	{ 10744, 2},	// mx5.tiki.ne.jp
-	{ 10759, 2},	// mx51.et.tiki.ne.jp
-	{ 10778, 2},	// mx51.tiki.ne.jp
-	{ 10794, 2},	// mx52.tiki.ne.jp
-	{ 10810, 2},	// mx6.et.tiki.ne.jp
-	{ 10828, 2},	// mx6.tiki.ne.jp
-	{ 10843, 2},	// mx61.tiki.ne.jp
-	{ 10859, 2},	// mx7.tiki.ne.jp
-	{ 10874, 2},	// mx71.tiki.ne.jp
-	{ 10890, 2},	// mx8.tiki.ne.jp
-	{ 10905, 2},	// mx81.tiki.ne.jp
-	{ 10921, 2},	// mx82.tiki.ne.jp
-	{ 10937, 2},	// mx9.tiki.ne.jp
-	{ 10952, 2},	// mx91.tiki.ne.jp
-	{ 10968, 103},	// mypec.eu
-	{ 10977, 68},	// myself.com
-	{ 10988, 92},	// narod.ru
-	{ 10997, 152},	// natteliv.dk
-	{ 11031, 166},	// navy.plala.or.jp
-	{ 11048, 152},	// netbruger.dk
-	{ 11061, 50},	// netscape.net
-	{ 11074, 81},	// neuf.fr
-	{ 11082, 68},	// newyork.usa.com
-	{ 11098, 188},	// nifty.com
-	{ 11108, 158},	// nn.iij4u.or.jp
-	{ 11123, 143},	// nsat.jp
-	{ 11131, 72},	// ntlworld.com
-	{ 11144, 68},	// null.net
-	{ 11153, 105},	// nvbell.net
-	{ 11164, 68},	// nycmail.com
-	{ 11186, 180},	// o2.pl
-	{ 11192, 68},	// oath.com
-	{ 11201, 189},	// ocn.ad.jp
-	{ 11211, 189},	// ocn.ne.jp
-	{ 11244, 167},	// olive.plala.or.jp
-	{ 11262, 73},	// one.com
-	{ 11270, 78},	// one.cz
-	{ 11277, 197},	// onet.eu
-	{ 11285, 197},	// onet.pl
-	{ 11293, 49},	// online.de
-	{ 11303, 49},	// onlinehome.de
-	{ 11317, 197},	// op.pl
-	{ 11345, 168},	// opal.plala.or.jp
-	{ 11362, 68},	// optician.com
-	{ 11375, 74},	// orange.fr
-	{ 11409, 169},	// orange.plala.or.jp
-	{ 11452, 170},	// orchid.plala.or.jp
-	{ 11501, 46},	// outlook.com
-	{ 11513, 226},	// ovh.net
-	{ 11548, 105},	// pacbell.net
-	{ 11560, 68},	// pacificwest.com
-	{ 11576, 144},	// pal.kijimadaira.jp
-	{ 11620, 171},	// palette.plala.or.jp
-	{ 11640, 196},	// parabox.or.jp
-	{ 11654, 204},	// pdx.edu
-	{ 11685, 172},	// peach.plala.or.jp
-	{ 11703, 103},	// pec.it
-	{ 11710, 152},	// pedal.dk
-	{ 11719, 152},	// pengemand.dk
-	{ 11732, 75},	// peoplepc.com
-	{ 11745, 145},	// pep-security.net
-	{ 11762, 36},	// pep.security
-	{ 11775, 173},	// peptest.ch
-	{ 11786, 68},	// petlover.com
-	{ 11799, 68},	// photographer.net
-	{ 11835, 68},	// playful.com
-	{ 11869, 175},	// plum.plala.or.jp
-	{ 11886, 176},	// po.dcn.ne.jp
-	{ 11899, 179},	// po.gunmanet.ne.jp
-	{ 11917, 179},	// po.gunmanet.or.jp
-	{ 11974, 179},	// po.wind.co.jp
-	{ 11988, 179},	// po.wind.jp
-	{ 11999, 179},	// po.wind.ne.jp
-	{ 12013, 147},	// pobox.com
-	{ 12036, 197},	// poczta.onet.eu
-	{ 12051, 197},	// poczta.onet.pl
-	{ 12066, 68},	// poetic.com
-	{ 12077, 152},	// pokerface.dk
-	{ 12090, 68},	// politician.com
-	{ 12128, 181},	// polka.plala.or.jp
-	{ 12277, 1},	// pop.shibata.ne.jp
-	{ 12500, 68},	// popstar.com
-	{ 12512, 68},	// post.com
-	{ 12521, 152},	// post.cybercity.dk
-	{ 12539, 80},	// post.cz
-	{ 12547, 152},	// post.dia.dk
-	{ 12559, 202},	// posteo.af
-	{ 12569, 202},	// posteo.at
-	{ 12579, 202},	// posteo.be
-	{ 12589, 202},	// posteo.ch
-	{ 12599, 202},	// posteo.cl
-	{ 12609, 202},	// posteo.co
-	{ 12619, 202},	// posteo.co.uk
-	{ 12632, 202},	// posteo.com.br
-	{ 12646, 202},	// posteo.cr
-	{ 12656, 202},	// posteo.cz
-	{ 12666, 202},	// posteo.de
-	{ 12676, 202},	// posteo.dk
-	{ 12686, 202},	// posteo.ee
-	{ 12696, 202},	// posteo.es
-	{ 12706, 202},	// posteo.eu
-	{ 12716, 202},	// posteo.fi
-	{ 12726, 202},	// posteo.gl
-	{ 12736, 202},	// posteo.gr
-	{ 12746, 202},	// posteo.hn
-	{ 12756, 202},	// posteo.hr
-	{ 12766, 202},	// posteo.hu
-	{ 12776, 202},	// posteo.ie
-	{ 12786, 202},	// posteo.in
-	{ 12796, 202},	// posteo.is
-	{ 12806, 202},	// posteo.jp
-	{ 12816, 202},	// posteo.la
-	{ 12826, 202},	// posteo.li
-	{ 12836, 202},	// posteo.lt
-	{ 12846, 202},	// posteo.lu
-	{ 12856, 202},	// posteo.me
-	{ 12866, 202},	// posteo.mx
-	{ 12876, 202},	// posteo.my
-	{ 12886, 202},	// posteo.net
-	{ 12897, 202},	// posteo.nl
-	{ 12907, 202},	// posteo.no
-	{ 12917, 202},	// posteo.nz
-	{ 12927, 202},	// posteo.org
-	{ 12938, 202},	// posteo.pe
-	{ 12948, 202},	// posteo.pl
-	{ 12958, 202},	// posteo.pm
-	{ 12968, 202},	// posteo.pt
-	{ 12978, 202},	// posteo.ro
-	{ 12988, 202},	// posteo.ru
-	{ 12998, 202},	// posteo.se
-	{ 13008, 202},	// posteo.sg
-	{ 13018, 202},	// posteo.si
-	{ 13028, 202},	// posteo.tn
-	{ 13038, 202},	// posteo.uk
-	{ 13048, 202},	// posteo.us
-	{ 13058, 152},	// postman.dk
-	{ 13069, 158},	// pp.iij4u.or.jp
-	{ 13084, 68},	// presidency.com
-	{ 13099, 68},	// priest.com
-	{ 13110, 152},	// privat.dia.dk
-	{ 13124, 152},	// privatmail.dk
-	{ 13138, 105},	// prodigy.net
-	{ 13150, 68},	// programmer.net
-	{ 13165, 180},	// prokonto.pl
-	{ 13193, 76},	// proximus.be
-	{ 13221, 203},	// ptd.net
-	{ 13229, 68},	// publicist.com
-	{ 13267, 205},	// purple.plala.or.jp
-	{ 13306, 148},	// q.com
-	{ 13312, 77},	// qq.com
-	{ 13319, 152},	// quake.dk
-	{ 13328, 94},	// quicknet.nl
-	{ 13365, 206},	// rainbow.plala.or.jp
-	{ 13385, 149},	// rambler.ru
-	{ 13396, 94},	// razcall.com
-	{ 13408, 94},	// razcall.nl
-	{ 13419, 152},	// ready.dk
-	{ 13428, 68},	// realtyagent.com
-	{ 13444, 68},	// reborn.com
-	{ 13476, 207},	// red.plala.or.jp
-	{ 13492, 68},	// reggaefan.com
-	{ 13524, 68},	// religious.com
-	{ 13538, 68},	// repairman.com
-	{ 13552, 68},	// representative.com
-	{ 13571, 197},	// republika.pl
-	{ 13584, 68},	// rescueteam.com
-	{ 13599, 68},	// revenue.com
-	{ 13634, 208},	// rmail.plala.or.jp
-	{ 13652, 71},	// rocketmail.com
-	{ 13667, 68},	// rocketship.com
-	{ 13682, 68},	// rockfan.com
-	{ 13694, 68},	// rome.com
-	{ 13726, 209},	// rondo.plala.or.jp
-	{ 13766, 210},	// rose.plala.or.jp
-	{ 13806, 211},	// rouge.plala.or.jp
-	{ 13824, 68},	// royal.net
-	{ 13834, 153},	// rr.com
-	{ 13841, 158},	// rr.iij4u.or.jp
-	{ 13878, 212},	// ruby.plala.or.jp
-	{ 13895, 165},	// ruhrnet-online.de
-	{ 13913, 150},	// runestone.net
-	{ 13927, 83},	// rzone.de
-	{ 13936, 68},	// saintly.com
-	{ 13948, 151},	// sakunet.ne.jp
-	{ 13962, 68},	// salesperson.net
-	{ 13978, 68},	// sanfranmail.com
-	{ 13994, 105},	// sbcglobal.net
-	{ 14008, 49},	// schlund.de
-	{ 14019, 68},	// scientist.com
-	{ 14033, 68},	// scotlandmail.com
-	{ 14071, 213},	// sea.plala.or.jp
-	{ 14087, 152},	// secret.dk
-	{ 14097, 68},	// secretary.net
-	{ 14173, 79},	// secureserver.net
-	{ 14213, 68},	// seductive.com
-	{ 14279, 217},	// sepia.plala.or.jp
-	{ 14323, 218},	// serenade.plala.or.jp
-	{ 14344, 80},	// seznam.cz
-	{ 14354, 81},	// sfr.fr
-	{ 14383, 219},	// silk.plala.or.jp
-	{ 14424, 220},	// silver.plala.or.jp
-	{ 14443, 68},	// singapore.com
-	{ 14457, 86},	// sky.com
-	{ 14486, 221},	// sky.plala.or.jp
-	{ 14502, 76},	// skynet.be
-	{ 14512, 152},	// sleepy.dk
-	{ 14545, 222},	// smail.plala.or.jp
-	{ 14803, 34},	// smtp.cz
-	{ 16045, 68},	// snakebite.com
-	{ 16059, 105},	// snet.net
-	{ 16090, 223},	// snow.plala.or.jp
-	{ 16107, 224},	// so.wind.jp
-	{ 16118, 224},	// so.wind.ne.jp
-	{ 16132, 49},	// sofort-start.de
-	{ 16148, 49},	// sofort-surf.de
-	{ 16163, 49},	// sofortstart.de
-	{ 16178, 49},	// sofortsurf.de
-	{ 16192, 226},	// someplaceiwanna.be
-	{ 16235, 225},	// sonata.plala.or.jp
-	{ 16254, 68},	// songwriter.net
-	{ 16269, 68},	// soon.com
-	{ 16278, 68},	// spainmail.com
-	{ 16292, 80},	// spoluzaci.cz
-	{ 16305, 152},	// sporty.dk
-	{ 16315, 158},	// ss.iij4u.or.jp
-	{ 16369, 83},	// strato.de
-	{ 16379, 236},	// studenti.univr.it
-	{ 16420, 228},	// suite.plala.or.jp
-	{ 16438, 152},	// superbruger.dk
-	{ 16453, 105},	// swbell.net
-	{ 16464, 52},	// sympatico.ca
-	{ 16503, 229},	// symphony.plala.or.jp
-	{ 16524, 215},	// t-online.de
-	{ 16536, 152},	// talent.dk
-	{ 16546, 121},	// talk21.com
-	{ 16557, 152},	// tanke.dk
-	{ 16589, 230},	// taupe.plala.or.jp
-	{ 16607, 152},	// taxidriver.dk
-	{ 16621, 68},	// teachers.org
-	{ 16634, 68},	// techie.com
-	{ 16645, 68},	// technologist.com
-	{ 16662, 152},	// teens.dk
-	{ 16671, 152},	// teknik.dk
-	{ 16681, 165},	// telebel.de
-	{ 16692, 165},	// telelev.de
-	{ 16703, 185},	// teleos-web.de
-	{ 16717, 84},	// telstra.com
-	{ 16729, 97},	// terra.es
-	{ 16738, 68},	// texas.usa.com
-	{ 16752, 68},	// thegame.com
-	{ 16764, 68},	// therapist.net
-	{ 16778, 124},	// thinline.cz
-	{ 16790, 164},	// tiki.ne.jp
-	{ 16801, 195},	// tiscali.cz
-	{ 16812, 85},	// tiscali.it
-	{ 16823, 152},	// tjekket.dk
-	{ 16834, 180},	// tlen.pl
-	{ 16865, 231},	// tmail.plala.or.jp
-	{ 16908, 232},	// toccata.plala.or.jp
-	{ 16928, 68},	// toke.com
-	{ 16937, 68},	// tokyo.com
-	{ 16947, 68},	// toothfairy.com
-	{ 16985, 233},	// topaz.plala.or.jp
-	{ 17003, 152},	// traceroute.dk
-	{ 17039, 234},	// trio.plala.or.jp
-	{ 17056, 152},	// tv.dk
-	{ 17062, 68},	// tvstar.com
-	{ 17073, 152},	// ugenstilbud.dk
-	{ 17111, 235},	// umail.plala.or.jp
-	{ 17129, 154},	// umich.edu
-	{ 17139, 68},	// umpire.com
-	{ 17150, 152},	// ungdom.dk
-	{ 17206, 87},	// uol.com.br
-	{ 17217, 94},	// upcmail.nl
-	{ 17228, 68},	// usa.com
-	{ 17236, 68},	// uymail.com
-	{ 17247, 190},	// verizon.net
-	{ 17259, 165},	// versanet.de
-	{ 17271, 165},	// versatel.de
-	{ 17283, 152},	// video.dk
-	{ 17316, 237},	// violet.plala.or.jp
-	{ 17335, 152},	// vip.cybercity.dk
-	{ 17352, 98},	// virgin.net
-	{ 17363, 88},	// virginmedia.com
-	{ 17379, 152},	// vittig.dk
-	{ 17389, 118},	// vm.aikis.or.jp
-	{ 17427, 238},	// vmail.plala.or.jp
-	{ 17445, 197},	// vp.pl
-	{ 17451, 239},	// vp.tiki.ne.jp
-	{ 17479, 68},	// wallet.com
-	{ 17513, 240},	// waltz.plala.or.jp
-	{ 17531, 74},	// wanadoo.fr
-	{ 17542, 105},	// wans.net
-	{ 17573, 241},	// wave.plala.or.jp
-	{ 17590, 89},	// web.de
-	{ 17597, 90},	// webhuset.no
-	{ 17609, 68},	// webname.com
-	{ 17621, 68},	// weirdness.com
-	{ 17658, 242},	// white.plala.or.jp
-	{ 17676, 68},	// who.net
-	{ 17684, 68},	// whoever.com
-	{ 17738, 243},	// wine.plala.or.jp
-	{ 17755, 68},	// winning.com
-	{ 17767, 68},	// witty.com
-	{ 17800, 244},	// wmail.plala.or.jp
-	{ 17818, 195},	// wo.cz
-	{ 17824, 152},	// wol.dk
-	{ 17831, 68},	// worker.com
-	{ 17842, 68},	// workmail.com
-	{ 17855, 195},	// worldmail.cz
-	{ 17868, 195},	// worldonline.cz
-	{ 17883, 152},	// worldonline.dk
-	{ 17898, 91},	// wp.pl
-	{ 17904, 68},	// writeme.com
-	{ 17916, 159},	// x-il.jp
-	{ 17947, 245},	// xmail.plala.or.jp
-	{ 17965, 246},	// xp.wind.jp
-	{ 17999, 247},	// xpost.plala.or.jp
-	{ 18017, 201},	// xs4all.nl
-	{ 18027, 199},	// xtra.co.nz
-	{ 18038, 92},	// ya.ru
-	{ 18044, 187},	// yahoo.co.jp
-	{ 18056, 71},	// yahoo.co.nz
-	{ 18068, 71},	// yahoo.co.uk
-	{ 18080, 71},	// yahoo.com
-	{ 18090, 71},	// yahoo.com.ar
-	{ 18103, 71},	// yahoo.com.au
-	{ 18116, 71},	// yahoo.com.br
-	{ 18129, 71},	// yahoo.com.mx
-	{ 18142, 71},	// yahoo.de
-	{ 18151, 71},	// yahoo.es
-	{ 18160, 71},	// yahoo.fr
-	{ 18169, 71},	// yahoo.it
-	{ 18178, 71},	// yahoo.se
-	{ 18187, 71},	// yahoodns.net
-	{ 18200, 92},	// yandex.by
-	{ 18210, 92},	// yandex.com
-	{ 18221, 92},	// yandex.kz
-	{ 18231, 92},	// yandex.net
-	{ 18242, 92},	// yandex.ru
-	{ 18252, 92},	// yandex.ua
-	{ 18262, 248},	// ybb.ne.jp
-	{ 18321, 93},	// yeah.net
-	{ 18354, 249},	// yellow.plala.or.jp
-	{ 18373, 71},	// ymail.com
-	{ 18406, 250},	// ymail.plala.or.jp
-	{ 18424, 68},	// yours.com
-	{ 18457, 251},	// ypost.plala.or.jp
-	{ 18475, 156},	// zeelandnet.nl
-	{ 18489, 94},	// zeggis.com
-	{ 18500, 94},	// zeggis.nl
-	{ 18510, 94},	// ziggo.nl
-	{ 18519, 94},	// ziggomail.com
-	{ 18533, 94},	// zinders.nl
-	{ 18567, 252},	// zmail.plala.or.jp
-	{ 18585, 95},	// zoho.com
-	{ 18594, 95},	// zohomail.com
-	{ 18630, 253},	// zpost.plala.or.jp
+	{ 9753, 70},	// mail.ru
+	{ 9799, 152},	// mail.telenor.dk
+	{ 9843, 155},	// mail.wind.co.jp
+	{ 9859, 155},	// mail.wind.jp
+	{ 9872, 155},	// mail.wind.ne.jp
+	{ 9942, 68},	// marchmail.com
+	{ 9980, 157},	// maroon.plala.or.jp
+	{ 9999, 152},	// maskulin.dk
+	{ 10048, 69},	// me.com
+	{ 10055, 184},	// mebtel.net
+	{ 10066, 58},	// messagingengine.com
+	{ 10086, 68},	// mexicomail.com
+	{ 10101, 152},	// min-postkasse.dk
+	{ 10118, 68},	// mindless.com
+	{ 10131, 57},	// mindspring.com
+	{ 10146, 68},	// minister.com
+	{ 10183, 160},	// minuet.plala.or.jp
+	{ 10202, 159},	// miobox.jp
+	{ 10212, 159},	// miomio.jp
+	{ 10222, 161},	// ml.murakami.ne.jp
+	{ 10240, 1},	// ml.shibata.ne.jp
+	{ 10257, 142},	// mnet.ne.jp
+	{ 10268, 152},	// mobil.dk
+	{ 10296, 68},	// mobsters.com
+	{ 10309, 68},	// monarchy.com
+	{ 10331, 143},	// mopera.net
+	{ 10342, 68},	// moscowmail.com
+	{ 10357, 46},	// msn.com
+	{ 10365, 95},	// multiweb.nl
+	{ 10377, 68},	// munich.com
+	{ 10388, 68},	// musician.org
+	{ 10401, 68},	// muslim.com
+	{ 10412, 152},	// musling.dk
+	{ 10466, 2},	// mx1.tiki.ne.jp
+	{ 10481, 2},	// mx2.et.tiki.ne.jp
+	{ 10499, 2},	// mx2.tiki.ne.jp
+	{ 10514, 2},	// mx2.wt.tiki.ne.jp
+	{ 10532, 2},	// mx21.tiki.ne.jp
+	{ 10548, 2},	// mx22.tiki.ne.jp
+	{ 10564, 2},	// mx3.et.tiki.ne.jp
+	{ 10582, 2},	// mx3.tiki.ne.jp
+	{ 10597, 2},	// mx31.tiki.ne.jp
+	{ 10613, 2},	// mx32.tiki.ne.jp
+	{ 10629, 2},	// mx35.tiki.ne.jp
+	{ 10645, 2},	// mx36.tiki.ne.jp
+	{ 10661, 2},	// mx4.et.tiki.ne.jp
+	{ 10679, 2},	// mx4.tiki.ne.jp
+	{ 10694, 2},	// mx41.tiki.ne.jp
+	{ 10710, 2},	// mx5.et.tiki.ne.jp
+	{ 10728, 2},	// mx5.tiki.ne.jp
+	{ 10743, 2},	// mx51.et.tiki.ne.jp
+	{ 10762, 2},	// mx51.tiki.ne.jp
+	{ 10778, 2},	// mx52.tiki.ne.jp
+	{ 10794, 2},	// mx6.et.tiki.ne.jp
+	{ 10812, 2},	// mx6.tiki.ne.jp
+	{ 10827, 2},	// mx61.tiki.ne.jp
+	{ 10843, 2},	// mx7.tiki.ne.jp
+	{ 10858, 2},	// mx71.tiki.ne.jp
+	{ 10874, 2},	// mx8.tiki.ne.jp
+	{ 10889, 2},	// mx81.tiki.ne.jp
+	{ 10905, 2},	// mx82.tiki.ne.jp
+	{ 10921, 2},	// mx9.tiki.ne.jp
+	{ 10936, 2},	// mx91.tiki.ne.jp
+	{ 10952, 104},	// mypec.eu
+	{ 10961, 68},	// myself.com
+	{ 10972, 93},	// narod.ru
+	{ 10981, 152},	// natteliv.dk
+	{ 11015, 166},	// navy.plala.or.jp
+	{ 11032, 152},	// netbruger.dk
+	{ 11045, 50},	// netscape.net
+	{ 11058, 82},	// neuf.fr
+	{ 11066, 68},	// newyork.usa.com
+	{ 11082, 188},	// nifty.com
+	{ 11092, 158},	// nn.iij4u.or.jp
+	{ 11107, 144},	// nsat.jp
+	{ 11115, 73},	// ntlworld.com
+	{ 11128, 68},	// null.net
+	{ 11137, 106},	// nvbell.net
+	{ 11148, 68},	// nycmail.com
+	{ 11170, 180},	// o2.pl
+	{ 11176, 68},	// oath.com
+	{ 11185, 189},	// ocn.ad.jp
+	{ 11195, 189},	// ocn.ne.jp
+	{ 11228, 167},	// olive.plala.or.jp
+	{ 11246, 74},	// one.com
+	{ 11254, 79},	// one.cz
+	{ 11261, 197},	// onet.eu
+	{ 11269, 197},	// onet.pl
+	{ 11277, 49},	// online.de
+	{ 11287, 49},	// onlinehome.de
+	{ 11301, 197},	// op.pl
+	{ 11329, 168},	// opal.plala.or.jp
+	{ 11346, 68},	// optician.com
+	{ 11359, 75},	// orange.fr
+	{ 11393, 169},	// orange.plala.or.jp
+	{ 11436, 170},	// orchid.plala.or.jp
+	{ 11485, 46},	// outlook.com
+	{ 11497, 226},	// ovh.net
+	{ 11532, 106},	// pacbell.net
+	{ 11544, 68},	// pacificwest.com
+	{ 11560, 145},	// pal.kijimadaira.jp
+	{ 11604, 171},	// palette.plala.or.jp
+	{ 11624, 196},	// parabox.or.jp
+	{ 11638, 204},	// pdx.edu
+	{ 11669, 172},	// peach.plala.or.jp
+	{ 11687, 104},	// pec.it
+	{ 11694, 152},	// pedal.dk
+	{ 11703, 152},	// pengemand.dk
+	{ 11716, 76},	// peoplepc.com
+	{ 11729, 146},	// pep-security.net
+	{ 11746, 36},	// pep.security
+	{ 11759, 173},	// peptest.ch
+	{ 11770, 68},	// petlover.com
+	{ 11783, 68},	// photographer.net
+	{ 11819, 68},	// playful.com
+	{ 11853, 175},	// plum.plala.or.jp
+	{ 11870, 176},	// po.dcn.ne.jp
+	{ 11883, 179},	// po.gunmanet.ne.jp
+	{ 11901, 179},	// po.gunmanet.or.jp
+	{ 11958, 179},	// po.wind.co.jp
+	{ 11972, 179},	// po.wind.jp
+	{ 11983, 179},	// po.wind.ne.jp
+	{ 11997, 147},	// pobox.com
+	{ 12020, 197},	// poczta.onet.eu
+	{ 12035, 197},	// poczta.onet.pl
+	{ 12050, 68},	// poetic.com
+	{ 12061, 152},	// pokerface.dk
+	{ 12074, 68},	// politician.com
+	{ 12112, 181},	// polka.plala.or.jp
+	{ 12261, 1},	// pop.shibata.ne.jp
+	{ 12484, 68},	// popstar.com
+	{ 12496, 68},	// post.com
+	{ 12505, 152},	// post.cybercity.dk
+	{ 12523, 81},	// post.cz
+	{ 12531, 152},	// post.dia.dk
+	{ 12543, 202},	// posteo.af
+	{ 12553, 202},	// posteo.at
+	{ 12563, 202},	// posteo.be
+	{ 12573, 202},	// posteo.ch
+	{ 12583, 202},	// posteo.cl
+	{ 12593, 202},	// posteo.co
+	{ 12603, 202},	// posteo.co.uk
+	{ 12616, 202},	// posteo.com.br
+	{ 12630, 202},	// posteo.cr
+	{ 12640, 202},	// posteo.cz
+	{ 12650, 202},	// posteo.de
+	{ 12660, 202},	// posteo.dk
+	{ 12670, 202},	// posteo.ee
+	{ 12680, 202},	// posteo.es
+	{ 12690, 202},	// posteo.eu
+	{ 12700, 202},	// posteo.fi
+	{ 12710, 202},	// posteo.gl
+	{ 12720, 202},	// posteo.gr
+	{ 12730, 202},	// posteo.hn
+	{ 12740, 202},	// posteo.hr
+	{ 12750, 202},	// posteo.hu
+	{ 12760, 202},	// posteo.ie
+	{ 12770, 202},	// posteo.in
+	{ 12780, 202},	// posteo.is
+	{ 12790, 202},	// posteo.jp
+	{ 12800, 202},	// posteo.la
+	{ 12810, 202},	// posteo.li
+	{ 12820, 202},	// posteo.lt
+	{ 12830, 202},	// posteo.lu
+	{ 12840, 202},	// posteo.me
+	{ 12850, 202},	// posteo.mx
+	{ 12860, 202},	// posteo.my
+	{ 12870, 202},	// posteo.net
+	{ 12881, 202},	// posteo.nl
+	{ 12891, 202},	// posteo.no
+	{ 12901, 202},	// posteo.nz
+	{ 12911, 202},	// posteo.org
+	{ 12922, 202},	// posteo.pe
+	{ 12932, 202},	// posteo.pl
+	{ 12942, 202},	// posteo.pm
+	{ 12952, 202},	// posteo.pt
+	{ 12962, 202},	// posteo.ro
+	{ 12972, 202},	// posteo.ru
+	{ 12982, 202},	// posteo.se
+	{ 12992, 202},	// posteo.sg
+	{ 13002, 202},	// posteo.si
+	{ 13012, 202},	// posteo.tn
+	{ 13022, 202},	// posteo.uk
+	{ 13032, 202},	// posteo.us
+	{ 13042, 152},	// postman.dk
+	{ 13053, 158},	// pp.iij4u.or.jp
+	{ 13068, 68},	// presidency.com
+	{ 13083, 68},	// priest.com
+	{ 13094, 152},	// privat.dia.dk
+	{ 13108, 152},	// privatmail.dk
+	{ 13122, 106},	// prodigy.net
+	{ 13134, 68},	// programmer.net
+	{ 13149, 180},	// prokonto.pl
+	{ 13177, 77},	// proximus.be
+	{ 13205, 203},	// ptd.net
+	{ 13213, 68},	// publicist.com
+	{ 13251, 205},	// purple.plala.or.jp
+	{ 13290, 148},	// q.com
+	{ 13296, 78},	// qq.com
+	{ 13303, 152},	// quake.dk
+	{ 13312, 95},	// quicknet.nl
+	{ 13349, 206},	// rainbow.plala.or.jp
+	{ 13369, 149},	// rambler.ru
+	{ 13380, 95},	// razcall.com
+	{ 13392, 95},	// razcall.nl
+	{ 13403, 152},	// ready.dk
+	{ 13412, 68},	// realtyagent.com
+	{ 13428, 68},	// reborn.com
+	{ 13460, 207},	// red.plala.or.jp
+	{ 13476, 68},	// reggaefan.com
+	{ 13508, 68},	// religious.com
+	{ 13522, 68},	// repairman.com
+	{ 13536, 68},	// representative.com
+	{ 13555, 197},	// republika.pl
+	{ 13568, 68},	// rescueteam.com
+	{ 13583, 68},	// revenue.com
+	{ 13618, 208},	// rmail.plala.or.jp
+	{ 13636, 71},	// rocketmail.com
+	{ 13651, 68},	// rocketship.com
+	{ 13666, 68},	// rockfan.com
+	{ 13678, 68},	// rome.com
+	{ 13710, 209},	// rondo.plala.or.jp
+	{ 13750, 210},	// rose.plala.or.jp
+	{ 13790, 211},	// rouge.plala.or.jp
+	{ 13808, 68},	// royal.net
+	{ 13818, 153},	// rr.com
+	{ 13825, 158},	// rr.iij4u.or.jp
+	{ 13862, 212},	// ruby.plala.or.jp
+	{ 13879, 165},	// ruhrnet-online.de
+	{ 13897, 150},	// runestone.net
+	{ 13911, 84},	// rzone.de
+	{ 13920, 68},	// saintly.com
+	{ 13932, 151},	// sakunet.ne.jp
+	{ 13946, 68},	// salesperson.net
+	{ 13962, 68},	// sanfranmail.com
+	{ 13978, 106},	// sbcglobal.net
+	{ 13992, 49},	// schlund.de
+	{ 14003, 68},	// scientist.com
+	{ 14017, 68},	// scotlandmail.com
+	{ 14055, 213},	// sea.plala.or.jp
+	{ 14071, 152},	// secret.dk
+	{ 14081, 68},	// secretary.net
+	{ 14157, 80},	// secureserver.net
+	{ 14197, 68},	// seductive.com
+	{ 14263, 217},	// sepia.plala.or.jp
+	{ 14307, 218},	// serenade.plala.or.jp
+	{ 14328, 81},	// seznam.cz
+	{ 14338, 82},	// sfr.fr
+	{ 14367, 219},	// silk.plala.or.jp
+	{ 14408, 220},	// silver.plala.or.jp
+	{ 14427, 68},	// singapore.com
+	{ 14441, 87},	// sky.com
+	{ 14470, 221},	// sky.plala.or.jp
+	{ 14486, 77},	// skynet.be
+	{ 14496, 152},	// sleepy.dk
+	{ 14529, 222},	// smail.plala.or.jp
+	{ 14787, 34},	// smtp.cz
+	{ 16029, 68},	// snakebite.com
+	{ 16043, 106},	// snet.net
+	{ 16074, 223},	// snow.plala.or.jp
+	{ 16091, 224},	// so.wind.jp
+	{ 16102, 224},	// so.wind.ne.jp
+	{ 16116, 49},	// sofort-start.de
+	{ 16132, 49},	// sofort-surf.de
+	{ 16147, 49},	// sofortstart.de
+	{ 16162, 49},	// sofortsurf.de
+	{ 16176, 226},	// someplaceiwanna.be
+	{ 16219, 225},	// sonata.plala.or.jp
+	{ 16238, 68},	// songwriter.net
+	{ 16253, 68},	// soon.com
+	{ 16262, 68},	// spainmail.com
+	{ 16276, 81},	// spoluzaci.cz
+	{ 16289, 152},	// sporty.dk
+	{ 16299, 158},	// ss.iij4u.or.jp
+	{ 16353, 84},	// strato.de
+	{ 16363, 236},	// studenti.univr.it
+	{ 16404, 228},	// suite.plala.or.jp
+	{ 16422, 152},	// superbruger.dk
+	{ 16437, 106},	// swbell.net
+	{ 16448, 52},	// sympatico.ca
+	{ 16487, 229},	// symphony.plala.or.jp
+	{ 16508, 215},	// t-online.de
+	{ 16520, 152},	// talent.dk
+	{ 16530, 122},	// talk21.com
+	{ 16541, 152},	// tanke.dk
+	{ 16573, 230},	// taupe.plala.or.jp
+	{ 16591, 152},	// taxidriver.dk
+	{ 16605, 68},	// teachers.org
+	{ 16618, 68},	// techie.com
+	{ 16629, 68},	// technologist.com
+	{ 16646, 152},	// teens.dk
+	{ 16655, 152},	// teknik.dk
+	{ 16665, 165},	// telebel.de
+	{ 16676, 165},	// telelev.de
+	{ 16687, 185},	// teleos-web.de
+	{ 16701, 85},	// telstra.com
+	{ 16713, 98},	// terra.es
+	{ 16722, 68},	// texas.usa.com
+	{ 16736, 68},	// thegame.com
+	{ 16748, 68},	// therapist.net
+	{ 16762, 125},	// thinline.cz
+	{ 16774, 164},	// tiki.ne.jp
+	{ 16785, 195},	// tiscali.cz
+	{ 16796, 86},	// tiscali.it
+	{ 16807, 152},	// tjekket.dk
+	{ 16818, 180},	// tlen.pl
+	{ 16849, 231},	// tmail.plala.or.jp
+	{ 16892, 232},	// toccata.plala.or.jp
+	{ 16912, 68},	// toke.com
+	{ 16921, 68},	// tokyo.com
+	{ 16931, 68},	// toothfairy.com
+	{ 16969, 233},	// topaz.plala.or.jp
+	{ 16987, 152},	// traceroute.dk
+	{ 17023, 234},	// trio.plala.or.jp
+	{ 17040, 152},	// tv.dk
+	{ 17046, 68},	// tvstar.com
+	{ 17057, 152},	// ugenstilbud.dk
+	{ 17095, 235},	// umail.plala.or.jp
+	{ 17113, 154},	// umich.edu
+	{ 17123, 68},	// umpire.com
+	{ 17134, 152},	// ungdom.dk
+	{ 17190, 88},	// uol.com.br
+	{ 17201, 95},	// upcmail.nl
+	{ 17212, 68},	// usa.com
+	{ 17220, 68},	// uymail.com
+	{ 17231, 190},	// verizon.net
+	{ 17243, 165},	// versanet.de
+	{ 17255, 165},	// versatel.de
+	{ 17267, 152},	// video.dk
+	{ 17300, 237},	// violet.plala.or.jp
+	{ 17319, 152},	// vip.cybercity.dk
+	{ 17336, 99},	// virgin.net
+	{ 17347, 89},	// virginmedia.com
+	{ 17363, 152},	// vittig.dk
+	{ 17373, 119},	// vm.aikis.or.jp
+	{ 17411, 238},	// vmail.plala.or.jp
+	{ 17429, 197},	// vp.pl
+	{ 17435, 239},	// vp.tiki.ne.jp
+	{ 17463, 68},	// wallet.com
+	{ 17497, 240},	// waltz.plala.or.jp
+	{ 17515, 75},	// wanadoo.fr
+	{ 17526, 106},	// wans.net
+	{ 17557, 241},	// wave.plala.or.jp
+	{ 17574, 90},	// web.de
+	{ 17581, 91},	// webhuset.no
+	{ 17593, 68},	// webname.com
+	{ 17605, 68},	// weirdness.com
+	{ 17642, 242},	// white.plala.or.jp
+	{ 17660, 68},	// who.net
+	{ 17668, 68},	// whoever.com
+	{ 17722, 243},	// wine.plala.or.jp
+	{ 17739, 68},	// winning.com
+	{ 17751, 68},	// witty.com
+	{ 17784, 244},	// wmail.plala.or.jp
+	{ 17802, 195},	// wo.cz
+	{ 17808, 152},	// wol.dk
+	{ 17815, 68},	// worker.com
+	{ 17826, 68},	// workmail.com
+	{ 17839, 195},	// worldmail.cz
+	{ 17852, 195},	// worldonline.cz
+	{ 17867, 152},	// worldonline.dk
+	{ 17882, 92},	// wp.pl
+	{ 17888, 68},	// writeme.com
+	{ 17900, 159},	// x-il.jp
+	{ 17931, 245},	// xmail.plala.or.jp
+	{ 17949, 246},	// xp.wind.jp
+	{ 17983, 247},	// xpost.plala.or.jp
+	{ 18001, 201},	// xs4all.nl
+	{ 18011, 199},	// xtra.co.nz
+	{ 18022, 93},	// ya.ru
+	{ 18028, 187},	// yahoo.co.jp
+	{ 18040, 71},	// yahoo.co.nz
+	{ 18052, 71},	// yahoo.co.uk
+	{ 18064, 71},	// yahoo.com
+	{ 18074, 71},	// yahoo.com.ar
+	{ 18087, 71},	// yahoo.com.au
+	{ 18100, 71},	// yahoo.com.br
+	{ 18113, 71},	// yahoo.com.mx
+	{ 18126, 71},	// yahoo.de
+	{ 18135, 71},	// yahoo.es
+	{ 18144, 71},	// yahoo.fr
+	{ 18153, 71},	// yahoo.it
+	{ 18162, 71},	// yahoo.se
+	{ 18171, 71},	// yahoodns.net
+	{ 18184, 93},	// yandex.by
+	{ 18194, 93},	// yandex.com
+	{ 18205, 93},	// yandex.kz
+	{ 18215, 93},	// yandex.net
+	{ 18226, 93},	// yandex.ru
+	{ 18236, 93},	// yandex.ua
+	{ 18246, 248},	// ybb.ne.jp
+	{ 18305, 94},	// yeah.net
+	{ 18338, 249},	// yellow.plala.or.jp
+	{ 18357, 71},	// ymail.com
+	{ 18390, 250},	// ymail.plala.or.jp
+	{ 18408, 68},	// yours.com
+	{ 18441, 251},	// ypost.plala.or.jp
+	{ 18459, 156},	// zeelandnet.nl
+	{ 18473, 95},	// zeggis.com
+	{ 18484, 95},	// zeggis.nl
+	{ 18494, 95},	// ziggo.nl
+	{ 18503, 95},	// ziggomail.com
+	{ 18517, 95},	// zinders.nl
+	{ 18551, 252},	// zmail.plala.or.jp
+	{ 18569, 96},	// zoho.com
+	{ 18578, 96},	// zohomail.com
+	{ 18614, 253},	// zpost.plala.or.jp
 };
 
 const unsigned IspDBSize = 837;
@@ -3180,6 +3179,6 @@ const unsigned IspDBSize = 837;
 
 // sizeof(Domain2AS) = 8
 // sizeof(AccountSettings) = 64
-// Data size: 19107 + 16256 + 6696 = 42059 Bytes.
+// Data size: 19091 + 16256 + 6696 = 42043 Bytes.
 // ===<End of generated file>===
 

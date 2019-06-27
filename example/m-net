@@ -1,0 +1,62 @@
+<clientConfig version="1.1">
+  <emailProvider id="M-net">
+    <domain>
+    <domain>16000-kbits.de</domain>
+    <domain>7fun.de</domain>
+    <domain>a-city.de</domain>
+    <domain>alpenbazi.de</domain>
+    <domain>amberg-mail.de</domain>
+    <domain>augustakom.net</domain>
+    <domain>bayern-mail.de</domain>
+    <domain>club-goes-uefacup.de</domain>
+    <domain>dachau-mail.de</domain>
+    <domain>erding-mail.de</domain>
+    <domain>es-laendle.de</domain>
+    <domain>familien-postfach.de</domain>
+    <domain>fcn-cluberer.de</domain>
+    <domain>frankenbeutel-mail.de</domain>
+    <domain>franken-ist-cool.de</domain>
+    <domain>franken-online.de</domain>
+    <domain>ich-liebe-franken.de</domain>
+    <domain>ich-mag-net.de</domain>
+    <domain>ingolstadt-mail.de</domain>
+    <domain>loewen-mail.de</domain>
+    <domain>maxi-allgaeu.de</domain>
+    <domain>maxi-bayern.de</domain>
+    <domain>maxi-dsl.de</domain>
+    <domain>maxi-schwaben.de</domain>
+    <domain>mnet-mail.de</domain>
+    <domain>mnet-online.de</domain>
+    <domain>muenchen-ist-toll.de</domain>
+    <domain>muenchen-mail.de</domain>
+    <domain>muenchen-surf.de</domain>
+    <domain>myway.de</domain>
+    <domain>nefkom.info</domain>
+    <domain>nefkom.net</domain>
+    <domain>neumarkt-mail.de</domain>
+    <domain>post-ist-da.de</domain>
+    <domain>regensburg-mail.de</domain>
+    <domain>rotgruenweiss.de</domain>
+    <domain>starnberg-mail.de</domain>
+    <domain>unser-postfach.de</domain>
+    <domain>weissblautsv.de</domain>
+    <domain>wir-datschiburger.de</domain>
+
+    <displayName>M-net Telekommunikations GmbH</displayName>
+    <displayShortName>M-net</displayShortName>
+    <incomingServer type="imap">
+      <hostname>imap.mnet-online.de</hostname>
+      <port>993</port>
+      <socketType>SSL</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </incomingServer>
+    <outgoingServer type="smtp">
+      <hostname>mail.mnet-online.de</hostname>
+      <port>587</port>
+      <socketType>STARTTLS</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </outgoingServer>
+  </emailProvider>
+</clientConfig>
