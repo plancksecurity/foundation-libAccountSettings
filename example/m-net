@@ -1,6 +1,5 @@
 <clientConfig version="1.1">
   <emailProvider id="M-net">
-    <domain>
     <domain>16000-kbits.de</domain>
     <domain>7fun.de</domain>
     <domain>a-city.de</domain>
