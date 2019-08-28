@@ -31,14 +31,19 @@ typedef enum _AS_STATUS
 typedef enum _AS_FLAGS
 {
 	AS_FLAG_USE_LOCAL_ISP_DB   = 0x0010, ///<  use local ISP database
-	AS_FLAG_USE_HEURISTICS     = 0x0020, ///<  use heuristics from account's domain name
-	AS_FLAG_USE_ANY_LOCAL      = 0x00FF, ///<  use all local (without communication to 3rd parties) methods in ascending order
+// FIXME: local-only heuristics? Is that possible/sensible?
+//	AS_FLAG_USE_HEURISTICS     = 0x0020, ///<  use heuristics from account's domain name
+	AS_FLAG_USE_ANY_LOCAL      = 0x000F, ///<  use all local (without communication to 3rd parties) methods in ascending order
 	
-	AS_FLAG_USE_DNS_AUTOCONFIG = 0x0100, ///<  fetch account config from "autodiscover/autoconfig" servers
-	AS_FLAG_USE_DNS_SRV        = 0x0200, ///<  use DNS SRV records for the mail domain
-	AS_FLAG_USE_ONLINE_ISP_DB  = 0x0800, ///<  ask https://live.mozillamessaging.com/autoconfig/v1.1/$DOMAINNAME
+	AS_FLAG_USE_MOZ_AUTOCONFIG  = 0x0100, ///<  fetch account config via Mozilla's "autoconfig" method
+	AS_FLAG_USE_MS_AUTODISCOVER = 0x0200, ///<  fetch account config via Microsoft's "autodiscover" method
+	AS_FLAG_USE_DNS_SRV         = 0x0400, ///<  use DNS SRV records for the mail domain
+	AS_FLAG_USE_ONLINE_ISP_DB   = 0x0800, ///<  ask https://live.mozillamessaging.com/autoconfig/v1.1/$DOMAINNAME
+	AS_FLAG_USE_ANY_ONLINE      = 0x0F00, ///<  try all (almost) reliable online configuration methods in ascending order
 	
-	AS_FLAG_USE_ANY            = 0xFFFF  ///<  try first local, than network methods
+	AS_FLAG_USE_GUESSING        = 0x1000, ///<  guess server names and try to detect its login methods. MAY BE DANGEROUS!
+	
+	AS_FLAG_USE_ANY             = 0xFFFF  ///<  try first local, than network methods
 } AS_FLAGS;
 
 
