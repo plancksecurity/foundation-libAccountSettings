@@ -50,22 +50,26 @@ std::ostream& operator<<(std::ostream& o, const AccountSettingsS& as)
 
 bool operator<(const ServerS& a, const ServerS& b)
 {
-	return std::tie(a.name, a.port, a.access, a.username, a.port) < std::tie(b.name, b.port, b.access, b.username, b.port);
+	return std::tie(a.name, a.port, a.access, a.username, a.port)
+	     < std::tie(b.name, b.port, b.access, b.username, b.port);
 }
 
 bool operator==(const ServerS& a, const ServerS& b)
 {
-	return std::tie(a.name, a.port, a.access, a.username, a.port) == std::tie(b.name, b.port, b.access, b.username, b.port);
+	return std::tie(a.name, a.port, a.access, a.username, a.port)
+	    == std::tie(b.name, b.port, b.access, b.username, b.port);
 }
 
 bool operator<(const AccountSettingsS& a, const AccountSettingsS& b)
 {
-	return std::tie(a.id, a.displayName, a.incoming, a.outgoing) < std::tie(a.id, a.displayName, b.incoming, b.outgoing);
+	return std::tie(a.id, a.displayName, a.incoming, a.outgoing)
+	     < std::tie(a.id, a.displayName, b.incoming, b.outgoing);
 }
 
 bool operator!=(const AccountSettingsS& a, const AccountSettingsS& b)
 {
-	return std::tie(a.id, a.displayName, a.incoming, a.outgoing) != std::tie(a.id, a.displayName, b.incoming, b.outgoing);
+	return std::tie(a.id, a.displayName, a.incoming, a.outgoing)
+	    != std::tie(a.id, a.displayName, b.incoming, b.outgoing);
 }
 
 std::string Hex(unsigned u)
