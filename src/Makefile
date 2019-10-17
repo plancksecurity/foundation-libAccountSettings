@@ -19,7 +19,7 @@ accountSettings_test: accountSettings_test.o libAccountSettings.a
 	${CXX}  -o $@ $^  -lldns
 
 libAccountSettings.a: account_settings_internal.o implementation.o \
-      isp_db.o \
+      isp_db.o http_client.o \
       from_srv.o
 	${AR} rcs $@ $^
 
