@@ -52,12 +52,12 @@ std::string http_get_file(const std::string& host, int port, const std::string& 
 	std::getline(response_stream, status_message);
 	if (!response_stream || http_version.substr(0, 5) != "HTTP/")
 	{
-		throw HttpError(-1, "Invalid response: \"" + http_version + "\"");
+		throw HttpError(host, port, path, -1,  http_version);
 	}
 	
 	if (status_code != 200)
 	{
-		throw HttpError(status_code, status_message);
+		throw HttpError(host, port, path, status_code, status_message);
 	}
 
 	// Read the response headers, which are terminated by a blank line.

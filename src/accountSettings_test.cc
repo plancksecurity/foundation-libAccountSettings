@@ -3,6 +3,7 @@
 #include "../include/account_settings_c.h"
 #include "account_settings_internal.hh"
 #include "from_srv.hh"
+#include "http_client.hh"
 #include <string>
 #include <vector>
 #include <iostream>
@@ -92,6 +93,28 @@ bool testSRV()
 }
 
 
+bool testHttp()
+{
+	using account_settings::http_get_file;
+	
+	bool okay = true;
+	
+	okay &= (http_get_file("autoconfig.peptest.ch", 80, "/mail/config-v1.1.xml").size() > 0);
+	
+	bool invalid_host = false;
+	try
+	{
+		http_get_file("invalid-host.pep.lol", 80, "/dontmatter");
+	}catch(...)
+	{
+		invalid_host = true;
+	}
+	okay &= invalid_host;
+	
+	return okay;
+}
+
+
 int main(int argc, char** argv)
 try{
 	if(argc>1)
@@ -112,7 +135,7 @@ try{
 	bool all_okay = true;
 	all_okay &= testServers( incomingServer, &AS_get_incoming );
 	all_okay &= testServers( outgoingServer, &AS_get_outgoing );
-	
+	all_okay &= testHttp();
 	all_okay &= testSRV();
 	
 	std::cout << "***\t" << (all_okay ? "All tests are okay." : "ERROS happened") << std::endl;
