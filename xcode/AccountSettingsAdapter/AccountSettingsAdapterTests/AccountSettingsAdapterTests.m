@@ -48,11 +48,11 @@
     [self testServerWithAddress:@"blahblah@yahoo.com" incomingHostName:@"imap.mail.yahoo.com"
                    incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
               incomingTransport:AccountSettingsServerTransportTLS
-             incomingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
+             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
                outgoingHostName:@"smtp.mail.yahoo.com" outgoingPort:465
                outgoingProtocol:AccountSettingsServerTypeSMTP
               outgoingTransport:AccountSettingsServerTransportTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodOAUTH2
+             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
                      providerID: AccountSettingsProviderIDYahoo];
 }
 
