@@ -51,10 +51,10 @@ typedef enum _AS_FLAGS
 typedef enum _AS_ACCESS
 {
 	/// protocols
+	AS_PROTO_EXCHANGE     = 0x00008,  ///< both (?) - selected with very low precedence
 	AS_PROTO_POP3         = 0x00011,  ///< incoming
 	AS_PROTO_IMAP         = 0x00012,  ///< incoming
 	AS_PROTO_SMTP         = 0x00021,  ///< outgoing
-	AS_PROTO_EXCHANGE     = 0x00041,  ///< both (?)
 	AS_PROTO_BITMASK      = 0x000FF,  ///< bitmask for AS_PROTO...
 	
 	/// socket types
