@@ -16,7 +16,7 @@ xml2cxx: xml2cxx.o tinyxml2.o account_settings_internal.o stringpool.o
 	${CXX}  -o $@ $^
 
 accountSettings_test: accountSettings_test.o libAccountSettings.a
-	${CXX}  -o $@ $^  -lldns
+	${CXX}  -o $@ $^  -lldns -lcrypto -lssl
 
 libAccountSettings.a: account_settings_internal.o implementation.o \
       isp_db.o http_client.o \

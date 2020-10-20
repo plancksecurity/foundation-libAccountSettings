@@ -32,7 +32,7 @@ public:
 
 // returns the content of the given http://host:port/path as string
 // might throw HttpError
-std::string http_get_file(const std::string& host, int port, const std::string& path);
+std::string http_get_file(const std::string& host, int port, const std::string& path, bool tls);
 
 } // end of namespace account_settings
 

@@ -1,17 +1,19 @@
 #include "http_client.hh"
 
 #include <boost/asio.hpp>
+#include <boost/asio/ssl.hpp>
 
 namespace account_settings
 {
 
 using boost::asio::ip::tcp;
+namespace ssl = boost::asio::ssl;
 
 // returns the content of the given http://host:port/path as string
 // might throw HttpError
 // implementation based on https://www.boost.org/doc/libs/1_71_0/doc/html/boost_asio/example/cpp03/http/client/sync_client.cpp
 // (Boost license 1.0)
-std::string http_get_file(const std::string& host, int port, const std::string& path)
+std::string http_get_file(const std::string& host, int port, const std::string& path, bool tls)
 {
 	boost::asio::io_context io_context;
 
@@ -19,10 +21,16 @@ std::string http_get_file(const std::string& host, int port, const std::string& 
 	tcp::resolver resolver(io_context);
 	tcp::resolver::results_type endpoints = resolver.resolve(host, std::to_string(port));
 
-	// Try each endpoint until we successfully establish a connection.
-	tcp::socket socket(io_context);
-	boost::asio::connect(socket, endpoints);
-
+	tcp::socket* socket = nullptr;
+	if(tls)
+	{
+		ssl::context ctx(ssl::context::sslv23);
+		
+	}else{
+		// Try each endpoint until we successfully establish a connection.
+		socket = new tcp::socket(io_context);
+		boost::asio::connect(*socket, endpoints);
+	}
 	// Form the request. We specify the "Connection: close" header so that the
 	// server will close the socket after transmitting the response. This will
 	// allow us to treat all data up until the EOF as the content.
@@ -34,13 +42,13 @@ std::string http_get_file(const std::string& host, int port, const std::string& 
 		<< "Connection: close\r\n\r\n";
 
 	// Send the request.
-	boost::asio::write(socket, request);
+	boost::asio::write(*socket, request);
 
 	// Read the response status line. The response streambuf will automatically
 	// grow to accommodate the entire line. The growth may be limited by passing
 	// a maximum size to the streambuf constructor.
 	boost::asio::streambuf response;
-	boost::asio::read_until(socket, response, "\r\n");
+	boost::asio::read_until(*socket, response, "\r\n");
 
 	// Check that response is OK.
 	std::istream response_stream(&response);
@@ -61,7 +69,7 @@ std::string http_get_file(const std::string& host, int port, const std::string& 
 	}
 
 	// Read the response headers, which are terminated by a blank line.
-	boost::asio::read_until(socket, response, "\r\n\r\n");
+	boost::asio::read_until(*socket, response, "\r\n\r\n");
 /*
 	// Process the response headers.
 	std::string header;
@@ -77,7 +85,7 @@ std::string http_get_file(const std::string& host, int port, const std::string& 
 	std::string content;
 	
 	boost::system::error_code error;
-	while (boost::asio::read(socket, response,
+	while (boost::asio::read(*socket, response,
 		  boost::asio::transfer_at_least(1), error))
 	{
 		auto bufs = response.data();

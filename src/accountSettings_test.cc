@@ -99,12 +99,12 @@ bool testHttp()
 	
 	bool okay = true;
 	
-	okay &= (http_get_file("autoconfig.peptest.ch", 80, "/mail/config-v1.1.xml").size() > 0);
+	okay &= (http_get_file("autoconfig.peptest.ch", 80, "/mail/config-v1.1.xml", false).size() > 0);
 	
 	bool invalid_host = false;
 	try
 	{
-		http_get_file("invalid-host.pep.lol", 80, "/dontmatter");
+		http_get_file("invalid-host.pep.lol", 80, "/dontmatter", false);
 	}catch(...)
 	{
 		invalid_host = true;
