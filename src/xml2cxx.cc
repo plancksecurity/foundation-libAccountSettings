@@ -140,6 +140,7 @@ const std::map<std::string, unsigned> mproto =
 		{"pop3", AS_PROTO_POP3},
 		{"imap", AS_PROTO_IMAP},
 		{"smtp", AS_PROTO_SMTP},
+		{"exchange", AS_PROTO_EXCHANGE},
 	};
 
 const std::map<std::string, unsigned> msocket =
@@ -207,7 +208,13 @@ std::vector<ServerS> assignServers(const tx::XMLElement* elem, const char* membe
 		ServerS server;
 		unsigned access = 0;
 		const std::string type = e->Attribute("type");
-		access |= mproto.at(type);
+		try{
+			access |= mproto.at(type);
+		}catch(std::exception& e)
+		{
+			std::cerr << "*** UNKNOWN PROTOCOL TYPE \"" << type << "\" in memberName \"" << memberName << "\"! \n";
+			throw;
+		}
 		
 		server.name = assignMember(e, "hostname");
 		server.port = std::stoi(assignMember(e, "port"));
@@ -354,8 +361,11 @@ try{
 		"// Data size: " << string_pool_size << " + " << ass_size << " + " << isp_size << " = " << (string_pool_size+ass_size+isp_size) << " Bytes.\n"
 		"// ===<End of generated file>===\n\n";
 }
+/*
 catch(std::runtime_error& e)
 {
 	std::cerr << "ERROR: " << e.what() << "\n";
 	return 7;
 }
+*/
+catch(double * d) {throw;}
