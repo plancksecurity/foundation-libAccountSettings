@@ -15,6 +15,23 @@
 
 @implementation AccountSettingsAdapterTests
 
+// LAS-32
+- (void)testPosteoServerNotNil
+{
+
+    id<AccountSettingsProtocol> as = [[AccountSettings alloc]
+                                      initWithAccountName:@" someone@posteo.net"
+                                      provider:nil flags:AS_FLAG_USE_ANY
+                                      credentials:nil];
+    [as lookup];
+
+    XCTAssertEqual(as.status, AS_OK);
+    XCTAssertNotNil(as.incoming.hostname);
+    XCTAssertNotNil(as.outgoing.hostname);
+}
+
+// MARK: - All the below: testing on concrete values does not make sense. The values can and will c hange. That is not an issue (but actually expected) if the new values are valid.
+
 - (void)testQueryPeptest
 {
     NSString *hostName = @"peptest.ch";
@@ -41,19 +58,6 @@
               outgoingTransport:AccountSettingsServerTransportTLS
              outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
                      providerID: @"ovh.net"];
-}
-
-- (void)testQueryYahoo
-{
-    [self testServerWithAddress:@"blahblah@yahoo.com" incomingHostName:@"imap.mail.yahoo.com"
-                   incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
-              incomingTransport:AccountSettingsServerTransportTLS
-             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
-               outgoingHostName:@"smtp.mail.yahoo.com" outgoingPort:465
-               outgoingProtocol:AccountSettingsServerTypeSMTP
-              outgoingTransport:AccountSettingsServerTransportTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
-                     providerID: AccountSettingsProviderIDYahoo];
 }
 
 - (void)testQueryGmail
@@ -86,7 +90,8 @@
 {
     id<AccountSettingsProtocol> as = [[AccountSettings alloc]
                                       initWithAccountName:@"someone@example.com"
-                                      provider:nil flags:AS_FLAG_USE_ANY
+                                      provider:nil
+                                      flags:AS_FLAG_USE_ANY
                                       credentials:nil];
     [as lookup];
 
