@@ -1,6 +1,0 @@
-regexp
-\.DS_Store
-xcuserdata/.*
-\.orig$
-\.git/
-\.gitkeep
