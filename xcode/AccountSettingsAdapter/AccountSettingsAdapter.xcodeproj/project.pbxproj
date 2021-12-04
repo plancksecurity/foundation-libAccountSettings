@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15BDBDD4275A911600A17875 /* AccountSettingsProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 431C06531ECDF350003C2B29 /* AccountSettingsProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15BDBDD5275A911600A17875 /* AccountSettingsServer.h in Headers */ = {isa = PBXBuildFile; fileRef = B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15BDBDD7275A919500A17875 /* AccountSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 15BDBDD6275A919500A17875 /* AccountSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15BDBDD8275A953800A17875 /* account_settings_common.h in Headers */ = {isa = PBXBuildFile; fileRef = B7582BA51ED5884F003E4184 /* account_settings_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43018BE61EB99FF1004ABF26 /* account_settings_internal.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BDF1EB99FF1004ABF26 /* account_settings_internal.cc */; };
 		43018BE71EB99FF1004ABF26 /* accountSettings_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE01EB99FF1004ABF26 /* accountSettings_test.cc */; };
 		43018BE81EB99FF1004ABF26 /* implementation.cc in Sources */ = {isa = PBXBuildFile; fileRef = 43018BE11EB99FF1004ABF26 /* implementation.cc */; };
@@ -22,7 +26,6 @@
 		B72A64DD1EC0525500F71131 /* libAccountSettingsAdapter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */; };
 		B72A64E61EC0802B00F71131 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B72A64E41EC0800F00F71131 /* libc++.1.dylib */; };
 		B7E050321EB2491E006EC1EC /* AccountSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E050311EB2491E006EC1EC /* AccountSettings.m */; };
-		B7E050331EB2491E006EC1EC /* AccountSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7E050301EB2491E006EC1EC /* AccountSettings.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +45,13 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				B7E050331EB2491E006EC1EC /* AccountSettings.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15BDBDD6275A919500A17875 /* AccountSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSettings.h; sourceTree = "<group>"; };
 		43018BDF1EB99FF1004ABF26 /* account_settings_internal.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = account_settings_internal.cc; path = ../../src/account_settings_internal.cc; sourceTree = "<group>"; };
 		43018BE01EB99FF1004ABF26 /* accountSettings_test.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = accountSettings_test.cc; path = ../../src/accountSettings_test.cc; sourceTree = "<group>"; };
 		43018BE11EB99FF1004ABF26 /* implementation.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = implementation.cc; path = ../../src/implementation.cc; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 		B7582BA51ED5884F003E4184 /* account_settings_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = account_settings_common.h; path = ../../include/account_settings_common.h; sourceTree = "<group>"; };
 		B781A9461EBC748700519E88 /* AccountSettingsServer+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountSettingsServer+Internal.h"; sourceTree = "<group>"; };
 		B7E0502D1EB2491E006EC1EC /* libAccountSettingsAdapter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAccountSettingsAdapter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7E050301EB2491E006EC1EC /* AccountSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettings.h; sourceTree = "<group>"; };
 		B7E050311EB2491E006EC1EC /* AccountSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountSettings.m; sourceTree = "<group>"; };
 		B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSettingsServer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,8 +161,8 @@
 		B7E0502F1EB2491E006EC1EC /* AccountSettingsAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				15BDBDD6275A919500A17875 /* AccountSettings.h */,
 				431C06531ECDF350003C2B29 /* AccountSettingsProtocols.h */,
-				B7E050301EB2491E006EC1EC /* AccountSettings.h */,
 				B7E050311EB2491E006EC1EC /* AccountSettings.m */,
 				B7E050501EB25CD7006EC1EC /* AccountSettingsServer.h */,
 				B781A9461EBC748700519E88 /* AccountSettingsServer+Internal.h */,
@@ -205,6 +207,20 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		15BDBDD3275A90F100A17875 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BDBDD8275A953800A17875 /* account_settings_common.h in Headers */,
+				15BDBDD5275A911600A17875 /* AccountSettingsServer.h in Headers */,
+				15BDBDD7275A919500A17875 /* AccountSettings.h in Headers */,
+				15BDBDD4275A911600A17875 /* AccountSettingsProtocols.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		B72A64D71EC0525500F71131 /* AccountSettingsAdapterTests */ = {
 			isa = PBXNativeTarget;
@@ -230,6 +246,7 @@
 			buildConfigurationList = B7E050361EB2491E006EC1EC /* Build configuration list for PBXNativeTarget "AccountSettingsAdapter" */;
 			buildPhases = (
 				151573B91F2093D60049BB0B /* Build Time Start Script */,
+				15BDBDD3275A90F100A17875 /* Headers */,
 				B7E050291EB2491E006EC1EC /* Sources */,
 				B7E0502A1EB2491E006EC1EC /* Frameworks */,
 				B7E0502B1EB2491E006EC1EC /* CopyFiles */,
