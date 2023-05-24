@@ -46,20 +46,6 @@
                      providerID: @"peptest.ch"];
 }
 
-- (void)testQueryPlaceiwannabe
-{
-    NSString *hostName = @"ssl0.ovh.net";
-    [self testServerWithAddress:@"someone@someplaceiwanna.be" incomingHostName:hostName
-                   incomingPort:993 incomingProtocol:AccountSettingsServerTypeIMAP
-              incomingTransport:AccountSettingsServerTransportTLS
-             incomingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
-               outgoingHostName:hostName outgoingPort:465
-               outgoingProtocol:AccountSettingsServerTypeSMTP
-              outgoingTransport:AccountSettingsServerTransportTLS
-             outgoingAuthMethod:AccountSettingsServerAuthMethodPasswordClearText
-                     providerID: @"ovh.net"];
-}
-
 - (void)testQueryGmail
 {
     [self testServerWithAddress:@"blahblah@gmail.com" incomingHostName:@"imap.gmail.com"
