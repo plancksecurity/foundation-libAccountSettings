@@ -68,3 +68,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+## Created when updating the accound DB
+src/xml2cxx
+src/*.o
