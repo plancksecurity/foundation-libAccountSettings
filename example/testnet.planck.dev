@@ -1,0 +1,21 @@
+<clientConfig version="1.1">
+  <emailProvider id="testnet.planck.dev">
+    <domain>testnet.planck.dev</domain>
+    <displayName>planck testnet</displayName>
+    <displayShortName>planck testnet</displayShortName>
+    <incomingServer type="imap">
+      <hostname>testnet.planck.dev</hostname>
+      <port>993</port>
+      <socketType>SSL</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </incomingServer>
+    <outgoingServer type="smtp">
+      <hostname>testnet.planck.dev</hostname>
+      <port>587</port>
+      <socketType>STARTTLS</socketType>
+      <username>%EMAILADDRESS%</username>
+      <authentication>password-cleartext</authentication>
+    </outgoingServer>
+  </emailProvider>
+</clientConfig>
